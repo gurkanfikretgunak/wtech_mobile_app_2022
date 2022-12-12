@@ -1,6 +1,7 @@
 import 'package:client/core/data/local/shared_prefs.dart';
 import 'package:client/core/domain/models/todos/todo_model.dart';
 import 'package:client/core/domain/models/user/user_model.dart';
+import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/sample_view/bloc/sample_bloc.dart';
 import 'package:flavor/flavor.dart';
 import 'package:flutter/material.dart';
@@ -9,22 +10,32 @@ import 'package:logger/logger.dart';
 // ignore: depend_on_referenced_packages
 import 'package:provider/provider.dart';
 
-class MainScreen extends StatelessWidget {
+import '../common/widgets/custom_appbar.dart';
+import '../common/widgets/custom_button.dart';
+import '../common/widgets/custom_navbar.dart';
+import '../common/widgets/custom_textfield.dart';
+
+class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
 
+  @override
+  State<MainScreen> createState() => _MainScreenState();
+}
+
+class _MainScreenState extends State<MainScreen> {
+  
   @override
   Widget build(BuildContext context) {
     return Consumer<MainBloc>(
       builder: (context, bloc, _) {
         return Scaffold(
-          appBar: AppBar(actions: [
-            IconButton(
-              icon: const Icon(Icons.refresh),
-              onPressed: bloc.loadUsers,
-            ),
-          ], title: Text("App + ${Flavor.I.getString(Keys.appTitle)} Client ")),
+          appBar: CustomAppBar.customAppBar(context: context, titleText: L10n.of(context)!.hello, isBackIcon: false),
+          drawer :const Drawer(child: Text("data")),
           body: Column(
             children: [
+              CustomElevatedButton(onPressed: () {  }, text: 'a',),
+               CustomTextFormField(prefixIcon: Icons.account_circle,labelText: L10n.of(context)!.apply,passwordVisibility: true, ),
+
               SizedBox(
                 height: 200,
                 child: StreamBuilder<bool>(
@@ -120,6 +131,7 @@ class MainScreen extends StatelessWidget {
               ),
             ],
           ),
+          bottomNavigationBar: CustomBottomNavBar()
         );
       },
     );
