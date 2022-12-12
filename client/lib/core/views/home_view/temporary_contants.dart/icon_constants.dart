@@ -9,4 +9,11 @@ class IconConstant {
     Icons.wrap_text_outlined
   ];
   static List<String> iconDef = ["Mentor", "Haberler", "Videolar", "İş ve Staj", "Blog"];
+
+  static List<IconData> drawerIcon = [
+    Icons.info_outline,
+    Icons.ballot_rounded,
+    Icons.groups_outlined,
+    Icons.call,
+  ];
 }

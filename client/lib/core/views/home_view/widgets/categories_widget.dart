@@ -1,5 +1,5 @@
 import 'package:client/core/constants/color_constans.dart';
-import 'package:client/core/constants/icon_constants.dart';
+import 'package:client/core/views/home_view/temporary_contants.dart/icon_constants.dart';
 import 'package:flutter/material.dart';
 
 class CategoriesWidget extends StatelessWidget {
