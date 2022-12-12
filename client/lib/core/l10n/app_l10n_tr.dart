@@ -279,4 +279,10 @@ class L10nTr extends L10n {
 
   @override
   String get save => 'Kaydet';
+
+  @override
+  String get allRightsReserved => '© 2022 Wtech Platform. Tüm hakları saklıdır';
+
+  @override
+  String get establishmentDate => '2019';
 }

@@ -644,6 +644,18 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'Save'**
   String get save;
+
+  /// No description provided for @allRightsReserved.
+  ///
+  /// In en, this message translates to:
+  /// **'2022 Wtech Platform. All rights reserved'**
+  String get allRightsReserved;
+
+  /// No description provided for @establishmentDate.
+  ///
+  /// In en, this message translates to:
+  /// **'2019'**
+  String get establishmentDate;
 }
 
 class _L10nDelegate extends LocalizationsDelegate<L10n> {
