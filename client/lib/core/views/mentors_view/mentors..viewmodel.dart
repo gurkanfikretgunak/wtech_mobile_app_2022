@@ -1,5 +1,7 @@
 import 'package:client/core/views/abstractions/base_view_model.dart';
+import 'package:injectable/injectable.dart';
 
+@Injectable()
 class MentorsViewModel extends BaseViewModel {
   @override
   void clear() {

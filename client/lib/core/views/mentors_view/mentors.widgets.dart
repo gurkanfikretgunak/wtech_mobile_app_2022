@@ -6,6 +6,6 @@ class MentorsWidgets {
   }
 
   Widget appBarTitle(BuildContext context) {
-    return const Text('Mentors View');
+    return Text('Mentorler', style: Theme.of(context).textTheme.headline6);
   }
 }
