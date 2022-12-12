@@ -7,6 +7,6 @@ class CustomUserProfile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(child: CircleAvatar());
+    return Container(child: const CircleAvatar());
   }
 }
