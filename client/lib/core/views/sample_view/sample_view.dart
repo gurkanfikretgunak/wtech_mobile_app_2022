@@ -2,7 +2,10 @@ import 'package:client/core/data/local/shared_prefs.dart';
 import 'package:client/core/domain/models/todos/todo_model.dart';
 import 'package:client/core/domain/models/user/user_model.dart';
 import 'package:client/core/l10n/app_l10n.dart';
+import 'package:client/core/views/common/widgets/custom_image.dart';
+import 'package:client/core/views/common/widgets/text/custom_text.dart';
 import 'package:client/core/views/sample_view/bloc/sample_bloc.dart';
+import 'package:client/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:loading_overlay/loading_overlay.dart';
 import 'package:logger/logger.dart';
@@ -27,14 +30,19 @@ class _MainScreenState extends State<MainScreen> {
     return Consumer<MainBloc>(
       builder: (context, bloc, _) {
         return Scaffold(
-            appBar: CustomAppBar.customAppBar(context: context, titleText: L10n.of(context)!.hello, isBackIcon: false),
+            appBar: CustomAppBar.customAppBar(
+                context: context,
+                titleText: L10n.of(context)!.hello,
+                isBackIcon: false),
             drawer: const Drawer(child: Text("data")),
             body: Column(
               children: [
+                CustomImage(assetPath: Assets.icons.blog.path),
                 CustomElevatedButton(
                   onPressed: () {},
                   text: 'a',
                 ),
+                const CustomText("deneme"),
                 CustomTextFormField(
                   prefixIcon: Icons.account_circle,
                   labelText: L10n.of(context)!.apply,
@@ -108,8 +116,11 @@ class _MainScreenState extends State<MainScreen> {
                                   return ListTile(
                                       trailing: IconButton(
                                         onPressed: () {
-                                          SharedPrefs().setStorageUsers(user.email);
-                                          Logger().i(SharedPrefs().getStorageUsers().toString());
+                                          SharedPrefs()
+                                              .setStorageUsers(user.email);
+                                          Logger().i(SharedPrefs()
+                                              .getStorageUsers()
+                                              .toString());
                                           bloc.loadUsers();
                                         },
                                         icon: const Icon(Icons.refresh_rounded),
