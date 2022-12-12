@@ -6,6 +6,6 @@ import 'abstractions/base_view_model.dart';
 class SampleViewModel extends BaseViewModel {
   @override
   void clear() {
-    // TODO: implement reset
+  
   }
 }
