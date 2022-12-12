@@ -42,6 +42,9 @@ flutter:
     - assets/env/.env.test 
     - assets/env/.env.dev
     - assets/env/
+    - assets/images/
+    - assets/icons/
+
   
   
   
