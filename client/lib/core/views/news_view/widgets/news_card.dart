@@ -1,76 +1,86 @@
+import 'package:client/core/domain/models/news/news_model.dart';
 import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/views/news_detail_view/news_detail.view.dart';
 import 'package:client/core/views/news_view/news.widgets.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../gen/assets.gen.dart';
 
+// ignore: must_be_immutable
 class NewsCard extends StatelessWidget with NewsWidgets {
-  const NewsCard({
+  NewsCard({
     super.key,
-    required this.title,
-    required this.subTitle,
-    required this.date,
     this.isTitleCard,
+    required this.news,
   });
 
-  final String title;
-  final String subTitle;
-  final String date;
+  final NewsModel news;
   final bool? isTitleCard;
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      child: SizedBox(
-        child: isTitleCard != null
-            ? Wrap(
-                runSpacing: 10,
-                alignment: WrapAlignment.spaceEvenly,
-                children: [
-                  cardImage(
-                      imagePath: Assets.images.news1.path, context: context),
-                  Padding(
-                    padding: context.paddingAll,
-                    child: Wrap(
-                      children: [
-                        cardTitleText(title),
-                        cardSubTitleText(subTitle),
-                        dateText(
-                          context: context,
-                          date: date,
-                          alignment: Alignment.bottomRight,
-                        ),
-                      ],
-                    ),
-                  )
-                ],
-              )
-            : SizedBox(
-                child: Row(
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => NewsDetailView(
+                    news: const SizedBox(),
+                  )),
+        );
+      },
+      child: Card(
+        child: SizedBox(
+          child: isTitleCard != null
+              ? Wrap(
+                  runSpacing: 10,
+                  alignment: WrapAlignment.spaceEvenly,
                   children: [
-                    Expanded(
+                    cardImage(
+                        imagePath: Assets.images.news1.path, context: context),
+                    Padding(
+                      padding: context.paddingAll,
+                      child: Wrap(
+                        children: [
+                          cardTitleText(news.title),
+                          cardSubTitleText(news.subTitle),
+                          dateText(
+                            context: context,
+                            date: news.date,
+                            alignment: Alignment.bottomRight,
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
+                )
+              : SizedBox(
+                  child: Row(
+                    children: [
+                      Expanded(
+                          flex: 6,
+                          child: cardImage(
+                              imagePath: Assets.images.news2.path,
+                              context: context)),
+                      const Spacer(),
+                      Expanded(
                         flex: 6,
-                        child: cardImage(
-                            imagePath: Assets.images.news2.path,
-                            context: context)),
-                    const Spacer(),
-                    Expanded(
-                      flex: 6,
-                      child: Padding(
-                        padding: context.paddingAll,
-                        child: Wrap(
-                          runSpacing: 8,
-                          children: [
-                            cardTitleText(title),
-                            cardSubTitleText(subTitle),
-                            dateText(context: context, date: date),
-                          ],
+                        child: Padding(
+                          padding: context.paddingAll,
+                          child: Wrap(
+                            runSpacing: 8,
+                            children: [
+                              cardTitleText(news.title),
+                              cardSubTitleText(news.subTitle),
+                              dateText(context: context, date: news.date),
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),
+        ),
       ),
     );
   }

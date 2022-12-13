@@ -1,23 +1,51 @@
+import 'package:client/core/domain/models/news/news_model.dart';
 import 'package:client/core/extensions/extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/common/widgets/custom_image.dart';
 import 'package:client/core/views/common/widgets/text/custom_text.dart';
 import 'package:client/core/views/news_view/widgets/news_card.dart';
 import 'package:flutter/material.dart';
-import 'package:path/path.dart';
 
 import '../../../gen/assets.gen.dart';
 import '../../constants/color_constans.dart';
 
 class NewsWidgets {
-  Widget card({bool? isTitleCard}) {
-    //Backend'den geleceği için şimdilik static kullanıyorum
-    return NewsCard(
-      isTitleCard: isTitleCard,
+  List<NewsModel> newsList = [
+    NewsModel(
       date: "27.06.2022",
       title: "Teknolojiyi Egece Dokuyoruz Proje Lansmanı Yapıldı",
       subTitle:
           "Egebimtes ve Teknolojide Kadın Derneği iş birliğinde Egebimtes 30…",
+      image: Assets.images.news1.path,
+    ),
+    NewsModel(
+      date: "27.06.2022",
+      title: "Teknolojiyi Egece Dokuyoruz Proje Lansmanı Yapıldı",
+      subTitle:
+          "Egebimtes ve Teknolojide Kadın Derneği iş birliğinde Egebimtes 30…",
+      image: Assets.images.news2.path,
+    ),
+    NewsModel(
+      date: "27.06.2022",
+      title: "Teknolojiyi Egece Dokuyoruz Proje Lansmanı Yapıldı",
+      subTitle:
+          "Egebimtes ve Teknolojide Kadın Derneği iş birliğinde Egebimtes 30…",
+      image: Assets.images.news2.path,
+    ),
+    NewsModel(
+      date: "27.06.2022",
+      title: "Teknolojiyi Egece Dokuyoruz Proje Lansmanı Yapıldı",
+      subTitle:
+          "Egebimtes ve Teknolojide Kadın Derneği iş birliğinde Egebimtes 30…",
+      image: Assets.images.news2.path,
+    )
+  ];
+
+  Widget card({bool? isTitleCard, required NewsModel news}) {
+    //Backend'den geleceği için şimdilik static kullanıyorum
+    return NewsCard(
+      isTitleCard: isTitleCard,
+      news: news,
     );
   }
 
