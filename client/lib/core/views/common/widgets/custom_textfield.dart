@@ -7,7 +7,6 @@ class CustomTextFormField extends StatefulWidget {
     super.key,
     this.suffixIcon,
     this.prefixIcon,
-
     this.hintText,
     this.labelText,
     this.passwordVisibility,
@@ -19,15 +18,13 @@ class CustomTextFormField extends StatefulWidget {
   final String? hintText;
   final String? labelText;
   final bool? passwordVisibility;
-  
 
   @override
   State<CustomTextFormField> createState() => _CustomTextFormFieldState();
 }
 
 class _CustomTextFormFieldState extends State<CustomTextFormField> {
-
-  bool obscureText = true;
+  bool obscureText = false;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
@@ -43,14 +40,12 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
                 });
               }
             },
-            child: 
-                obscureText
-                    ?  Icon(
-                        Icons.remove_red_eye,
-                        color: ColorConstant.instance.grey,
-                      )
-                    : const Icon(Icons.visibility_off)
-                ),
+            child: obscureText
+                ? Icon(
+                    Icons.remove_red_eye,
+                    color: ColorConstant.instance.grey,
+                  )
+                : const Icon(Icons.visibility_off)),
         prefixIcon: Icon(widget.prefixIcon),
         contentPadding: EdgeInsets.symmetric(
             horizontal: context.dynamicWidth(0), vertical: 0),
