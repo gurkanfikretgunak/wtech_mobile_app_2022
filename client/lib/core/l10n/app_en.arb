@@ -101,8 +101,8 @@
     "companyName" : "Company Name",
     "profile" : "Profile",
     "resetPassword" : "Reset Password",
-    "save" : "Save"
+    "save" : "Save",
+    "allRightsReserved":"2022 Wtech Platform. All rights reserved",
+    "establishmentDate":"2019"
     
-    
-
 }
