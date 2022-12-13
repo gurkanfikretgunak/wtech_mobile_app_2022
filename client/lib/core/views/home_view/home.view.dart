@@ -62,3 +62,8 @@ class HomeView extends StatelessWidget with HomeViewWidget {
         });
   }
 }
+
+Future<bool> loginAction() async {
+  await Future.delayed(Duration(seconds: 5000));
+  return true;
+}
