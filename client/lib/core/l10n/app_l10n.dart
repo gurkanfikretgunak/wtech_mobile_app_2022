@@ -132,7 +132,7 @@ abstract class L10n {
   /// No description provided for @mentor.
   ///
   /// In en, this message translates to:
-  /// **'Mentor'**
+  /// **'mentor'**
   String get mentor;
 
   /// No description provided for @news.
@@ -644,6 +644,84 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'Save'**
   String get save;
+
+  /// No description provided for @withSignUp.
+  ///
+  /// In en, this message translates to:
+  /// **'By registering'**
+  String get withSignUp;
+
+  /// No description provided for @withuserAgree.
+  ///
+  /// In en, this message translates to:
+  /// **'the user agreement'**
+  String get withuserAgree;
+
+  /// No description provided for @and.
+  ///
+  /// In en, this message translates to:
+  /// **'and'**
+  String get and;
+
+  /// No description provided for @clarificationText.
+  ///
+  /// In en, this message translates to:
+  /// **'the clarification Text'**
+  String get clarificationText;
+
+  /// No description provided for @youAgree.
+  ///
+  /// In en, this message translates to:
+  /// **'you accept'**
+  String get youAgree;
+
+  /// No description provided for @alreadyHave.
+  ///
+  /// In en, this message translates to:
+  /// **'do you Already Have an Account?'**
+  String get alreadyHave;
+
+  /// No description provided for @student.
+  ///
+  /// In en, this message translates to:
+  /// **'student'**
+  String get student;
+
+  /// No description provided for @teacher.
+  ///
+  /// In en, this message translates to:
+  /// **'instructor'**
+  String get teacher;
+
+  /// No description provided for @educationContent.
+  ///
+  /// In en, this message translates to:
+  /// **'Education Content'**
+  String get educationContent;
+
+  /// No description provided for @educationLevel.
+  ///
+  /// In en, this message translates to:
+  /// **'Level'**
+  String get educationLevel;
+
+  /// No description provided for @educationTime.
+  ///
+  /// In en, this message translates to:
+  /// **'Time'**
+  String get educationTime;
+
+  /// No description provided for @educationCertificate.
+  ///
+  /// In en, this message translates to:
+  /// **'Certificate'**
+  String get educationCertificate;
+
+  /// No description provided for @educationLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get educationLanguage;
 }
 
 class _L10nDelegate extends LocalizationsDelegate<L10n> {

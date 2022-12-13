@@ -23,7 +23,7 @@ class L10nTr extends L10n {
   String get categories => 'Categories';
 
   @override
-  String get mentor => 'Mentor';
+  String get mentor => 'mentor';
 
   @override
   String get news => 'Haberler';
@@ -279,4 +279,43 @@ class L10nTr extends L10n {
 
   @override
   String get save => 'Kaydet';
+
+  @override
+  String get withSignUp => 'By registering';
+
+  @override
+  String get withuserAgree => 'the user agreement';
+
+  @override
+  String get and => 'and';
+
+  @override
+  String get clarificationText => 'Aydınlatma Metni';
+
+  @override
+  String get youAgree => 'you accept';
+
+  @override
+  String get alreadyHave => 'do you Already Have an Account?';
+
+  @override
+  String get student => 'student';
+
+  @override
+  String get teacher => 'instructor';
+
+  @override
+  String get educationContent => 'Education Content';
+
+  @override
+  String get educationLevel => 'Level';
+
+  @override
+  String get educationTime => 'Time';
+
+  @override
+  String get educationCertificate => 'Certificate';
+
+  @override
+  String get educationLanguage => 'Language';
 }

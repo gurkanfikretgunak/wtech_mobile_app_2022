@@ -50,7 +50,6 @@
     "continueNow": "devam",
     "inspection" : "incele",
     "events" : "Etkinlikler",
-
     "appBarTitle": "İş ve Staj",
     "@appBarTitle": {
         "description": ""
@@ -102,5 +101,22 @@
     "companyName" : " Firma Adı",
     "profile" : "Profil",
     "resetPassword" : "Şifreyi Yenile",
-    "save" : "Kaydet"
+    "save" : "Kaydet",
+    "withSignUp" : "Kayıt Olarak",
+    "withuserAgree" : "Kullanıcı Sözleşmesini",
+    "and" : "ve",
+    "clarificationText" : "Aydınlatma Metnini",
+    "youAgree" : "Kabul Etmiş Olursunuz",
+    "alreadyHave" : "Zaten hesabınız var mı?",
+    "student" : "öğrenci",
+    "teacher" : "eğitmen",
+    "mentor" : "mentor",
+    "educationContent" : "Eğitim İçeriği",
+    "educationLevel" : "Seviye",
+    "educationTime" : "Süre",
+    "educationCertificate" : "Sertifika",
+    "educationLanguage" : "Dil"
+
+
+
 }

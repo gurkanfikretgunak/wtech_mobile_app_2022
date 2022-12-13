@@ -101,7 +101,21 @@
     "companyName" : "Company Name",
     "profile" : "Profile",
     "resetPassword" : "Reset Password",
-    "save" : "Save"
+    "save" : "Save",
+    "withSignUp" : "By registering",
+    "withuserAgree" : "the user agreement",
+    "and" : "and",
+    "clarificationText" : "the clarification Text",
+    "youAgree" : "you accept",
+    "alreadyHave" : "do you Already Have an Account?",
+    "student" : "student",
+    "teacher" : "instructor",
+    "mentor" : "mentor",
+    "educationContent" : "Education Content",
+    "educationLevel" : "Level",
+    "educationTime" : "Time",
+    "educationCertificate" : "Certificate",
+    "educationLanguage" : "Language"
     
     
 

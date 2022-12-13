@@ -44,7 +44,8 @@ class CustomTheme {
       border: OutlineInputBorder(
             borderRadius: const BorderRadius.all(Radius.circular(8)),
             borderSide: BorderSide(color:ColorConstant.instance.black)),
-    ) 
+    ),
+    
 
   );
   }
