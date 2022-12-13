@@ -1,7 +1,12 @@
 import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/l10n/app_l10n.dart';
+import 'package:client/core/views/common/widgets/custom_image.dart';
+import 'package:client/core/views/common/widgets/text/custom_text.dart';
 import 'package:client/core/views/news_view/widgets/news_card.dart';
 import 'package:flutter/material.dart';
+import 'package:path/path.dart';
 
+import '../../../gen/assets.gen.dart';
 import '../../constants/color_constans.dart';
 
 class NewsWidgets {
@@ -18,27 +23,27 @@ class NewsWidgets {
 
   Widget titleText(BuildContext context) {
     return Padding(
-      padding: context.paddingAll,
-      child:
-          Text("Son Haberler", style: Theme.of(context).textTheme.headline6!),
+        padding: context.paddingAll,
+        child: CustomText(
+          L10n.of(context)!.lastNews,
+          fontSize: 20,
+          fontWeight: FontWeight.w600,
+        ));
+  }
+
+  Widget cardImage({required String imagePath, required BuildContext context}) {
+    return CustomImage(
+      assetPath: imagePath,
     );
   }
 
-  Widget cardImage({required String imagePath}) {
-    return Image(
-      image: AssetImage(imagePath),
-      fit: BoxFit.fitHeight,
-    );
+  Widget cardTitleText(String title) {
+    return CustomText(title, fontSize: 17, fontWeight: FontWeight.w500);
   }
 
-  Widget cardTitleText(String title, BuildContext context) {
-    return Text(title,
-        style: Theme.of(context).textTheme.headline6!.copyWith(fontSize: 17));
-  }
-
-  Widget cardSubTitleText(String subTitle, BuildContext context) {
-    return Text(subTitle,
-        style: Theme.of(context).textTheme.headline2!.copyWith(fontSize: 14));
+  Widget cardSubTitleText(String subTitle) {
+    return CustomText(subTitle,
+        fontSize: 14, color: ColorConstant.instance.black.withOpacity(0.5));
   }
 
   Widget dateText({
@@ -59,7 +64,11 @@ class NewsWidgets {
             color: ColorConstant.instance.grey,
             size: 14,
           ),
-          Text(date, style: Theme.of(context).textTheme.labelMedium),
+          CustomText(
+            date,
+            fontSize: 14,
+            color: ColorConstant.instance.black.withOpacity(0.8),
+          )
         ],
       ),
     );

@@ -2,6 +2,8 @@ import 'package:client/core/extensions/extension.dart';
 import 'package:client/core/views/news_view/news.widgets.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../gen/assets.gen.dart';
+
 class NewsCard extends StatelessWidget with NewsWidgets {
   const NewsCard({
     super.key,
@@ -25,13 +27,14 @@ class NewsCard extends StatelessWidget with NewsWidgets {
                 runSpacing: 10,
                 alignment: WrapAlignment.spaceEvenly,
                 children: [
-                  cardImage(imagePath: 'assets/images/title_card.png'),
+                  cardImage(
+                      imagePath: Assets.images.news1.path, context: context),
                   Padding(
                     padding: context.paddingAll,
                     child: Wrap(
                       children: [
-                        cardTitleText(title, context),
-                        cardSubTitleText(subTitle, context),
+                        cardTitleText(title),
+                        cardSubTitleText(subTitle),
                         dateText(
                           context: context,
                           date: date,
@@ -47,8 +50,10 @@ class NewsCard extends StatelessWidget with NewsWidgets {
                   children: [
                     Expanded(
                         flex: 6,
-                        child:
-                            cardImage(imagePath: 'assets/images/news_1.png')),
+                        child: cardImage(
+                            imagePath: Assets.images.news2.path,
+                            context: context)),
+                    const Spacer(),
                     Expanded(
                       flex: 6,
                       child: Padding(
@@ -56,8 +61,8 @@ class NewsCard extends StatelessWidget with NewsWidgets {
                         child: Wrap(
                           runSpacing: 8,
                           children: [
-                            cardTitleText(title, context),
-                            cardSubTitleText(subTitle, context),
+                            cardTitleText(title),
+                            cardSubTitleText(subTitle),
                             dateText(context: context, date: date),
                           ],
                         ),
