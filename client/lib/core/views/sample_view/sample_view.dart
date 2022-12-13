@@ -2,8 +2,10 @@ import 'package:client/core/data/local/shared_prefs.dart';
 import 'package:client/core/domain/models/todos/todo_model.dart';
 import 'package:client/core/domain/models/user/user_model.dart';
 import 'package:client/core/l10n/app_l10n.dart';
+import 'package:client/core/views/common/widgets/custom_image.dart';
+import 'package:client/core/views/common/widgets/text/custom_text.dart';
 import 'package:client/core/views/sample_view/bloc/sample_bloc.dart';
-import 'package:flavor/flavor.dart';
+import 'package:client/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:loading_overlay/loading_overlay.dart';
 import 'package:logger/logger.dart';
@@ -26,6 +28,7 @@ class _MainScreenState extends State<MainScreen> {
     return Consumer<MainBloc>(
       builder: (context, bloc, _) {
         return Scaffold(
+<<<<<<< HEAD
             appBar: CustomAppBar.customAppBar(context: context, titleText: L10n.of(context)!.hello, isBackIcon: false),
             drawer: const Drawer(child: Text("data")),
             body: Column(
@@ -71,6 +74,66 @@ class _MainScreenState extends State<MainScreen> {
                     },
                   ),
                 ),
+=======
+            appBar: CustomAppBar.customAppBar(
+                context: context,
+                titleText: L10n.of(context)!.hello,
+                isBackIcon: false),
+            drawer: const Drawer(child: Text("data")),
+            body: Column(
+              children: [
+                CustomImage(assetPath: Assets.icons.blog.path),
+                CustomElevatedButton(
+                  onPressed: () {},
+                  text: 'a',
+                ),
+                const CustomText("deneme"),
+                CustomTextFormField(
+                  prefixIcon: Icons.account_circle,
+                  labelText: L10n.of(context)!.apply,
+                ),
+                SizedBox(
+                  height: 200,
+                  child: StreamBuilder<bool>(
+                    stream: bloc.loading,
+                    builder: (context, snapshot) {
+                      return LoadingOverlay(
+                        isLoading: snapshot.data ?? false,
+                        child: StreamBuilder<List<TodoModel>>(
+                          stream: bloc.todos,
+                          builder: (context, snapshot) {
+                            if (!snapshot.hasData) {
+                              return Center(
+                                child: ElevatedButton(
+                                  onPressed: bloc.loadTodos,
+                                  child: const Text('Load Todos'),
+                                ),
+                              );
+                            }
+                            final todos = snapshot.data!;
+                            return Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: ListView.builder(
+                                itemCount: todos.length,
+                                itemBuilder: (context, index) {
+                                  final t = todos[index];
+                                  return ListTile(
+                                      title: Text(t.title),
+                                      subtitle: Text(t.description),
+                                      onTap: () {
+                                        bloc.deleteByIdTodo(t.id);
+                                        bloc.loadTodos();
+                                      });
+                                },
+                              ),
+                            );
+                          },
+                        ),
+                      );
+                    },
+                  ),
+                ),
+>>>>>>> 0ade9db0203e94a701a1080e4e7ac44cc32630ed
                 SizedBox(
                   height: 200,
                   child: StreamBuilder<bool>(
@@ -99,8 +162,16 @@ class _MainScreenState extends State<MainScreen> {
                                   return ListTile(
                                       trailing: IconButton(
                                         onPressed: () {
+<<<<<<< HEAD
                                           SharedPrefs().setStorageUsers(user.email);
                                           Logger().i(SharedPrefs().getStorageUsers().toString());
+=======
+                                          SharedPrefs()
+                                              .setStorageUsers(user.email);
+                                          Logger().i(SharedPrefs()
+                                              .getStorageUsers()
+                                              .toString());
+>>>>>>> 0ade9db0203e94a701a1080e4e7ac44cc32630ed
                                           bloc.loadUsers();
                                         },
                                         icon: const Icon(Icons.refresh_rounded),
@@ -122,7 +193,11 @@ class _MainScreenState extends State<MainScreen> {
                 ),
               ],
             ),
+<<<<<<< HEAD
             bottomNavigationBar: CustomBottomNavBar());
+=======
+            bottomNavigationBar: const CustomBottomNavBar());
+>>>>>>> 0ade9db0203e94a701a1080e4e7ac44cc32630ed
       },
     );
   }
