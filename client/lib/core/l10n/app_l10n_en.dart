@@ -29,6 +29,9 @@ class L10nEn extends L10n {
   String get news => 'News';
 
   @override
+  String get newsDetail => 'News Detail';
+
+  @override
   String get videos => 'Videos';
 
   @override
@@ -140,16 +143,10 @@ class L10nEn extends L10n {
   String get signInEmail => 'Sign in with E-mail.';
 
   @override
-  String get loginBottomDescription => 'By registering, you accept the User Agreement and the Clarification Text.';
-
-  @override
   String get rememberMe => 'Remember me';
 
   @override
   String get forgotPassword => 'Forgot your password?';
-
-  @override
-  String get doYouHaveAccount => 'Not a member? Sign up here.';
 
   @override
   String get forgotPasswordDescription => 'Please enter your e-mail or phone number.';
@@ -192,6 +189,9 @@ class L10nEn extends L10n {
 
   @override
   String get details => 'Details';
+
+  @override
+  String get readNews => 'Click to read the news.';
 
   @override
   String get myApplications => 'My Applications';
@@ -281,7 +281,15 @@ class L10nEn extends L10n {
   String get save => 'Save';
 
   @override
+  String get allRightsReserved => '2022 Wtech Platform. All rights reserved';
 
+  @override
+  String get establishmentDate => '2019';
+
+  @override
+  String get wtech => 'Woman in Technology Association';
+
+  @override
   String get withSignUp => 'By registering';
 
   @override
@@ -320,9 +328,81 @@ class L10nEn extends L10n {
   @override
   String get educationLanguage => 'Language';
 
-  String get allRightsReserved => '2022 Wtech Platform. All rights reserved';
+  @override
+  String get notMember => 'Not a member?';
 
   @override
-  String get establishmentDate => '2019';
+  String get signUpHere => 'Sign up here.';
 
+  @override
+  String get userAgreement => 'User Agreement';
+
+  @override
+  String get illuminationText => 'Illumination Text';
+
+  @override
+  String get or => 'or';
+
+  @override
+  String get loginBottomDescription => 'By registering you agree to :';
+
+  @override
+  String get mentorAppBarTitle => 'Mentors';
+
+  @override
+  String get mentorDetailViewText => 'times viewed.';
+
+  @override
+  String get mentorDetailAppliedText => 'applied.';
+
+  @override
+  String get mentorDetailAboutTitle => 'About the Mentor';
+
+  @override
+  String get mentorDetailExpertTitle => 'Areas of expertise ';
+
+  @override
+  String get mentorDetailContactUs => 'Contact us';
+
+  @override
+  String get mentorDetailBottomSheetName => 'Your name*';
+
+  @override
+  String get mentorDetailBottomSheetEmail => 'E-mail Address*';
+
+  @override
+  String get mentorDetailBottomSheetMessage => 'Your message*';
+
+  @override
+  String get mentorDetailBottomSheetUploadFile => 'Upload Attachments(Max 10MB)';
+
+  @override
+  String get mentorDetailBottomSheetSelectFile => 'Select file';
+
+  @override
+  String get mentorDetailBottomSheetNotSelectedFile => 'File not selected';
+
+  @override
+  String get mentorDetailBottomSheetSaveInfo => 'Save my information for the next action.';
+
+  @override
+  String get mentorDetailBottomSheetWatchVideo => 'Watch the video';
+
+  @override
+  String get mentorDetailBottomSheetSend => 'Send';
+
+  @override
+  String get qualification => 'General Qualifications and job description';
+
+  @override
+  String get criteria => 'Candidate Criteria';
+
+  @override
+  String get positionInfo => 'Position Information';
+
+  @override
+  String get endedButton => 'Ended';
+
+  @override
+  String get lastUpdatedDate => 'Last Updated Date';
 }

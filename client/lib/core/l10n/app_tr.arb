@@ -20,13 +20,11 @@
     "signInApple" : "Apple ile giriş yapın.",
     "or" : "Veya",
     "signInEmail" : "E-posta ile giriş yapın.",
-    "loginBottomDescription" : "Kayıt Olarak Kullanıcı Sözleşmesini ve Aydınlatma Metnini Kabul Etmiş Olursunuz.",
     "email" : "E-Posta",
     "password" : "Şifre",
     "rememberMe" : "Beni Hatırla",
     "forgotPassword" : "Parolanızı mı unuttunuz?",
     "signIn" : "Giriş Yap",
-    "doYouHaveAccount" : "Üye değil misiniz? Buradan üye olun.",
     "forgotPasswordDescription" : "Lütfen E-Postanızı veya telefon numaranızı giriniz.",
     "backLogin" : "Girişe geri dön.",
     "emailOrPhone" : "E-posta veya telefon",
@@ -50,6 +48,7 @@
     "continueNow": "devam",
     "inspection" : "incele",
     "events" : "Etkinlikler",
+
     "appBarTitle": "İş ve Staj",
     "@appBarTitle": {
         "description": ""
@@ -102,7 +101,10 @@
     "profile" : "Profil",
     "resetPassword" : "Şifreyi Yenile",
     "save" : "Kaydet",
-<<<<<<< HEAD
+    "allRightsReserved":"© 2022 Wtech Platform. Tüm hakları saklıdır",
+    "establishmentDate":"2019",
+    "wtech":"Teknolojide Kadın Derneği",
+    "views": "görüntüleme", 
     "withSignUp" : "Kayıt Olarak",
     "withuserAgree" : "Kullanıcı Sözleşmesini",
     "and" : "ve",
@@ -116,12 +118,34 @@
     "educationLevel" : "Seviye",
     "educationTime" : "Süre",
     "educationCertificate" : "Sertifika",
-    "educationLanguage" : "Dil"
-
-=======
-        "allRightsReserved":"© 2022 Wtech Platform. Tüm hakları saklıdır",
-        "establishmentDate":"2019"
->>>>>>> 0ade9db0203e94a701a1080e4e7ac44cc32630ed
-
-
+    "educationLanguage" : "Dil",
+    "notMember" : "Üye değil misiniz?",
+    "signUpHere" : "Buradan üye olun.",
+    "userAgreement" : "Kullanıcı Sözleşmesi",
+    "illuminationText" : "Aydınlatma Metni",
+    "or" : "Veya",
+    "loginBottomDescription" : "Kayıt olarak kabul etmiş olursunuz:",
+    "mentorAppBarTitle": "Mentorler",
+    "mentorDetailViewText":"kez görüntülendi.",
+    "mentorDetailAppliedText":"Başvuru yapıldı.",
+    "mentorDetailAboutTitle":"Mentor Hakkında",
+    "mentorDetailExpertTitle":"Uzmanlık Alanları",
+    "mentorDetailContactUs":"İletişime geç",
+    "mentorDetailBottomSheetName":"İsminiz*",
+    "mentorDetailBottomSheetEmail":"E-Posta Adresiniz*",
+    "mentorDetailBottomSheetMessage":"Mesajınız*",
+    "mentorDetailBottomSheetUploadFile":"Ekleri Yükle(Maks 10MB)",
+    "mentorDetailBottomSheetSelectFile":"Dosya Seç",
+    "mentorDetailBottomSheetNotSelectedFile":"Dosya seçilmedi",
+    "mentorDetailBottomSheetSaveInfo":"Bir sonraki işlem için bilgilerimi kaydet.",
+    "mentorDetailBottomSheetWatchVideo":"Videoyu İzle",
+    "mentorDetailBottomSheetSend":"Gönder",
+    "jobAndinternship" : "İş ve Staj",
+    "qualification" : " Genel Nitelikler ve iş tanımı",
+    "criteria" : "Aday Kriterleri",
+    "positionInfo" : "Pozisyon Bilgileri",
+    "internship" : "Staj",
+    "endedButton" : "Sonlandı",
+    "lastUpdatedDate" : "Son Güncelleme Tarihi"
 }
+
