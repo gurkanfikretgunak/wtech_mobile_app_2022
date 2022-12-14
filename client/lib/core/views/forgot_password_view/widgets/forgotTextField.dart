@@ -19,7 +19,8 @@ class ForgotTextField extends StatefulWidget {
   final IconData? prefixIcon;
   final TextEditingController tfcontroller;
   final TextStyle? labelStyle;
-  final IconData? suffixIcon;
+  final Widget? suffixIcon;
+  
   
 
   @override
@@ -32,10 +33,10 @@ class _ForgotTextFieldState extends State<ForgotTextField> {
     return TextFormField(
       decoration: InputDecoration(
 
-        prefixIcon: Icon(widget.prefixIcon),
+        
         labelText: widget.labelText,
         labelStyle: widget.labelStyle,
-        suffixIcon: Icon(widget.suffixIcon)
+        suffixIcon: widget.suffixIcon
       ),
       controller: widget.tfcontroller,
     );

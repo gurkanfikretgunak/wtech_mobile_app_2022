@@ -24,6 +24,7 @@ dependencies:
   logger: ^1.1.0
   shared_preferences: 2.0.0-nullsafety
   flutter_svg: ^1.1.6
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -35,6 +36,11 @@ dev_dependencies:
   json_serializable: ^6.5.4
   rxdart: ^0.27.7
   provider: ^6.0.4
+  flutter_launcher_icons: ^0.11.0
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/wtechLogo.png"  
 flutter:
   generate: false
   uses-material-design: true
@@ -43,7 +49,9 @@ flutter:
     - assets/env/.env.test 
     - assets/env/.env.dev
     - assets/env/
-
+    - assets/images/
+    - assets/icons/
+  
   
   
   

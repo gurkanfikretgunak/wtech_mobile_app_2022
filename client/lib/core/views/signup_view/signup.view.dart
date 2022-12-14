@@ -1,13 +1,16 @@
-
-
-
-
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/signup_view/signup.viewmodel.dart';
 import 'package:client/core/views/signup_view/signup.widgets.dart';
+import 'package:client/core/views/signup_view/signup_constants/label_constants.dart';
+import 'package:client/core/views/signup_view/widgets/agreement_text.dart';
+import 'package:client/core/views/signup_view/widgets/profile_choose_widget.dart';
+import 'package:client/core/views/signup_view/widgets/register_textfield.dart';
+import 'package:client/core/views/signup_view/widgets/signup_button.dart';
+import 'package:client/core/views/signup_view/widgets/image_asset.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
+import '../../constants/color_constans.dart';
 
 class SignUpView extends StatelessWidget with SignUpWidgets {
   SignUpView({super.key});
@@ -16,11 +19,36 @@ class SignUpView extends StatelessWidget with SignUpWidgets {
   
 
   @override
-  
   Widget build(BuildContext context) {
     
-    return Scaffold(
-      body: body(context),
+   
+
+    return StreamBuilder(
+      stream: _vm.loading,
+      builder: (context, snapshot) => 
+      Scaffold(
+        body: Center(
+          child: Column(
+
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  const PictureWidget(),
+                  Text(L10n.of(context)!.signUp,style:TextStyle(fontSize: 15,fontWeight: FontWeight.w400,color: ColorConstant.instance.grey)),
+                  Column(
+                    children: [
+                      userInfoTextfield(context,SignUpConstants().signUpLabels(context),SignUpConstants().controllerList()),
+                      userProfileWidget(context,SignUpConstants().profileController!)
+                    ],
+                  ),
+                    const Padding(padding:EdgeInsets.only(top: 8)),
+                    const SignUpButton(),
+                    const AgreementTextWidget()
+                ],
+              ),
+        )
+        
+      ),
     );
   }
 }
+

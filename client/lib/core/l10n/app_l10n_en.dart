@@ -281,6 +281,7 @@ class L10nEn extends L10n {
   String get save => 'Save';
 
   @override
+
   String get withSignUp => 'By registering';
 
   @override
@@ -318,4 +319,10 @@ class L10nEn extends L10n {
 
   @override
   String get educationLanguage => 'Language';
+
+  String get allRightsReserved => '2022 Wtech Platform. All rights reserved';
+
+  @override
+  String get establishmentDate => '2019';
+
 }
