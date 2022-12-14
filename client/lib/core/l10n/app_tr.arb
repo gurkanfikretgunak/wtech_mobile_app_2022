@@ -102,5 +102,9 @@
     "companyName" : " Firma Adı",
     "profile" : "Profil",
     "resetPassword" : "Şifreyi Yenile",
-    "save" : "Kaydet"
+    "save" : "Kaydet",
+        "allRightsReserved":"© 2022 Wtech Platform. Tüm hakları saklıdır",
+        "establishmentDate":"2019"
+
+
 }
