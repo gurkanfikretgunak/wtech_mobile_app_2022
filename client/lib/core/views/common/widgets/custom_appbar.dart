@@ -1,27 +1,22 @@
-
-
 import 'package:client/core/constants/color_constans.dart';
 import 'package:flutter/material.dart';
 
 import '../../../extensions/extension.dart';
 
 class CustomAppBar extends PreferredSize {
-  const CustomAppBar({
-    super.key,
-    required super.child,
-    required super.preferredSize,
-  });
+  const CustomAppBar({super.key, required super.child, required super.preferredSize});
 
   static PreferredSize customAppBar({
     required BuildContext context,
     required String titleText,
     required bool isBackIcon,
+    bool? isCheck,
+    TextButton? appButton,
   }) {
     return PreferredSize(
         preferredSize: const Size.fromHeight(70.0),
         child: AppBar(
-          leading: isBackIcon
-              ?  const BackButton() : null, 
+          leading: isBackIcon ? const BackButton() : null,
           title: Padding(
             padding: const EdgeInsets.only(top: 14.0),
             child: Column(
@@ -35,22 +30,25 @@ class CustomAppBar extends PreferredSize {
             ),
           ),
           actions: [
-            Padding(
-              padding: context.paddingOnlyTop,
-              child: Container(
-                  height: 40,
-                  width: 85,
-                  decoration: BoxDecoration(color: ColorConstant.instance.yellow, borderRadius: BorderRadius.circular(50)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Text("W-27", style: Theme.of(context).textTheme.subtitle1?.copyWith(fontWeight: FontWeight.bold)),
-                      const CircleAvatar(maxRadius: 18),
-                    ],
-                  )),
-            )
+            isCheck!
+                ? Padding(
+                    padding: context.paddingOnlyTop,
+                    child: Container(
+                        height: 40,
+                        width: 85,
+                        decoration: BoxDecoration(
+                            color: ColorConstant.instance.yellow, borderRadius: BorderRadius.circular(50)),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Text("W-27",
+                                style: Theme.of(context).textTheme.subtitle1?.copyWith(fontWeight: FontWeight.bold)),
+                            const CircleAvatar(maxRadius: 18),
+                          ],
+                        )),
+                  )
+                : appButton ?? const SizedBox()
           ],
         ));
   }
-
 }

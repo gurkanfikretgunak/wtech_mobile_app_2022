@@ -19,8 +19,8 @@ class HomeView extends StatelessWidget with HomeViewWidget {
         stream: _vm.loading,
         builder: (context, snapshot) {
           return Scaffold(
-              appBar:
-                  CustomAppBar.customAppBar(context: context, titleText: L10n.of(context)!.hello, isBackIcon: false),
+              appBar: CustomAppBar.customAppBar(
+                  context: context, titleText: L10n.of(context)!.hello, isBackIcon: false, isCheck: true),
               drawer: drawerWidget(context),
               body: Padding(
                 padding: context.paddingAll,
