@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 import '../../../constants/color_constans.dart';
 
-class DateText extends StatelessWidget {
-  const DateText({
+class CustomDateText extends StatelessWidget {
+  const CustomDateText({
     super.key,
     required this.date,
   });

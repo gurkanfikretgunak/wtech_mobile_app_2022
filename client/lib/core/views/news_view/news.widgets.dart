@@ -7,7 +7,7 @@ import 'package:client/core/views/news_view/widgets/news_card.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/color_constans.dart';
-import '../common/widgets/date_text.dart';
+import '../common/widgets/custom_date_text.dart';
 
 class NewsWidgets {
   Widget card({bool? isTitleCard, required NewsModel news}) {
@@ -54,7 +54,7 @@ class NewsWidgets {
   }) {
     return Align(
       alignment: alignment ?? Alignment.bottomLeft,
-      child: DateText(
+      child: CustomDateText(
         date: date,
       ),
     );

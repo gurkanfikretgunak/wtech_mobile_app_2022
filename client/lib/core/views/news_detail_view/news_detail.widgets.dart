@@ -6,8 +6,8 @@ import '../../constants/color_constans.dart';
 import '../../l10n/app_l10n.dart';
 
 import '../common/widgets/custom_image.dart';
-import '../common/widgets/date_text.dart';
-import '../common/widgets/views_count.dart';
+import '../common/widgets/custom_date_text.dart';
+import '../common/widgets/custom_views_count.dart';
 
 class NewsDetailWidgets {
   Widget title(NewsModel news) {
@@ -43,7 +43,7 @@ class NewsDetailWidgets {
           color: ColorConstant.instance.blue,
           fontWeight: FontWeight.w700,
         ),
-        const DateText(date: '27.06.2022')
+        const CustomDateText(date: '27.06.2022')
       ],
     );
   }
@@ -64,7 +64,7 @@ class NewsDetailWidgets {
           fontSize: 17,
           fontWeight: FontWeight.w700,
         ),
-        const ViewsCount(viewsCount: "126")
+        const CustomViewsCount(viewsCount: "126")
       ],
     );
   }

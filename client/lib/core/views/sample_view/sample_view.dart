@@ -2,7 +2,9 @@ import 'package:client/core/data/local/shared_prefs.dart';
 import 'package:client/core/domain/models/todos/todo_model.dart';
 import 'package:client/core/domain/models/user/user_model.dart';
 import 'package:client/core/l10n/app_l10n.dart';
+import 'package:client/core/views/common/widgets/custom_date_text.dart';
 import 'package:client/core/views/common/widgets/custom_image.dart';
+import 'package:client/core/views/common/widgets/custom_views_count.dart';
 import 'package:client/core/views/common/widgets/text/custom_text.dart';
 import 'package:client/core/views/sample_view/bloc/sample_bloc.dart';
 import 'package:client/gen/assets.gen.dart';
@@ -37,16 +39,23 @@ class _MainScreenState extends State<MainScreen> {
             drawer: const Drawer(child: Text("data")),
             body: Column(
               children: [
+                /**CustomWidget'ların Örnek Kullanımları*/
+                const CustomDateText(date: "12.02.2022"),
+                const CustomViewsCount(viewsCount: "126"),
                 CustomImage(assetPath: Assets.icons.blog.path),
                 CustomElevatedButton(
                   onPressed: () {},
                   text: 'a',
                 ),
+                CustomIconButton(onPressed: () {}, icon: Icons.abc),
+                CustomTextButton(onPressed: () {}, text: "text"),
                 const CustomText("deneme"),
                 CustomTextFormField(
                   prefixIcon: Icons.account_circle,
                   labelText: L10n.of(context)!.apply,
                 ),
+                /****************************************/
+
                 SizedBox(
                   height: 200,
                   child: StreamBuilder<bool>(

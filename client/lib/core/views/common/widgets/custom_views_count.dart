@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 
 import '../../../constants/color_constans.dart';
 
-class ViewsCount extends StatelessWidget {
-  const ViewsCount({
+class CustomViewsCount extends StatelessWidget {
+  const CustomViewsCount({
     super.key,
     required this.viewsCount,
   });
