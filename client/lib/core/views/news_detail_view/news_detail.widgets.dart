@@ -4,9 +4,10 @@ import 'package:client/core/views/common/widgets/text/custom_text.dart';
 import 'package:flutter/material.dart';
 import '../../constants/color_constans.dart';
 import '../../l10n/app_l10n.dart';
-import '../common/date_text.dart';
-import '../common/views_count.dart';
+
 import '../common/widgets/custom_image.dart';
+import '../common/widgets/date_text.dart';
+import '../common/widgets/views_count.dart';
 
 class NewsDetailWidgets {
   Widget title(NewsModel news) {

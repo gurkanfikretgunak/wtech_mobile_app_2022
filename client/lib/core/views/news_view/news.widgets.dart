@@ -3,12 +3,11 @@ import 'package:client/core/extensions/extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/common/widgets/custom_image.dart';
 import 'package:client/core/views/common/widgets/text/custom_text.dart';
-import 'package:client/core/views/common/date_text.dart';
 import 'package:client/core/views/news_view/widgets/news_card.dart';
 import 'package:flutter/material.dart';
 
-import '../../../gen/assets.gen.dart';
 import '../../constants/color_constans.dart';
+import '../common/widgets/date_text.dart';
 
 class NewsWidgets {
   Widget card({bool? isTitleCard, required NewsModel news}) {

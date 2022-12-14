@@ -12,10 +12,10 @@ import 'package:logger/logger.dart';
 // ignore: depend_on_referenced_packages
 import 'package:provider/provider.dart';
 
+import '../common/widgets/button/button_libary.dart';
 import '../common/widgets/custom_appbar.dart';
-import '../common/widgets/custom_button.dart';
 import '../common/widgets/custom_navbar.dart';
-import '../common/widgets/custom_textfield.dart';
+import '../common/widgets/text/custom_textfield.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
