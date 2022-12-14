@@ -1,3 +1,4 @@
+import 'package:client/core/extensions/extension.dart';
 import 'package:client/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 
@@ -5,11 +6,23 @@ import 'widgets/mentor_card_widget.dart';
 
 class MentorsWidgets {
   Widget body(BuildContext context) {
-    return MentorCardWidget(
-      mentor: 'Zehra Öney',
-      organization: 'Teknolojide Kadın Derneği',
-      role: 'Yönetim Kurulu Başkanı',
-      imageUrl: Assets.images.mentor.path,
+    return GridView.builder(
+      physics: const BouncingScrollPhysics(),
+      padding: context.paddingAll,
+      itemCount: 5,
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,
+        crossAxisSpacing: 20,
+        childAspectRatio: 0.8,
+      ),
+      itemBuilder: (context, index) {
+        return MentorCardWidget(
+          mentor: 'Zehra Öney',
+          organization: 'Teknolojide Kadın Derneği',
+          role: 'Yönetim Kurulu Başkanı',
+          imageUrl: Assets.images.mentor1.path,
+        );
+      },
     );
   }
 
@@ -17,13 +30,3 @@ class MentorsWidgets {
     return Text('Mentorler', style: Theme.of(context).textTheme.headline6);
   }
 }
-// GridView.builder(
-//         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-//         itemBuilder: (context, index) {
-//           return const MentorCardWidget(
-//             mentor: 'Zehra Öney',
-//             organization: 'Teknolojide Kadın Derneği',
-//             role: 'Yönetim Kurulu Başkanı',
-//             imageUrl: 'https://avatars.githubusercontent.com/u/68864968?v=4',
-//           );
-//         });
