@@ -64,7 +64,7 @@ class MentorInfosWidget extends StatelessWidget {
     return Positioned(
       top: 100,
       child: SizedBox(
-        width: MediaQuery.of(context).size.width * 0.4,
+        width: context.dynamicWidth(0.4),
         child: Card(
           elevation: 8,
           shape: RoundedRectangleBorder(

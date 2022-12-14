@@ -16,7 +16,7 @@ import 'package:client/core/di/config/raw_helper.dart' as _i5;
 import 'package:client/core/di/config/register_module.dart' as _i16;
 import 'package:client/core/views/mentors_details_view/mentors_details.viewmodel.dart'
     as _i3;
-import 'package:client/core/views/mentors_view/mentors..viewmodel.dart' as _i4;
+import 'package:client/core/views/mentors_view/mentors.viewmodel.dart' as _i4;
 import 'package:client/core/views/user_profile_view/user_profile.viewmodel.dart'
     as _i8;
 import 'package:client/core/views/videos_view/videos.viewmodel.dart' as _i9;

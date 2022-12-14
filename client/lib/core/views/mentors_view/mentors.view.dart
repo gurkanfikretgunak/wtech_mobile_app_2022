@@ -1,5 +1,5 @@
 import 'package:client/core/views/common/widgets/custom_navbar.dart';
-import 'package:client/core/views/mentors_view/mentors..viewmodel.dart';
+import 'package:client/core/views/mentors_view/mentors.viewmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
