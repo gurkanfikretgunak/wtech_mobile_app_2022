@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 
 import '../../../../gen/assets.gen.dart';
 
-// ignore: must_be_immutable
 class NewsCard extends StatelessWidget with NewsWidgets {
   NewsCard({
     super.key,
@@ -24,9 +23,10 @@ class NewsCard extends StatelessWidget with NewsWidgets {
         Navigator.push(
           context,
           MaterialPageRoute(
-              builder: (context) => NewsDetailView(
-                    news: const SizedBox(),
-                  )),
+            builder: (context) => NewsDetailView(
+              news: news,
+            ),
+          ),
         );
       },
       child: Card(
@@ -43,9 +43,8 @@ class NewsCard extends StatelessWidget with NewsWidgets {
                       child: Wrap(
                         children: [
                           cardTitleText(news.title),
-                          cardSubTitleText(news.subTitle),
+                          cardDetailText(news.detail),
                           dateText(
-                            context: context,
                             date: news.date,
                             alignment: Alignment.bottomRight,
                           ),
@@ -71,8 +70,8 @@ class NewsCard extends StatelessWidget with NewsWidgets {
                             runSpacing: 8,
                             children: [
                               cardTitleText(news.title),
-                              cardSubTitleText(news.subTitle),
-                              dateText(context: context, date: news.date),
+                              cardDetailText(news.detail),
+                              dateText(date: news.date),
                             ],
                           ),
                         ),

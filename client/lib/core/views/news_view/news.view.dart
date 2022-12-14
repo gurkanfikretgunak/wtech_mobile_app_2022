@@ -2,6 +2,7 @@ import 'package:client/core/domain/models/news/news_model.dart';
 import 'package:client/core/extensions/extension.dart';
 import 'package:client/core/views/news_view/news.widgets.dart';
 import 'package:client/core/views/news_view/widgets/news_card.dart';
+import 'package:client/core/views/news_view/widgets/news_list.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
@@ -23,22 +24,26 @@ class NewsView extends StatelessWidget with NewsWidgets {
           isBackIcon: false),
       body: Padding(
         padding: context.paddingAll,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            card(news: newsList[0], isTitleCard: true),
-            titleText(context),
-            Expanded(
-              child: ListView.builder(
-                itemCount: 2,
-                itemBuilder: (context, index) {
-                  return NewsCard(
-                    news: newsList[index + 1],
-                  );
-                },
-              ),
-            )
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              card(news: newsList[0], isTitleCard: true),
+              titleText(context),
+              SizedBox(
+                height: 400,
+                child: ListView.builder(
+                  // physics: const NeverScrollableScrollPhysics(),
+                  itemCount: newsList.length - 1,
+                  itemBuilder: (context, index) {
+                    return NewsCard(
+                      news: newsList[index + 1],
+                    );
+                  },
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

@@ -8,7 +8,7 @@ part of 'news_model.dart';
 
 _$_NewsModel _$$_NewsModelFromJson(Map<String, dynamic> json) => _$_NewsModel(
       title: json['title'] as String,
-      subTitle: json['subTitle'] as String,
+      detail: json['detail'] as String,
       date: json['date'] as String,
       image: json['image'] as String,
     );
@@ -16,7 +16,7 @@ _$_NewsModel _$$_NewsModelFromJson(Map<String, dynamic> json) => _$_NewsModel(
 Map<String, dynamic> _$$_NewsModelToJson(_$_NewsModel instance) =>
     <String, dynamic>{
       'title': instance.title,
-      'subTitle': instance.subTitle,
+      'detail': instance.detail,
       'date': instance.date,
       'image': instance.image,
     };

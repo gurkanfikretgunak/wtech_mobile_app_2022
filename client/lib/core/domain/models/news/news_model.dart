@@ -7,7 +7,7 @@ part 'news_model.g.dart';
 class NewsModel with _$NewsModel {
   const factory NewsModel({
     required String title,
-    required String subTitle,
+    required String detail,
     required String date,
     required String image,
   }) = _NewsModel;

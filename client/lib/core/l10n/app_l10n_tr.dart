@@ -29,6 +29,9 @@ class L10nTr extends L10n {
   String get news => 'Haberler';
 
   @override
+  String get newsDetail => 'Haber Detayı';
+
+  @override
   String get videos => 'Videos';
 
   @override
@@ -86,7 +89,7 @@ class L10nTr extends L10n {
   String get lastPosts => 'Last Posts';
 
   @override
-  String get views => 'views';
+  String get views => 'görüntüleme';
 
   @override
   String get nameSurnamee => 'Name-Surname';
@@ -194,6 +197,9 @@ class L10nTr extends L10n {
   String get details => 'incele';
 
   @override
+  String get readNews => 'Haberi okumak için tıklayınız.';
+
+  @override
   String get myApplications => 'Başvurularım';
 
   @override
@@ -285,4 +291,7 @@ class L10nTr extends L10n {
 
   @override
   String get establishmentDate => '2019';
+
+  @override
+  String get wtech => 'Teknolojide Kadın Derneği';
 }

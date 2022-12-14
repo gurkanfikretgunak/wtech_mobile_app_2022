@@ -3,6 +3,7 @@ import 'package:client/core/extensions/extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/common/widgets/custom_image.dart';
 import 'package:client/core/views/common/widgets/text/custom_text.dart';
+import 'package:client/core/views/common/date_text.dart';
 import 'package:client/core/views/news_view/widgets/news_card.dart';
 import 'package:flutter/material.dart';
 
@@ -10,37 +11,6 @@ import '../../../gen/assets.gen.dart';
 import '../../constants/color_constans.dart';
 
 class NewsWidgets {
-  List<NewsModel> newsList = [
-    NewsModel(
-      date: "27.06.2022",
-      title: "Teknolojiyi Egece Dokuyoruz Proje Lansmanı Yapıldı",
-      subTitle:
-          "Egebimtes ve Teknolojide Kadın Derneği iş birliğinde Egebimtes 30…",
-      image: Assets.images.news1.path,
-    ),
-    NewsModel(
-      date: "27.06.2022",
-      title: "Teknolojiyi Egece Dokuyoruz Proje Lansmanı Yapıldı",
-      subTitle:
-          "Egebimtes ve Teknolojide Kadın Derneği iş birliğinde Egebimtes 30…",
-      image: Assets.images.news2.path,
-    ),
-    NewsModel(
-      date: "27.06.2022",
-      title: "Teknolojiyi Egece Dokuyoruz Proje Lansmanı Yapıldı",
-      subTitle:
-          "Egebimtes ve Teknolojide Kadın Derneği iş birliğinde Egebimtes 30…",
-      image: Assets.images.news2.path,
-    ),
-    NewsModel(
-      date: "27.06.2022",
-      title: "Teknolojiyi Egece Dokuyoruz Proje Lansmanı Yapıldı",
-      subTitle:
-          "Egebimtes ve Teknolojide Kadın Derneği iş birliğinde Egebimtes 30…",
-      image: Assets.images.news2.path,
-    )
-  ];
-
   Widget card({bool? isTitleCard, required NewsModel news}) {
     //Backend'den geleceği için şimdilik static kullanıyorum
     return NewsCard(
@@ -69,35 +39,24 @@ class NewsWidgets {
     return CustomText(title, fontSize: 17, fontWeight: FontWeight.w500);
   }
 
-  Widget cardSubTitleText(String subTitle) {
-    return CustomText(subTitle,
-        fontSize: 14, color: ColorConstant.instance.black.withOpacity(0.5));
+  Widget cardDetailText(String subTitle) {
+    return CustomText(
+      subTitle,
+      fontSize: 14,
+      color: ColorConstant.instance.black.withOpacity(0.5),
+      maxLines: 2,
+      overflow: TextOverflow.ellipsis,
+    );
   }
 
   Widget dateText({
-    required BuildContext context,
     required String date,
     Alignment? alignment,
   }) {
     return Align(
       alignment: alignment ?? Alignment.bottomLeft,
-      child: Wrap(
-        alignment: WrapAlignment.end,
-        direction: Axis.horizontal,
-        crossAxisAlignment: WrapCrossAlignment.center,
-        spacing: 10,
-        children: [
-          Icon(
-            Icons.calendar_month_outlined,
-            color: ColorConstant.instance.grey,
-            size: 14,
-          ),
-          CustomText(
-            date,
-            fontSize: 14,
-            color: ColorConstant.instance.black.withOpacity(0.8),
-          )
-        ],
+      child: DateText(
+        date: date,
       ),
     );
   }

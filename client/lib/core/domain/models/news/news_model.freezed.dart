@@ -21,7 +21,7 @@ NewsModel _$NewsModelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$NewsModel {
   String get title => throw _privateConstructorUsedError;
-  String get subTitle => throw _privateConstructorUsedError;
+  String get detail => throw _privateConstructorUsedError;
   String get date => throw _privateConstructorUsedError;
   String get image => throw _privateConstructorUsedError;
 
@@ -36,7 +36,7 @@ abstract class $NewsModelCopyWith<$Res> {
   factory $NewsModelCopyWith(NewsModel value, $Res Function(NewsModel) then) =
       _$NewsModelCopyWithImpl<$Res, NewsModel>;
   @useResult
-  $Res call({String title, String subTitle, String date, String image});
+  $Res call({String title, String detail, String date, String image});
 }
 
 /// @nodoc
@@ -53,7 +53,7 @@ class _$NewsModelCopyWithImpl<$Res, $Val extends NewsModel>
   @override
   $Res call({
     Object? title = null,
-    Object? subTitle = null,
+    Object? detail = null,
     Object? date = null,
     Object? image = null,
   }) {
@@ -62,9 +62,9 @@ class _$NewsModelCopyWithImpl<$Res, $Val extends NewsModel>
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      subTitle: null == subTitle
-          ? _value.subTitle
-          : subTitle // ignore: cast_nullable_to_non_nullable
+      detail: null == detail
+          ? _value.detail
+          : detail // ignore: cast_nullable_to_non_nullable
               as String,
       date: null == date
           ? _value.date
@@ -85,7 +85,7 @@ abstract class _$$_NewsModelCopyWith<$Res> implements $NewsModelCopyWith<$Res> {
       __$$_NewsModelCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String title, String subTitle, String date, String image});
+  $Res call({String title, String detail, String date, String image});
 }
 
 /// @nodoc
@@ -100,7 +100,7 @@ class __$$_NewsModelCopyWithImpl<$Res>
   @override
   $Res call({
     Object? title = null,
-    Object? subTitle = null,
+    Object? detail = null,
     Object? date = null,
     Object? image = null,
   }) {
@@ -109,9 +109,9 @@ class __$$_NewsModelCopyWithImpl<$Res>
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      subTitle: null == subTitle
-          ? _value.subTitle
-          : subTitle // ignore: cast_nullable_to_non_nullable
+      detail: null == detail
+          ? _value.detail
+          : detail // ignore: cast_nullable_to_non_nullable
               as String,
       date: null == date
           ? _value.date
@@ -130,7 +130,7 @@ class __$$_NewsModelCopyWithImpl<$Res>
 class _$_NewsModel implements _NewsModel {
   const _$_NewsModel(
       {required this.title,
-      required this.subTitle,
+      required this.detail,
       required this.date,
       required this.image});
 
@@ -140,7 +140,7 @@ class _$_NewsModel implements _NewsModel {
   @override
   final String title;
   @override
-  final String subTitle;
+  final String detail;
   @override
   final String date;
   @override
@@ -148,7 +148,7 @@ class _$_NewsModel implements _NewsModel {
 
   @override
   String toString() {
-    return 'NewsModel(title: $title, subTitle: $subTitle, date: $date, image: $image)';
+    return 'NewsModel(title: $title, detail: $detail, date: $date, image: $image)';
   }
 
   @override
@@ -157,15 +157,14 @@ class _$_NewsModel implements _NewsModel {
         (other.runtimeType == runtimeType &&
             other is _$_NewsModel &&
             (identical(other.title, title) || other.title == title) &&
-            (identical(other.subTitle, subTitle) ||
-                other.subTitle == subTitle) &&
+            (identical(other.detail, detail) || other.detail == detail) &&
             (identical(other.date, date) || other.date == date) &&
             (identical(other.image, image) || other.image == image));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, title, subTitle, date, image);
+  int get hashCode => Object.hash(runtimeType, title, detail, date, image);
 
   @JsonKey(ignore: true)
   @override
@@ -184,7 +183,7 @@ class _$_NewsModel implements _NewsModel {
 abstract class _NewsModel implements NewsModel {
   const factory _NewsModel(
       {required final String title,
-      required final String subTitle,
+      required final String detail,
       required final String date,
       required final String image}) = _$_NewsModel;
 
@@ -194,7 +193,7 @@ abstract class _NewsModel implements NewsModel {
   @override
   String get title;
   @override
-  String get subTitle;
+  String get detail;
   @override
   String get date;
   @override

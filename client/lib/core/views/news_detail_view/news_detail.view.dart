@@ -1,20 +1,21 @@
+import 'package:client/core/domain/models/news/news_model.dart';
 import 'package:client/core/extensions/extension.dart';
-import 'package:client/core/views/news_view/news.widgets.dart';
+import 'package:client/core/views/news_detail_view/news_detail.widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
-
 import '../../l10n/app_l10n.dart';
 import '../common/widgets/custom_appbar.dart';
-import '../view_model_sample_two/sample_two.viewmodel.dart';
+import 'news_detail.viewmodel.dart';
 
-class NewsDetailView extends StatelessWidget with NewsWidgets {
+// ignore: must_be_immutable
+class NewsDetailView extends StatelessWidget with NewsDetailWidgets {
   NewsDetailView({
     super.key,
     required this.news,
   });
 
-  final Widget news;
-  final _vm = GetIt.I.get<SampleViewModelTwo>();
+  final NewsModel news;
+  final _vm = GetIt.I.get<NewsDetailViewModel>();
 
   @override
   Widget build(BuildContext context) {
@@ -26,8 +27,16 @@ class NewsDetailView extends StatelessWidget with NewsWidgets {
       body: Padding(
         padding: context.paddingAll,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [],
+          children: [
+            Expanded(flex: 2, child: title(news)),
+            Expanded(flex: 2, child: wtechAndDateText(context)),
+            Expanded(flex: 6, child: newsImage(news, context)),
+            Expanded(flex: 2, child: newsDetailTitleAndViewsCount(context)),
+            Expanded(flex: 5, child: newsDetailTextCard(context, news)),
+            const Spacer()
+          ],
         ),
       ),
     );

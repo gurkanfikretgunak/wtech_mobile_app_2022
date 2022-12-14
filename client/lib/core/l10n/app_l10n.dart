@@ -141,6 +141,12 @@ abstract class L10n {
   /// **'News'**
   String get news;
 
+  /// No description provided for @newsDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'News Detail'**
+  String get newsDetail;
+
   /// No description provided for @videos.
   ///
   /// In en, this message translates to:
@@ -471,6 +477,12 @@ abstract class L10n {
   /// **'Details'**
   String get details;
 
+  /// No description provided for @readNews.
+  ///
+  /// In en, this message translates to:
+  /// **'Click to read the news.'**
+  String get readNews;
+
   /// No description provided for @myApplications.
   ///
   /// In en, this message translates to:
@@ -656,6 +668,12 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'2019'**
   String get establishmentDate;
+
+  /// No description provided for @wtech.
+  ///
+  /// In en, this message translates to:
+  /// **'Woman in Technology Association'**
+  String get wtech;
 }
 
 class _L10nDelegate extends LocalizationsDelegate<L10n> {

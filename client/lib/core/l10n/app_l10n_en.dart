@@ -29,6 +29,9 @@ class L10nEn extends L10n {
   String get news => 'News';
 
   @override
+  String get newsDetail => 'News Detail';
+
+  @override
   String get videos => 'Videos';
 
   @override
@@ -194,6 +197,9 @@ class L10nEn extends L10n {
   String get details => 'Details';
 
   @override
+  String get readNews => 'Click to read the news.';
+
+  @override
   String get myApplications => 'My Applications';
 
   @override
@@ -285,4 +291,7 @@ class L10nEn extends L10n {
 
   @override
   String get establishmentDate => '2019';
+
+  @override
+  String get wtech => 'Woman in Technology Association';
 }

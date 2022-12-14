@@ -103,8 +103,11 @@
     "profile" : "Profil",
     "resetPassword" : "Şifreyi Yenile",
     "save" : "Kaydet",
-        "allRightsReserved":"© 2022 Wtech Platform. Tüm hakları saklıdır",
-        "establishmentDate":"2019"
+    "allRightsReserved":"© 2022 Wtech Platform. Tüm hakları saklıdır",
+    "establishmentDate":"2019",
+    "wtech":"Teknolojide Kadın Derneği",
+    "views": "görüntüleme"
+
 
 
 }
