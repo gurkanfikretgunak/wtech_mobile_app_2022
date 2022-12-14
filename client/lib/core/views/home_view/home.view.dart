@@ -36,18 +36,12 @@ class HomeView extends StatelessWidget with HomeViewWidget {
                               width: MediaQuery.of(context).size.width,
                               child: cardWidget(context, true)),
                         ),
-                        Text(
-                          L10n.of(context)!.categories,
-                          style: Theme.of(context).textTheme.headline6,
-                        ),
+                        Text(L10n.of(context)!.categories, style: Theme.of(context).textTheme.headline6),
                         SizedBox(
                             height: MediaQuery.of(context).size.height * 0.15,
                             width: MediaQuery.of(context).size.width,
                             child: const CategoriesWidget()),
-                        Text(
-                          L10n.of(context)!.currentTraining,
-                          style: Theme.of(context).textTheme.headline6,
-                        ),
+                        Text(L10n.of(context)!.currentTraining, style: Theme.of(context).textTheme.headline6),
                         Padding(
                           padding: context.paddingOnlyTop,
                           child: SizedBox(
@@ -61,9 +55,4 @@ class HomeView extends StatelessWidget with HomeViewWidget {
               bottomNavigationBar: const CustomBottomNavBar());
         });
   }
-}
-
-Future<bool> loginAction() async {
-  await Future.delayed(Duration(seconds: 5000));
-  return true;
 }
