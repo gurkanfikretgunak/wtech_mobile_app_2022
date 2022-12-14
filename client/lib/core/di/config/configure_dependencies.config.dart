@@ -14,7 +14,11 @@ import 'package:client/core/data/network/services/users/user_api.dart' as _i14;
 import 'package:client/core/di/config/app_config.dart' as _i9;
 import 'package:client/core/di/config/raw_helper.dart' as _i4;
 import 'package:client/core/di/config/register_module.dart' as _i15;
+
 import 'package:client/core/views/jobs_view/jobs.viewmodel.dart' as _i3;
+
+import 'package:client/core/views/mentors_view/mentors..viewmodel.dart' as _i3;
+
 import 'package:client/core/views/user_profile_view/user_profile.viewmodel.dart'
     as _i7;
 import 'package:client/core/views/videos_view/videos.viewmodel.dart' as _i8;
@@ -40,7 +44,11 @@ Future<_i1.GetIt> $initGetIt(
     environmentFilter,
   );
   final registerModule = _$RegisterModule();
+
   gh.factory<_i3.JobsViewModel>(() => _i3.JobsViewModel());
+
+  gh.factory<_i3.MentorsViewModel>(() => _i3.MentorsViewModel());
+
   await gh.singletonAsync<_i4.RawConfig>(
     () => registerModule.config(),
     preResolve: true,

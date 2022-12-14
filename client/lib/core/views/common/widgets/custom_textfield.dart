@@ -7,10 +7,9 @@ class CustomTextFormField extends StatefulWidget {
     super.key,
     this.suffixIcon,
     this.prefixIcon,
-
     this.hintText,
     this.labelText,
-    this.passwordVisibility,
+    this.isPassword = false,
   });
 
   final IconData? suffixIcon;
@@ -18,42 +17,39 @@ class CustomTextFormField extends StatefulWidget {
 
   final String? hintText;
   final String? labelText;
-  final bool? passwordVisibility;
-  
+  final bool? isPassword;
 
   @override
   State<CustomTextFormField> createState() => _CustomTextFormFieldState();
 }
 
 class _CustomTextFormFieldState extends State<CustomTextFormField> {
-
-  bool obscureText = true;
+  bool obscureText = false;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      obscureText: obscureText,
+      obscureText: widget.isPassword! ? !obscureText : obscureText,
       decoration: InputDecoration(
         hintText: widget.hintText,
         labelText: widget.labelText,
-        suffixIcon: GestureDetector(
-            onTap: () {
-              if (widget.passwordVisibility!) {
-                setState(() {
-                  obscureText = !obscureText;
-                });
-              }
-            },
-            child: 
-                obscureText
-                    ?  Icon(
+        suffixIcon: widget.isPassword!
+            ? GestureDetector(
+                onTap: () {
+                  if (widget.isPassword!) {
+                    setState(() {
+                      obscureText = !obscureText;
+                    });
+                  }
+                },
+                child: !obscureText
+                    ? Icon(
                         Icons.remove_red_eye,
                         color: ColorConstant.instance.grey,
                       )
-                    : const Icon(Icons.visibility_off)
-                ),
+                    : const Icon(Icons.visibility_off))
+            : null,
         prefixIcon: Icon(widget.prefixIcon),
-        contentPadding: EdgeInsets.symmetric(
-            horizontal: context.dynamicWidth(0), vertical: 0),
+        contentPadding: EdgeInsets.symmetric(horizontal: context.dynamicWidth(0), vertical: 0),
       ),
     );
   }
