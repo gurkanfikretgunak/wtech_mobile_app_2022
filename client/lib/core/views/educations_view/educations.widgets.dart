@@ -81,15 +81,23 @@ class EducationsWidgets {
 
   Widget searchBar(BuildContext context, double height, double width) {
     return Container(
-      height: height / 20,
+      height: height / 15,
       width: width,
-      color: ColorConstant.instance.white,
-      child: Row(
-        children: [
-          IconButton(
-            icon: Icon(Icons.filter_alt_outlined),
-            onPressed: () {},
+      decoration: BoxDecoration(
+        color: ColorConstant.instance.white,
+        borderRadius: BorderRadius.only(bottomLeft: Radius.circular(16), bottomRight: Radius.circular(16)),
+        boxShadow: [
+          BoxShadow(
+            color: ColorConstant.instance.black,
+            offset: Offset(0.0, 0.0),
+            blurRadius: 1.0,
           ),
+        ],
+        //border: Border.all()
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
           SizedBox(
             child: Container(
               width: width / 1.2,
