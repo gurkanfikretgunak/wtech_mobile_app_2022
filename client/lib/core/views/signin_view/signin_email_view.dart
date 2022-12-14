@@ -28,10 +28,10 @@ class _MainScreenState extends State<SignInEmailView> with SignInWidget {
         return Scaffold(
           body: SingleChildScrollView(
             child: Padding(
-              padding: context.paddingAll,
+              padding: context.paddingNormal,
               child: Wrap(
                 alignment: WrapAlignment.center,
-                runSpacing: 20,
+                runSpacing: 30,
                 children: [
                   const Logo(),
                   emailTextField(context),

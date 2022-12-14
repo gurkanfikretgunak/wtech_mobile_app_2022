@@ -1,8 +1,8 @@
-import 'package:client/core/views/common/widgets/custom_textfield.dart';
 import 'package:client/core/views/signin_view/widgets/sigin_account_button_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../../l10n/app_l10n.dart';
+import '../common/widgets/text/custom_textfield.dart';
 
 class SignInWidget {
   Widget form(BuildContext context) {
@@ -13,7 +13,6 @@ class SignInWidget {
     return CustomTextFormField(
       prefixIcon: Icons.mail_outline,
       labelText: L10n.of(context)!.email,
-      passwordVisibility: false,
     );
   }
 
@@ -21,7 +20,6 @@ class SignInWidget {
     return CustomTextFormField(
       prefixIcon: Icons.lock_outline,
       labelText: L10n.of(context)!.password,
-      passwordVisibility: true,
       isPassword: true,
     );
   }

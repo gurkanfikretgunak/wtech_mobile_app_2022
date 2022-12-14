@@ -28,7 +28,7 @@ class _MainScreenState extends State<SignInAccountView> with SignInWidget {
         return Scaffold(
           body: SingleChildScrollView(
             child: Padding(
-              padding: context.paddingAll,
+              padding: context.horizontalPaddingNormal,
               child: Wrap(
                 alignment: WrapAlignment.center,
                 runSpacing: 60,

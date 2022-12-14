@@ -19,7 +19,7 @@ class CustomSignInAccountDivider extends StatelessWidget {
           indent: 10,
           endIndent: 50,
         )),
-        CustomText(L10n.of(context)!.details),
+        CustomText(L10n.of(context)!.or),
         const Expanded(
             child: CustomDivider(
           indent: 50,

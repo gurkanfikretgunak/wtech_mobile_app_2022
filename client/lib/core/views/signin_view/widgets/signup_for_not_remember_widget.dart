@@ -11,26 +11,21 @@ class SignUpForNotRemember extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        CustomText(
-          L10n.of(context)!.doYouHaveAccount,
-        ),
-        SizedBox(
-          width: context.dynamicWidth(0.001),
-        ),
-        TextButton(
+    return Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+      CustomText(
+        fontSize: 18,
+        L10n.of(context)!.notMember,
+      ),
+      TextButton(
           style: TextButton.styleFrom(
             textStyle: const TextStyle(fontSize: 15),
           ),
           onPressed: () {},
           child: CustomText(
+            fontSize: 18,
             color: Colors.blue,
-            L10n.of(context)!.doYouHaveAccount,
-          ),
-        ),
-      ],
-    );
+            L10n.of(context)!.signUpHere,
+          )),
+    ]);
   }
 }

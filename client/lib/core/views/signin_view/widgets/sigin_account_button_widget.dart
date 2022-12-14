@@ -13,7 +13,7 @@ class SignInAccountButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: context.paddingAll,
+      padding: context.paddingNormal,
       child: InkWell(
         child: Container(
           alignment: Alignment.center,
