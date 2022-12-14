@@ -132,7 +132,7 @@ abstract class L10n {
   /// No description provided for @mentor.
   ///
   /// In en, this message translates to:
-  /// **'Mentor'**
+  /// **'mentor'**
   String get mentor;
 
   /// No description provided for @news.
@@ -140,6 +140,12 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'News'**
   String get news;
+
+  /// No description provided for @newsDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'News Detail'**
+  String get newsDetail;
 
   /// No description provided for @videos.
   ///
@@ -363,12 +369,6 @@ abstract class L10n {
   /// **'Sign in with E-mail.'**
   String get signInEmail;
 
-  /// No description provided for @loginBottomDescription.
-  ///
-  /// In en, this message translates to:
-  /// **'By registering, you accept the User Agreement and the Clarification Text.'**
-  String get loginBottomDescription;
-
   /// No description provided for @rememberMe.
   ///
   /// In en, this message translates to:
@@ -380,12 +380,6 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'Forgot your password?'**
   String get forgotPassword;
-
-  /// No description provided for @doYouHaveAccount.
-  ///
-  /// In en, this message translates to:
-  /// **'Not a member? Sign up here.'**
-  String get doYouHaveAccount;
 
   /// No description provided for @forgotPasswordDescription.
   ///
@@ -470,6 +464,12 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'Details'**
   String get details;
+
+  /// No description provided for @readNews.
+  ///
+  /// In en, this message translates to:
+  /// **'Click to read the news.'**
+  String get readNews;
 
   /// No description provided for @myApplications.
   ///
@@ -656,6 +656,246 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'2019'**
   String get establishmentDate;
+
+  /// No description provided for @wtech.
+  ///
+  /// In en, this message translates to:
+  /// **'Woman in Technology Association'**
+  String get wtech;
+
+  /// No description provided for @withSignUp.
+  ///
+  /// In en, this message translates to:
+  /// **'By registering'**
+  String get withSignUp;
+
+  /// No description provided for @withuserAgree.
+  ///
+  /// In en, this message translates to:
+  /// **'the user agreement'**
+  String get withuserAgree;
+
+  /// No description provided for @and.
+  ///
+  /// In en, this message translates to:
+  /// **'and'**
+  String get and;
+
+  /// No description provided for @clarificationText.
+  ///
+  /// In en, this message translates to:
+  /// **'the clarification Text'**
+  String get clarificationText;
+
+  /// No description provided for @youAgree.
+  ///
+  /// In en, this message translates to:
+  /// **'you accept'**
+  String get youAgree;
+
+  /// No description provided for @alreadyHave.
+  ///
+  /// In en, this message translates to:
+  /// **'do you Already Have an Account?'**
+  String get alreadyHave;
+
+  /// No description provided for @student.
+  ///
+  /// In en, this message translates to:
+  /// **'student'**
+  String get student;
+
+  /// No description provided for @teacher.
+  ///
+  /// In en, this message translates to:
+  /// **'instructor'**
+  String get teacher;
+
+  /// No description provided for @educationContent.
+  ///
+  /// In en, this message translates to:
+  /// **'Education Content'**
+  String get educationContent;
+
+  /// No description provided for @educationLevel.
+  ///
+  /// In en, this message translates to:
+  /// **'Level'**
+  String get educationLevel;
+
+  /// No description provided for @educationTime.
+  ///
+  /// In en, this message translates to:
+  /// **'Time'**
+  String get educationTime;
+
+  /// No description provided for @educationCertificate.
+  ///
+  /// In en, this message translates to:
+  /// **'Certificate'**
+  String get educationCertificate;
+
+  /// No description provided for @educationLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get educationLanguage;
+
+  /// No description provided for @notMember.
+  ///
+  /// In en, this message translates to:
+  /// **'Not a member?'**
+  String get notMember;
+
+  /// No description provided for @signUpHere.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign up here.'**
+  String get signUpHere;
+
+  /// No description provided for @userAgreement.
+  ///
+  /// In en, this message translates to:
+  /// **'User Agreement'**
+  String get userAgreement;
+
+  /// No description provided for @illuminationText.
+  ///
+  /// In en, this message translates to:
+  /// **'Illumination Text'**
+  String get illuminationText;
+
+  /// No description provided for @or.
+  ///
+  /// In en, this message translates to:
+  /// **'or'**
+  String get or;
+
+  /// No description provided for @loginBottomDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'By registering you agree to :'**
+  String get loginBottomDescription;
+
+  /// No description provided for @mentorAppBarTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Mentors'**
+  String get mentorAppBarTitle;
+
+  /// No description provided for @mentorDetailViewText.
+  ///
+  /// In en, this message translates to:
+  /// **'times viewed.'**
+  String get mentorDetailViewText;
+
+  /// No description provided for @mentorDetailAppliedText.
+  ///
+  /// In en, this message translates to:
+  /// **'applied.'**
+  String get mentorDetailAppliedText;
+
+  /// No description provided for @mentorDetailAboutTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'About the Mentor'**
+  String get mentorDetailAboutTitle;
+
+  /// No description provided for @mentorDetailExpertTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Areas of expertise '**
+  String get mentorDetailExpertTitle;
+
+  /// No description provided for @mentorDetailContactUs.
+  ///
+  /// In en, this message translates to:
+  /// **'Contact us'**
+  String get mentorDetailContactUs;
+
+  /// No description provided for @mentorDetailBottomSheetName.
+  ///
+  /// In en, this message translates to:
+  /// **'Your name*'**
+  String get mentorDetailBottomSheetName;
+
+  /// No description provided for @mentorDetailBottomSheetEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'E-mail Address*'**
+  String get mentorDetailBottomSheetEmail;
+
+  /// No description provided for @mentorDetailBottomSheetMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Your message*'**
+  String get mentorDetailBottomSheetMessage;
+
+  /// No description provided for @mentorDetailBottomSheetUploadFile.
+  ///
+  /// In en, this message translates to:
+  /// **'Upload Attachments(Max 10MB)'**
+  String get mentorDetailBottomSheetUploadFile;
+
+  /// No description provided for @mentorDetailBottomSheetSelectFile.
+  ///
+  /// In en, this message translates to:
+  /// **'Select file'**
+  String get mentorDetailBottomSheetSelectFile;
+
+  /// No description provided for @mentorDetailBottomSheetNotSelectedFile.
+  ///
+  /// In en, this message translates to:
+  /// **'File not selected'**
+  String get mentorDetailBottomSheetNotSelectedFile;
+
+  /// No description provided for @mentorDetailBottomSheetSaveInfo.
+  ///
+  /// In en, this message translates to:
+  /// **'Save my information for the next action.'**
+  String get mentorDetailBottomSheetSaveInfo;
+
+  /// No description provided for @mentorDetailBottomSheetWatchVideo.
+  ///
+  /// In en, this message translates to:
+  /// **'Watch the video'**
+  String get mentorDetailBottomSheetWatchVideo;
+
+  /// No description provided for @mentorDetailBottomSheetSend.
+  ///
+  /// In en, this message translates to:
+  /// **'Send'**
+  String get mentorDetailBottomSheetSend;
+
+  /// No description provided for @qualification.
+  ///
+  /// In en, this message translates to:
+  /// **'General Qualifications and job description'**
+  String get qualification;
+
+  /// No description provided for @criteria.
+  ///
+  /// In en, this message translates to:
+  /// **'Candidate Criteria'**
+  String get criteria;
+
+  /// No description provided for @positionInfo.
+  ///
+  /// In en, this message translates to:
+  /// **'Position Information'**
+  String get positionInfo;
+
+  /// No description provided for @endedButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Ended'**
+  String get endedButton;
+
+  /// No description provided for @lastUpdatedDate.
+  ///
+  /// In en, this message translates to:
+  /// **'Last Updated Date'**
+  String get lastUpdatedDate;
 }
 
 class _L10nDelegate extends LocalizationsDelegate<L10n> {
