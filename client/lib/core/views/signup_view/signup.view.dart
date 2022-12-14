@@ -23,9 +23,7 @@ class SignUpView extends StatelessWidget with SignUpWidgets {
     
    
 
-    return StreamBuilder(
-      stream: _vm.loading,
-      builder: (context, snapshot) => 
+    return 
       Scaffold(
         body: Center(
           child: Column(
@@ -47,8 +45,8 @@ class SignUpView extends StatelessWidget with SignUpWidgets {
               ),
         )
         
-      ),
-    );
+      );
+    
   }
 }
 
