@@ -1,6 +1,8 @@
+import 'package:client/core/constants/color_constans.dart';
 import 'package:flutter/material.dart';
 
 import '../../../l10n/app_l10n.dart';
+import '../../common/widgets/text/custom_text.dart';
 
 class SignInBottomDescription extends StatelessWidget {
   const SignInBottomDescription({
@@ -9,12 +11,10 @@ class SignInBottomDescription extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(50.0),
-      child: Text(
-        style: const TextStyle(fontSize: 11, color: Colors.black38),
-        L10n.of(context)!.loginBottomDescription,
-      ),
+    return CustomText(
+      
+      color: ColorConstant.instance.grey,
+      L10n.of(context)!.loginBottomDescription,
     );
   }
 }

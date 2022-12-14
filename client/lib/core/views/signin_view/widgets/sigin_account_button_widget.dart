@@ -1,3 +1,4 @@
+import 'package:client/core/extensions/extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -12,7 +13,7 @@ class SignInAccountButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(20.0),
+      padding: context.paddingAll,
       child: InkWell(
         child: Container(
           alignment: Alignment.center,
@@ -21,8 +22,8 @@ class SignInAccountButton extends StatelessWidget {
             border: Border.all(color: Colors.black),
             color: Colors.white,
           ),
-          height: 40,
-          width: 500,
+          height: context.dynamicHeight(0.04),
+          width: context.dynamicWidth(5),
           child: Row(
             children: [
               Padding(

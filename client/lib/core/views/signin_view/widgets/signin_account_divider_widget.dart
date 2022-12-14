@@ -1,34 +1,30 @@
+import 'package:client/core/views/common/widgets/custom_divider.dart';
 import 'package:flutter/material.dart';
 
 import '../../../l10n/app_l10n.dart';
+import '../../common/widgets/text/custom_text.dart';
 
-class CustomDivider extends StatelessWidget {
-  const CustomDivider({
+class CustomSignInAccountDivider extends StatelessWidget {
+  const CustomSignInAccountDivider({
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         const Expanded(
-          child: Divider(
-            thickness: 1,
-            indent: 20,
-            endIndent: 60,
-            color: Colors.black38,
-          ),
-        ),
-        Text(L10n.of(context)!.details),
+            child: CustomDivider(
+          indent: 10,
+          endIndent: 50,
+        )),
+        CustomText(L10n.of(context)!.details),
         const Expanded(
-          child: Divider(
-            thickness: 1,
-            indent: 60,
-            endIndent: 20,
-            color: Colors.black38,
-          ),
-        ),
+            child: CustomDivider(
+          indent: 50,
+          endIndent: 10,
+        )),
       ],
     );
   }

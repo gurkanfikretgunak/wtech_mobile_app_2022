@@ -23,6 +23,7 @@ dependencies:
   loading_overlay: ^0.3.0
   logger: ^1.1.0
   shared_preferences: 2.0.0-nullsafety
+  flutter_svg: ^1.1.6
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -38,7 +39,7 @@ dev_dependencies:
 flutter_icons:
   android: true
   ios: true
-  image_path: "assets/icons/wtechLogo.png"  
+  image_path: "assets/icons/wtechIcon.svg"  
 flutter:
   generate: false
   uses-material-design: true

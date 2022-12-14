@@ -10,24 +10,19 @@ class SignInWidget {
   }
 
   Widget emailTextField(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(20.0),
-      child: CustomTextFormField(
-        prefixIcon: Icons.mail_outline,
-        labelText: L10n.of(context)!.email,
-        passwordVisibility: true,
-      ),
+    return CustomTextFormField(
+      prefixIcon: Icons.mail_outline,
+      labelText: L10n.of(context)!.email,
+      passwordVisibility: false,
     );
   }
 
   Widget passwordTextField(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(20),
-      child: CustomTextFormField(
-        prefixIcon: Icons.lock_outline,
-        labelText: L10n.of(context)!.password,
-        passwordVisibility: true,
-      ),
+    return CustomTextFormField(
+      prefixIcon: Icons.lock_outline,
+      labelText: L10n.of(context)!.password,
+      passwordVisibility: true,
+      isPassword: true,
     );
   }
 

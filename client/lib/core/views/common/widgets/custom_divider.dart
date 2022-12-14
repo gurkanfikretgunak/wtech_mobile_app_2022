@@ -5,8 +5,11 @@ class CustomDivider extends StatelessWidget {
     super.key,
     this.thickness,
     this.color,
+    this.indent,
+    required this.endIndent,
   });
-
+  final double? indent;
+  final double endIndent;
   final double? thickness;
   final Color? color;
   @override
@@ -14,6 +17,8 @@ class CustomDivider extends StatelessWidget {
     return Divider(
       thickness: thickness ?? 1,
       color: color,
+      indent: indent,
+      endIndent: endIndent,
     );
   }
 }

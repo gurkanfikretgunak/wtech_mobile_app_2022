@@ -1,3 +1,4 @@
+import 'package:client/core/extensions/extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -7,9 +8,9 @@ class Logo extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(60.0),
-      child: SvgPicture.asset("/images/logo.svg"),
+    return SizedBox(
+      height: context.dynamicHeight(0.1),
+      child: SvgPicture.asset("/images/wtechLogo.svg"),
     );
   }
 }

@@ -10,6 +10,7 @@ class CustomTextFormField extends StatefulWidget {
     this.hintText,
     this.labelText,
     this.isPassword = false,
+    this.passwordVisibility,
   });
 
   final IconData? suffixIcon;
@@ -18,7 +19,7 @@ class CustomTextFormField extends StatefulWidget {
   final String? hintText;
   final String? labelText;
   final bool? passwordVisibility;
-  
+  final bool? isPassword;
 
   @override
   State<CustomTextFormField> createState() => _CustomTextFormFieldState();
@@ -33,24 +34,25 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
       decoration: InputDecoration(
         hintText: widget.hintText,
         labelText: widget.labelText,
-        suffixIcon: GestureDetector(
-            onTap: () {
-              if (widget.passwordVisibility!) {
-                setState(() {
-                  obscureText = !obscureText;
-                });
-              }
-            },
-            child: 
-                obscureText
-                    ?  Icon(
+        suffixIcon: widget.isPassword!
+            ? GestureDetector(
+                onTap: () {
+                  if (widget.passwordVisibility!) {
+                    setState(() {
+                      obscureText = !obscureText;
+                    });
+                  }
+                },
+                child: obscureText
+                    ? Icon(
                         Icons.remove_red_eye,
                         color: ColorConstant.instance.grey,
                       )
-                    : const Icon(Icons.visibility_off)
-                ),
+                    : const Icon(Icons.visibility_off))
+            : null,
         prefixIcon: Icon(widget.prefixIcon),
-        contentPadding: EdgeInsets.symmetric(horizontal: context.dynamicWidth(0), vertical: 0),
+        contentPadding: EdgeInsets.symmetric(
+            horizontal: context.dynamicWidth(0), vertical: 0),
       ),
     );
   }
