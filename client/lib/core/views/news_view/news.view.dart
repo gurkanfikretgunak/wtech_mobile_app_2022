@@ -1,4 +1,3 @@
-import 'package:client/core/domain/models/news/news_model.dart';
 import 'package:client/core/extensions/extension.dart';
 import 'package:client/core/views/news_view/news.widgets.dart';
 import 'package:client/core/views/news_view/widgets/news_card.dart';
