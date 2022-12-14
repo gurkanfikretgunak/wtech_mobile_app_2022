@@ -1,4 +1,5 @@
 import 'package:client/core/constants/color_constans.dart';
+import 'package:client/core/extensions/extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/common/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
@@ -34,8 +35,8 @@ class _JobsCardWidgetState extends State<JobsCardWidget> {
           alignment: AlignmentDirectional.topCenter,
           children: [
             SizedBox(
-              height: 270,
-              width: 250,
+              height: context.dynamicHeight(0.4),
+              width: context.dynamicWidth(0.5),
               child: Card(
                 elevation: 8,
                 shape: RoundedRectangleBorder(
@@ -45,8 +46,8 @@ class _JobsCardWidgetState extends State<JobsCardWidget> {
                 child: Column(
                   children: [
                     SizedBox(
-                      width: 250,
-                      height: 110,
+                      height: context.dynamicHeight(0.16),
+                      width: context.dynamicWidth(0.5),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(16.0),
                         child: Image.network(
@@ -73,11 +74,11 @@ class _JobsCardWidgetState extends State<JobsCardWidget> {
                               ),
                               Row(
                                 children: [
-                                  Text(widget.showNo.toString()),
                                   Icon(
                                     Icons.remove_red_eye,
                                     color: ColorConstant.instance.black,
                                   ),
+                                  Text(widget.showNo.toString()),
                                 ],
                               ),
                             ],
@@ -88,17 +89,18 @@ class _JobsCardWidgetState extends State<JobsCardWidget> {
                           Row(
                             children: [
                               Expanded(
-                                child: Text(
-                                  widget.role!,
-                                  overflow: TextOverflow.ellipsis,
-                                  maxLines: 1,
-                                  softWrap: false,
+                                child: Padding(
+                                  padding:
+                                      const EdgeInsets.fromLTRB(0, 10, 0, 15),
+                                  child: Text(
+                                    widget.role!,
+                                    overflow: TextOverflow.ellipsis,
+                                    maxLines: 1,
+                                    softWrap: false,
+                                  ),
                                 ),
                               ),
                             ],
-                          ),
-                          const SizedBox(
-                            height: 20,
                           ),
                           Row(
                             children: [
