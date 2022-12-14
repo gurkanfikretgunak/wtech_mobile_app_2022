@@ -25,7 +25,7 @@ class NewsDetailView extends StatelessWidget with NewsDetailWidgets {
           titleText: L10n.of(context)!.news,
           isBackIcon: false),
       body: Padding(
-        padding: context.paddingAll,
+        padding: context.horizontalPaddingNormal,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -34,7 +34,7 @@ class NewsDetailView extends StatelessWidget with NewsDetailWidgets {
             Expanded(flex: 2, child: wtechAndDateText(context)),
             Expanded(flex: 6, child: newsImage(news, context)),
             Expanded(flex: 2, child: newsDetailTitleAndViewsCount(context)),
-            Expanded(flex: 5, child: newsDetailTextCard(context, news)),
+            Expanded(flex: 6, child: newsDetailTextCard(context, news)),
             const Spacer()
           ],
         ),

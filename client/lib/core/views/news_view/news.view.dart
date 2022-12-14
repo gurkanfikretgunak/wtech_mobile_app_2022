@@ -23,7 +23,7 @@ class NewsView extends StatelessWidget with NewsWidgets {
           titleText: L10n.of(context)!.news,
           isBackIcon: false),
       body: Padding(
-        padding: context.paddingAll,
+        padding: context.paddingNormal,
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

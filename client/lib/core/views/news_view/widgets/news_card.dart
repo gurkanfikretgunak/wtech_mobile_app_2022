@@ -39,7 +39,7 @@ class NewsCard extends StatelessWidget with NewsWidgets {
                     cardImage(
                         imagePath: Assets.images.news1.path, context: context),
                     Padding(
-                      padding: context.paddingAll,
+                      padding: context.paddingLow,
                       child: Wrap(
                         children: [
                           cardTitleText(news.title),
@@ -65,7 +65,7 @@ class NewsCard extends StatelessWidget with NewsWidgets {
                       Expanded(
                         flex: 6,
                         child: Padding(
-                          padding: context.paddingAll,
+                          padding: context.paddingLow,
                           child: Wrap(
                             runSpacing: 8,
                             children: [

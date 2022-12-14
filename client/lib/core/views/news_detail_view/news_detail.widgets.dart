@@ -71,7 +71,7 @@ class NewsDetailWidgets {
   Widget newsDetailTextCard(BuildContext context, NewsModel news) {
     return Card(
       child: Padding(
-        padding: context.paddingAll,
+        padding: context.paddingNormal,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.start,

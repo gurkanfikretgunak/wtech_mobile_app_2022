@@ -23,7 +23,7 @@ class L10nTr extends L10n {
   String get categories => 'Categories';
 
   @override
-  String get mentor => 'Mentor';
+  String get mentor => 'mentor';
 
   @override
   String get news => 'Haberler';
@@ -35,7 +35,7 @@ class L10nTr extends L10n {
   String get videos => 'Videos';
 
   @override
-  String get jobAndinternship => 'Job and Internship';
+  String get jobAndinternship => 'İş ve Staj';
 
   @override
   String get blog => 'Blog';
@@ -143,16 +143,10 @@ class L10nTr extends L10n {
   String get signInEmail => 'E-posta ile giriş yapın.';
 
   @override
-  String get loginBottomDescription => 'Kayıt Olarak Kullanıcı Sözleşmesini ve Aydınlatma Metnini Kabul Etmiş Olursunuz.';
-
-  @override
   String get rememberMe => 'Beni Hatırla';
 
   @override
   String get forgotPassword => 'Parolanızı mı unuttunuz?';
-
-  @override
-  String get doYouHaveAccount => 'Üye değil misiniz? Buradan üye olun.';
 
   @override
   String get forgotPasswordDescription => 'Lütfen E-Postanızı veya telefon numaranızı giriniz.';
@@ -294,4 +288,121 @@ class L10nTr extends L10n {
 
   @override
   String get wtech => 'Teknolojide Kadın Derneği';
+
+  @override
+  String get withSignUp => 'Kayıt Olarak';
+
+  @override
+  String get withuserAgree => 'Kullanıcı Sözleşmesini';
+
+  @override
+  String get and => 've';
+
+  @override
+  String get clarificationText => 'Aydınlatma Metnini';
+
+  @override
+  String get youAgree => 'Kabul Etmiş Olursunuz';
+
+  @override
+  String get alreadyHave => 'Zaten hesabınız var mı?';
+
+  @override
+  String get student => 'öğrenci';
+
+  @override
+  String get teacher => 'eğitmen';
+
+  @override
+  String get educationContent => 'Eğitim İçeriği';
+
+  @override
+  String get educationLevel => 'Seviye';
+
+  @override
+  String get educationTime => 'Süre';
+
+  @override
+  String get educationCertificate => 'Sertifika';
+
+  @override
+  String get educationLanguage => 'Dil';
+
+  @override
+  String get notMember => 'Üye değil misiniz?';
+
+  @override
+  String get signUpHere => 'Buradan üye olun.';
+
+  @override
+  String get userAgreement => 'Kullanıcı Sözleşmesi';
+
+  @override
+  String get illuminationText => 'Aydınlatma Metni';
+
+  @override
+  String get or => 'Veya';
+
+  @override
+  String get loginBottomDescription => 'Kayıt olarak kabul etmiş olursunuz:';
+
+  @override
+  String get mentorAppBarTitle => 'Mentorler';
+
+  @override
+  String get mentorDetailViewText => 'kez görüntülendi.';
+
+  @override
+  String get mentorDetailAppliedText => 'Başvuru yapıldı.';
+
+  @override
+  String get mentorDetailAboutTitle => 'Mentor Hakkında';
+
+  @override
+  String get mentorDetailExpertTitle => 'Uzmanlık Alanları';
+
+  @override
+  String get mentorDetailContactUs => 'İletişime geç';
+
+  @override
+  String get mentorDetailBottomSheetName => 'İsminiz*';
+
+  @override
+  String get mentorDetailBottomSheetEmail => 'E-Posta Adresiniz*';
+
+  @override
+  String get mentorDetailBottomSheetMessage => 'Mesajınız*';
+
+  @override
+  String get mentorDetailBottomSheetUploadFile => 'Ekleri Yükle(Maks 10MB)';
+
+  @override
+  String get mentorDetailBottomSheetSelectFile => 'Dosya Seç';
+
+  @override
+  String get mentorDetailBottomSheetNotSelectedFile => 'Dosya seçilmedi';
+
+  @override
+  String get mentorDetailBottomSheetSaveInfo => 'Bir sonraki işlem için bilgilerimi kaydet.';
+
+  @override
+  String get mentorDetailBottomSheetWatchVideo => 'Videoyu İzle';
+
+  @override
+  String get mentorDetailBottomSheetSend => 'Gönder';
+
+  @override
+  String get qualification => ' Genel Nitelikler ve iş tanımı';
+
+  @override
+  String get criteria => 'Aday Kriterleri';
+
+  @override
+  String get positionInfo => 'Pozisyon Bilgileri';
+
+  @override
+  String get endedButton => 'Sonlandı';
+
+  @override
+  String get lastUpdatedDate => 'Son Güncelleme Tarihi';
 }
