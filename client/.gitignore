@@ -12,6 +12,13 @@
 migrate_working_dir/
 /lib/core/domain/models/test/
 /lib/core/data/network/services/test/
+/ios/
+/android/
+/windows/
+/linux/
+/web/
+/test/
+
 
 
 # IntelliJ related
