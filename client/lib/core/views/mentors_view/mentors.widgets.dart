@@ -8,7 +8,7 @@ class MentorsWidgets {
   Widget body(BuildContext context) {
     return GridView.builder(
       physics: const BouncingScrollPhysics(),
-      padding: context.paddingAll,
+      padding: context.paddingNormal,
       itemCount: 5,
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,

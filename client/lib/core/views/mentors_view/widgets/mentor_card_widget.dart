@@ -1,7 +1,7 @@
 import 'package:client/core/constants/color_constans.dart';
 import 'package:client/core/extensions/extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
-import 'package:client/core/views/common/widgets/custom_button.dart';
+import 'package:client/core/views/common/widgets/button/button_libary.dart';
 import 'package:flutter/material.dart';
 
 class MentorCardWidget extends StatelessWidget {
@@ -72,13 +72,13 @@ class MentorInfosWidget extends StatelessWidget {
             side: BorderSide(color: ColorConstant.instance.black.withOpacity(0.1)),
           ),
           child: Padding(
-            padding: context.paddingBodyHorizontal,
+            padding: context.horizontalPaddingNormal,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(mentor ?? '', style: Theme.of(context).textTheme.bodyText1),
                 Padding(
-                  padding: context.paddingBodyVertical,
+                  padding: context.verticalPaddingNormal,
                   child: Text(
                     organization ?? '',
                     style: Theme.of(context).textTheme.bodySmall!.copyWith(color: ColorConstant.instance.blue),
@@ -88,7 +88,7 @@ class MentorInfosWidget extends StatelessWidget {
                   role ?? '',
                   style: Theme.of(context).textTheme.bodySmall!.copyWith(color: ColorConstant.instance.grey),
                 ),
-                CustomElevatedButton(onPressed: () {}, text: L10n.of(context)?.contact)
+                CustomElevatedButton(onPressed: () {}, text: L10n.of(context)?.contact ?? '')
               ],
             ),
           ),
