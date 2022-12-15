@@ -1,0 +1,61 @@
+import 'package:client/core/extensions/extension.dart';
+import 'package:flutter/material.dart';
+
+class EventsDateAndLocation extends StatelessWidget {
+  const EventsDateAndLocation({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Text(
+          maxLines: 4,
+          'İstanbul Teknolojide Lider Kadınlar Eğitim Programı ',
+          style: Theme.of(context)
+              .textTheme
+              .subtitle1
+              ?.copyWith(fontWeight: FontWeight.w400),
+        ),
+        Padding(
+          padding: context.paddingOnlyTop * 2,
+          child: Row(
+            children: [
+              Row(
+                children: [
+                  const Icon(
+                    Icons.location_on_sharp,
+                    color: Colors.grey,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(
+                        left: MediaQuery.of(context).size.width * 0.025),
+                    child: const Text('İstanbul'),
+                  )
+                ],
+              ),
+              Padding(
+                padding: EdgeInsets.only(
+                    left: MediaQuery.of(context).size.width * 0.07),
+                child: Row(
+                  children: [
+                    const Icon(
+                      Icons.calendar_month_outlined,
+                      color: Colors.grey,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(
+                          left: MediaQuery.of(context).size.width * 0.025),
+                      child: const Text('27.06.2022'),
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
+        )
+      ],
+    );
+  }
+}
