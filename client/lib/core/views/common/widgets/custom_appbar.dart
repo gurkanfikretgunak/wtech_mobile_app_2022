@@ -23,13 +23,18 @@ class CustomAppBar extends PreferredSize {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(titleText,
-                    style:
-                        Theme.of(context).textTheme.headline6?.copyWith(fontSize: 20, fontWeight: FontWeight.normal)),
-                Text("Gürkan Fikret Günak", style: Theme.of(context).textTheme.headline6?.copyWith(fontSize: 20))
+                    style: Theme.of(context).textTheme.headline6?.copyWith(
+                        fontSize: 20, fontWeight: FontWeight.normal)),
+                Text("Gürkan Fikret Günak",
+                    style: Theme.of(context)
+                        .textTheme
+                        .headline6
+                        ?.copyWith(fontSize: 20))
               ],
             ),
           ),
           actions: [
+
             isCheck!
                 ? Padding(
                     padding: context.paddingOnlyTop,
@@ -48,6 +53,28 @@ class CustomAppBar extends PreferredSize {
                         )),
                   )
                 : appButton ?? const SizedBox()
+
+            Padding(
+              padding: context.onlyTopPaddingNormal,
+              child: Container(
+                  height: 40,
+                  width: 85,
+                  decoration: BoxDecoration(
+                      color: ColorConstant.instance.yellow,
+                      borderRadius: BorderRadius.circular(50)),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Text("W-27",
+                          style: Theme.of(context)
+                              .textTheme
+                              .subtitle1
+                              ?.copyWith(fontWeight: FontWeight.bold)),
+                      const CircleAvatar(maxRadius: 18),
+                    ],
+                  )),
+            )
+
           ],
         ));
   }

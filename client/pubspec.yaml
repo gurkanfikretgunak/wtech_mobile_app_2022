@@ -34,6 +34,7 @@ dependencies:
 
   #Cache
   shared_preferences: 2.0.0-nullsafety
+  chewie: ^1.3.6
   
   # Service Locator 
   get_it: 7.2.0

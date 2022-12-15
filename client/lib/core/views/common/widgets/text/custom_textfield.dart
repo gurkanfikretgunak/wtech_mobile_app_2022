@@ -10,6 +10,7 @@ class CustomTextFormField extends StatefulWidget {
     this.hintText,
     this.labelText,
     this.isPassword = false,
+    this.controller,
   });
 
   final IconData? suffixIcon;
@@ -18,6 +19,7 @@ class CustomTextFormField extends StatefulWidget {
   final String? hintText;
   final String? labelText;
   final bool? isPassword;
+  final TextEditingController? controller;
 
   @override
   State<CustomTextFormField> createState() => _CustomTextFormFieldState();
@@ -29,6 +31,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
   Widget build(BuildContext context) {
     return TextFormField(
       obscureText: widget.isPassword! ? !obscureText : obscureText,
+      controller: widget.controller,
       decoration: InputDecoration(
         hintText: widget.hintText,
         labelText: widget.labelText,
@@ -49,7 +52,8 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
                     : const Icon(Icons.visibility_off))
             : null,
         prefixIcon: Icon(widget.prefixIcon),
-        contentPadding: EdgeInsets.symmetric(horizontal: context.dynamicWidth(0), vertical: 0),
+        contentPadding: EdgeInsets.symmetric(
+            horizontal: context.dynamicWidth(0), vertical: 0),
       ),
     );
   }
