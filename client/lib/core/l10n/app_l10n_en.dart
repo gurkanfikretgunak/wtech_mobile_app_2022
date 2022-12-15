@@ -23,7 +23,7 @@ class L10nEn extends L10n {
   String get categories => 'Categories';
 
   @override
-  String get mentor => 'mentor';
+  String get mentor => 'Mentor';
 
   @override
   String get news => 'News';

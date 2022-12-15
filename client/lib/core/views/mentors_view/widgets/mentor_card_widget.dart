@@ -88,7 +88,11 @@ class MentorInfosWidget extends StatelessWidget {
                   role ?? '',
                   style: Theme.of(context).textTheme.bodySmall!.copyWith(color: ColorConstant.instance.grey),
                 ),
-                CustomElevatedButton(onPressed: () {}, text: L10n.of(context)?.contact ?? '')
+                CustomElevatedButton(
+                  onPressed: () {},
+                  text: L10n.of(context)?.contact ?? '',
+                  textColor: ColorConstant.instance.white,
+                )
               ],
             ),
           ),

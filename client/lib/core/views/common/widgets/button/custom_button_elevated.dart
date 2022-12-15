@@ -1,3 +1,4 @@
+import 'package:client/core/extensions/extension.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../constants/color_constans.dart';
@@ -41,13 +42,15 @@ class CustomElevatedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: onPressed,
-      child: Wrap(
-        direction: Axis.horizontal,
-        alignment: WrapAlignment.center,
-        crossAxisAlignment: WrapCrossAlignment.center,
-        spacing: 10,
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
         children: [
-          iconWidget == null ? const SizedBox() : iconWidget!,
+          iconWidget != null
+              ? Padding(
+                  padding: context.onlyRightPaddingNormal,
+                  child: iconWidget!,
+                )
+              : const SizedBox.shrink(),
           CustomText(
             text,
             fontWeight: fontWeight ?? FontWeight.w600,

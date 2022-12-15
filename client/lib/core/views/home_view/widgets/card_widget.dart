@@ -1,5 +1,6 @@
+import 'package:client/core/constants/color_constans.dart';
 import 'package:client/core/extensions/extension.dart';
-import 'package:client/core/views/common/widgets/custom_button.dart';
+import 'package:client/core/views/common/widgets/button/button_libary.dart';
 import 'package:flutter/material.dart';
 
 import '../../../l10n/app_l10n.dart';
@@ -12,7 +13,7 @@ class CardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: context.paddingBodyHorizontal,
+      padding: context.horizontalPaddingLow,
       child: Card(
         elevation: 5,
         shape: const RoundedRectangleBorder(
@@ -22,18 +23,19 @@ class CardWidget extends StatelessWidget {
           children: [
             Expanded(
                 flex: 3,
-                child: Container(
-                    decoration: const BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(12))),
-                    child: Image.asset(HomeTextContants.imagePath,
-                        fit: BoxFit.fill, width: MediaQuery.of(context).size.width))),
+                child: ClipRRect(
+                  borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
+                  child: Image.asset(HomeTextContants.imagePath,
+                      fit: BoxFit.fill, width: MediaQuery.of(context).size.width),
+                )),
             Expanded(
               flex: 2,
               child: Row(
                 children: [
                   SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.55,
+                      width: context.width * 0.53,
                       child: Padding(
-                          padding: context.paddingBodyHorizontal,
+                          padding: context.horizontalPaddingLow,
                           child: Column(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
                             const Text(HomeTextContants.baslikText, maxLines: 2),
                             isCheck!
@@ -43,7 +45,7 @@ class CardWidget extends StatelessWidget {
                                       Text(HomeTextContants.cityText)
                                     ]),
                                     Padding(
-                                        padding: context.paddingBodyHorizontal,
+                                        padding: context.horizontalPaddingLow,
                                         child: Row(children: const [
                                           Icon(Icons.event_outlined, size: 15),
                                           Text(HomeTextContants.dateText)
@@ -53,7 +55,8 @@ class CardWidget extends StatelessWidget {
                           ]))),
                   SizedBox(
                       height: MediaQuery.of(context).size.height * 0.04,
-                      child: CustomElevatedButton(onPressed: () {}, text: L10n.of(context)!.view)),
+                      child: CustomElevatedButton(
+                          onPressed: () {}, text: L10n.of(context)!.view, textColor: ColorConstant.instance.white)),
                 ],
               ),
             ),
