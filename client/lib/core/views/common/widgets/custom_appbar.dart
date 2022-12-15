@@ -4,16 +4,14 @@ import 'package:flutter/material.dart';
 import '../../../extensions/extension.dart';
 
 class CustomAppBar extends PreferredSize {
-  const CustomAppBar({
-    super.key,
-    required super.child,
-    required super.preferredSize,
-  });
+  const CustomAppBar({super.key, required super.child, required super.preferredSize});
 
   static PreferredSize customAppBar({
     required BuildContext context,
     required String titleText,
     required bool isBackIcon,
+    bool? isCheck,
+    TextButton? appButton,
   }) {
     return PreferredSize(
         preferredSize: const Size.fromHeight(70.0),
@@ -36,6 +34,26 @@ class CustomAppBar extends PreferredSize {
             ),
           ),
           actions: [
+
+            isCheck!
+                ? Padding(
+                    padding: context.paddingOnlyTop,
+                    child: Container(
+                        height: 40,
+                        width: 85,
+                        decoration: BoxDecoration(
+                            color: ColorConstant.instance.yellow, borderRadius: BorderRadius.circular(50)),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Text("W-27",
+                                style: Theme.of(context).textTheme.subtitle1?.copyWith(fontWeight: FontWeight.bold)),
+                            const CircleAvatar(maxRadius: 18),
+                          ],
+                        )),
+                  )
+                : appButton ?? const SizedBox()
+
             Padding(
               padding: context.onlyTopPaddingNormal,
               child: Container(
@@ -56,6 +74,7 @@ class CustomAppBar extends PreferredSize {
                     ],
                   )),
             )
+
           ],
         ));
   }

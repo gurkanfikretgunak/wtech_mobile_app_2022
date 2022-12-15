@@ -40,7 +40,7 @@ class CustomElevatedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: onPressed ?? () {},
+      onPressed: onPressed,
       child: Wrap(
         direction: Axis.horizontal,
         alignment: WrapAlignment.center,
