@@ -1,4 +1,5 @@
 import 'package:client/core/constants/color_constans.dart';
+import 'package:client/core/extensions/extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/common/widgets/custom_date_text.dart';
 import 'package:client/core/views/common/widgets/custom_views_count.dart';
@@ -40,11 +41,14 @@ class _CardItemWidgetState extends State<CardItemWidget> {
 
   @override
   Widget build(BuildContext context) {
-    var column = [
+    List<Widget> cardBody = [
       CustomDateText(date: widget.formattedDate),
       Text(
         widget.videoTitle,
-        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+        style: Theme.of(context)
+            .textTheme
+            .titleMedium!
+            .copyWith(fontWeight: FontWeight.bold),
       ),
       Align(
         alignment: Alignment.centerRight,
@@ -53,7 +57,7 @@ class _CardItemWidgetState extends State<CardItemWidget> {
       ),
     ];
 
-    var clipRRect = InkWell(
+    InkWell cardVideo = InkWell(
       onTap: () {
         showDialog(
             context: context,
@@ -66,21 +70,18 @@ class _CardItemWidgetState extends State<CardItemWidget> {
         ClipRRect(
           borderRadius: widget.isHorizontal
               ? const BorderRadius.only(
-                  topLeft: Radius.circular(10),
-                  bottomLeft: Radius.circular(10),
+                  topLeft: Radius.circular(4),
+                  bottomLeft: Radius.circular(4),
                 )
               : const BorderRadius.only(
-                  topLeft: Radius.circular(10),
-                  topRight: Radius.circular(10),
+                  topLeft: Radius.circular(4),
+                  topRight: Radius.circular(4),
                 ),
-          child: SizedBox(
-            height: MediaQuery.of(context).size.height / 5,
-            child: VideoPlayer(_controller),
-          ),
+          child: VideoPlayer(_controller),
         ),
         Container(
-          height: 50,
-          width: 50,
+          height: MediaQuery.of(context).size.height / 18.5,
+          width: MediaQuery.of(context).size.height / 18.5,
           decoration: BoxDecoration(
             color: ColorConstant.instance.transparent,
             borderRadius: const BorderRadius.all(Radius.circular(50.0)),
@@ -99,23 +100,18 @@ class _CardItemWidgetState extends State<CardItemWidget> {
     );
 
     return Card(
-      shape: RoundedRectangleBorder(
-        side: BorderSide(color: ColorConstant.instance.shinyWhite, width: 1),
-        borderRadius: BorderRadius.circular(10),
-      ),
       child: widget.isHorizontal
           ? Row(
               children: [
-                Expanded(flex: 5, child: clipRRect),
+                Expanded(flex: 5, child: cardVideo),
                 Expanded(
                     flex: 4,
-                    child: Container(
-                      padding: const EdgeInsets.all(10),
-                      height: MediaQuery.of(context).size.height / 5,
+                    child: Padding(
+                      padding: context.paddingLow,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: column,
+                        children: cardBody,
                       ),
                     ))
               ],
@@ -123,13 +119,15 @@ class _CardItemWidgetState extends State<CardItemWidget> {
           : Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                clipRRect,
-                Padding(
-                  padding: const EdgeInsets.all(10),
-                  child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: column),
+                Expanded(flex: 2, child: cardVideo),
+                Expanded(
+                  child: Padding(
+                    padding: context.paddingLow,
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: cardBody),
+                  ),
                 )
               ],
             ),

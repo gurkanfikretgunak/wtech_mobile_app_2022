@@ -1,5 +1,6 @@
 import 'package:chewie/chewie.dart';
 import 'package:client/core/constants/color_constans.dart';
+import 'package:client/core/extensions/extension.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
@@ -36,7 +37,7 @@ class _VideoItemWidgetState extends State<VideoItemWidget> {
   @override
   Widget build(BuildContext context) {
     return Dialog(
-      insetPadding: const EdgeInsets.symmetric(horizontal: 10),
+      insetPadding: context.horizontalPaddingLow,
       child: SizedBox(
         width: double.infinity,
         height: MediaQuery.of(context).size.height / 3.1,
@@ -52,7 +53,7 @@ class _VideoItemWidgetState extends State<VideoItemWidget> {
               ),
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.all(10.0),
+                  padding: context.paddingLow,
                   child: Chewie(
                     controller: _chewieController,
                   ),
