@@ -22,7 +22,7 @@ class CategoriesWidget extends StatelessWidget {
                 child: Icon(IconConstant.iconList[index]),
               ),
               Text(
-                IconConstant.iconDef[index],
+                IconConstant.iconDef(context)[index],
               )
             ],
           ),

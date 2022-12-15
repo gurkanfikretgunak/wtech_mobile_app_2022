@@ -1,3 +1,4 @@
+import 'package:client/core/l10n/app_l10n.dart';
 import 'package:flutter/material.dart';
 
 class IconConstant {
@@ -8,7 +9,15 @@ class IconConstant {
     Icons.work_outline_sharp,
     Icons.wrap_text_outlined
   ];
-  static List<String> iconDef = ["Mentor", "Haberler", "Videolar", "İş ve Staj", "Blog"];
+  static List<String> iconDef(context) {
+    return [
+      L10n.of(context)!.mentor,
+      L10n.of(context)!.news,
+      L10n.of(context)!.videos,
+      L10n.of(context)!.job,
+      L10n.of(context)!.blog,
+    ];
+  }
 
   static List<IconData> drawerIcon = [
     Icons.info_outline,

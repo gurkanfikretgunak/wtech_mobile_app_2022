@@ -132,7 +132,7 @@ abstract class L10n {
   /// No description provided for @mentor.
   ///
   /// In en, this message translates to:
-  /// **'mentor'**
+  /// **'Mentor'**
   String get mentor;
 
   /// No description provided for @news.

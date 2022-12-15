@@ -13,7 +13,7 @@ class MentorsWidgets {
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         crossAxisSpacing: 20,
-        childAspectRatio: 0.8,
+        childAspectRatio: 0.7,
       ),
       itemBuilder: (context, index) {
         return MentorCardWidget(
