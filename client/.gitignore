@@ -9,6 +9,11 @@
 .buildlog/
 .history
 .svn/
+.idea
+migrate_working_dir/
+/lib/core/domain/models/test/
+/lib/core/data/network/services/test/
+
 
 # IntelliJ related
 *.iml
@@ -120,3 +125,7 @@ app.*.symbols
 *.g.dart
 *.config.dart
 *.freezed.dart
+/lib/core/data/network/services/todos/todo_api.g.dart
+/lib/core/data/network/services/users/user_api.g.dart
+/lib/core/domain/models/todos/todo_model.g.dart
+/lib/core/domain/models/user/user_model.g.dart
