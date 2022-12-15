@@ -8,9 +8,11 @@ class CustomViewsCount extends StatelessWidget {
   const CustomViewsCount({
     super.key,
     required this.viewsCount,
+    this.hasViewsText = false,
   });
 
   final String viewsCount;
+  final bool hasViewsText;
   @override
   Widget build(BuildContext context) {
     return Wrap(
@@ -29,11 +31,13 @@ class CustomViewsCount extends StatelessWidget {
           color: ColorConstant.instance.black.withOpacity(0.5),
           fontWeight: FontWeight.w600,
         ),
-        CustomText(
-          L10n.of(context)!.views,
-          color: ColorConstant.instance.black.withOpacity(0.5),
-          fontWeight: FontWeight.w600,
-        )
+        hasViewsText
+            ? CustomText(
+                L10n.of(context)!.views,
+                color: ColorConstant.instance.black.withOpacity(0.5),
+                fontWeight: FontWeight.w600,
+              )
+            : const SizedBox.shrink(),
       ],
     );
   }

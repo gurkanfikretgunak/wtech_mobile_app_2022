@@ -1,11 +1,15 @@
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/themes/custom_theme.dart';
+
 import 'package:client/core/views/sample_view/bloc/sample_bloc.dart';
 import 'package:client/core/views/sample_view/sample_view.dart';
 import 'package:client/core/views/signin_view/signin_account_view.dart';
 import 'package:client/core/views/signin_view/signin_email_view.dart';
+
+import 'package:client/core/views/home_view/home.view.dart';
+
+
 // ignore: depend_on_referenced_packages
-import 'package:provider/provider.dart';
 import 'package:flavor/flavor.dart';
 import 'package:flutter/material.dart';
 
@@ -20,11 +24,7 @@ class App extends StatelessWidget {
         localizationsDelegates: L10n.localizationsDelegates,
         supportedLocales: L10n.supportedLocales,
         // home: FlavorView(),
-        home: Provider<MainBloc>(
-          create: (_) => MainBloc(),
-          dispose: (context, bloc) => bloc.dispose(),
-          child: const MainScreen(),
-        ),
+        home: HomeView(),
         title: "Flutter Boilerplate : ${Flavor.I.getString(Keys.appTitle)}",
         theme: CustomTheme.customThemeData(context),
         debugShowCheckedModeBanner: false,
