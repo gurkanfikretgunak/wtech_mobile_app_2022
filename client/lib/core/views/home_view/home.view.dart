@@ -1,7 +1,8 @@
+import 'package:client/core/extensions/extension.dart';
 import 'package:client/core/views/home_view/widgets/categories_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
-import '../../extensions/extension.dart';
+
 import '../../l10n/app_l10n.dart';
 import '../common/widgets/custom_appbar.dart';
 import '../common/widgets/custom_navbar.dart';
@@ -19,18 +20,19 @@ class HomeView extends StatelessWidget with HomeViewWidget {
         stream: _vm.loading,
         builder: (context, snapshot) {
           return Scaffold(
-              appBar: CustomAppBar.customAppBar(
-                  context: context, titleText: L10n.of(context)!.hello, isBackIcon: false, isCheck: true),
+              // appBar: CustomAppBar.customAppBar(
+              //     context: context, titleText: L10n.of(context)!.hello, isBackIcon: true, isCheck: true),
+              appBar: CustomAppbar(titleText: L10n.of(context)!.hello, isCheck: true),
               drawer: drawerWidget(context),
               body: Padding(
-                padding: context.paddingAll,
+                padding: context.paddingNormal,
                 child: Wrap(
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: context.paddingTopAndBottom,
+                          padding: context.verticalPaddingNormal,
                           child: SizedBox(
                               height: MediaQuery.of(context).size.height * 0.28,
                               width: MediaQuery.of(context).size.width,
@@ -43,7 +45,7 @@ class HomeView extends StatelessWidget with HomeViewWidget {
                             child: const CategoriesWidget()),
                         Text(L10n.of(context)!.currentTraining, style: Theme.of(context).textTheme.headline6),
                         Padding(
-                          padding: context.paddingOnlyTop,
+                          padding: context.onlyTopPaddingNormal,
                           child: SizedBox(
                               height: MediaQuery.of(context).size.height * 0.2, child: cardWidget(context, false)),
                         ),
