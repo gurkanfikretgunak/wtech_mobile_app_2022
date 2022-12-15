@@ -1,6 +1,13 @@
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/themes/custom_theme.dart';
+
+import 'package:client/core/views/sample_view/bloc/sample_bloc.dart';
+import 'package:client/core/views/sample_view/sample_view.dart';
+import 'package:client/core/views/signin_view/signin_account_view.dart';
+import 'package:client/core/views/signin_view/signin_email_view.dart';
+
 import 'package:client/core/views/home_view/home.view.dart';
+
 
 // ignore: depend_on_referenced_packages
 import 'package:flavor/flavor.dart';
