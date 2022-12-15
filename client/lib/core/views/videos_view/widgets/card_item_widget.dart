@@ -1,6 +1,7 @@
 import 'package:client/core/constants/color_constans.dart';
 import 'package:client/core/l10n/app_l10n.dart';
-import 'package:client/core/views/videos_view/widgets/card_icon_text_widget.dart';
+import 'package:client/core/views/common/widgets/custom_date_text.dart';
+import 'package:client/core/views/common/widgets/custom_views_count.dart';
 import 'package:client/core/views/videos_view/widgets/video_item_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
@@ -40,17 +41,15 @@ class _CardItemWidgetState extends State<CardItemWidget> {
   @override
   Widget build(BuildContext context) {
     var column = [
-      CardIconTextWidget(
-          icon: Icons.calendar_month, text: widget.formattedDate),
+      CustomDateText(date: widget.formattedDate),
       Text(
         widget.videoTitle,
         style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
       ),
       Align(
         alignment: Alignment.centerRight,
-        child: CardIconTextWidget(
-            icon: Icons.visibility,
-            text: '${widget.viewsNumber} ${L10n.of(context)!.views}'),
+        child: CustomViewsCount(
+            viewsCount: "${widget.viewsNumber} ${L10n.of(context)!.views}"),
       ),
     ];
 
@@ -129,6 +128,7 @@ class _CardItemWidgetState extends State<CardItemWidget> {
                   padding: const EdgeInsets.all(10),
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: column),
                 )
               ],

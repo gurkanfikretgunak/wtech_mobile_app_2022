@@ -1,5 +1,6 @@
 import 'package:chewie/chewie.dart';
 import 'package:client/core/l10n/app_l10n.dart';
+import 'package:client/core/views/common/widgets/text/custom_text.dart';
 import 'package:client/core/views/videos_view/widgets/card_item_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -21,10 +22,11 @@ class VideosWidgets {
               isHorizontal: false,
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 12.0),
-              child: Text(
+              padding: const EdgeInsets.all(12.0),
+              child: CustomText(
                 L10n.of(context)!.lastPosts,
-                style: Theme.of(context).textTheme.headline6,
+                fontSize: 20,
+                fontWeight: FontWeight.w600,
               ),
             ),
             ListView.builder(
