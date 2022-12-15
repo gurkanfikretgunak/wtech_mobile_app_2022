@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 extension ContextExtension on BuildContext {
+
+  double dynamicWidth(double val) => MediaQuery.of(this).size.width * val;
+  double dynamicHeight(double val) => MediaQuery.of(this).size.height * val;
+=======
   MediaQueryData get mediaQuery => MediaQuery.of(this);
 
   double get height => mediaQuery.size.height;
@@ -11,11 +15,27 @@ extension ContextExtension on BuildContext {
   double get mediumValue => height * 0.04;
   double get highValue => height * 0.1;
 
+
   double dynamicWidth(double val) => width * val;
   double dynamicHeight(double val) => height * val;
 }
 
 extension PaddingExtension on BuildContext {
+
+  EdgeInsetsGeometry get appPaddingAll => EdgeInsets.all(dynamicWidth(0.02));
+  EdgeInsetsGeometry get paddingAll => EdgeInsets.all(dynamicWidth(0.04));
+
+  EdgeInsetsGeometry get paddingBodyHorizontal => EdgeInsets.symmetric(horizontal: dynamicWidth(0.02));
+  EdgeInsetsGeometry get paddingBodyVertical => EdgeInsets.symmetric(vertical: dynamicWidth(0.02));
+
+  EdgeInsetsGeometry get paddingOnlyTop => EdgeInsets.only(
+        top: dynamicWidth(0.02),
+      );
+  EdgeInsetsGeometry get paddingTopAndBottom => EdgeInsets.only(
+        top: dynamicWidth(0.02),
+        bottom: dynamicWidth(0.03),
+      );
+
   EdgeInsets get paddingLow => EdgeInsets.all(lowValue);
   EdgeInsets get paddingNormal => EdgeInsets.all(normalValue);
   EdgeInsets get paddingMedium => EdgeInsets.all(mediumValue);
@@ -69,4 +89,5 @@ extension EmptyWidget on BuildContext {
   Widget get emptySizedHeightBoxLow => SizedBox(height: lowValue);
   Widget get emptySizedHeightBoxNormal => SizedBox(height: normalValue);
   Widget get emptySizedHeightBoxHigh => SizedBox(width: highValue);
+
 }

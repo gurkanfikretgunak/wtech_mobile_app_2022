@@ -7,6 +7,14 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:client/core/data/network/abstractions/todos_service.dart'
     as _i13;
+
+import 'package:client/core/data/network/services/todos/todo_api.dart' as _i12;
+import 'package:client/core/data/network/services/users/user_api.dart' as _i14;
+import 'package:client/core/di/config/app_config.dart' as _i9;
+import 'package:client/core/di/config/raw_helper.dart' as _i4;
+import 'package:client/core/di/config/register_module.dart' as _i15;
+import 'package:client/core/views/home_view/home.viewmodel.dart' as _i3;
+
 import 'package:client/core/data/network/abstractions/users_service.dart'
     as _i15;
 import 'package:client/core/data/network/services/todos/todo_api.dart' as _i14;
@@ -18,6 +26,7 @@ import 'package:client/core/views/mentors_view/mentors..viewmodel.dart' as _i3;
 import 'package:client/core/views/news_detail_view/news_detail.viewmodel.dart'
     as _i4;
 import 'package:client/core/views/news_view/news.viewmodel.dart' as _i5;
+
 import 'package:client/core/views/user_profile_view/user_profile.viewmodel.dart'
     as _i9;
 import 'package:client/core/views/videos_view/videos.viewmodel.dart' as _i10;
@@ -43,10 +52,15 @@ Future<_i1.GetIt> $initGetIt(
     environmentFilter,
   );
   final registerModule = _$RegisterModule();
+
+  gh.factory<_i3.HomeViewModel>(() => _i3.HomeViewModel());
+  await gh.singletonAsync<_i4.RawConfig>(
+=======
   gh.factory<_i3.MentorsViewModel>(() => _i3.MentorsViewModel());
   gh.factory<_i4.NewsDetailViewModel>(() => _i4.NewsDetailViewModel());
   gh.factory<_i5.NewsViewModel>(() => _i5.NewsViewModel());
   await gh.singletonAsync<_i6.RawConfig>(
+
     () => registerModule.config(),
     preResolve: true,
   );
