@@ -1,8 +1,6 @@
 
 import 'package:client/core/constants/color_constans.dart';
 import 'package:client/core/l10n/app_l10n.dart';
-import 'package:client/core/views/common/widgets/custom_button.dart';
-import 'package:client/core/views/common/widgets/custom_textfield.dart';
 import 'package:client/core/views/forgot_password_view/widgets/forgotTextField.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';

@@ -1,8 +1,9 @@
 import 'package:client/core/constants/color_constans.dart';
 import 'package:client/core/extensions/extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
-import 'package:client/core/views/common/widgets/custom_textfield.dart';
 import 'package:flutter/material.dart';
+
+import '../../common/widgets/text/custom_textfield.dart';
 
 class SearchBarWidget extends StatelessWidget {
   const SearchBarWidget({

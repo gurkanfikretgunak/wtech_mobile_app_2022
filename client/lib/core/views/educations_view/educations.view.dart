@@ -16,7 +16,7 @@ class EducationView extends StatelessWidget {
 
     return SafeArea(
       child: Scaffold(
-        appBar: CustomAppBar.customAppBar(context: context, titleText: L10n.of(context)!.hello, isBackIcon: false),
+        appBar: CustomAppbar(titleText: L10n.of(context)!.hello, isCheck: false),
         drawer :const Drawer(child: Text("data")),
         extendBody: true,
         extendBodyBehindAppBar: false,
