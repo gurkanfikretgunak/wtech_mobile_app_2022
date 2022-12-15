@@ -1,22 +1,19 @@
 import 'package:client/core/constants/color_constans.dart';
 import 'package:client/core/extensions/extension.dart';
-import 'package:client/core/views/common/widgets/text/custom_text.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class EducationsDetailWidgets {
   Widget educationContent(BuildContext context, double height, double width) {
     return Padding(
-      padding: PaddingExtension(context).paddingAll,
-      child: Container(
+      padding: PaddingExtension(context).paddingNormal,
+      child: SizedBox(
         width: width,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Eğitim İçeriği",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
+            const Text("Eğitim İçeriği", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
             Padding(
-              padding: PaddingExtension(context).paddingAll,
+              padding: PaddingExtension(context).paddingNormal,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -26,7 +23,7 @@ class EducationsDetailWidgets {
               ),
             ),
             Padding(
-              padding: PaddingExtension(context).paddingAll,
+              padding: PaddingExtension(context).paddingNormal,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -45,7 +42,7 @@ class EducationsDetailWidgets {
     return Row(
       children: [
         Icon(icon1, color: ColorConstant.instance.black),
-        Text(text1, style: TextStyle(fontWeight: FontWeight.bold)),
+        Text(text1, style: const TextStyle(fontWeight: FontWeight.bold)),
         Text(text2, style: TextStyle(color: ColorConstant.instance.grey)),
       ],
     );

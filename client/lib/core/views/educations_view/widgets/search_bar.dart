@@ -17,11 +17,11 @@ class SearchBarWidget extends StatelessWidget {
       width: context.dynamicWidth(1),
       decoration: BoxDecoration(
         color: ColorConstant.instance.white,
-        borderRadius: BorderRadius.only(bottomLeft: Radius.circular(16), bottomRight: Radius.circular(16)),
+        borderRadius: const BorderRadius.only(bottomLeft: Radius.circular(16), bottomRight: Radius.circular(16)),
         boxShadow: [
           BoxShadow(
             color: ColorConstant.instance.black,
-            offset: Offset(0.0, 0.0),
+            offset: const Offset(0.0, 0.0),
             blurRadius: 1.0,
           ),
         ],
@@ -31,11 +31,11 @@ class SearchBarWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
-            padding: PaddingExtension(context).paddingAll,
+            padding: PaddingExtension(context).paddingNormal,
             child: SizedBox(
               child: Container(
                 height: context.dynamicHeight(0.09),
-                width: context.dynamicWidth(0.8),              
+                width: context.dynamicWidth(0.8),
                 decoration: BoxDecoration(
                   //color: ColorConstant.instance.grey,
                   borderRadius: BorderRadius.circular(10),

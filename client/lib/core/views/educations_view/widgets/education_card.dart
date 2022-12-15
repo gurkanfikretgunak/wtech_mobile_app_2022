@@ -4,7 +4,6 @@ import 'package:client/core/l10n/app_l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
-
 class CardWidget extends StatelessWidget {
   const CardWidget({
     Key? key,
@@ -13,29 +12,31 @@ class CardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: PaddingExtension(context).paddingBodyHorizontal,
+      padding: PaddingExtension(context).horizontalPaddingNormal,
       child: Container(
         child: Card(
           clipBehavior: Clip.antiAliasWithSaveLayer,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
           child: Container(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Image.asset("images/education_1.png"),
                 Padding(
-                  padding: PaddingExtension(context).paddingAll,
-                  child: Text("Flutter & Dart Bootcamp 22'",
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                  padding: PaddingExtension(context).paddingNormal,
+                  child: const Text("Flutter & Dart Bootcamp 22'",
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
                 ),
                 Padding(
-                  padding: PaddingExtension(context).paddingAll,
-                  child: Text(
+                  padding: PaddingExtension(context).paddingNormal,
+                  child: const Text(
                       "Sizleri front-end geliştirme dünyasında sektörün yeni lideri Flutter Geliştiricisi...",
                       style: TextStyle(color: Colors.grey, fontSize: 12)),
                 ),
                 Padding(
-                  padding: PaddingExtension(context).paddingAll,
+                  padding: PaddingExtension(context).paddingNormal,
                   child: Row(
                     children: [
                       RatingBar.builder(
@@ -53,30 +54,24 @@ class CardWidget extends StatelessWidget {
                           print(rating);
                         },
                       ),
-                      Text("(0)"),
+                      const Text("(0)"),
                     ],
                   ),
                 ),
                 Padding(
-                  padding: PaddingExtension(context).paddingAll,
+                  padding: PaddingExtension(context).paddingNormal,
                   child: Row(
                     children: [
                       ElevatedButton(
                         child: Text(L10n.of(context)!.educationButton),
                         onPressed: () {},
                       ),
-                      IconButton(
-                          onPressed: () async {
-                            
-                          }, icon: Icon(Icons.favorite_border)),
+                      IconButton(onPressed: () async {}, icon: const Icon(Icons.favorite_border)),
                     ],
                   ),
                 ),
               ],
             ),
-          ),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(16),
           ),
         ),
       ),

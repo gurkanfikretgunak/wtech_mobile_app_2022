@@ -2,7 +2,7 @@ import 'package:client/core/constants/color_constans.dart';
 import 'package:client/core/extensions/extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/common/widgets/button/button_libary.dart';
-import 'package:client/core/views/common/widgets/text/text_libary.dart';
+import 'package:client/core/views/common/widgets/text/text_library.dart';
 import 'package:flutter/material.dart';
 
 class MentorsDetailBottomSheetWidget extends StatelessWidget {
