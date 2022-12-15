@@ -65,3 +65,5 @@ app.*.map.json
 #Readme file
 README.md
 main.dart
+*.config.dart
+*.g.dart
