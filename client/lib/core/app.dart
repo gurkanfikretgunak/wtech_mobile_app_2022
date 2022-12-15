@@ -2,10 +2,10 @@ import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/themes/custom_theme.dart';
 import 'package:client/core/views/sample_view/bloc/sample_bloc.dart';
 import 'package:client/core/views/sample_view/sample_view.dart';
-// ignore: depend_on_referenced_packages
-import 'package:provider/provider.dart';
 import 'package:flavor/flavor.dart';
 import 'package:flutter/material.dart';
+// ignore: depend_on_referenced_packages
+import 'package:provider/provider.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
