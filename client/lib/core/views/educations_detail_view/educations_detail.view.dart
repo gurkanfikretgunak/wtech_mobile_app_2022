@@ -28,7 +28,7 @@ class EducationsDetailView extends StatelessWidget {
       builder: (context, snapshot) {
         return SafeArea(
         child: Scaffold(
-          appBar: CustomAppBar.customAppBar(context: context, titleText: L10n.of(context)!.hello, isBackIcon: true),
+          appBar: CustomAppbar( titleText: L10n.of(context)!.hello, isCheck: true),
           body: SingleChildScrollView(
             child: Padding(
               padding: PaddingExtension(context).paddingAll,
@@ -36,7 +36,7 @@ class EducationsDetailView extends StatelessWidget {
                 children: [
                   ClipRRect(borderRadius: BorderRadius.circular(13), child: Image.asset("images/education_1.png")),
                   EducationsDetailWidgets().educationContent(context, screenHeight, screenWidth),
-                  CustomDivider(),
+                  CustomDivider(endIndent: 1,),
                   EducationDescription(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
