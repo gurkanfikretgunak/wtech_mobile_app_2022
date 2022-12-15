@@ -23,6 +23,7 @@ dependencies:
   loading_overlay: ^0.3.0
   logger: ^1.1.0
   shared_preferences: 2.0.0-nullsafety
+  flutter_rating_bar: ^4.0.1
   
 dev_dependencies:
   flutter_test:
