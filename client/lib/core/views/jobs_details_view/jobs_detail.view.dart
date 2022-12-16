@@ -1,6 +1,5 @@
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/common/widgets/custom_appbar.dart';
-import 'package:client/core/views/common/widgets/custom_navbar.dart';
 import 'package:client/core/views/jobs_details_view/jobs_detail.viewmodel.dart';
 import 'package:client/core/views/jobs_details_view/jobs_detail.widgets.dart';
 import 'package:flutter/material.dart';
@@ -12,12 +11,10 @@ class JobsDetailView extends StatelessWidget with JobsDetailWidgets {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar.customAppBar(
-          context: context,
-          titleText: L10n.of(context)!.jobAndinternship,
-          isBackIcon: true),
-      body: body(context),
-      bottomNavigationBar: const CustomBottomNavBar(),
+      appBar: CustomAppbar(
+        titleText: L10n.of(context)!.jobAndinternship,
+      ),
+      body: SingleChildScrollView(child: body(context)),
     );
   }
 }

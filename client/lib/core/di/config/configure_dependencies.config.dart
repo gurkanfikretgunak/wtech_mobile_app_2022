@@ -6,29 +6,32 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:client/core/data/network/abstractions/todos_service.dart'
-    as _i15;
-import 'package:client/core/data/network/abstractions/users_service.dart'
     as _i17;
-import 'package:client/core/data/network/services/todos/todo_api.dart' as _i16;
-import 'package:client/core/data/network/services/users/user_api.dart' as _i18;
-import 'package:client/core/di/config/app_config.dart' as _i13;
-import 'package:client/core/di/config/raw_helper.dart' as _i8;
-import 'package:client/core/di/config/register_module.dart' as _i19;
+import 'package:client/core/data/network/abstractions/users_service.dart'
+    as _i19;
+import 'package:client/core/data/network/services/todos/todo_api.dart' as _i18;
+import 'package:client/core/data/network/services/users/user_api.dart' as _i20;
+import 'package:client/core/di/config/app_config.dart' as _i15;
+import 'package:client/core/di/config/raw_helper.dart' as _i10;
+import 'package:client/core/di/config/register_module.dart' as _i21;
 import 'package:client/core/views/home_view/home.viewmodel.dart' as _i3;
-import 'package:client/core/views/mentors_details_view/mentors_details.viewmodel.dart'
+import 'package:client/core/views/jobs_details_view/jobs_detail.viewmodel.dart'
     as _i4;
-import 'package:client/core/views/mentors_view/mentors.viewmodel.dart' as _i5;
-import 'package:client/core/views/news_detail_view/news_detail.viewmodel.dart'
+import 'package:client/core/views/jobs_view/jobs.viewmodel.dart' as _i5;
+import 'package:client/core/views/mentors_details_view/mentors_details.viewmodel.dart'
     as _i6;
-import 'package:client/core/views/news_view/news.viewmodel.dart' as _i7;
+import 'package:client/core/views/mentors_view/mentors.viewmodel.dart' as _i7;
+import 'package:client/core/views/news_detail_view/news_detail.viewmodel.dart'
+    as _i8;
+import 'package:client/core/views/news_view/news.viewmodel.dart' as _i9;
 import 'package:client/core/views/user_profile_view/user_profile.viewmodel.dart'
-    as _i11;
-import 'package:client/core/views/videos_view/videos.viewmodel.dart' as _i12;
+    as _i13;
+import 'package:client/core/views/videos_view/videos.viewmodel.dart' as _i14;
 import 'package:client/core/views/view_model_sample/sample.viewmodel.dart'
-    as _i9;
+    as _i11;
 import 'package:client/core/views/view_model_sample_two/sample_two.viewmodel.dart'
-    as _i10;
-import 'package:dio/dio.dart' as _i14;
+    as _i12;
+import 'package:dio/dio.dart' as _i16;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart'
     as _i2; // ignore_for_file: unnecessary_lambdas
@@ -47,29 +50,31 @@ Future<_i1.GetIt> $initGetIt(
   );
   final registerModule = _$RegisterModule();
   gh.factory<_i3.HomeViewModel>(() => _i3.HomeViewModel());
-  gh.factory<_i4.MentorsDetailsViewModel>(() => _i4.MentorsDetailsViewModel());
-  gh.factory<_i5.MentorsViewModel>(() => _i5.MentorsViewModel());
-  gh.factory<_i6.NewsDetailViewModel>(() => _i6.NewsDetailViewModel());
-  gh.factory<_i7.NewsViewModel>(() => _i7.NewsViewModel());
-  await gh.singletonAsync<_i8.RawConfig>(
+  gh.factory<_i4.JobsDetailViewModel>(() => _i4.JobsDetailViewModel());
+  gh.factory<_i5.JobsViewModel>(() => _i5.JobsViewModel());
+  gh.factory<_i6.MentorsDetailsViewModel>(() => _i6.MentorsDetailsViewModel());
+  gh.factory<_i7.MentorsViewModel>(() => _i7.MentorsViewModel());
+  gh.factory<_i8.NewsDetailViewModel>(() => _i8.NewsDetailViewModel());
+  gh.factory<_i9.NewsViewModel>(() => _i9.NewsViewModel());
+  await gh.singletonAsync<_i10.RawConfig>(
     () => registerModule.config(),
     preResolve: true,
   );
-  gh.factory<_i9.SampleViewModel>(() => _i9.SampleViewModel());
-  gh.factory<_i10.SampleViewModelTwo>(() => _i10.SampleViewModelTwo());
-  gh.factory<_i11.UserProfileViewModel>(() => _i11.UserProfileViewModel());
-  gh.factory<_i12.VideosViewModel>(() => _i12.VideosViewModel());
-  gh.singleton<_i13.AppConfig>(_i13.AppConfig(get<_i8.RawConfig>()));
-  gh.singleton<_i14.Dio>(registerModule.dio(get<_i13.AppConfig>()));
-  gh.factory<_i15.TodosService>(() => _i16.RestTodoService(
-        get<_i14.Dio>(),
-        get<_i13.AppConfig>(),
+  gh.factory<_i11.SampleViewModel>(() => _i11.SampleViewModel());
+  gh.factory<_i12.SampleViewModelTwo>(() => _i12.SampleViewModelTwo());
+  gh.factory<_i13.UserProfileViewModel>(() => _i13.UserProfileViewModel());
+  gh.factory<_i14.VideosViewModel>(() => _i14.VideosViewModel());
+  gh.singleton<_i15.AppConfig>(_i15.AppConfig(get<_i10.RawConfig>()));
+  gh.singleton<_i16.Dio>(registerModule.dio(get<_i15.AppConfig>()));
+  gh.factory<_i17.TodosService>(() => _i18.RestTodoService(
+        get<_i16.Dio>(),
+        get<_i15.AppConfig>(),
       ));
-  gh.factory<_i17.UserService>(() => _i18.RestUserService(
-        get<_i14.Dio>(),
-        get<_i13.AppConfig>(),
+  gh.factory<_i19.UserService>(() => _i20.RestUserService(
+        get<_i16.Dio>(),
+        get<_i15.AppConfig>(),
       ));
   return get;
 }
 
-class _$RegisterModule extends _i19.RegisterModule {}
+class _$RegisterModule extends _i21.RegisterModule {}

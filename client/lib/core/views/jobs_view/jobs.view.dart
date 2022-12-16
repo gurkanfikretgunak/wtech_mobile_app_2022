@@ -12,10 +12,9 @@ class JobsView extends StatelessWidget with JobsWidgets {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar.customAppBar(
-          context: context,
-          titleText: L10n.of(context)!.jobAndinternship,
-          isBackIcon: true),
+      appBar: CustomAppbar(
+        titleText: L10n.of(context)!.jobAndinternship,
+      ),
       body: body(context),
       bottomNavigationBar: const CustomBottomNavBar(),
     );

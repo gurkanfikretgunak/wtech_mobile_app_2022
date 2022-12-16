@@ -6,7 +6,7 @@ class JobsWidgets {
   Widget body(BuildContext context) {
     return GridView.builder(
       physics: const BouncingScrollPhysics(),
-      padding: context.paddingAll,
+      padding: context.paddingLow,
       itemCount: 5,
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
@@ -19,7 +19,7 @@ class JobsWidgets {
           applyTime: "10.11.2022",
           institution: "Women in Technology Association",
           role: "Project Management Assistant",
-          showNo: 10),
+          showNo: "100"),
     );
   }
 }
