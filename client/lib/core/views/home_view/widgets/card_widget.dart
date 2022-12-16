@@ -1,6 +1,8 @@
 import 'package:client/core/constants/color_constans.dart';
 import 'package:client/core/extensions/extension.dart';
 import 'package:client/core/views/common/widgets/button/button_libary.dart';
+import 'package:client/core/views/news_detail_view/news_detail.view.dart';
+import 'package:client/core/views/news_view/news.view.dart';
 import 'package:flutter/material.dart';
 
 import '../../../l10n/app_l10n.dart';
@@ -56,7 +58,13 @@ class CardWidget extends StatelessWidget {
                   SizedBox(
                       height: MediaQuery.of(context).size.height * 0.04,
                       child: CustomElevatedButton(
-                          onPressed: () {}, text: L10n.of(context)!.view, textColor: ColorConstant.instance.white)),
+                          onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => NewsView(),
+                            ));
+                          },
+                          text: L10n.of(context)!.view,
+                          textColor: ColorConstant.instance.white)),
                 ],
               ),
             ),

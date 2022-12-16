@@ -7,23 +7,17 @@ import '../../l10n/app_l10n.dart';
 
 @Injectable()
 class EducationsDetailViewModel extends BaseViewModel {
-
   BehaviorSubject<bool> _favorite = BehaviorSubject<bool>.seeded(false);
   Stream get favorite => _favorite.stream;
 
   void changeFavorite() {
-    if(_favorite == false) {
+    if (_favorite == false) {
       _favorite.add(true);
-    }
-    else if(_favorite == true) {
+    } else if (_favorite == true) {
       _favorite.add(false);
     }
   }
 
-
   @override
-  void clear() {
-    
-  }
-
+  void clear() {}
 }
