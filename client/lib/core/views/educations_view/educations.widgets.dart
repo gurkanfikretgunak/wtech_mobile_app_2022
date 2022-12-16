@@ -10,7 +10,7 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 class EducationsWidgets {
   
   Widget educationCard(BuildContext context, double height, double width) {
-    return CardWidget();
+    return EducationCardWidget();
   }
 
   Widget searchBar(BuildContext context, double height, double width) {

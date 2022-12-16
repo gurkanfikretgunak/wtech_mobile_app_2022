@@ -7,8 +7,10 @@ import 'package:client/core/views/common/widgets/custom_divider.dart';
 import 'package:client/core/views/educations_detail_view/educations_detail.viewmodel.dart';
 import 'package:client/core/views/educations_detail_view/educations_detail.widgets.dart';
 import 'package:client/core/views/educations_detail_view/widgets/expansion_tile.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
+import 'package:rxdart/rxdart.dart';
 
 class EducationsDetailView extends StatelessWidget {
   const EducationsDetailView({super.key});
@@ -19,7 +21,7 @@ class EducationsDetailView extends StatelessWidget {
     double screenWidth = MediaQuery.of(context).size.width;
 
     final vm = GetIt.I.get<EducationsDetailViewModel>();
-    //BehaviorSubject<bool> isFavorite = _vm.favorite;
+    bool isFavorite = vm.changeFavorite();
 
     return StreamBuilder(
       stream: vm.favorite,
@@ -47,9 +49,9 @@ class EducationsDetailView extends StatelessWidget {
                           child: CustomElevatedButton(onPressed: () {}, text: "Başvur", textColor: ColorConstant.instance.white,),
                         ),
                         IconButton(
-                          icon: const Icon(Icons.favorite_border),
+                          icon: isFavorite == true ? const Icon(Icons.favorite) : const Icon(Icons.favorite_border),
                           onPressed: () {
-                            vm.changeFavorite();
+                            isFavorite = vm.changeFavorite();                            
                           },
                         ),
                       ],
