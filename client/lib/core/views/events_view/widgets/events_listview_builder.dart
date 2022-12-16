@@ -1,5 +1,3 @@
-
-
 import 'package:client/core/extensions/extension.dart';
 import 'package:client/core/views/events_view/widgets/events.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +13,7 @@ class EventsListviewBuilder extends StatelessWidget {
       itemCount: 2,
       itemBuilder: (context, index) {
         return Padding(
-          padding: context.paddingOnlyTop,
+          padding: context.onlyTopPaddingNormal,
           child: const Events(),
         );
       },

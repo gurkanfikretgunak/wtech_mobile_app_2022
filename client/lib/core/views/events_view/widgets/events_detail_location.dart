@@ -1,4 +1,5 @@
 import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/views/common/widgets/custom_date_text.dart';
 import 'package:flutter/material.dart';
 
 class EventsDateAndLocation extends StatelessWidget {
@@ -19,7 +20,7 @@ class EventsDateAndLocation extends StatelessWidget {
               ?.copyWith(fontWeight: FontWeight.w400),
         ),
         Padding(
-          padding: context.paddingOnlyTop * 2,
+          padding: context.onlyTopPaddingNormal,
           child: Row(
             children: [
               Row(
@@ -36,22 +37,9 @@ class EventsDateAndLocation extends StatelessWidget {
                 ],
               ),
               Padding(
-                padding: EdgeInsets.only(
-                    left: MediaQuery.of(context).size.width * 0.07),
-                child: Row(
-                  children: [
-                    const Icon(
-                      Icons.calendar_month_outlined,
-                      color: Colors.grey,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(
-                          left: MediaQuery.of(context).size.width * 0.025),
-                      child: const Text('27.06.2022'),
-                    )
-                  ],
-                ),
-              )
+                  padding: EdgeInsets.only(
+                      left: MediaQuery.of(context).size.width * 0.07),
+                  child: const CustomDateText(date: '27.06.2022'))
             ],
           ),
         )
