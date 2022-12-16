@@ -1,3 +1,4 @@
+import 'package:client/core/constants/color_constans.dart';
 import 'package:client/core/extensions/extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/common/widgets/button/button_libary.dart';
@@ -43,7 +44,7 @@ class EducationsDetailView extends StatelessWidget {
                         SizedBox(
                           width: screenWidth / 1.5,
                           height: screenHeight / 20,
-                          child: CustomElevatedButton(onPressed: () {}, text: "Başvur"),
+                          child: CustomElevatedButton(onPressed: () {}, text: "Başvur", textColor: ColorConstant.instance.white,),
                         ),
                         IconButton(
                           icon: const Icon(Icons.favorite_border),
