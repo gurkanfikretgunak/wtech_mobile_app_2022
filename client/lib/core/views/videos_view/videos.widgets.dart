@@ -8,7 +8,6 @@ import 'package:flutter/material.dart';
 class VideosWidgets {
   late ChewieController chewieController;
   Widget body(BuildContext context) {
-    debugPrint((MediaQuery.of(context).size.height / 5.8).toString());
     return SingleChildScrollView(
       child: Padding(
         padding: context.paddingNormal,
@@ -55,9 +54,5 @@ class VideosWidgets {
         ),
       ),
     );
-  }
-
-  Widget appBar(BuildContext context) {
-    return Container();
   }
 }

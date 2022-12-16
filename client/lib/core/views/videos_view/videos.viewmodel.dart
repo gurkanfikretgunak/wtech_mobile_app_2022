@@ -1,28 +1,35 @@
 import 'package:client/core/views/abstractions/base_view_model.dart';
 import 'package:injectable/injectable.dart';
 import 'package:rxdart/rxdart.dart';
+import 'package:video_player/video_player.dart';
 
 @Injectable()
 class VideosViewModel extends BaseViewModel {
-  final _login = BehaviorSubject<String>.seeded("");
-  final _password = BehaviorSubject<String>.seeded("");
+  final _isUrlWork = BehaviorSubject<bool>();
+  final _controller = BehaviorSubject<VideoPlayerController>();
 
-  Stream get login => _login.stream;
-  void setLogin(String value) => _login.add(value);
+  Stream get isUrlWork => _isUrlWork.stream;
+  void setIsUrlWork(bool value) => _isUrlWork.add(value);
 
-  Stream get password => _password.stream;
-  void setPassword(String value) => _password.add(value);
+  Stream get controller => _controller.stream;
+  void setController(VideoPlayerController value) =>
+      _controller.sink.add(value);
+  void deleteController(VideoPlayerController value) =>
+      _controller.sink.close();
 
-  Future<bool> signIn() async {
-    setLoading(true);
-    await Future.delayed(const Duration(seconds: 1));
-    setLoading(false);
-    return false;
+  Future<void> videoControl(
+    String videoUrl,
+  ) async {
+    setController(VideoPlayerController.network(videoUrl)
+      ..initialize().then((_) {
+        setIsUrlWork(true);
+      }).onError((error, stackTrace) {
+        setIsUrlWork(false);
+      }));
   }
 
   @override
   void clear() {
-    _login.add("");
-    _password.add("");
+    deleteController;
   }
 }
