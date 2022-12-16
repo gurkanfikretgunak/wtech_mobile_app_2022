@@ -50,6 +50,9 @@ extension PaddingExtension on BuildContext {
   EdgeInsets get onlyTopPaddingNormal => EdgeInsets.only(top: normalValue);
   EdgeInsets get onlyTopPaddingMedium => EdgeInsets.only(top: mediumValue);
   EdgeInsets get onlyTopPaddingHigh => EdgeInsets.only(top: highValue);
+
+  EdgeInsets get onlyLRTpaddingNormal => EdgeInsets.only(left: normalValue, right: normalValue, top: lowValue);
+  EdgeInsets get onlyTRpaddingNormal => EdgeInsets.only(left: normalValue, top: lowValue, bottom: lowValue);
 }
 
 extension EmptyWidget on BuildContext {

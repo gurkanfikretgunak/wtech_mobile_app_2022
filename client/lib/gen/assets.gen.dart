@@ -148,18 +148,34 @@ class $AssetsImagesGen {
   /// File path: assets/images/deneme.jpg
   AssetGenImage get deneme => const AssetGenImage('assets/images/deneme.jpg');
 
+  /// File path: assets/images/dijital_sanatlar.jpeg
+  AssetGenImage get dijitalSanatlar =>
+      const AssetGenImage('assets/images/dijital_sanatlar.jpeg');
+
   /// File path: assets/images/education_1.png
   AssetGenImage get education1 =>
       const AssetGenImage('assets/images/education_1.png');
 
+  /// File path: assets/images/ege_egitim.jpeg
+  AssetGenImage get egeEgitim =>
+      const AssetGenImage('assets/images/ege_egitim.jpeg');
+
   /// File path: assets/images/facebook.svg
   String get facebook => 'assets/images/facebook.svg';
+
+  /// File path: assets/images/gelecekle_iddia.jpeg
+  AssetGenImage get gelecekleIddia =>
+      const AssetGenImage('assets/images/gelecekle_iddia.jpeg');
 
   /// File path: assets/images/github.svg
   String get github => 'assets/images/github.svg';
 
   /// File path: assets/images/google.svg
   String get google => 'assets/images/google.svg';
+
+  /// File path: assets/images/happy_friday.jpeg
+  AssetGenImage get happyFriday =>
+      const AssetGenImage('assets/images/happy_friday.jpeg');
 
   /// File path: assets/images/home_1.png
   AssetGenImage get home1 => const AssetGenImage('assets/images/home_1.png');
@@ -172,6 +188,9 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/logo.svg
   String get logoSvg => 'assets/images/logo.svg';
+
+  /// File path: assets/images/logos.jpeg
+  AssetGenImage get logos => const AssetGenImage('assets/images/logos.jpeg');
 
   /// File path: assets/images/mentor_1.png
   AssetGenImage get mentor1 =>
@@ -186,9 +205,16 @@ class $AssetsImagesGen {
   /// File path: assets/images/profile.jpg
   AssetGenImage get profile => const AssetGenImage('assets/images/profile.jpg');
 
+  /// File path: assets/images/saglik.png
+  AssetGenImage get saglik => const AssetGenImage('assets/images/saglik.png');
+
   /// File path: assets/images/title_card.png
   AssetGenImage get titleCard =>
       const AssetGenImage('assets/images/title_card.png');
+
+  /// File path: assets/images/turk_traktor.jpeg
+  AssetGenImage get turkTraktor =>
+      const AssetGenImage('assets/images/turk_traktor.jpeg');
 
   /// File path: assets/images/wtech-logo.png
   AssetGenImage get wtechLogo =>
@@ -206,19 +232,26 @@ class $AssetsImagesGen {
         apple,
         blog1,
         deneme,
+        dijitalSanatlar,
         education1,
+        egeEgitim,
         facebook,
+        gelecekleIddia,
         github,
         google,
+        happyFriday,
         home1,
         job1,
         logoPng,
         logoSvg,
+        logos,
         mentor1,
         news1,
         news2,
         profile,
+        saglik,
         titleCard,
+        turkTraktor,
         wtechLogo,
         wtechLogoPng,
         wtechLogoSvg
