@@ -1,6 +1,6 @@
 import 'package:client/core/constants/color_constans.dart';
 import 'package:client/core/views/videos_view/videos.viewmodel.dart';
-import 'package:client/core/views/videos_view/widgets/video_item_widget.dart';
+import 'package:client/core/views/videos_view/widgets/video_dialog_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:video_player/video_player.dart';
@@ -42,7 +42,7 @@ class _CardVideoWidgetState extends State<CardVideoWidget> {
                 showDialog(
                     context: context,
                     builder: (ctx) => Center(
-                          child: VideoItemWidget(
+                          child: VideoDialogWidget(
                             videoPlayerController:
                                 VideoPlayerController.network(widget.videoUrl),
                           ),

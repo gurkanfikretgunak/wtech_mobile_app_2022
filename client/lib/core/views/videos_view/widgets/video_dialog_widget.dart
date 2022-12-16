@@ -4,17 +4,17 @@ import 'package:client/core/extensions/extension.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
-class VideoItemWidget extends StatefulWidget {
+class VideoDialogWidget extends StatefulWidget {
   final VideoPlayerController videoPlayerController;
 
-  const VideoItemWidget({required this.videoPlayerController, Key? key})
+  const VideoDialogWidget({required this.videoPlayerController, Key? key})
       : super(key: key);
 
   @override
-  State<VideoItemWidget> createState() => _VideoItemWidgetState();
+  State<VideoDialogWidget> createState() => _VideoDialogWidgetState();
 }
 
-class _VideoItemWidgetState extends State<VideoItemWidget> {
+class _VideoDialogWidgetState extends State<VideoDialogWidget> {
   late ChewieController _chewieController;
 
   @override
