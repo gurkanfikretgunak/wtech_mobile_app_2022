@@ -9,8 +9,6 @@ class EventsDetailButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
         onPressed: () {
-          debugPrint(MediaQuery.of(context).size.height.toString());
-           debugPrint(MediaQuery.of(context).size.width.toString());
           showModalBottomSheet(
             context: context,
             isScrollControlled: true,

@@ -1,6 +1,6 @@
-
 import 'package:client/core/constants/color_constans.dart';
 import 'package:flutter/material.dart';
+import 'package:client/core/extensions/extension.dart';
 
 class CalendarEventsCount extends StatelessWidget {
   const CalendarEventsCount({
@@ -16,9 +16,7 @@ class CalendarEventsCount extends StatelessWidget {
       itemBuilder: (context, index) {
         return Padding(
           padding:
-              EdgeInsets.only(right: MediaQuery.of(context).size.width * 0.01) +
-                  EdgeInsets.only(
-                      bottom: MediaQuery.of(context).size.width * 0.025),
+              context.onlyRightPaddingLow + context.onlyBottomPaddingNormal,
           child: Center(
             child: Container(
               width: 12,

@@ -15,7 +15,7 @@ class BaseMainSheet extends StatelessWidget {
           const BaseBottomSheetHeader(),
           Expanded(
             child: Padding(
-              padding: context.paddingBodyHorizontal * 2,
+              padding: context.horizontalPaddingMedium,
               child: const EventsDetail(),
             ),
           )

@@ -43,7 +43,7 @@ class _EventsViewState extends State<EventsView> {
         ),
         actions: [
           Padding(
-            padding: context.paddingOnlyTop,
+            padding: context.onlyTopPaddingNormal,
             child: Container(
                 height: 40,
                 width: 85,
@@ -65,15 +65,15 @@ class _EventsViewState extends State<EventsView> {
         ],
       ),
       body: Padding(
-        padding: context.paddingBodyHorizontal,
+        padding: context.horizontalPaddingNormal,
         child: Column(
           children: [
             Padding(
-              padding: context.paddingOnlyTop * 4,
+              padding: context.onlyTopPaddingMedium * 1.5,
               child: const TheDayOfTheMonth(),
             ),
             Padding(
-              padding: context.paddingOnlyTop,
+              padding: context.onlyTopPaddingNormal,
               child: const CalenderListview(),
             ),
             Expanded(

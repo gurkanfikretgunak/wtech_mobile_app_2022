@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 class CalendarCard extends StatefulWidget {
@@ -18,8 +16,7 @@ class _CalendarCardState extends State<CalendarCard> {
   @override
   Widget build(BuildContext context) {
     return Card(
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         color: widget.color,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

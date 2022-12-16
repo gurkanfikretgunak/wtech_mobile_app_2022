@@ -1,8 +1,8 @@
 import 'package:client/core/constants/color_constans.dart';
 import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/views/common/widgets/custom_divider.dart';
 import 'package:flutter/material.dart';
 
-// Icon size 36 temadan almaya çalışalım
 class BaseBottomSheetHeader extends StatelessWidget {
   const BaseBottomSheetHeader({
     Key? key,
@@ -18,12 +18,12 @@ class BaseBottomSheetHeader extends StatelessWidget {
         alignment: Alignment.topCenter,
         children: [
           Padding(
-            padding: context.paddingOnlyTop * 1.5,
-            child: Divider(
-              color: ColorConstant.instance.grey,
-              thickness: 3,
-              indent: MediaQuery.of(context).size.width * 0.30,
+            padding: context.onlyTopPaddingNormal,
+            child: CustomDivider(
               endIndent: MediaQuery.of(context).size.width * 0.30,
+              color: ColorConstant.instance.grey,
+              indent: MediaQuery.of(context).size.width * 0.30,
+              thickness: 3,
             ),
           ),
           Positioned(
@@ -34,8 +34,7 @@ class BaseBottomSheetHeader extends StatelessWidget {
                   Navigator.of(context).pop();
                 },
                 child: Padding(
-                  padding: EdgeInsets.only(
-                      right: MediaQuery.of(context).size.width * 0.02),
+                  padding: context.onlyRightPaddingNormal,
                   child: Icon(
                     Icons.close,
                     color: ColorConstant.instance.grey,
