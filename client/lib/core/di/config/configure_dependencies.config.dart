@@ -6,14 +6,14 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:client/core/data/network/abstractions/todos_service.dart'
-    as _i19;
+    as _i20;
 import 'package:client/core/data/network/abstractions/users_service.dart'
-    as _i21;
-import 'package:client/core/data/network/services/todos/todo_api.dart' as _i20;
-import 'package:client/core/data/network/services/users/user_api.dart' as _i22;
-import 'package:client/core/di/config/app_config.dart' as _i17;
+    as _i22;
+import 'package:client/core/data/network/services/todos/todo_api.dart' as _i21;
+import 'package:client/core/data/network/services/users/user_api.dart' as _i23;
+import 'package:client/core/di/config/app_config.dart' as _i18;
 import 'package:client/core/di/config/raw_helper.dart' as _i11;
-import 'package:client/core/di/config/register_module.dart' as _i23;
+import 'package:client/core/di/config/register_module.dart' as _i24;
 import 'package:client/core/views/educations_detail_view/educations_detail.viewmodel.dart'
     as _i3;
 import 'package:client/core/views/educations_view/educations.viewmodel.dart'
@@ -28,14 +28,16 @@ import 'package:client/core/views/news_detail_view/news_detail.viewmodel.dart'
     as _i9;
 import 'package:client/core/views/news_view/news.viewmodel.dart' as _i10;
 import 'package:client/core/views/signup_view/signup.viewmodel.dart' as _i14;
-import 'package:client/core/views/user_profile_view/user_profile.viewmodel.dart'
+import 'package:client/core/views/supporting_institutions_view/support_inst.viewmodel.dart'
     as _i15;
-import 'package:client/core/views/videos_view/videos.viewmodel.dart' as _i16;
+import 'package:client/core/views/user_profile_view/user_profile.viewmodel.dart'
+    as _i16;
+import 'package:client/core/views/videos_view/videos.viewmodel.dart' as _i17;
 import 'package:client/core/views/view_model_sample/sample.viewmodel.dart'
     as _i12;
 import 'package:client/core/views/view_model_sample_two/sample_two.viewmodel.dart'
     as _i13;
-import 'package:dio/dio.dart' as _i18;
+import 'package:dio/dio.dart' as _i19;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart'
     as _i2; // ignore_for_file: unnecessary_lambdas
@@ -69,19 +71,21 @@ Future<_i1.GetIt> $initGetIt(
   gh.factory<_i12.SampleViewModel>(() => _i12.SampleViewModel());
   gh.factory<_i13.SampleViewModelTwo>(() => _i13.SampleViewModelTwo());
   gh.factory<_i14.SignUpViewModel>(() => _i14.SignUpViewModel());
-  gh.factory<_i15.UserProfileViewModel>(() => _i15.UserProfileViewModel());
-  gh.factory<_i16.VideosViewModel>(() => _i16.VideosViewModel());
-  gh.singleton<_i17.AppConfig>(_i17.AppConfig(get<_i11.RawConfig>()));
-  gh.singleton<_i18.Dio>(registerModule.dio(get<_i17.AppConfig>()));
-  gh.factory<_i19.TodosService>(() => _i20.RestTodoService(
-        get<_i18.Dio>(),
-        get<_i17.AppConfig>(),
+  gh.factory<_i15.SupportInstutionsViewModel>(
+      () => _i15.SupportInstutionsViewModel());
+  gh.factory<_i16.UserProfileViewModel>(() => _i16.UserProfileViewModel());
+  gh.factory<_i17.VideosViewModel>(() => _i17.VideosViewModel());
+  gh.singleton<_i18.AppConfig>(_i18.AppConfig(get<_i11.RawConfig>()));
+  gh.singleton<_i19.Dio>(registerModule.dio(get<_i18.AppConfig>()));
+  gh.factory<_i20.TodosService>(() => _i21.RestTodoService(
+        get<_i19.Dio>(),
+        get<_i18.AppConfig>(),
       ));
-  gh.factory<_i21.UserService>(() => _i22.RestUserService(
-        get<_i18.Dio>(),
-        get<_i17.AppConfig>(),
+  gh.factory<_i22.UserService>(() => _i23.RestUserService(
+        get<_i19.Dio>(),
+        get<_i18.AppConfig>(),
       ));
   return get;
 }
 
-class _$RegisterModule extends _i23.RegisterModule {}
+class _$RegisterModule extends _i24.RegisterModule {}

@@ -46,6 +46,9 @@ dependencies:
 
   #Core utilities
   logger: ^1.1.0
+
+  #videoos
+  video_player: ^2.4.10
   
   
 
@@ -73,7 +76,7 @@ dev_dependencies:
 
 
 flutter:
-  generate: false
+  generate: true
   uses-material-design: true
   assets:
     - assets/env/.env.prod

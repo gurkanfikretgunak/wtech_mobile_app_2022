@@ -2,6 +2,8 @@ import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/themes/custom_theme.dart';
 import 'package:client/core/views/sample_view/bloc/sample_bloc.dart';
 import 'package:client/core/views/sample_view/sample_view.dart';
+import 'package:client/core/views/signup_view/signup.view.dart';
+import 'package:client/core/views/supporting_institutions_view/support_inst.view.dart';
 import 'package:flavor/flavor.dart';
 import 'package:flutter/material.dart';
 // ignore: depend_on_referenced_packages
@@ -21,7 +23,7 @@ class App extends StatelessWidget {
         home: Provider<MainBloc>(
           create: (_) => MainBloc(),
           dispose: (context, bloc) => bloc.dispose(),
-          child: const MainScreen(),
+          child:  SupportInstutionsView(),
         ),
         title: "Flutter Boilerplate : ${Flavor.I.getString(Keys.appTitle)}",
         theme: CustomTheme.customThemeData(context),
