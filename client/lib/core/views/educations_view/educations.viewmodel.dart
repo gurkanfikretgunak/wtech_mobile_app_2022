@@ -1,13 +1,10 @@
-import 'dart:async';
-
 import 'package:client/core/views/abstractions/base_view_model.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:injectable/injectable.dart';
 import 'package:rxdart/rxdart.dart';
 
 @Injectable()
 class EducationsViewModel extends BaseViewModel {
-  BehaviorSubject<bool> _heartFill = BehaviorSubject<bool>.seeded(true);
+  final BehaviorSubject<bool> _heartFill = BehaviorSubject<bool>.seeded(true);
   Stream get heartFill => _heartFill.stream;
 
   bool fillHeart = false;

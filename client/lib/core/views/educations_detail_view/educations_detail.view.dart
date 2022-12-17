@@ -7,18 +7,15 @@ import 'package:client/core/views/common/widgets/custom_divider.dart';
 import 'package:client/core/views/educations_detail_view/educations_detail.viewmodel.dart';
 import 'package:client/core/views/educations_detail_view/educations_detail.widgets.dart';
 import 'package:client/core/views/educations_detail_view/widgets/expansion_tile.dart';
-import 'package:flutter/foundation.dart';
+import 'package:client/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
-import 'package:rxdart/rxdart.dart';
 
 class EducationsDetailView extends StatelessWidget {
   const EducationsDetailView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    double screenHeight = MediaQuery.of(context).size.height;
-    double screenWidth = MediaQuery.of(context).size.width;
 
     final vm = GetIt.I.get<EducationsDetailViewModel>();
     bool isFavorite = vm.changeFavorite();
@@ -34,8 +31,8 @@ class EducationsDetailView extends StatelessWidget {
                 padding: PaddingExtension(context).paddingNormal,
                 child: Column(
                   children: [
-                    ClipRRect(borderRadius: BorderRadius.circular(13), child: Image.asset("images/education_1.png")),
-                    EducationsDetailWidgets().educationContent(context, screenHeight, screenWidth),
+                    ClipRRect(borderRadius: BorderRadius.circular(13), child: Image.asset(Assets.images.education1.path)),
+                    EducationsDetailWidgets().educationContent(context),
                     const CustomDivider(
                       endIndent: 1,
                     ),
@@ -44,8 +41,8 @@ class EducationsDetailView extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         SizedBox(
-                          width: screenWidth / 1.5,
-                          height: screenHeight / 20,
+                          width: context.dynamicWidth(0.7),
+                          height: context.dynamicHeight(0.05),
                           child: CustomElevatedButton(onPressed: () {}, text: "Başvur", textColor: ColorConstant.instance.white,),
                         ),
                         IconButton(
