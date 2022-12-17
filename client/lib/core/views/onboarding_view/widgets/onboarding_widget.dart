@@ -14,13 +14,12 @@ class OnboardContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        context.emptySizedHeightBoxSpecial,
-        Image.asset(
-          image,
-          height: 250,
-        ),
-        context.emptySizedHeightBoxTittle,
+        context.emptySizedHeightBoxHigh,
+        Image.asset(image, height: context.dynamicHeight(0.3)),
+        context.emptySizedHeightBoxNormal,
+        context.emptySizedHeightBoxNormal,
         Text(
           title,
           textAlign: TextAlign.center,
@@ -29,7 +28,7 @@ class OnboardContent extends StatelessWidget {
               .headline5!
               .copyWith(fontWeight: FontWeight.w500),
         ),
-        context.emptySizedHeightBoxDescription,
+        context.emptySizedHeightBoxNormal,
         Text(
           description,
           textAlign: TextAlign.center,

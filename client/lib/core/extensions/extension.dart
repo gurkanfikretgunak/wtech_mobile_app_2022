@@ -69,9 +69,4 @@ extension EmptyWidget on BuildContext {
   Widget get emptySizedHeightBoxLow => SizedBox(height: lowValue);
   Widget get emptySizedHeightBoxNormal => SizedBox(height: normalValue);
   Widget get emptySizedHeightBoxHigh => SizedBox(width: highValue);
-  Widget get emptySizedHeightBoxSpecial =>
-      SizedBox(height: dynamicHeight(0.18));
-  Widget get emptySizedHeightBoxTittle => SizedBox(height: dynamicHeight(0.08));
-  Widget get emptySizedHeightBoxDescription =>
-      SizedBox(height: dynamicHeight(0.05));
 }

@@ -64,8 +64,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
                           )),
                   const Spacer(),
                   SizedBox(
-                      height: 60,
-                      width: 60,
+                      height: context.dynamicHeight(0.08),
+                      width: context.dynamicWidth(0.17),
                       child: ElevatedButton(
                         onPressed: () {
                           Navigator.push(
@@ -76,7 +76,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                         style: ElevatedButton.styleFrom(
                             backgroundColor: ColorConstant.instance.yellow,
                             shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(22))),
+                                borderRadius: BorderRadius.circular(30))),
                         child: Text('Skip'),
                       )),
                 ],
