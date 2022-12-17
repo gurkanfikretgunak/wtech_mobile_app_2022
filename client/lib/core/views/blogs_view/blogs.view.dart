@@ -1,35 +1,54 @@
 import 'package:client/core/views/blogs_view/blogs.widgets.dart';
-import 'package:client/core/views/blogs_view/widgets/blog_list_tile.dart';
-import 'package:client/core/views/blogs_view/widgets/blog_model.dart';
+import 'package:client/core/views/blogs_view/widgets/blogs_list.dart';
+import 'package:client/core/views/blogs_view/widgets/blogs_model.dart';
+import 'package:client/core/views/blogs_view/widgets/blogs_card.dart';
+import 'package:client/core/views/common/widgets/button/custom_button_icon.dart';
+import 'package:client/core/views/common/widgets/text/text_library.dart';
 
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 
-class BlogsView extends StatefulWidget with BlogsWidget {
-  const BlogsView({Key? key}) : super(key: key);
+import '../../extensions/extension.dart';
+import '../../l10n/app_l10n.dart';
+import '../common/widgets/custom_appbar.dart';
+import '../common/widgets/custom_navbar.dart';
+import '../view_model_sample_two/sample_two.viewmodel.dart';
 
-  @override
-  State<BlogsView> createState() => _BlogsViewState();
-}
+class BlogsView extends StatelessWidget with BlogsWidget {
+  BlogsView({super.key});
 
-class _BlogsViewState extends State<BlogsView> {
+  final _vm = GetIt.I.get<SampleViewModelTwo>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.all(16),
+      appBar: CustomAppbar(titleText: L10n.of(context)!.blog),
+      bottomNavigationBar: const CustomBottomNavBar(),
+      body: Padding(
+        padding: context.paddingNormal,
+        child: SingleChildScrollView(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              context.emptySizedHeightBoxHigh,
+              // SizedBox(
+              //   width: context.dynamicWidth(1),
+              //   child: Column(
+              //     children: [
+              //       CustomIconButton(onPressed: () {}, icon: Icons.filter),
+              //       const CustomTextFormField(),
+              //     ],
+              //   ),
+              // ),
               SizedBox(
-                height: 16.0,
-              ),
-              Column(
-                children: BlogsData.recentNewsData
-                    .map((e) => BlogsListTile(e))
-                    .toList(),
-              ),
+                height: context.dynamicHeight(1),
+                child: ListView.builder(
+                  itemCount: blogsList.length,
+                  itemBuilder: (context, index) {
+                    return BlogsCard(blogs: blogsList[index]);
+                  },
+                ),
+              )
             ],
           ),
         ),

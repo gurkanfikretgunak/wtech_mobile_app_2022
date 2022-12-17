@@ -1,60 +1,39 @@
+import 'package:client/core/extensions/extension.dart';
 import 'package:client/core/views/blogs_detail_view/blogs_detail.widgets.dart';
 import 'package:client/core/views/blogs_view/blogs.viewmodel.dart';
-import 'package:client/core/views/blogs_view/widgets/blog_model.dart';
+import 'package:client/core/views/blogs_view/widgets/blogs_model.dart';
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 
-class BlogsDetailView extends StatefulWidget with BlogsDetailWidget {
-  BlogsDetailView(this.data, {Key? key}) : super(key: key);
-  BlogsData data;
-  @override
-  State<BlogsDetailView> createState() => _BlogsDetailViewState();
-}
+import '../../l10n/app_l10n.dart';
+import '../common/widgets/custom_appbar.dart';
+import 'blogs_detail.viewmodel.dart';
 
-class _BlogsDetailViewState extends State<BlogsDetailView> {
+class BlogsDetailView extends StatelessWidget with BlogsDetailWidget {
+  BlogsDetailView({
+    super.key,
+    required this.blogs,
+  });
+
+  final BlogsModel blogs;
+  final _vm = GetIt.I.get<BlogsDetailViewModel>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0.0,
-        iconTheme: IconThemeData(color: Colors.orange.shade900),
-      ),
+      appBar: CustomAppbar(titleText: L10n.of(context)!.news),
       body: Padding(
-        padding: const EdgeInsets.all(18.0),
+        padding: context.horizontalPaddingNormal,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              widget.data.title!,
-              style: TextStyle(
-                fontSize: 26.0,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(
-              height: 8.0,
-            ),
-            Text(
-              widget.data.author!,
-              style: TextStyle(
-                color: Colors.black54,
-              ),
-            ),
-            SizedBox(
-              height: 20.0,
-            ),
-            Hero(
-              tag: "${widget.data.title}",
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(30.0),
-                child: Image.network(widget.data.urlToImage!),
-              ),
-            ),
-            SizedBox(
-              height: 30.0,
-            ),
-            Text(widget.data.content!)
+            Expanded(flex: 2, child: title(blogs)),
+            Expanded(flex: 2, child: wtechAndDateText(context)),
+            Expanded(flex: 6, child: blogsImage(blogs, context)),
+            Expanded(flex: 2, child: blogsDetailTitleAndViewsCount(context)),
+            Expanded(flex: 6, child: blogsDetailTextCard(context, blogs)),
+            const Spacer()
           ],
         ),
       ),
