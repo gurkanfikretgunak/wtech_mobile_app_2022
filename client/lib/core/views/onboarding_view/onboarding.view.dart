@@ -3,6 +3,7 @@ import 'package:client/core/views/home_view/home.view.dart';
 import 'package:client/core/views/onboarding_view/widgets/dot_indicator.dart';
 import 'package:client/core/views/onboarding_view/widgets/onboarding_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:client/core/extensions/extension.dart';
 
 class OnboardingPage extends StatefulWidget {
   const OnboardingPage({Key? key}) : super(key: key);
@@ -34,7 +35,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
       backgroundColor: ColorConstant.instance.white,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: context.paddingNormal,
           child: Column(
             children: [
               Expanded(
@@ -58,7 +59,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                   ...List.generate(
                       demo_data.length,
                       (index) => Padding(
-                            padding: EdgeInsets.all(10),
+                            padding: context.paddingNormal,
                             child: DotIndicator(isActive: index == _pageIndex),
                           )),
                   const Spacer(),

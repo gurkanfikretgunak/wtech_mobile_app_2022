@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:client/core/extensions/extension.dart';
 
 class OnboardContent extends StatelessWidget {
   const OnboardContent({
@@ -14,12 +15,12 @@ class OnboardContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const SizedBox(height: 92),
+        context.emptySizedHeightBoxSpecial,
         Image.asset(
           image,
           height: 250,
         ),
-        const SizedBox(height: 52),
+        context.emptySizedHeightBoxTittle,
         Text(
           title,
           textAlign: TextAlign.center,
@@ -28,7 +29,7 @@ class OnboardContent extends StatelessWidget {
               .headline5!
               .copyWith(fontWeight: FontWeight.w500),
         ),
-        const SizedBox(height: 12),
+        context.emptySizedHeightBoxDescription,
         Text(
           description,
           textAlign: TextAlign.center,
