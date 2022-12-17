@@ -5,32 +5,20 @@ import '../../constants/color_constans.dart';
 import '../../l10n/app_l10n.dart';
 
 import '../blogs_view/widgets/blogs_model.dart';
+import '../common/widgets/button/button_libary.dart';
 import '../common/widgets/custom_image.dart';
 import '../common/widgets/custom_date_text.dart';
 import '../common/widgets/custom_views_count.dart';
 
 class BlogsDetailWidget {
   Widget title(BlogsModel blogs) {
-    var blogs;
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Expanded(
-          flex: 6,
-          child: CustomText(
-            blogs.title,
-            fontSize: 20,
-          ),
+        CustomText(
+          blogs.title!,
+          fontSize: 20,
         ),
-        Expanded(
-          child: Align(
-            alignment: Alignment.centerRight,
-            child: CircleAvatar(
-              backgroundColor: ColorConstant.instance.shinyWhite,
-              child: const Icon(Icons.favorite),
-            ),
-          ),
-        )
       ],
     );
   }
@@ -49,49 +37,35 @@ class BlogsDetailWidget {
     );
   }
 
-  Widget blogsImage(BlogsModel news, BuildContext context) {
-    var blogs;
+  Widget blogsImage(BlogsModel blog, BuildContext context) {
     return CustomImage(
       width: context.dynamicWidth(1),
-      assetPath: blogs.image,
+      assetPath: blog.image!,
     );
   }
 
   Widget blogsDetailTitleAndViewsCount(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        CustomText(
-          L10n.of(context)!.blog,
-          fontSize: 17,
-          fontWeight: FontWeight.w700,
-        ),
-        const CustomViewsCount(viewsCount: "126")
-      ],
+    return const Align(
+      alignment: Alignment.centerRight,
+      child: CustomViewsCount(
+        viewsCount: "126",
+        hasViewsText: true,
+      ),
     );
   }
 
-  Widget blogsDetailTextCard(BuildContext context, BlogsModel blogs) {
-    return Card(
-      child: Padding(
-        padding: context.paddingNormal,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            CustomText(blogs.detail!, fontSize: 15),
-            TextButton(
-              onPressed: () {},
-              child: CustomText(
-                L10n.of(context)!.blog,
-                color: ColorConstant.instance.blue,
-                fontWeight: FontWeight.w700,
-                fontSize: 18,
-              ),
-            )
-          ],
-        ),
-      ),
+  Widget blogsDetailTextCard(BuildContext context, BlogsModel blog) {
+    return CustomText(blog.detail!);
+  }
+
+  Widget shareButton(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        CustomTextButton(
+            onPressed: () {}, text: L10n.of(context)!.shareThisPost),
+        CustomIconButton(onPressed: () {}, icon: Icons.share)
+      ],
     );
   }
 }

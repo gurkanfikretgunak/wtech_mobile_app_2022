@@ -1,7 +1,8 @@
 import 'package:client/core/extensions/extension.dart';
 import 'package:client/core/views/blogs_detail_view/blogs_detail.widgets.dart';
-import 'package:client/core/views/blogs_view/blogs.viewmodel.dart';
 import 'package:client/core/views/blogs_view/widgets/blogs_model.dart';
+import 'package:client/core/views/common/widgets/button/button_libary.dart';
+import 'package:client/core/views/common/widgets/text/text_library.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
@@ -21,19 +22,19 @@ class BlogsDetailView extends StatelessWidget with BlogsDetailWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppbar(titleText: L10n.of(context)!.news),
+      appBar: CustomAppbar(titleText: L10n.of(context)!.blog),
       body: Padding(
         padding: context.horizontalPaddingNormal,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            Expanded(flex: 2, child: title(blogs)),
+            Expanded(child: title(blogs)),
             Expanded(flex: 2, child: wtechAndDateText(context)),
             Expanded(flex: 6, child: blogsImage(blogs, context)),
             Expanded(flex: 2, child: blogsDetailTitleAndViewsCount(context)),
-            Expanded(flex: 6, child: blogsDetailTextCard(context, blogs)),
-            const Spacer()
+            Expanded(flex: 5, child: blogsDetailTextCard(context, blogs)),
+            Expanded(flex: 3, child: shareButton(context))
           ],
         ),
       ),
