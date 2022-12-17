@@ -1,6 +1,6 @@
 import 'package:client/core/extensions/extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
-import 'package:client/core/views/common/widgets/custom_button.dart';
+import 'package:client/core/views/common/widgets/button/button_libary.dart';
 import 'package:client/core/views/common/widgets/custom_divider.dart';
 import 'package:client/core/views/sample_view/bloc/sample_bloc.dart';
 import 'package:client/core/views/signin_view/signin_widgets.dart';
