@@ -405,4 +405,16 @@ class L10nEn extends L10n {
 
   @override
   String get lastUpdatedDate => 'Last Updated Date';
+
+  @override
+  String get whatMakeUsSpecial => 'What Make Us Special?';
+
+  @override
+  String get whoWe => 'Who are we?';
+
+  @override
+  String get whatWeDoing => 'What are we doing?';
+
+  @override
+  String get ourGoals => 'Our Goals';
 }

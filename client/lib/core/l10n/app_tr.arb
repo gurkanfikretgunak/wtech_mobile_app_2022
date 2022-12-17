@@ -146,6 +146,12 @@
     "positionInfo" : "Pozisyon Bilgileri",
     "internship" : "Staj",
     "endedButton" : "Sonlandı",
-    "lastUpdatedDate" : "Son Güncelleme Tarihi"
+    "lastUpdatedDate" : "Son Güncelleme Tarihi",
+    "whatMakeUsSpecial": "Bizi Özel Yapan Nedir?",
+    "whoWe":"Biz Kimiz?",
+    "whatWeDoing":"Neler Yapıyoruz?",
+    "ourGoals": "Hedeflerimiz"
+
+
 }
 

@@ -13,6 +13,7 @@ class AboutCategoryCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      elevation: 0,
       child: Column(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,

@@ -896,6 +896,30 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'Last Updated Date'**
   String get lastUpdatedDate;
+
+  /// No description provided for @whatMakeUsSpecial.
+  ///
+  /// In en, this message translates to:
+  /// **'What Make Us Special?'**
+  String get whatMakeUsSpecial;
+
+  /// No description provided for @whoWe.
+  ///
+  /// In en, this message translates to:
+  /// **'Who are we?'**
+  String get whoWe;
+
+  /// No description provided for @whatWeDoing.
+  ///
+  /// In en, this message translates to:
+  /// **'What are we doing?'**
+  String get whatWeDoing;
+
+  /// No description provided for @ourGoals.
+  ///
+  /// In en, this message translates to:
+  /// **'Our Goals'**
+  String get ourGoals;
 }
 
 class _L10nDelegate extends LocalizationsDelegate<L10n> {

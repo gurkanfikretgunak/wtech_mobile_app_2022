@@ -1,7 +1,7 @@
 import 'package:client/core/extensions/extension.dart';
 import 'package:flutter/cupertino.dart';
 
-import '../../../../gen/assets.gen.dart';
+import '../../../../../gen/assets.gen.dart';
 import '../../common/widgets/custom_image.dart';
 
 List wtechStatisticsList(BuildContext context) {

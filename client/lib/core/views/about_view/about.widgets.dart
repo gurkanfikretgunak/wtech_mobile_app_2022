@@ -1,6 +1,7 @@
 import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/l10n/app_l10n.dart';
 import 'package:flutter/material.dart';
-import '../../../gen/assets.gen.dart';
+import '../../../../gen/assets.gen.dart';
 import '../../constants/color_constans.dart';
 import '../common/widgets/custom_image.dart';
 import '../common/widgets/text/text_library.dart';
@@ -12,7 +13,7 @@ import 'widgets/wtech_statistics_list.dart';
 class AboutWidgets {
   Widget descriptionText(BuildContext context) {
     return Padding(
-      padding: context.paddingMedium,
+      padding: context.horizontalPaddingMedium,
       child: Column(
         children: [
           CustomText(
@@ -31,10 +32,10 @@ class AboutWidgets {
     );
   }
 
-  Widget titleText() {
-    return const Center(
+  Widget titleText(BuildContext context) {
+    return Center(
       child: CustomText(
-        "Bizi Özel Yapan Nedir?",
+        L10n.of(context)!.whatMakeUsSpecial,
         fontSize: 18,
         fontWeight: FontWeight.w600,
       ),
@@ -86,10 +87,11 @@ class AboutWidgets {
     return Padding(
       padding: context.horizontalPaddingNormal,
       child: ListView.builder(
+        physics: const BouncingScrollPhysics(),
         itemCount: 3,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
-          var listItem = aboutItemList[index];
+          var listItem = aboutItemList(context)[index];
           return IntroduceCard(listItem: listItem);
         },
       ),

@@ -145,4 +145,11 @@
     "positionInfo" : "Position Information",
      "endedButton" : "Ended",
     "lastUpdatedDate" : "Last Updated Date"
+    ,
+        "whatMakeUsSpecial": "What Make Us Special?",
+           "whoWe":"Who are we?",
+    "whatWeDoing":"What are we doing?",
+    "ourGoals": "Our Goals"
+
+
 }

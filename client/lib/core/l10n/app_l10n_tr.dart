@@ -405,4 +405,16 @@ class L10nTr extends L10n {
 
   @override
   String get lastUpdatedDate => 'Son Güncelleme Tarihi';
+
+  @override
+  String get whatMakeUsSpecial => 'Bizi Özel Yapan Nedir?';
+
+  @override
+  String get whoWe => 'Biz Kimiz?';
+
+  @override
+  String get whatWeDoing => 'Neler Yapıyoruz?';
+
+  @override
+  String get ourGoals => 'Hedeflerimiz';
 }
