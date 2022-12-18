@@ -58,10 +58,11 @@ class _MainScreenState extends State<SignInEmailView> with SignInWidget {
                       Text(L10n.of(context)!.rememberMe),
                     ],
                   ),
-                  TextButton(
-                    style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 15)),
-                    onPressed: () {},
-                    child: Text(L10n.of(context)!.forgotPassword),
+                  SizedBox(
+                    height: context.dynamicHeight(0.04),
+                    width: context.dynamicWidth(1),
+                    child: CustomElevatedButton(
+                        textColor: ColorConstant.instance.white, onPressed: () {}, text: L10n.of(context)!.signIn),
                   ),
                 ],
               ),
