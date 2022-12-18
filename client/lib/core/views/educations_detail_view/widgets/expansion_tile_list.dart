@@ -1,7 +1,7 @@
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:flutter/material.dart';
 
-class ExpansionTileList {
+class ExpansionListTile {
   List<String>headerList(BuildContext context){
     return [L10n.of(context)!.aboutEducation, L10n.of(context)!.participationConditions, L10n.of(context)!.gains, L10n.of(context)!.workingSpaces];
   }
