@@ -1,7 +1,6 @@
 List<String> profileText = [
   "Profil Düzenle",
   "Ayarlar",
-  "Duyurular",
+  "Bildirimler",
   "Yardım",
-  
 ];
