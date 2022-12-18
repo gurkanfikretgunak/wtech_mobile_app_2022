@@ -11,6 +11,8 @@ class FoundingMembersView extends StatelessWidget with FoundingMembersWidgets {
     return Scaffold(
       appBar: CustomAppbar(
         titleText: "Kurucu Üyeler",
+        isCheck: false,
+        isName: false,
       ),
       bottomNavigationBar: const CustomBottomNavBar(),
       body: body(context),
