@@ -1,4 +1,9 @@
+import 'package:client/core/views/blogs_view/blogs.view.dart';
+import 'package:client/core/views/educations_view/educations.view.dart';
+import 'package:client/core/views/jobs_details_view/jobs_detail.view.dart';
+import 'package:client/core/views/mentors_view/mentors.view.dart';
 import 'package:client/core/views/news_view/news.view.dart';
+import 'package:client/core/views/videos_view/videos.view.dart';
 import 'package:flutter/material.dart';
 
 import '../enums/routes.enum.dart';
@@ -18,14 +23,11 @@ class AppRoutes {
         // TODO: Handle this case.
         break;
       case Routes.blogs:
-        // TODO: Handle this case.
-        break;
-      case Routes.blogDetail:
-        // TODO: Handle this case.
-        break;
+        return navigate(BlogsView());
+
       case Routes.educations:
-        // TODO: Handle this case.
-        break;
+        return navigate(const EducationView());
+
       case Routes.educationDetail:
         // TODO: Handle this case.
         break;
@@ -42,14 +44,13 @@ class AppRoutes {
         // TODO: Handle this case.
         break;
       case Routes.jobs:
-        // TODO: Handle this case.
-        break;
+        return navigate(JobsDetailView());
+
       case Routes.jobDetail:
         // TODO: Handle this case.
         break;
       case Routes.mentors:
-        // TODO: Handle this case.
-        break;
+        return navigate(MentorsView());
       case Routes.mentorDetail:
         // TODO: Handle this case.
         break;
@@ -72,8 +73,7 @@ class AppRoutes {
         // TODO: Handle this case.
         break;
       case Routes.videos:
-        // TODO: Handle this case.
-        break;
+        return navigate(VideosView());
 
       default:
         return navigate(

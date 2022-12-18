@@ -20,7 +20,10 @@ class HomeView extends StatelessWidget with HomeViewWidget {
         stream: _vm.loading,
         builder: (context, snapshot) {
           return Scaffold(
-              appBar: CustomAppbar(titleText: L10n.of(context)!.hello, isCheck: true, isName: true),
+              appBar: CustomAppbar(
+                  titleText: L10n.of(context)!.hello,
+                  isCheck: true,
+                  isName: true),
               drawer: const DrawerWidget(),
               body: Padding(
                 padding: context.onlyLRTpaddingNormal,
@@ -30,13 +33,15 @@ class HomeView extends StatelessWidget with HomeViewWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         HomeViewWidget.searchHomeWidget(context),
+                        context.emptySizedHeightBoxLow,
                         SizedBox(
                             height: context.dynamicHeight(0.29),
                             width: context.width,
                             child: const EventSwiperWidget()),
                         Padding(
                           padding: context.onlyTRpaddingNormal,
-                          child: Text(L10n.of(context)!.categories, style: Theme.of(context).textTheme.headline6),
+                          child: Text(L10n.of(context)!.categories,
+                              style: Theme.of(context).textTheme.headline6),
                         ),
                         SizedBox(
                             height: context.dynamicHeight(0.098),
@@ -44,9 +49,12 @@ class HomeView extends StatelessWidget with HomeViewWidget {
                             child: const CategoriesWidget()),
                         Padding(
                           padding: context.onlyTRpaddingNormal,
-                          child: Text(L10n.of(context)!.currentTraining, style: Theme.of(context).textTheme.headline6),
+                          child: Text(L10n.of(context)!.currentTraining,
+                              style: Theme.of(context).textTheme.headline6),
                         ),
-                        SizedBox(height: context.dynamicHeight(0.2), child: homeCardWidget(context)),
+                        SizedBox(
+                            height: context.dynamicHeight(0.2),
+                            child: homeCardWidget(context)),
                       ],
                     ),
                   ],

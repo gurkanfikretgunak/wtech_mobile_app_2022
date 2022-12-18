@@ -33,9 +33,9 @@ class NewsView extends StatelessWidget with NewsWidgets {
               card(news: newsList[0], isTitleCard: true),
               titleText(context),
               SizedBox(
-                height: 400,
+                height: context.dynamicHeight(0.8),
                 child: ListView.builder(
-                  // physics: const NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   itemCount: newsList.length - 1,
                   itemBuilder: (context, index) {
                     return NewsCard(
