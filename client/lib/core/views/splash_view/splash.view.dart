@@ -16,14 +16,19 @@ class _SplashViewState extends State<SplashView> {
 
   @override
   Widget build(BuildContext context) {
-    final double screenHeight = MediaQuery.of(context).size.height;
-    return Column(
-      children: [
-        SplashLogo(i: 2, screenHeight: screenHeight),
-        widget.allRightReservedText(3, screenHeight,
-            upperText: '© 2022 Wtech Platform. Tüm hakları saklıdır',
-            bottomText: '2019')
-      ],
+    return Scaffold(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          const Expanded(
+            flex: 3,
+            child: SplashLogo(),
+          ),
+          const Spacer(),
+          Expanded(child: widget.allRightReservedText(context)),
+          const Spacer()
+        ],
+      ),
     );
   }
 }
