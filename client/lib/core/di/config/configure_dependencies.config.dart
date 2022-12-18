@@ -14,16 +14,16 @@ import 'package:client/core/data/network/services/users/user_api.dart' as _i24;
 import 'package:client/core/di/config/app_config.dart' as _i19;
 import 'package:client/core/di/config/raw_helper.dart' as _i13;
 import 'package:client/core/di/config/register_module.dart' as _i25;
-import 'package:client/core/views/blogs_detail_view/blogs_detail.viewmodel.dart'
-    as _i3;
-import 'package:client/core/views/blogs_view/blogs.viewmodel.dart' as _i4;
 import 'package:client/core/views/educations_detail_view/educations_detail.viewmodel.dart'
-    as _i5;
+    as _i3;
 import 'package:client/core/views/educations_view/educations.viewmodel.dart'
-    as _i6;
+    as _i4;
 import 'package:client/core/views/forgot_password_view/fotgotpass.viewmodel.dart'
+    as _i5;
+import 'package:client/core/views/home_view/home.viewmodel.dart' as _i6;
+import 'package:client/core/views/jobs_details_view/jobs_detail.viewmodel.dart'
     as _i7;
-import 'package:client/core/views/home_view/home.viewmodel.dart' as _i8;
+import 'package:client/core/views/jobs_view/jobs.viewmodel.dart' as _i8;
 import 'package:client/core/views/mentors_details_view/mentors_details.viewmodel.dart'
     as _i9;
 import 'package:client/core/views/mentors_view/mentors.viewmodel.dart' as _i10;
@@ -56,13 +56,13 @@ Future<_i1.GetIt> $initGetIt(
     environmentFilter,
   );
   final registerModule = _$RegisterModule();
-  gh.factory<_i3.BlogsDetailViewModel>(() => _i3.BlogsDetailViewModel());
-  gh.factory<_i4.BlogsViewModel>(() => _i4.BlogsViewModel());
-  gh.factory<_i5.EducationsDetailViewModel>(
-      () => _i5.EducationsDetailViewModel());
-  gh.factory<_i6.EducationsViewModel>(() => _i6.EducationsViewModel());
-  gh.factory<_i7.ForgotPasswordViewModel>(() => _i7.ForgotPasswordViewModel());
-  gh.factory<_i8.HomeViewModel>(() => _i8.HomeViewModel());
+  gh.factory<_i3.EducationsDetailViewModel>(
+      () => _i3.EducationsDetailViewModel());
+  gh.factory<_i4.EducationsViewModel>(() => _i4.EducationsViewModel());
+  gh.factory<_i5.ForgotPasswordViewModel>(() => _i5.ForgotPasswordViewModel());
+  gh.factory<_i6.HomeViewModel>(() => _i6.HomeViewModel());
+  gh.factory<_i7.JobsDetailViewModel>(() => _i7.JobsDetailViewModel());
+  gh.factory<_i8.JobsViewModel>(() => _i8.JobsViewModel());
   gh.factory<_i9.MentorsDetailsViewModel>(() => _i9.MentorsDetailsViewModel());
   gh.factory<_i10.MentorsViewModel>(() => _i10.MentorsViewModel());
   gh.factory<_i11.NewsDetailViewModel>(() => _i11.NewsDetailViewModel());
