@@ -1,24 +1,26 @@
 import 'package:client/core/constants/color_constans.dart';
 import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/l10n/app_l10n.dart';
+import 'package:client/core/views/common/widgets/text/custom_text.dart';
 import 'package:flutter/material.dart';
 
 class EducationsDetailWidgets {
-  Widget educationContent(BuildContext context, double height, double width) {
+  Widget educationContent(BuildContext context) {
     return Padding(
       padding: PaddingExtension(context).paddingNormal,
       child: SizedBox(
-        width: width,
+        width: context.dynamicWidth(1),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text("Eğitim İçeriği", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
+            CustomText(L10n.of(context)!.educationContent),
             Padding(
               padding: PaddingExtension(context).paddingNormal,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  contentPieces(context, Icons.link, "Seviye : ", "Genel"),
-                  contentPieces(context, Icons.workspace_premium, "Sertifika : ", "Var"),
+                  contentPieces(context, Icons.link, L10n.of(context)!.educationLevel, ": Genel"),
+                  contentPieces(context, Icons.workspace_premium, L10n.of(context)!.educationCertificate, ": Var"),
                 ],
               ),
             ),
@@ -27,8 +29,8 @@ class EducationsDetailWidgets {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  contentPieces(context, Icons.schedule, "Süre : ", "40 Saat"),
-                  contentPieces(context, Icons.language, "Dil     : ", "Türkçe"),
+                  contentPieces(context, Icons.schedule, L10n.of(context)!.educationTime, ": 40 Saat"),
+                  contentPieces(context, Icons.language, L10n.of(context)!.educationLanguage, ":     Türkçe"),
                 ],
               ),
             ),
