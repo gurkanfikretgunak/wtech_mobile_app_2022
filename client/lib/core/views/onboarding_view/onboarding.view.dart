@@ -1,4 +1,5 @@
 import 'package:client/core/constants/color_constans.dart';
+import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/home_view/home.view.dart';
 import 'package:client/core/views/onboarding_view/widgets/dot_indicator.dart';
 import 'package:client/core/views/onboarding_view/widgets/onboarding_widget.dart';
@@ -40,7 +41,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
             children: [
               Expanded(
                 child: PageView.builder(
-                  itemCount: demo_data.length,
+                  itemCount: demoDataFunction(context).length,
                   controller: _pageController,
                   onPageChanged: (index) {
                     setState(() {
@@ -48,16 +49,16 @@ class _OnboardingPageState extends State<OnboardingPage> {
                     });
                   },
                   itemBuilder: (context, index) => OnboardContent(
-                    image: demo_data[index].image,
-                    title: demo_data[index].title,
-                    description: demo_data[index].description,
+                    image: demoDataFunction(context)[index].image,
+                    title: demoDataFunction(context)[index].title,
+                    description: demoDataFunction(context)[index].description,
                   ),
                 ),
               ),
               Row(
                 children: [
                   ...List.generate(
-                      demo_data.length,
+                      demoDataFunction(context).length,
                       (index) => Padding(
                             padding: context.paddingNormal,
                             child: DotIndicator(isActive: index == _pageIndex),
@@ -90,7 +91,9 @@ class _OnboardingPageState extends State<OnboardingPage> {
 }
 
 class Onboard {
-  final String image, title, description;
+  final String image;
+  final String title;
+  final String description;
   Onboard({
     required this.image,
     required this.title,
@@ -98,23 +101,20 @@ class Onboard {
   });
 }
 
-final List<Onboard> demo_data = [
-  Onboard(
-    image: 'assets/education.gif',
-    title: 'Sana Uygun Eğitimi Beraber Bulalım!',
-    description:
-        '100 Eğitmen ve Kurumdan 30 Farklı Sertifikalı Kursa Ücretsiz Erişim! Kariyer ve öğrenim hayatınızı bir sonraki seviyeye taşıyın.',
-  ),
-  Onboard(
-    image: 'assets/mentor.gif',
-    title: 'Birlikte Güçlüyüz',
-    description:
-        'Türkiye’nin teknolojide lider kurumlarından ve üniversitelerinden farklı alanlardaki danışmanlar ve mentorler, Wtech Platform’da senin yanında!',
-  ),
-  Onboard(
-    image: 'assets/events.gif',
-    title: 'İşimiz İnsan, İşimiz Teknoloji',
-    description:
-        'Yetenekler ve kurumların bir araya gelebilmeleri için gerekli köprüyü kuruyoruz. Teknolojide fark yaratmak için doğru yerdesin!',
-  ),
-];
+List<Onboard> demoDataFunction(BuildContext context) => [
+      Onboard(
+        image: 'assets/education.gif',
+        title: L10n.of(context)!.titleEducation,
+        description: L10n.of(context)!.descriptionEducation,
+      ),
+      Onboard(
+        image: 'assets/mentor.gif',
+        title: L10n.of(context)!.titleMentor,
+        description: L10n.of(context)!.descriptionMentor,
+      ),
+      Onboard(
+        image: 'assets/events.gif',
+        title: L10n.of(context)!.titleEvents,
+        description: L10n.of(context)!.descriptionEvents,
+      ),
+    ];
