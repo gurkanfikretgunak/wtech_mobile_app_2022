@@ -1,3 +1,4 @@
+import 'package:client/core/constants/color_constans.dart';
 import 'package:client/core/extensions/extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/common/widgets/button/button_libary.dart';
@@ -20,62 +21,66 @@ class SignInEmailView extends StatefulWidget {
 
 class _MainScreenState extends State<SignInEmailView> with SignInWidget {
   bool light = true;
+  TextEditingController emailTextController = TextEditingController();
+  TextEditingController passwordTextController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<MainBloc>(
-      builder: (context, bloc, _) {
-        return Scaffold(
-          body: SingleChildScrollView(
-            child: Padding(
-              padding: context.paddingNormal,
-              child: Wrap(
-                alignment: WrapAlignment.center,
-                runSpacing: 30,
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: context.paddingMedium,
+          child: Wrap(
+            alignment: WrapAlignment.center,
+            runSpacing: 30,
+            children: [
+              Padding(
+                padding: context.onlyTopPaddingHigh,
+                child: const Logo(),
+              ),
+              emailTextField(context, emailTextController),
+              passwordTextField(context, passwordTextController),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Logo(),
-                  emailTextField(context),
-                  passwordTextField(context),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Row(
-                        children: [
-                          Switch(
-                            value: light,
-                            activeTrackColor: Colors.blue.shade200,
-                            activeColor: Colors.blue,
-                            onChanged: (bool value) {
-                              setState(() {
-                                light = value;
-                              });
-                            },
-                          ),
-                          Text(L10n.of(context)!.rememberMe),
-                        ],
+                      Switch(
+                        value: light,
+                        activeTrackColor: Colors.blue.shade200,
+                        activeColor: Colors.blue,
+                        onChanged: (bool value) {
+                          setState(() {
+                            light = value;
+                          });
+                        },
                       ),
-                      TextButton(
-                        style: TextButton.styleFrom(
-                            textStyle: const TextStyle(fontSize: 15)),
-                        onPressed: () {},
-                        child: Text(L10n.of(context)!.forgotPassword),
-                      ),
+                      Text(L10n.of(context)!.rememberMe),
                     ],
                   ),
-                  SizedBox(
-                    width: context.dynamicWidth(1),
-                    child: CustomElevatedButton(
-                        onPressed: () {}, text: L10n.of(context)!.signIn),
+                  TextButton(
+                    style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 15)),
+                    onPressed: () {},
+                    child: Text(L10n.of(context)!.forgotPassword),
                   ),
-                  const CustomDivider(endIndent: 0),
-                  const SignUpForNotRemember(),
-                  const SignInBottomDescription(),
                 ],
               ),
-            ),
+              SizedBox(
+                width: context.dynamicWidth(1),
+                height: context.dynamicHeight(0.065),
+                child: CustomElevatedButton(
+                  onPressed: () {},
+                  text: L10n.of(context)!.signIn,
+                  fontSize: 17,
+                ),
+              ),
+              const CustomDivider(endIndent: 0),
+              const SignUpForNotRemember(),
+              const SignInBottomDescription(),
+            ],
           ),
-        );
-      },
+        ),
+      ),
     );
   }
 }
