@@ -11,28 +11,28 @@ class SignInBottomDescription extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        CustomText(
-          color: ColorConstant.instance.grey,
-          L10n.of(context)!.loginBottomDescription,
-        ),
-        TextButton(
-          onPressed: () {},
-          child: CustomText(L10n.of(context)!.userAgreement,
-              color: ColorConstant.instance.blue),
-        ),
-        CustomText(
-          color: ColorConstant.instance.grey,
-          "&",
-        ),
-        TextButton(
-          onPressed: () {},
-          child: CustomText(L10n.of(context)!.illuminationText,
-              color: ColorConstant.instance.blue),
-        ),
-      ],
+    return FittedBox(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          CustomText(
+            color: ColorConstant.instance.grey,
+            L10n.of(context)!.loginBottomDescription,
+          ),
+          TextButton(
+            onPressed: () {},
+            child: CustomText(L10n.of(context)!.userAgreement, color: ColorConstant.instance.blue),
+          ),
+          CustomText(
+            color: ColorConstant.instance.grey,
+            "&",
+          ),
+          TextButton(
+            onPressed: () {},
+            child: CustomText(L10n.of(context)!.illuminationText, color: ColorConstant.instance.blue),
+          ),
+        ],
+      ),
     );
   }
 }
