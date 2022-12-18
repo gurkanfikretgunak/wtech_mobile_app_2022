@@ -8,10 +8,11 @@ class JobsWidgets {
       physics: const BouncingScrollPhysics(),
       padding: context.paddingLow,
       itemCount: 5,
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         crossAxisSpacing: 10,
-        childAspectRatio: 0.65,
+        mainAxisSpacing: context.dynamicHeight(0.2),
+        //childAspectRatio: 0.5,
       ),
       itemBuilder: (context, index) => const JobsCardWidget(
           imageUrl:

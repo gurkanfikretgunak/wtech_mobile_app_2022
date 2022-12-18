@@ -99,9 +99,7 @@ class JobsCardWidget extends StatelessWidget {
             Positioned(
               top: context.dynamicHeight(0.11),
               left: context.dynamicWidth(0.01),
-              child: SizedBox(
-                height: context.dynamicHeight(0.05),
-                width: context.dynamicWidth(0.17),
+              child: FittedBox(
                 child: Card(
                   color: ColorConstant.instance.yellow,
                   elevation: 8,
@@ -110,10 +108,13 @@ class JobsCardWidget extends StatelessWidget {
                     side: const BorderSide(color: Colors.black12),
                   ),
                   child: Center(
-                    child: CustomText(
-                      L10n.of(context)!.internship,
-                      color: ColorConstant.instance.white,
-                      fontWeight: FontWeight.bold,
+                    child: Padding(
+                      padding: context.paddingLow,
+                      child: CustomText(
+                        L10n.of(context)!.internship,
+                        color: ColorConstant.instance.white,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
