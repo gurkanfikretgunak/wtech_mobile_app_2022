@@ -9,23 +9,20 @@ class CustomBottomNavBar extends StatefulWidget {
 }
 
 class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
-  
   int _selectedIndex = 0;
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
   }
-  
+
   @override
   Widget build(BuildContext context) {
-
     return BottomNavigationBar(
       currentIndex: _selectedIndex,
       onTap: _onItemTapped,
       type: BottomNavigationBarType.fixed,
-      items:  [
-
+      items: [
         BottomNavigationBarItem(
           icon: const Icon(Icons.home),
           label: L10n.of(context)!.home,
@@ -47,7 +44,6 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
           label: L10n.of(context)!.trainings,
         ),
       ],
-      
     );
   }
 }

@@ -19,6 +19,15 @@ class IconConstant {
     ];
   }
 
+  static List<String> drawerNames(context) {
+    return [
+      L10n.of(context)!.aboutUs,
+      L10n.of(context)!.missionVision,
+      L10n.of(context)!.participationConditions,
+      L10n.of(context)!.contact
+    ];
+  }
+
   static List<IconData> drawerIcon = [
     Icons.info_outline,
     Icons.ballot_rounded,
