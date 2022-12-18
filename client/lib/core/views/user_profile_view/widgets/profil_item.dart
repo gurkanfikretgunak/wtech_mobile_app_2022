@@ -35,7 +35,10 @@ class ProfilItem extends StatelessWidget {
                     CustomText(text),
                   ],
                 ),
-                const Icon(Icons.arrow_forward_ios_sharp),
+                const Icon(
+                  Icons.arrow_forward_ios_sharp,
+                  size: 20,
+                ),
               ],
             ),
           ),
