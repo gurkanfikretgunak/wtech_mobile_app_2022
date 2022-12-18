@@ -18,7 +18,11 @@ class NewsView extends StatelessWidget with NewsWidgets {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppbar(titleText: L10n.of(context)!.news),
+      appBar: CustomAppbar(
+        titleText: L10n.of(context)!.news,
+        isCheck: false,
+        isName: false,
+      ),
       bottomNavigationBar: const CustomBottomNavBar(),
       body: Padding(
         padding: context.paddingNormal,
