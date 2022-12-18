@@ -3,5 +3,5 @@ List<String> profileText = [
   "Ayarlar",
   "Duyurular",
   "Yardım",
-  "Çıkış Yap"
+  
 ];

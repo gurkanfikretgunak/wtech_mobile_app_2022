@@ -20,6 +20,7 @@ class ProfilItem extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Card(
+        elevation: 0.1,
         child: SizedBox(
           height: context.dynamicHeight(0.08),
           child: Padding(
@@ -34,7 +35,7 @@ class ProfilItem extends StatelessWidget {
                     CustomText(text),
                   ],
                 ),
-                const Icon(Icons.arrow_forward),
+                const Icon(Icons.arrow_forward_ios_sharp),
               ],
             ),
           ),

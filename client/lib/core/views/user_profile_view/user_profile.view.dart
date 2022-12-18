@@ -1,5 +1,7 @@
+import 'package:client/core/constants/color_constans.dart';
 import 'package:client/core/extensions/extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
+import 'package:client/core/views/common/widgets/button/button_libary.dart';
 import 'package:client/core/views/common/widgets/custom_appbar.dart';
 import 'package:client/core/views/common/widgets/text/custom_text.dart';
 import 'package:client/core/views/user_profile_view/user_profile.viewmodel.dart';
@@ -35,7 +37,14 @@ class UserProfileView extends StatelessWidget with UserProfileWidgets {
                     const CustomText("gurkan@gmail.com"),
                     context.emptySizedHeightBoxHigh,
                     context.emptySizedHeightBoxNormal,
-                    listViewBuildProfilItem(context)
+                    listViewBuildProfilItem(context),
+                    CustomElevatedButton(
+                      onPressed: () {},
+                      buttonColor: true,
+                      text: "Çıkış Yap",
+                      textColor: ColorConstant.instance.white,
+                      iconWidget: Icon(Icons.exit_to_app),
+                    )
                   ],
                 )),
             profileAvatar(context)
