@@ -1,3 +1,4 @@
+import 'package:client/core/constants/color_constans.dart';
 import 'package:client/core/extensions/extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/common/widgets/button/button_libary.dart';
@@ -63,9 +64,12 @@ class _MainScreenState extends State<SignInEmailView> with SignInWidget {
                     ],
                   ),
                   SizedBox(
+                    height: context.dynamicHeight(0.04),
                     width: context.dynamicWidth(1),
                     child: CustomElevatedButton(
-                        onPressed: () {}, text: L10n.of(context)!.signIn),
+                        textColor: ColorConstant.instance.white,
+                        onPressed: () {},
+                        text: L10n.of(context)!.signIn),
                   ),
                   const CustomDivider(endIndent: 0),
                   const SignUpForNotRemember(),
