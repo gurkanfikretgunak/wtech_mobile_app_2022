@@ -1,6 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+
 class PictureWidget extends StatelessWidget {
   const PictureWidget({
     Key? key,
@@ -8,8 +8,6 @@ class PictureWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SvgPicture.asset('images/logo.svg',height: 30);
+    return SvgPicture.asset('assets/images/logo.svg', height: 30);
   }
 }
-
-

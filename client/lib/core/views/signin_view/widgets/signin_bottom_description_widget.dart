@@ -21,8 +21,7 @@ class SignInBottomDescription extends StatelessWidget {
           ),
           TextButton(
             onPressed: () {},
-            child: CustomText(L10n.of(context)!.userAgreement,
-                color: ColorConstant.instance.blue),
+            child: CustomText(L10n.of(context)!.userAgreement, color: ColorConstant.instance.blue),
           ),
           CustomText(
             color: ColorConstant.instance.grey,
@@ -30,8 +29,7 @@ class SignInBottomDescription extends StatelessWidget {
           ),
           TextButton(
             onPressed: () {},
-            child: CustomText(L10n.of(context)!.illuminationText,
-                color: ColorConstant.instance.blue),
+            child: CustomText(L10n.of(context)!.illuminationText, color: ColorConstant.instance.blue),
           ),
         ],
       ),
