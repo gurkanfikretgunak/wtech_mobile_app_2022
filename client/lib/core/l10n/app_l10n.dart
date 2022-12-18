@@ -1328,6 +1328,42 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'Testinium'**
   String get testinium;
+
+  /// No description provided for @titleEducation.
+  ///
+  /// In en, this message translates to:
+  /// **'Let’s find your course together!'**
+  String get titleEducation;
+
+  /// No description provided for @descriptionEducation.
+  ///
+  /// In en, this message translates to:
+  /// **'Free Access to 30 Different Certified Courses Instructed by 100+ Educators and Institutions'**
+  String get descriptionEducation;
+
+  /// No description provided for @titleMentor.
+  ///
+  /// In en, this message translates to:
+  /// **'We Are Strong Together!'**
+  String get titleMentor;
+
+  /// No description provided for @descriptionMentor.
+  ///
+  /// In en, this message translates to:
+  /// **'From Turkey’s leading institutions and universities in technology, consultants and mentors in different fields side with you in Wtech Platform!'**
+  String get descriptionMentor;
+
+  /// No description provided for @titleEvents.
+  ///
+  /// In en, this message translates to:
+  /// **'Our job is human, our job is technology'**
+  String get titleEvents;
+
+  /// No description provided for @descriptionEvents.
+  ///
+  /// In en, this message translates to:
+  /// **'It builds the necessary bridge for talents and institutions to come together. You are in the right place to make a difference in technology!'**
+  String get descriptionEvents;
 }
 
 class _L10nDelegate extends LocalizationsDelegate<L10n> {

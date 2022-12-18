@@ -621,4 +621,22 @@ class L10nEn extends L10n {
 
   @override
   String get testinium => 'Testinium';
+
+  @override
+  String get titleEducation => 'Let’s find your course together!';
+
+  @override
+  String get descriptionEducation => 'Free Access to 30 Different Certified Courses Instructed by 100+ Educators and Institutions';
+
+  @override
+  String get titleMentor => 'We Are Strong Together!';
+
+  @override
+  String get descriptionMentor => 'From Turkey’s leading institutions and universities in technology, consultants and mentors in different fields side with you in Wtech Platform!';
+
+  @override
+  String get titleEvents => 'Our job is human, our job is technology';
+
+  @override
+  String get descriptionEvents => 'It builds the necessary bridge for talents and institutions to come together. You are in the right place to make a difference in technology!';
 }

@@ -221,7 +221,13 @@
     "pegasus" : "Pegasus",
     "pwc" : "PWC",
     "sem" : "SEM",
-    "testinium" : "Testinium"
+    "testinium" : "Testinium",
+    "titleEducation"  : "Sana Uygun Eğitimi Beraber Bulalım!",
+    "descriptionEducation" : "100 Eğitmen ve Kurumdan 30 Farklı Sertifikalı Kursa Ücretsiz Erişim! Kariyer ve öğrenim hayatınızı bir sonraki seviyeye taşıyın.",
+    "titleMentor"  : "Birlikte Güçlüyüz",
+    "descriptionMentor"  : "Türkiye’nin teknolojide lider kurumlarından ve üniversitelerinden farklı alanlardaki danışmanlar ve mentorler, Wtech Platform’da senin yanında!",
+    "titleEvents"  : "İşimiz İnsan, İşimiz Teknoloji",
+    "descriptionEvents" : "Yetenekler ve kurumların bir araya gelebilmeleri için gerekli köprüyü kuruyoruz. Teknolojide fark yaratmak için doğru yerdesin!"
 
 }
 

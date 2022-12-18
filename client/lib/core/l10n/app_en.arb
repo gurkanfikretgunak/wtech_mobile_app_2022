@@ -216,6 +216,12 @@
     "pegasus" : "Pegasus",
     "pwc" : "PWC",
     "sem" : "SEM",
-    "testinium" : "Testinium"
+    "testinium" : "Testinium",
+    "titleEducation"  : "Let’s find your course together!",
+    "descriptionEducation" : "Free Access to 30 Different Certified Courses Instructed by 100+ Educators and Institutions",
+    "titleMentor"  : "We Are Strong Together!",
+    "descriptionMentor" : "From Turkey’s leading institutions and universities in technology, consultants and mentors in different fields side with you in Wtech Platform!",
+    "titleEvents"  : "Our job is human, our job is technology",
+    "descriptionEvents"  : "It builds the necessary bridge for talents and institutions to come together. You are in the right place to make a difference in technology!"
 
 }
