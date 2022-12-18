@@ -1,11 +1,8 @@
 import 'package:client/core/constants/color_constans.dart';
-import 'package:client/core/l10n/app_l10n.dart';
+import 'package:client/core/extensions/extension.dart';
 import 'package:client/core/views/common/widgets/text/custom_text.dart';
 import 'package:client/core/views/educations_detail_view/widgets/expansion_tile_list.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class EducationDescription extends StatefulWidget {
   const EducationDescription({super.key});
@@ -17,17 +14,15 @@ class EducationDescription extends StatefulWidget {
 class _EducationDescriptionState extends State<EducationDescription> {
   @override
   Widget build(BuildContext context) {
-    double screenHeight = MediaQuery.of(context).size.height;
-    double screenWidth = MediaQuery.of(context).size.width;
 
     return SizedBox(
-      height: screenHeight / 2,
-      width: screenWidth,
+      height: context.dynamicHeight(0.4),
+      width: context.dynamicWidth(1),
       child: ListView.builder(
         itemBuilder: (context, index) {
-          return educationExpansions(ExpansionTileList().headerList(context)[index], ExpansionTileList().titleList(context)[index]);
+          return educationExpansions(ExpansionListTile().headerList(context)[index], ExpansionListTile().titleList(context)[index]);
         },
-         itemCount: ExpansionTileList().headerList(context).length),
+         itemCount: ExpansionListTile().headerList(context).length),
     );
   }
 
