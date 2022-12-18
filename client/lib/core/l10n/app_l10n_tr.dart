@@ -405,4 +405,238 @@ class L10nTr extends L10n {
 
   @override
   String get lastUpdatedDate => 'Son Güncelleme Tarihi';
+
+  @override
+  String get urlConnectionError => 'Url Bağlantı Hatası';
+
+  @override
+  String get plusmedia => '360plusmedia';
+
+  @override
+  String get fit => '90-fit';
+
+  @override
+  String get adcolony => 'Adcolony';
+
+  @override
+  String get akbank => 'Akbank';
+
+  @override
+  String get akkok => 'Akkök Holding';
+
+  @override
+  String get akode => 'Akode';
+
+  @override
+  String get aktek => 'Aktek';
+
+  @override
+  String get arceliktr => 'Arçelik Türkiye';
+
+  @override
+  String get arcelik => 'arcelik';
+
+  @override
+  String get arzum => 'Arzum';
+
+  @override
+  String get aslanoba => 'Aslanoba Group';
+
+  @override
+  String get atp => 'ATP';
+
+  @override
+  String get aws => 'AWS';
+
+  @override
+  String get baworks => 'BA-Works';
+
+  @override
+  String get baker => 'Baker-Mckenzie';
+
+  @override
+  String get bahcesehir => 'Bahçeşehir Koleji';
+
+  @override
+  String get baysalsezgin => 'Baysal Sezgin';
+
+  @override
+  String get botech => 'Botech';
+
+  @override
+  String get boyner => 'Boyner Group';
+
+  @override
+  String get cci => 'CCI';
+
+  @override
+  String get cisco => 'Cisco';
+
+  @override
+  String get commencis => 'Commencis';
+
+  @override
+  String get danone => 'Danone-Waters';
+
+  @override
+  String get deloitte => 'Deloitte';
+
+  @override
+  String get denizbank => 'Denizbank';
+
+  @override
+  String get dorce => 'Dorce';
+
+  @override
+  String get drager => 'Drager';
+
+  @override
+  String get ea => 'E-A Investments';
+
+  @override
+  String get eczacibasi => 'Eczacıbaşı';
+
+  @override
+  String get eksi => 'Ekşi Sözlük';
+
+  @override
+  String get elogo => 'E Logo';
+
+  @override
+  String get enerjisa => 'Enerjisa';
+
+  @override
+  String get etiya => 'Etiya';
+
+  @override
+  String get ford => 'Ford Otosan';
+
+  @override
+  String get gittigidiyor => 'Gittigidiyor';
+
+  @override
+  String get globalturk => 'GlobalTürk Capital';
+
+  @override
+  String get hasan => 'Hasan Faydasıçok E.V.';
+
+  @override
+  String get heidrick => 'Heidrick-Struggles';
+
+  @override
+  String get hepsiburada => 'Hepsiburada';
+
+  @override
+  String get hill => 'Hill Knowiton Strategies';
+
+  @override
+  String get hitay => 'Hitay';
+
+  @override
+  String get hitit => 'Hitit';
+
+  @override
+  String get hp => 'HP';
+
+  @override
+  String get imaj => 'İmaj';
+
+  @override
+  String get innovera => 'Innovera';
+
+  @override
+  String get kantar => 'Kantar Media';
+
+  @override
+  String get koton => 'Koton';
+
+  @override
+  String get kpmg => 'KOMG';
+
+  @override
+  String get kredi => 'Kredi Kayıt Bürosu';
+
+  @override
+  String get limak => 'Limak';
+
+  @override
+  String get linktera => 'Linktera';
+
+  @override
+  String get manpower => 'Manpower Group';
+
+  @override
+  String get mapfre => 'Mapfre';
+
+  @override
+  String get mentoro => 'Mentoro';
+
+  @override
+  String get mercer => 'Mercer';
+
+  @override
+  String get messe => 'Messe-Frankfurt';
+
+  @override
+  String get micro => 'Micro-Focus';
+
+  @override
+  String get microsoft => 'Microsoft';
+
+  @override
+  String get migros => 'Migros';
+
+  @override
+  String get mma => 'MMA';
+
+  @override
+  String get multinet => 'Multinet Up';
+
+  @override
+  String get mv => 'MV Holding';
+
+  @override
+  String get netas => 'Netas';
+
+  @override
+  String get netmarble => 'Nermarble Türkiye';
+
+  @override
+  String get ogilvy => 'Ogilvy';
+
+  @override
+  String get onicorn => 'Onicorn';
+
+  @override
+  String get paynet => 'Paynet';
+
+  @override
+  String get pegasus => 'Pegasus';
+
+  @override
+  String get pwc => 'PWC';
+
+  @override
+  String get sem => 'SEM';
+
+  @override
+  String get testinium => 'Testinium';
+
+  @override
+  String get titleEducation => 'Sana Uygun Eğitimi Beraber Bulalım!';
+
+  @override
+  String get descriptionEducation => '100 Eğitmen ve Kurumdan 30 Farklı Sertifikalı Kursa Ücretsiz Erişim! Kariyer ve öğrenim hayatınızı bir sonraki seviyeye taşıyın.';
+
+  @override
+  String get titleMentor => 'Birlikte Güçlüyüz';
+
+  @override
+  String get descriptionMentor => 'Türkiye’nin teknolojide lider kurumlarından ve üniversitelerinden farklı alanlardaki danışmanlar ve mentorler, Wtech Platform’da senin yanında!';
+
+  @override
+  String get titleEvents => 'İşimiz İnsan, İşimiz Teknoloji';
+
+  @override
+  String get descriptionEvents => 'Yetenekler ve kurumların bir araya gelebilmeleri için gerekli köprüyü kuruyoruz. Teknolojide fark yaratmak için doğru yerdesin!';
 }
