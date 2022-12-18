@@ -6,7 +6,12 @@ class CustomAppbar extends StatelessWidget with PreferredSizeWidget {
   final String? titleText;
   final bool? isCheck;
   final TextButton? appButton;
-  const CustomAppbar({Key? key, this.isCheck = false, this.appButton, this.titleText}) : super(key: key);
+  const CustomAppbar({
+    Key? key,
+    this.isCheck = false,
+    this.appButton,
+    this.titleText,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,9 +22,16 @@ class CustomAppbar extends StatelessWidget with PreferredSizeWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(titleText ?? "",
-                style: Theme.of(context).textTheme.headline6?.copyWith(fontSize: 20, fontWeight: FontWeight.normal)),
+                style: Theme.of(context)
+                    .textTheme
+                    .headline6
+                    ?.copyWith(fontSize: 20, fontWeight: FontWeight.normal)),
             isCheck!
-                ? Text("Gürkan Fikret Günak", style: Theme.of(context).textTheme.headline6?.copyWith(fontSize: 20))
+                ? Text("Gürkan Fikret Günak",
+                    style: Theme.of(context)
+                        .textTheme
+                        .headline6
+                        ?.copyWith(fontSize: 20))
                 : const SizedBox()
           ],
         ),
@@ -31,13 +43,17 @@ class CustomAppbar extends StatelessWidget with PreferredSizeWidget {
                 child: Container(
                     height: 40,
                     width: 85,
-                    decoration:
-                        BoxDecoration(color: ColorConstant.instance.yellow, borderRadius: BorderRadius.circular(50)),
+                    decoration: BoxDecoration(
+                        color: ColorConstant.instance.yellow,
+                        borderRadius: BorderRadius.circular(50)),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Text("W-27",
-                            style: Theme.of(context).textTheme.subtitle1?.copyWith(fontWeight: FontWeight.bold)),
+                            style: Theme.of(context)
+                                .textTheme
+                                .subtitle1
+                                ?.copyWith(fontWeight: FontWeight.bold)),
                         const CircleAvatar(maxRadius: 18),
                       ],
                     )),
