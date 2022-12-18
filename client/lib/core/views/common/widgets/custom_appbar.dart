@@ -8,16 +8,7 @@ class CustomAppbar extends StatelessWidget with PreferredSizeWidget {
   final bool? isCheck;
   final bool? isName;
   final TextButton? appButton;
-<<<<<<< HEAD
   const CustomAppbar({Key? key, this.isCheck = false, this.appButton, this.titleText, this.isName}) : super(key: key);
-=======
-  const CustomAppbar({
-    Key? key,
-    this.isCheck = false,
-    this.appButton,
-    this.titleText,
-  }) : super(key: key);
->>>>>>> 25774bbab5fd3c504dd86546f4d9c38d2c14f98d
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +16,6 @@ class CustomAppbar extends StatelessWidget with PreferredSizeWidget {
       leading:
           isCheck! ? customMenuBuilder() : Padding(padding: context.onlyTopPaddingNormal, child: const BackButton()),
       title: Padding(
-<<<<<<< HEAD
           padding: context.onlyTopPaddingLow,
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Text.rich(TextSpan(
@@ -60,48 +50,6 @@ class CustomAppbar extends StatelessWidget with PreferredSizeWidget {
                             child: CircleAvatar(maxRadius: 18, child: Image.asset(Assets.images.profile.path)),
                           ))),
                 ],
-=======
-        padding: context.onlyTopPaddingLow,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(titleText ?? "",
-                style: Theme.of(context)
-                    .textTheme
-                    .headline6
-                    ?.copyWith(fontSize: 20, fontWeight: FontWeight.normal)),
-            isCheck!
-                ? Text("Gürkan Fikret Günak",
-                    style: Theme.of(context)
-                        .textTheme
-                        .headline6
-                        ?.copyWith(fontSize: 20))
-                : const SizedBox()
-          ],
-        ),
-      ),
-      actions: [
-        isCheck!
-            ? Padding(
-                padding: context.onlyTopPaddingNormal,
-                child: Container(
-                    height: 40,
-                    width: 85,
-                    decoration: BoxDecoration(
-                        color: ColorConstant.instance.yellow,
-                        borderRadius: BorderRadius.circular(50)),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Text("W-27",
-                            style: Theme.of(context)
-                                .textTheme
-                                .subtitle1
-                                ?.copyWith(fontWeight: FontWeight.bold)),
-                        const CircleAvatar(maxRadius: 18),
-                      ],
-                    )),
->>>>>>> 25774bbab5fd3c504dd86546f4d9c38d2c14f98d
               )
             : const SizedBox()
       ],

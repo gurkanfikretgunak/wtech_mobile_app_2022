@@ -4,15 +4,16 @@ import 'package:rxdart/rxdart.dart';
 
 @Injectable()
 class EducationsDetailViewModel extends BaseViewModel {
-  BehaviorSubject<bool> _favorite = BehaviorSubject<bool>.seeded(false);
+  final BehaviorSubject<bool> _favorite = BehaviorSubject<bool>.seeded(true);
   Stream get favorite => _favorite.stream;
 
-  void changeFavorite() {
-    if (_favorite == false) {
-      _favorite.add(true);
-    } else if (_favorite == true) {
-      _favorite.add(false);
+  bool changeFavorite() {
+    if (_favorite.value == true) {
+      _favorite.value = false;
+    } else if (_favorite.value == false) {
+      _favorite.value = true;
     }
+    return _favorite.value;
   }
 
   @override
