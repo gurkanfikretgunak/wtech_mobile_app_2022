@@ -57,6 +57,7 @@ android/
 **/android/**/GeneratedPluginRegistrant.java
 **/android/key.properties
 *.jks
+/android/
 
 # iOS/XCode related
 **/ios/**/*.mode1v3
@@ -87,6 +88,7 @@ android/
 **/ios/Flutter/flutter_export_environment.sh
 **/ios/ServiceDefinitions.json
 **/ios/Runner/GeneratedPluginRegistrant.*
+/ios/
 
 # macOS
 **/Flutter/ephemeral/
@@ -94,14 +96,20 @@ android/
 **/macos/Flutter/GeneratedPluginRegistrant.swift
 **/macos/Flutter/ephemeral
 **/xcuserdata/
+/macos/
 
 # Windows
 **/windows/flutter/generated_plugin_registrant.cc
 **/windows/flutter/generated_plugin_registrant.h
+/windows/
 
 # Linux
 **/linux/flutter/generated_plugin_registrant.cc
 **/linux/flutter/generated_plugin_registrant.h
+/linux/
+
+# Web
+/web/
 
 # Coverage
 coverage/

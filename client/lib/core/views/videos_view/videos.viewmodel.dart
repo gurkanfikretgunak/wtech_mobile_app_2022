@@ -25,7 +25,12 @@ class VideosViewModel extends BaseViewModel {
         setIsUrlWork(true);
       }).onError((error, stackTrace) {
         setIsUrlWork(false);
-      }));
+      }).timeout(
+        const Duration(seconds: 5),
+        onTimeout: () {
+          setIsUrlWork(false);
+        },
+      ));
   }
 
   @override
