@@ -1,23 +1,23 @@
 import 'package:client/core/constants/color_constans.dart';
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/common/widgets/button/custom_button_elevated.dart';
-import 'package:client/core/views/common/widgets/text/custom_text.dart';
-import 'package:client/core/views/home_view/home.view.dart';
 import 'package:client/core/views/onboarding_view/widgets/dot_indicator.dart';
 import 'package:client/core/views/onboarding_view/widgets/onboarding_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:client/core/extensions/extension.dart';
 
 import '../../../gen/assets.gen.dart';
+import '../../enums/routes.enum.dart';
+import '../../routes/custom_navigator.dart';
 
-class OnboardingPage extends StatefulWidget {
-  const OnboardingPage({Key? key}) : super(key: key);
+class OnboardingView extends StatefulWidget {
+  const OnboardingView({Key? key}) : super(key: key);
 
   @override
-  State<OnboardingPage> createState() => _OnboardingPageState();
+  State<OnboardingView> createState() => _OnboardingViewState();
 }
 
-class _OnboardingPageState extends State<OnboardingPage> {
+class _OnboardingViewState extends State<OnboardingView> {
   late PageController _pageController;
 
   int _pageIndex = 0;
@@ -70,7 +70,16 @@ class _OnboardingPageState extends State<OnboardingPage> {
                           )),
                   const Spacer(),
 
-                  CustomElevatedButton(onPressed: () {}, text: 'Skip')
+                  CustomElevatedButton(
+                    buttonColor: ColorConstant.instance.yellow,
+                    width: context.dynamicWidth(0.25),
+                    borderRadius: 30,
+                    onPressed: () {
+                      CustomNavigator.goToScreen(
+                          context, Routes.signinWithAccount.name);
+                    },
+                    text: 'Skip',
+                  )
                   // SizedBox(
                   //   height: context.dynamicHeight(0.08),
                   //   width: context.dynamicWidth(0.17),

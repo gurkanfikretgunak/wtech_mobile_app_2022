@@ -71,7 +71,7 @@ class AppRoutes {
         // TODO: Handle this case.
         break;
       case Routes.onBoarding:
-        return navigate(const OnboardingPage());
+        return navigate(const OnboardingView());
 
       case Routes.signinWithAccount:
         return navigate(const SignInAccountView());
