@@ -1,10 +1,14 @@
 import 'package:client/core/constants/color_constans.dart';
 import 'package:client/core/l10n/app_l10n.dart';
+import 'package:client/core/views/common/widgets/button/custom_button_elevated.dart';
+import 'package:client/core/views/common/widgets/text/custom_text.dart';
 import 'package:client/core/views/home_view/home.view.dart';
 import 'package:client/core/views/onboarding_view/widgets/dot_indicator.dart';
 import 'package:client/core/views/onboarding_view/widgets/onboarding_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:client/core/extensions/extension.dart';
+
+import '../../../gen/assets.gen.dart';
 
 class OnboardingPage extends StatefulWidget {
   const OnboardingPage({Key? key}) : super(key: key);
@@ -41,6 +45,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
             children: [
               Expanded(
                 child: PageView.builder(
+                  physics: const BouncingScrollPhysics(),
                   itemCount: demoDataFunction(context).length,
                   controller: _pageController,
                   onPageChanged: (index) {
@@ -64,22 +69,25 @@ class _OnboardingPageState extends State<OnboardingPage> {
                             child: DotIndicator(isActive: index == _pageIndex),
                           )),
                   const Spacer(),
-                  SizedBox(
-                      height: context.dynamicHeight(0.08),
-                      width: context.dynamicWidth(0.17),
-                      child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => HomeView()),
-                          );
-                        },
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor: ColorConstant.instance.yellow,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30))),
-                        child: Text('Skip'),
-                      )),
+
+                  CustomElevatedButton(onPressed: () {}, text: 'Skip')
+                  // SizedBox(
+                  //   height: context.dynamicHeight(0.08),
+                  //   width: context.dynamicWidth(0.17),
+                  //   child: ElevatedButton(
+                  //     onPressed: () {
+                  //       Navigator.push(
+                  //         context,
+                  //         MaterialPageRoute(builder: (context) => HomeView()),
+                  //       );
+                  //     },
+                  //     style: ElevatedButton.styleFrom(
+                  //         backgroundColor: ColorConstant.instance.yellow,
+                  //         shape: RoundedRectangleBorder(
+                  //             borderRadius: BorderRadius.circular(30))),
+                  //     child: const CustomText('Skip'),
+                  //   ),
+                  // ),
                 ],
               ),
             ],
@@ -103,17 +111,18 @@ class Onboard {
 
 List<Onboard> demoDataFunction(BuildContext context) => [
       Onboard(
-        image: 'assets/education.gif',
+        image: Assets.gif.education.path,
+        //'assets/gif/education.gif',
         title: L10n.of(context)!.titleEducation,
         description: L10n.of(context)!.descriptionEducation,
       ),
       Onboard(
-        image: 'assets/mentor.gif',
+        image: Assets.gif.mentor.path,
         title: L10n.of(context)!.titleMentor,
         description: L10n.of(context)!.descriptionMentor,
       ),
       Onboard(
-        image: 'assets/events.gif',
+        image: Assets.gif.events.path,
         title: L10n.of(context)!.titleEvents,
         description: L10n.of(context)!.descriptionEvents,
       ),
