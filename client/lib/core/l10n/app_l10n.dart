@@ -339,30 +339,6 @@ abstract class L10n {
   /// **'Examine'**
   String get examine;
 
-  /// No description provided for @signInGoogle.
-  ///
-  /// In en, this message translates to:
-  /// **'Sign in with Google.'**
-  String get signInGoogle;
-
-  /// No description provided for @signInFacebook.
-  ///
-  /// In en, this message translates to:
-  /// **'Sign in with Facebook.'**
-  String get signInFacebook;
-
-  /// No description provided for @signInGithub.
-  ///
-  /// In en, this message translates to:
-  /// **'Sign in with Github.'**
-  String get signInGithub;
-
-  /// No description provided for @signInApple.
-  ///
-  /// In en, this message translates to:
-  /// **'Sign in with Apple.'**
-  String get signInApple;
-
   /// No description provided for @signInEmail.
   ///
   /// In en, this message translates to:
@@ -1364,6 +1340,102 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'It builds the necessary bridge for talents and institutions to come together. You are in the right place to make a difference in technology!'**
   String get descriptionEvents;
+
+  /// No description provided for @opportunitiyEquality.
+  ///
+  /// In en, this message translates to:
+  /// **'It provides the opportunity to train curious, inquisitive, productive, courageous and self-confident technologists who provide equal opportunities.'**
+  String get opportunitiyEquality;
+
+  /// No description provided for @madeUsSprecial.
+  ///
+  /// In en, this message translates to:
+  /// **'What Makes Us Special?'**
+  String get madeUsSprecial;
+
+  /// No description provided for @associationDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Zehra Öney, who has been working as a professional manager and entrepreneur in the technology sector since the early 2000s, especially in production, research and development, digital and mobile marketing, artificial intelligence, augmented reality, big data, machine learning, joined on 31 January 2019 with the intention of progressing towards the same goal. It was founded with 75 founding corporate members. Click here to access our corporate member list, which includes institutions such as HP Turkey, Denizbank, Tempo Call Center, Vodafone Turkey, Microsoft, Gittigidiyor, Akbank, Arçelik, Limak Holding, Yemeksepeti, UiPath, EnerjiSA, Pegasus, Migros, Adcolony and Baker&McKenzie. Zehra Öney, With all its work and experience in the field of technology with its agency 360+ Media Interactive Technologies, it is an important vision for the association to increase its investments in people and especially women in this field, to train more qualified human resources in the fields of technical expertise, and to enable women to have a voice as role models in this field. and was elected as the Founding Chairman of the Board of our association, which is a first in Turkey. Öney started the preliminary studies of the establishment of our association in 2017, brought the Wtech Platform into practice, gathered feedback on the activities of the association, and met with local and multinational companies in Turkey to get their opinions on this issue, and brought the establishment to life with these companies and their participation in this goal. While our association was being established, the main purpose was to fill the need for specialists in the fields of science and technology, to increase the number of trained individuals by investing in specialist training, to make Turkey an advantageous country in global competition with a strong technology; Thus, the objectives of increasing Turkey\'s welfare power were set. Our association reached more than 150 members in a short time after its establishment and started to sign successful projects with its fast, focused and disciplined working principle compared to many associations at the start-up level.'**
+  String get associationDescription;
+
+  /// No description provided for @whoAreWe.
+  ///
+  /// In en, this message translates to:
+  /// **'Who Are We?'**
+  String get whoAreWe;
+
+  /// No description provided for @whatAreWeDoing.
+  ///
+  /// In en, this message translates to:
+  /// **'What Are We Doing?'**
+  String get whatAreWeDoing;
+
+  /// No description provided for @ourGoal.
+  ///
+  /// In en, this message translates to:
+  /// **'Our Goal'**
+  String get ourGoal;
+
+  /// No description provided for @educationProgram.
+  ///
+  /// In en, this message translates to:
+  /// **'Education Program'**
+  String get educationProgram;
+
+  /// No description provided for @wtechStudent.
+  ///
+  /// In en, this message translates to:
+  /// **'Wtech Student'**
+  String get wtechStudent;
+
+  /// No description provided for @wtechGraduate.
+  ///
+  /// In en, this message translates to:
+  /// **'Wtech Graduate'**
+  String get wtechGraduate;
+
+  /// No description provided for @platformMember.
+  ///
+  /// In en, this message translates to:
+  /// **'Platform Members'**
+  String get platformMember;
+
+  /// No description provided for @applys.
+  ///
+  /// In en, this message translates to:
+  /// **'Applys'**
+  String get applys;
+
+  /// No description provided for @educations.
+  ///
+  /// In en, this message translates to:
+  /// **'Educations'**
+  String get educations;
+
+  /// No description provided for @wtechForCareer.
+  ///
+  /// In en, this message translates to:
+  /// **'WTECH PLATFORM FOR YOUR CAREER AND STUDY LIFE'**
+  String get wtechForCareer;
+
+  /// No description provided for @accepted.
+  ///
+  /// In en, this message translates to:
+  /// **'Accepted'**
+  String get accepted;
+
+  /// No description provided for @evaluating.
+  ///
+  /// In en, this message translates to:
+  /// **'Evaluating'**
+  String get evaluating;
+
+  /// No description provided for @signinWith.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in with'**
+  String get signinWith;
 }
 
 class _L10nDelegate extends LocalizationsDelegate<L10n> {

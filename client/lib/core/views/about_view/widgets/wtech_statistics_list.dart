@@ -2,6 +2,7 @@ import 'package:client/core/extensions/extension.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../../../../../gen/assets.gen.dart';
+import '../../../l10n/app_l10n.dart';
 import '../../common/widgets/custom_image.dart';
 
 List wtechStatisticsList(BuildContext context) {
@@ -9,22 +10,22 @@ List wtechStatisticsList(BuildContext context) {
     {
       "icon": customImage(context, Assets.icons.book.path),
       "count": "28",
-      "text": "Eğitim Programı",
+      "text": L10n.of(context)!.educationProgram,
     },
     {
       "icon": customImage(context, Assets.icons.mentor.path),
       "count": "500",
-      "text": "Wtech Öğrencisi",
+      "text": L10n.of(context)!.wtechStudent,
     },
     {
       "icon": customImage(context, Assets.icons.education.path),
       "count": "200",
-      "text": "Wtech Mezun",
+      "text": L10n.of(context)!.wtechGraduate,
     },
     {
       "icon": customImage(context, Assets.icons.persons.path),
       "count": "5000 +",
-      "text": "Platform Üyesi",
+      "text": L10n.of(context)!.platformMember,
     }
   ];
 }
