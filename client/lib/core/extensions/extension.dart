@@ -21,15 +21,22 @@ extension PaddingExtension on BuildContext {
   EdgeInsets get paddingMedium => EdgeInsets.all(mediumValue);
   EdgeInsets get paddingHigh => EdgeInsets.all(highValue);
 
-  EdgeInsets get horizontalPaddingLow => EdgeInsets.symmetric(horizontal: lowValue);
-  EdgeInsets get horizontalPaddingNormal => EdgeInsets.symmetric(horizontal: normalValue);
-  EdgeInsets get horizontalPaddingMedium => EdgeInsets.symmetric(horizontal: mediumValue);
-  EdgeInsets get horizontalPaddingHigh => EdgeInsets.symmetric(horizontal: highValue);
+  EdgeInsets get horizontalPaddingLow =>
+      EdgeInsets.symmetric(horizontal: lowValue);
+  EdgeInsets get horizontalPaddingNormal =>
+      EdgeInsets.symmetric(horizontal: normalValue);
+  EdgeInsets get horizontalPaddingMedium =>
+      EdgeInsets.symmetric(horizontal: mediumValue);
+  EdgeInsets get horizontalPaddingHigh =>
+      EdgeInsets.symmetric(horizontal: highValue);
 
   EdgeInsets get verticalPaddingLow => EdgeInsets.symmetric(vertical: lowValue);
-  EdgeInsets get verticalPaddingNormal => EdgeInsets.symmetric(vertical: normalValue);
-  EdgeInsets get verticalPaddingMedium => EdgeInsets.symmetric(vertical: mediumValue);
-  EdgeInsets get verticalPaddingHigh => EdgeInsets.symmetric(vertical: highValue);
+  EdgeInsets get verticalPaddingNormal =>
+      EdgeInsets.symmetric(vertical: normalValue);
+  EdgeInsets get verticalPaddingMedium =>
+      EdgeInsets.symmetric(vertical: mediumValue);
+  EdgeInsets get verticalPaddingHigh =>
+      EdgeInsets.symmetric(vertical: highValue);
 
   EdgeInsets get onlyLeftPaddingLow => EdgeInsets.only(left: lowValue);
   EdgeInsets get onlyLeftPaddingNormal => EdgeInsets.only(left: normalValue);
@@ -42,8 +49,10 @@ extension PaddingExtension on BuildContext {
   EdgeInsets get onlyRightPaddingHigh => EdgeInsets.only(right: highValue);
 
   EdgeInsets get onlyBottomPaddingLow => EdgeInsets.only(bottom: lowValue);
-  EdgeInsets get onlyBottomPaddingNormal => EdgeInsets.only(bottom: normalValue);
-  EdgeInsets get onlyBottomPaddingMedium => EdgeInsets.only(bottom: mediumValue);
+  EdgeInsets get onlyBottomPaddingNormal =>
+      EdgeInsets.only(bottom: normalValue);
+  EdgeInsets get onlyBottomPaddingMedium =>
+      EdgeInsets.only(bottom: mediumValue);
   EdgeInsets get onlyBottomPaddingHigh => EdgeInsets.only(bottom: highValue);
 
   EdgeInsets get onlyTopPaddingLow => EdgeInsets.only(top: lowValue);
