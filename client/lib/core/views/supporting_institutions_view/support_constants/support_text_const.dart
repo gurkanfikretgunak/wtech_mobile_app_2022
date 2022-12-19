@@ -1,10 +1,8 @@
-
 import 'package:client/core/l10n/app_l10n.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class SupportTextConstants {
-  
-  static List<String> imagePath() { 
+  static List<String> imagePath() {
     return [
       "https://www.wtechplatform.com/uploads/logolar/360plusmedia.jpg",
       "https://www.wtechplatform.com/uploads/logolar/90-fit.jpg",
@@ -78,9 +76,9 @@ class SupportTextConstants {
       "https://www.wtechplatform.com/uploads/logolar/testinium-logo.jpg"
     ];
   }
-  
-  List<String> instutionConstant(BuildContext context){ 
-    return  [
+
+  List<String> instutionConstant(BuildContext context) {
+    return [
       L10n.of(context)!.plusmedia,
       L10n.of(context)!.fit,
       L10n.of(context)!.adcolony,
@@ -151,7 +149,5 @@ class SupportTextConstants {
       L10n.of(context)!.sem,
       L10n.of(context)!.testinium,
     ];
-    
-    }
-  
+  }
 }
