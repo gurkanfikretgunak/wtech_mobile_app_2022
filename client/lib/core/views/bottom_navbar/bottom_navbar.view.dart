@@ -5,6 +5,8 @@ import 'package:client/core/views/common/widgets/custom_loading.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
+import '../../l10n/app_l10n.dart';
+import '../home_view/widgets/drawer_widget.dart';
 import 'bottom_navbar.viewmodel.dart';
 
 // ignore: must_be_immutable
@@ -20,7 +22,17 @@ class CustomBottomNavBar extends StatelessWidget with BottomNavBarWidgets {
       builder: (context, snapshot) {
         if (snapshot.hasData) {
           return Scaffold(
-            // appBar: const CustomAppbar(),
+            appBar: CustomAppbar(
+              titleText: buildAppBarTitle(
+                pageIndex: snapshot.data,
+                context: context,
+              ),
+
+              //L10n.of(context)!.hello,
+              isCheck: true,
+              isName: snapshot.data == 0 ? true : false,
+            ),
+            drawer: const DrawerWidget(),
             body: Center(
               child: pageOptionList.elementAt(snapshot.data),
             ),
@@ -35,5 +47,24 @@ class CustomBottomNavBar extends StatelessWidget with BottomNavBarWidgets {
         }
       },
     );
+  }
+
+  buildAppBarTitle({
+    required int pageIndex,
+    required BuildContext context,
+  }) {
+    switch (pageIndex) {
+      case 0:
+        return L10n.of(context)!.hello;
+      case 1:
+        return "Eğitimler";
+      case 2:
+        return L10n.of(context)!.events;
+      case 3:
+        return L10n.of(context)!.favorites;
+      case 4:
+        return L10n.of(context)!.apply;
+      default:
+    }
   }
 }

@@ -13,7 +13,8 @@ class SignUpWidgets {
     return RegisterTextfields();
   }
 
-  Widget userProfileWidget(BuildContext context, TextEditingController controller) {
+  Widget userProfileWidget(
+      BuildContext context, TextEditingController controller) {
     TextEditingController? profileController = TextEditingController();
     return UserProfileChooseWidget(profileController: profileController);
   }

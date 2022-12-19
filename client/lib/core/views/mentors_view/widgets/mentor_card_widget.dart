@@ -65,11 +65,12 @@ class MentorInfosWidget extends StatelessWidget {
     return Positioned(
       top: 100,
       child: SizedBox(
-        width: context.dynamicWidth(0.4),
+        height: context.dynamicHeight(0.17),
+        //width: context.dynamicWidth(0.5),
         child: Card(
-          elevation: 8,
+          elevation: 10,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(16),
+            borderRadius: BorderRadius.circular(8),
             side: BorderSide(
                 color: ColorConstant.instance.black.withOpacity(0.1)),
           ),
@@ -78,8 +79,11 @@ class MentorInfosWidget extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(mentor ?? '',
-                    style: Theme.of(context).textTheme.bodyText1),
+                Padding(
+                  padding: PaddingExtension(context).onlyTopPaddingLow,
+                  child: Text(mentor ?? '',
+                      style: Theme.of(context).textTheme.bodyText1),
+                ),
                 Padding(
                   padding: context.verticalPaddingNormal,
                   child: Text(
@@ -97,11 +101,14 @@ class MentorInfosWidget extends StatelessWidget {
                       .bodySmall!
                       .copyWith(color: ColorConstant.instance.grey),
                 ),
-                CustomElevatedButton(
-                  onPressed: () {},
-                  text: L10n.of(context)?.contact ?? '',
-                  textColor: ColorConstant.instance.white,
-                  // buttonColor: false,
+                Padding(
+                  padding: PaddingExtension(context).onlyTopPaddingLow,
+                  child: CustomElevatedButton(
+                    onPressed: () {},
+                    text: L10n.of(context)?.contact ?? '',
+                    textColor: ColorConstant.instance.white,
+                    // buttonColor: false,
+                  ),
                 )
               ],
             ),
