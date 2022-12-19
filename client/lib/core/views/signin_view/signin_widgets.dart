@@ -52,19 +52,19 @@ class SignInWidget {
       children: [
         SignInAccountButton(
           icon: "/images/google.svg",
-          text: L10n.of(context)!.signInGoogle,
+          text: L10n.of(context)!.aboutEducation,
         ),
         SignInAccountButton(
           icon: "/images/facebook.svg",
-          text: L10n.of(context)!.signInFacebook,
+          text: L10n.of(context)!.aboutEducation,
         ),
         SignInAccountButton(
           icon: "/images/apple.svg",
-          text: L10n.of(context)!.signInApple,
+          text: L10n.of(context)!.aboutEducation,
         ),
         SignInAccountButton(
           icon: "/images/github.svg",
-          text: L10n.of(context)!.signInGithub,
+          text: L10n.of(context)!.aboutEducation,   
         ),
       ],
     );

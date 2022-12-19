@@ -24,14 +24,17 @@ class SignUpView extends StatelessWidget with SignUpWidgets {
         children: [
           const PictureWidget(),
           Text(L10n.of(context)!.signUp,
-              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400, color: ColorConstant.instance.grey)),
+              style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w400,
+                  color: ColorConstant.instance.grey)),
           Column(
             children: [
-              userInfoTextfield(context, SignUpConstants().signUpLabels(context)),
+              userInfoTextfield(
+                  context, SignUpConstants().signUpLabels(context)),
               userProfileWidget(context, SignUpConstants().profileController!)
             ],
           ),
-          const Padding(padding: EdgeInsets.only(top: 8)),
           const SignUpButton(),
           const AgreementTextWidget()
         ],

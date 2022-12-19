@@ -1,9 +1,6 @@
 import 'package:client/core/extensions/extension.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
-
-import '../../l10n/app_l10n.dart';
-import '../common/widgets/custom_appbar.dart';
 import '../view_model_sample_two/sample_two.viewmodel.dart';
 import 'applys.widgets.dart';
 
@@ -15,11 +12,6 @@ class ApplysView extends StatelessWidget with ApplysWidgets {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppbar(
-        titleText: L10n.of(context)!.apply,
-        isName: false,
-        isCheck: true,
-      ),
       body: Padding(
         padding: context.paddingNormal,
         child: DefaultTabController(

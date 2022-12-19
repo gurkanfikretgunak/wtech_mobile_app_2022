@@ -128,18 +128,6 @@ class L10nTr extends L10n {
   String get examine => 'İncele';
 
   @override
-  String get signInGoogle => 'Google ile giriş yapın.';
-
-  @override
-  String get signInFacebook => 'Facebook ile giriş yapın.';
-
-  @override
-  String get signInGithub => 'Github ile giriş yapın.';
-
-  @override
-  String get signInApple => 'Apple ile giriş yapın.';
-
-  @override
   String get signInEmail => 'E-posta ile giriş yapın.';
 
   @override
@@ -639,4 +627,52 @@ class L10nTr extends L10n {
 
   @override
   String get descriptionEvents => 'Yetenekler ve kurumların bir araya gelebilmeleri için gerekli köprüyü kuruyoruz. Teknolojide fark yaratmak için doğru yerdesin!';
+
+  @override
+  String get opportunitiyEquality => 'Fırsat eşitliği sağlayan meraklı, araştırmacı, üretken, cesareti ve özgüveni yüksek teknolojistlerin yetişmesine imkan sunar.';
+
+  @override
+  String get madeUsSprecial => 'Bizi Özel Yapan Ne?';
+
+  @override
+  String get associationDescription => 'Derneğimiz, 2000li yılların başından beri teknoloji sektöründe özellikle üretimde, araştırma geliştirmede, dijital ve mobil pazarlama, yapay zeka, artırılmış gerçeklik, büyük veri, makine öğrenmesi gibi alanlarda profesyonel yönetici ve girişimci olarak çalışan Zehra Öney tarafından 31 Ocak 2019 tarihinde aynı hedefte ilerleme niyetiyle katılan 75 kurucu kurumsal üye ile birlikte kuruldu. HP Türkiye, Denizbank, Tempo Çağrı Merkezi, Vodafone Türkiye, Microsoft, Gittigidiyor, Akbank, Arçelik, Limak Holding, Yemeksepeti, UiPath, EnerjiSA, Pegasus, Migros, Adcolony ve Baker&McKenzie gibi kurumların yer aldığı kurumsal üye listemize ulaşabilmek için tıklayınız.Zehra Öney, ajansı 360+ Media Interactive Technologies ile teknoloji alanında yapmış olduğu tüm çalışmalar ve tecrübesiyle derneğin bu alanda insana ve özellikle kadınlara yapacağı yatırımların büyütülmesi, teknik uzmanlık alanlarında daha vasıflı insan kaynağının yetiştirilmesi, kadınların bu alanda rol model söz sahibi olacak şekilde var olabilmeleri açısından önemli bir vizyon ortaya koymuş ve Türkiye’de bir ilk olan derneğimizin Kurucu Yönetim Kurulu Başkanı olarak seçilmiştir. Öney, Derneğimizin kuruluşunun ön çalışmalarını 2017 yılında başlatmış, Wtech Platform’u hayata geçirerek burada derneğin yapacağı çalışmalarla ilgili geri bildirimler toplamış ve Türkiye’deki lokal ve çok uluslu firmalar ile görüşüp bu konudaki fikirlerini alarak kuruluşu bu firmalarla hayata geçirmiş ve onların da bu hedefe katılım yapmalarını sağlamıştır.Derneğimiz kurulurken ana amaç olarak merkeze bilim ve teknoloji alanlarında eksik olan alanında uzman insan ihtiyacını kapatmak, uzmanlık eğitimlerine yatırım yapıp yetişmiş birey sayısını artırmak, Türkiye’yi teknoloji konusunda güçlü bir şekilde, küresel rekabette avantajlı bir ülke haline getirmek; böylece Türkiye’nin refah gücünü arttırmak hedefleri konulmuştur. Derneğimiz, kuruluş sonrası kısa süre içerisinde 150’yi aşkın üye sayısına ulaştı ve start-up seviyesindeki birçok derneğe kıyasla hızlı, odaklı ve disiplinli çalışma prensibi ile başarılı projelere imza atmaya başladı.';
+
+  @override
+  String get whoAreWe => 'Biz Kimiz?';
+
+  @override
+  String get whatAreWeDoing => 'Ne Yapıyoruz?';
+
+  @override
+  String get ourGoal => 'Hedefimiz';
+
+  @override
+  String get educationProgram => 'Eğitim Programı';
+
+  @override
+  String get wtechStudent => 'Wtech Öğrencisi';
+
+  @override
+  String get wtechGraduate => 'Wtech Mezun';
+
+  @override
+  String get platformMember => 'Platform Üyesi';
+
+  @override
+  String get applys => 'Başvurular';
+
+  @override
+  String get educations => 'Eğitimler';
+
+  @override
+  String get wtechForCareer => 'KARİYER VE ÖĞRENİM HAYATINIZ İÇİN WTECH PLATFORM';
+
+  @override
+  String get accepted => 'Kabul Edildi';
+
+  @override
+  String get evaluating => 'Değerlendiriliyor';
+
+  @override
+  String get signinWith => 'ile giriş yap.';
 }
