@@ -4,18 +4,13 @@ import 'package:rxdart/rxdart.dart';
 
 @Injectable()
 class SettingsViewModel extends BaseViewModel {
-  BehaviorSubject<bool> _switcher = BehaviorSubject<bool>.seeded(false);
+  final _switcher = BehaviorSubject<bool>.seeded(false);
   Stream get switcher => _switcher.stream;
 
-  changeSwitcher(value) {
-    if (_switcher == value) {
-      _switcher.value = false;
-    } else if (_switcher == value) {
-      _switcher.value = true;
-    }
-    return _switcher.value;
-  }
+  changeSwitcher() => _switcher.value = !_switcher.value;
 
   @override
-  void clear() {}
+  void clear() {
+    changeSwitcher();
+  }
 }
