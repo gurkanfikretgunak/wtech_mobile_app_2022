@@ -17,7 +17,7 @@ class SettingsView extends StatelessWidget with SettingsViewWidget {
       appBar: CustomAppbar(
           titleText: L10n.of(context)!.profile, isName: false, isCheck: false),
       body: Padding(
-        padding: context.onlyLRTpaddingNormal,
+        padding: context.paddingNormal,
         child: Column(
           children: [
             settingCards(
@@ -25,17 +25,25 @@ class SettingsView extends StatelessWidget with SettingsViewWidget {
             settingCards(context, privacyText, 0.1, categoriesText[1], false),
             settingCards(context, themeText, 0.1, categoriesText[2], true),
             settingCards(context, languageText, 0.1, categoriesText[3], true),
+            const Spacer(),
             Padding(
-              padding: context.onlyTopPaddingHigh,
-              child: SizedBox(
-                width: context.dynamicWidth(0.6),
-                height: context.dynamicHeight(0.08),
-                child: CustomElevatedButton(
-                  onPressed: () {},
-                  // buttonColor: true,
-                  text: "Delete Account",
-                  textColor: ColorConstant.instance.white,
-                ),
+              padding: context.verticalPaddingNormal,
+              child: Column(
+                children: [
+                  Padding(
+                    padding: context.verticalPaddingLow,
+                    child: Text(
+                      L10n.of(context)!.deleteAccountInformation,
+                      style: Theme.of(context).textTheme.bodySmall,
+                    ),
+                  ),
+                  CustomElevatedButton(
+                    buttonColor: ColorConstant.instance.red,
+                    onPressed: () {},
+                    text: L10n.of(context)!.deleteAccount,
+                    textColor: ColorConstant.instance.white,
+                  ),
+                ],
               ),
             )
           ],

@@ -675,4 +675,10 @@ class L10nEn extends L10n {
 
   @override
   String get signinWith => 'Sign in with';
+
+  @override
+  String get deleteAccountInformation => '*Do you really want to delete this account?';
+
+  @override
+  String get deleteAccount => 'Delete Account';
 }
