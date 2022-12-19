@@ -44,14 +44,10 @@ class EducationsDetailView extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        SizedBox(
-                          width: context.dynamicWidth(0.7),
-                          height: context.dynamicHeight(0.05),
-                          child: CustomElevatedButton(
-                            onPressed: () {},
-                            text: "Başvur",
-                            textColor: ColorConstant.instance.white,
-                          ),
+                        CustomElevatedButton(
+                          onPressed: () {},
+                          text: "Başvur",
+                          textColor: ColorConstant.instance.white,
                         ),
                         IconButton(
                           icon: isFavorite == true
