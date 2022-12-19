@@ -25,7 +25,7 @@ class App extends StatelessWidget {
         home: Provider<MainBloc>(
           create: (_) => MainBloc(),
           dispose: (context, bloc) => bloc.dispose(),
-          child: FoundingMembersView(),
+          child: SupportInstutionsView(),
         ),
         title: "Flutter Boilerplate : ${Flavor.I.getString(Keys.appTitle)}",
         theme: CustomTheme.customThemeData(context),
