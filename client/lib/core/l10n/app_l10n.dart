@@ -897,29 +897,473 @@ abstract class L10n {
   /// **'Last Updated Date'**
   String get lastUpdatedDate;
 
-  /// No description provided for @whatMakeUsSpecial.
+  /// No description provided for @urlConnectionError.
   ///
   /// In en, this message translates to:
-  /// **'What Make Us Special?'**
-  String get whatMakeUsSpecial;
+  /// **'Url Connection Error'**
+  String get urlConnectionError;
 
-  /// No description provided for @whoWe.
+  /// No description provided for @plusmedia.
   ///
   /// In en, this message translates to:
-  /// **'Who are we?'**
-  String get whoWe;
+  /// **'360plusmedia'**
+  String get plusmedia;
 
-  /// No description provided for @whatWeDoing.
+  /// No description provided for @fit.
   ///
   /// In en, this message translates to:
-  /// **'What are we doing?'**
-  String get whatWeDoing;
+  /// **'90-fit'**
+  String get fit;
 
-  /// No description provided for @ourGoals.
+  /// No description provided for @adcolony.
   ///
   /// In en, this message translates to:
-  /// **'Our Goals'**
-  String get ourGoals;
+  /// **'Adcolony'**
+  String get adcolony;
+
+  /// No description provided for @akbank.
+  ///
+  /// In en, this message translates to:
+  /// **'Akbank'**
+  String get akbank;
+
+  /// No description provided for @akkok.
+  ///
+  /// In en, this message translates to:
+  /// **'Akkök Holding'**
+  String get akkok;
+
+  /// No description provided for @akode.
+  ///
+  /// In en, this message translates to:
+  /// **'Akode'**
+  String get akode;
+
+  /// No description provided for @aktek.
+  ///
+  /// In en, this message translates to:
+  /// **'Aktek'**
+  String get aktek;
+
+  /// No description provided for @arceliktr.
+  ///
+  /// In en, this message translates to:
+  /// **'Arçelik Türkiye'**
+  String get arceliktr;
+
+  /// No description provided for @arcelik.
+  ///
+  /// In en, this message translates to:
+  /// **'arcelik'**
+  String get arcelik;
+
+  /// No description provided for @arzum.
+  ///
+  /// In en, this message translates to:
+  /// **'Arzum'**
+  String get arzum;
+
+  /// No description provided for @aslanoba.
+  ///
+  /// In en, this message translates to:
+  /// **'Aslanoba Group'**
+  String get aslanoba;
+
+  /// No description provided for @atp.
+  ///
+  /// In en, this message translates to:
+  /// **'ATP'**
+  String get atp;
+
+  /// No description provided for @aws.
+  ///
+  /// In en, this message translates to:
+  /// **'AWS'**
+  String get aws;
+
+  /// No description provided for @baworks.
+  ///
+  /// In en, this message translates to:
+  /// **'BA-Works'**
+  String get baworks;
+
+  /// No description provided for @baker.
+  ///
+  /// In en, this message translates to:
+  /// **'Baker-Mckenzie'**
+  String get baker;
+
+  /// No description provided for @bahcesehir.
+  ///
+  /// In en, this message translates to:
+  /// **'Bahçeşehir Koleji'**
+  String get bahcesehir;
+
+  /// No description provided for @baysalsezgin.
+  ///
+  /// In en, this message translates to:
+  /// **'Baysal Sezgin'**
+  String get baysalsezgin;
+
+  /// No description provided for @botech.
+  ///
+  /// In en, this message translates to:
+  /// **'Botech'**
+  String get botech;
+
+  /// No description provided for @boyner.
+  ///
+  /// In en, this message translates to:
+  /// **'Boyner Group'**
+  String get boyner;
+
+  /// No description provided for @cci.
+  ///
+  /// In en, this message translates to:
+  /// **'CCI'**
+  String get cci;
+
+  /// No description provided for @cisco.
+  ///
+  /// In en, this message translates to:
+  /// **'Cisco'**
+  String get cisco;
+
+  /// No description provided for @commencis.
+  ///
+  /// In en, this message translates to:
+  /// **'Commencis'**
+  String get commencis;
+
+  /// No description provided for @danone.
+  ///
+  /// In en, this message translates to:
+  /// **'Danone-Waters'**
+  String get danone;
+
+  /// No description provided for @deloitte.
+  ///
+  /// In en, this message translates to:
+  /// **'Deloitte'**
+  String get deloitte;
+
+  /// No description provided for @denizbank.
+  ///
+  /// In en, this message translates to:
+  /// **'Denizbank'**
+  String get denizbank;
+
+  /// No description provided for @dorce.
+  ///
+  /// In en, this message translates to:
+  /// **'Dorce'**
+  String get dorce;
+
+  /// No description provided for @drager.
+  ///
+  /// In en, this message translates to:
+  /// **'Drager'**
+  String get drager;
+
+  /// No description provided for @ea.
+  ///
+  /// In en, this message translates to:
+  /// **'E-A Investments'**
+  String get ea;
+
+  /// No description provided for @eczacibasi.
+  ///
+  /// In en, this message translates to:
+  /// **'Eczacıbaşı'**
+  String get eczacibasi;
+
+  /// No description provided for @eksi.
+  ///
+  /// In en, this message translates to:
+  /// **'Ekşi Sözlük'**
+  String get eksi;
+
+  /// No description provided for @elogo.
+  ///
+  /// In en, this message translates to:
+  /// **'E Logo'**
+  String get elogo;
+
+  /// No description provided for @enerjisa.
+  ///
+  /// In en, this message translates to:
+  /// **'Enerjisa'**
+  String get enerjisa;
+
+  /// No description provided for @etiya.
+  ///
+  /// In en, this message translates to:
+  /// **'Etiya'**
+  String get etiya;
+
+  /// No description provided for @ford.
+  ///
+  /// In en, this message translates to:
+  /// **'Ford Otosan'**
+  String get ford;
+
+  /// No description provided for @gittigidiyor.
+  ///
+  /// In en, this message translates to:
+  /// **'Gittigidiyor'**
+  String get gittigidiyor;
+
+  /// No description provided for @globalturk.
+  ///
+  /// In en, this message translates to:
+  /// **'GlobalTürk Capital'**
+  String get globalturk;
+
+  /// No description provided for @hasan.
+  ///
+  /// In en, this message translates to:
+  /// **'Hasan Faydasıçok E.V.'**
+  String get hasan;
+
+  /// No description provided for @heidrick.
+  ///
+  /// In en, this message translates to:
+  /// **'Heidrick-Struggles'**
+  String get heidrick;
+
+  /// No description provided for @hepsiburada.
+  ///
+  /// In en, this message translates to:
+  /// **'Hepsiburada'**
+  String get hepsiburada;
+
+  /// No description provided for @hill.
+  ///
+  /// In en, this message translates to:
+  /// **'Hill Knowiton Strategies'**
+  String get hill;
+
+  /// No description provided for @hitay.
+  ///
+  /// In en, this message translates to:
+  /// **'Hitay'**
+  String get hitay;
+
+  /// No description provided for @hitit.
+  ///
+  /// In en, this message translates to:
+  /// **'Hitit'**
+  String get hitit;
+
+  /// No description provided for @hp.
+  ///
+  /// In en, this message translates to:
+  /// **'HP'**
+  String get hp;
+
+  /// No description provided for @imaj.
+  ///
+  /// In en, this message translates to:
+  /// **'İmaj'**
+  String get imaj;
+
+  /// No description provided for @innovera.
+  ///
+  /// In en, this message translates to:
+  /// **'Innovera'**
+  String get innovera;
+
+  /// No description provided for @kantar.
+  ///
+  /// In en, this message translates to:
+  /// **'Kantar Media'**
+  String get kantar;
+
+  /// No description provided for @koton.
+  ///
+  /// In en, this message translates to:
+  /// **'Koton'**
+  String get koton;
+
+  /// No description provided for @kpmg.
+  ///
+  /// In en, this message translates to:
+  /// **'KOMG'**
+  String get kpmg;
+
+  /// No description provided for @kredi.
+  ///
+  /// In en, this message translates to:
+  /// **'Kredi Kayıt Bürosu'**
+  String get kredi;
+
+  /// No description provided for @limak.
+  ///
+  /// In en, this message translates to:
+  /// **'Limak'**
+  String get limak;
+
+  /// No description provided for @linktera.
+  ///
+  /// In en, this message translates to:
+  /// **'Linktera'**
+  String get linktera;
+
+  /// No description provided for @manpower.
+  ///
+  /// In en, this message translates to:
+  /// **'Manpower Group'**
+  String get manpower;
+
+  /// No description provided for @mapfre.
+  ///
+  /// In en, this message translates to:
+  /// **'Mapfre'**
+  String get mapfre;
+
+  /// No description provided for @mentoro.
+  ///
+  /// In en, this message translates to:
+  /// **'Mentoro'**
+  String get mentoro;
+
+  /// No description provided for @mercer.
+  ///
+  /// In en, this message translates to:
+  /// **'Mercer'**
+  String get mercer;
+
+  /// No description provided for @messe.
+  ///
+  /// In en, this message translates to:
+  /// **'Messe-Frankfurt'**
+  String get messe;
+
+  /// No description provided for @micro.
+  ///
+  /// In en, this message translates to:
+  /// **'Micro-Focus'**
+  String get micro;
+
+  /// No description provided for @microsoft.
+  ///
+  /// In en, this message translates to:
+  /// **'Microsoft'**
+  String get microsoft;
+
+  /// No description provided for @migros.
+  ///
+  /// In en, this message translates to:
+  /// **'Migros'**
+  String get migros;
+
+  /// No description provided for @mma.
+  ///
+  /// In en, this message translates to:
+  /// **'MMA'**
+  String get mma;
+
+  /// No description provided for @multinet.
+  ///
+  /// In en, this message translates to:
+  /// **'Multinet Up'**
+  String get multinet;
+
+  /// No description provided for @mv.
+  ///
+  /// In en, this message translates to:
+  /// **'MV Holding'**
+  String get mv;
+
+  /// No description provided for @netas.
+  ///
+  /// In en, this message translates to:
+  /// **'Netas'**
+  String get netas;
+
+  /// No description provided for @netmarble.
+  ///
+  /// In en, this message translates to:
+  /// **'Nermarble Türkiye'**
+  String get netmarble;
+
+  /// No description provided for @ogilvy.
+  ///
+  /// In en, this message translates to:
+  /// **'Ogilvy'**
+  String get ogilvy;
+
+  /// No description provided for @onicorn.
+  ///
+  /// In en, this message translates to:
+  /// **'Onicorn'**
+  String get onicorn;
+
+  /// No description provided for @paynet.
+  ///
+  /// In en, this message translates to:
+  /// **'Paynet'**
+  String get paynet;
+
+  /// No description provided for @pegasus.
+  ///
+  /// In en, this message translates to:
+  /// **'Pegasus'**
+  String get pegasus;
+
+  /// No description provided for @pwc.
+  ///
+  /// In en, this message translates to:
+  /// **'PWC'**
+  String get pwc;
+
+  /// No description provided for @sem.
+  ///
+  /// In en, this message translates to:
+  /// **'SEM'**
+  String get sem;
+
+  /// No description provided for @testinium.
+  ///
+  /// In en, this message translates to:
+  /// **'Testinium'**
+  String get testinium;
+
+  /// No description provided for @titleEducation.
+  ///
+  /// In en, this message translates to:
+  /// **'Let’s find your course together!'**
+  String get titleEducation;
+
+  /// No description provided for @descriptionEducation.
+  ///
+  /// In en, this message translates to:
+  /// **'Free Access to 30 Different Certified Courses Instructed by 100+ Educators and Institutions'**
+  String get descriptionEducation;
+
+  /// No description provided for @titleMentor.
+  ///
+  /// In en, this message translates to:
+  /// **'We Are Strong Together!'**
+  String get titleMentor;
+
+  /// No description provided for @descriptionMentor.
+  ///
+  /// In en, this message translates to:
+  /// **'From Turkey’s leading institutions and universities in technology, consultants and mentors in different fields side with you in Wtech Platform!'**
+  String get descriptionMentor;
+
+  /// No description provided for @titleEvents.
+  ///
+  /// In en, this message translates to:
+  /// **'Our job is human, our job is technology'**
+  String get titleEvents;
+
+  /// No description provided for @descriptionEvents.
+  ///
+  /// In en, this message translates to:
+  /// **'It builds the necessary bridge for talents and institutions to come together. You are in the right place to make a difference in technology!'**
+  String get descriptionEvents;
 }
 
 class _L10nDelegate extends LocalizationsDelegate<L10n> {

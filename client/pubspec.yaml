@@ -8,7 +8,6 @@ dependencies:
   flutter:
     sdk: flutter
 
-  #Localization
   flutter_localizations:
     sdk: flutter
   
@@ -47,6 +46,10 @@ dependencies:
 
   #Core utilities
   logger: ^1.1.0
+  card_swiper: ^2.0.4
+
+  #videoos
+  video_player: ^2.4.10
   
   
 
@@ -58,6 +61,7 @@ dev_dependencies:
   #Flutter analyze
   flutter_lints: ^2.0.0
   build_runner: ^2.3.2
+  flutter_gen_runner: ^5.1.0+1
   injectable_generator:  ^1.5.4
 
   #Network

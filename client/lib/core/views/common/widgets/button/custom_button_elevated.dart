@@ -9,7 +9,7 @@ class CustomElevatedButton extends StatelessWidget {
     Key? key,
     required this.onPressed,
     required this.text,
-    this.backgroundColor,
+    this.primary,
     this.textColor,
     this.fontSize,
     this.height,
@@ -21,10 +21,11 @@ class CustomElevatedButton extends StatelessWidget {
     this.fontWeight,
     this.iconWidget,
     this.disabledBackgroundColor,
+    this.buttonColor,
   }) : super(key: key);
 
   final String text;
-  final Color? backgroundColor;
+  final Color? primary;
   final Color? textColor;
   final Color? shadowColor;
   final Color? borderSideColor;
@@ -37,16 +38,16 @@ class CustomElevatedButton extends StatelessWidget {
   final Widget? child;
   final Widget? iconWidget;
   final Color? disabledBackgroundColor;
-
+  final bool? buttonColor;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: onPressed,
-      style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all<Color>(
-          backgroundColor ?? ColorConstant.instance.blue,
-        ),
-      ),
+      style: buttonColor!
+          ? ButtonStyle(
+              backgroundColor: MaterialStateProperty.all(Color(0XFFF36262)),
+            )
+          : null,
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
