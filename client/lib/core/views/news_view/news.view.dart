@@ -1,5 +1,4 @@
 import 'package:client/core/extensions/extension.dart';
-import 'package:client/core/views/common/widgets/custom_navbar.dart';
 import 'package:client/core/views/news_view/news.widgets.dart';
 import 'package:client/core/views/news_view/widgets/news_card.dart';
 import 'package:client/core/views/news_view/widgets/news_list.dart';
@@ -23,7 +22,6 @@ class NewsView extends StatelessWidget with NewsWidgets {
         isCheck: false,
         isName: false,
       ),
-      bottomNavigationBar: const CustomBottomNavBar(),
       body: Padding(
         padding: context.paddingNormal,
         child: SingleChildScrollView(
@@ -33,9 +31,9 @@ class NewsView extends StatelessWidget with NewsWidgets {
               card(news: newsList[0], isTitleCard: true),
               titleText(context),
               SizedBox(
-                height: 400,
+                height: context.dynamicHeight(0.8),
                 child: ListView.builder(
-                  // physics: const NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   itemCount: newsList.length - 1,
                   itemBuilder: (context, index) {
                     return NewsCard(

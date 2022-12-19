@@ -1,5 +1,4 @@
 import 'package:client/core/extensions/extension.dart';
-import 'package:client/core/views/common/widgets/custom_navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
@@ -16,7 +15,11 @@ class ApplysView extends StatelessWidget with ApplysWidgets {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppbar(titleText: L10n.of(context)!.apply),
+      appBar: CustomAppbar(
+        titleText: L10n.of(context)!.apply,
+        isName: false,
+        isCheck: true,
+      ),
       body: Padding(
         padding: context.paddingNormal,
         child: DefaultTabController(
@@ -35,7 +38,6 @@ class ApplysView extends StatelessWidget with ApplysWidgets {
           ),
         ),
       ),
-      bottomNavigationBar: const CustomBottomNavBar(),
     );
   }
 }

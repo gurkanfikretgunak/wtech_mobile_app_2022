@@ -1,5 +1,4 @@
 import 'package:client/core/l10n/app_l10n.dart';
-import 'package:client/core/views/common/widgets/custom_navbar.dart';
 import 'package:client/core/views/videos_view/videos.viewmodel.dart';
 import 'package:client/core/views/videos_view/videos.widgets.dart';
 import 'package:flutter/material.dart';
@@ -17,9 +16,10 @@ class VideosView extends StatelessWidget with VideosWidgets {
     return Scaffold(
       appBar: CustomAppbar(
         titleText: L10n.of(context)!.videos,
+        isCheck: false,
+        isName: false,
       ),
       body: body(context),
-      bottomNavigationBar: const CustomBottomNavBar(),
     );
   }
 }

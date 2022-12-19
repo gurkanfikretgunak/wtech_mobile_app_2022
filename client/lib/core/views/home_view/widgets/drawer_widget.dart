@@ -29,17 +29,26 @@ class DrawerWidget extends StatelessWidget {
                 shrinkWrap: true,
                 itemCount: IconConstant.drawerIcon.length,
                 itemBuilder: (context, index) {
+                  var key = IconConstant().drawerList(context)[index];
                   return Column(
                     children: [
                       SizedBox(
                         height: context.dynamicHeight(0.06),
-                        child: ListTile(
-                            title: Text(IconConstant.drawerNames(context)[index],
-                                style: Theme.of(context).textTheme.headline6?.copyWith(fontSize: 18)),
+                        child: GestureDetector(
+                          onTap: key['onTap'],
+                          child: ListTile(
+                            title: Text(key['text'],
+                                //IconConstant.drawerNames(context)[index],
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .headline6
+                                    ?.copyWith(fontSize: 18)),
                             leading: Icon(
-                              IconConstant.drawerIcon[index],
+                              key['icon'],
                               color: ColorConstant.instance.blue,
-                            )),
+                            ),
+                          ),
+                        ),
                       ),
                       const Divider(thickness: 1)
                     ],
@@ -52,7 +61,10 @@ class DrawerWidget extends StatelessWidget {
             padding: context.onlyBottomPaddingNormal,
             child: Text(
               "by Teknolojide Kadın Derneği",
-              style: Theme.of(context).textTheme.subtitle1?.copyWith(color: ColorConstant.instance.blue, fontSize: 13),
+              style: Theme.of(context)
+                  .textTheme
+                  .subtitle1
+                  ?.copyWith(color: ColorConstant.instance.blue, fontSize: 13),
             ),
           ),
         ],

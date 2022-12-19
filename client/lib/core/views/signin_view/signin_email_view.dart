@@ -12,6 +12,9 @@ import 'package:flutter/material.dart';
 // ignore: depend_on_referenced_packages
 import 'package:provider/provider.dart';
 
+import '../../enums/routes.enum.dart';
+import '../../routes/custom_navigator.dart';
+
 class SignInEmailView extends StatefulWidget {
   const SignInEmailView({super.key});
 
@@ -62,7 +65,9 @@ class _MainScreenState extends State<SignInEmailView> with SignInWidget {
                     height: context.dynamicHeight(0.04),
                     width: context.dynamicWidth(1),
                     child: CustomElevatedButton(
-                        textColor: ColorConstant.instance.white, onPressed: () {}, text: L10n.of(context)!.signIn),
+                        textColor: ColorConstant.instance.white,
+                        onPressed: () {},
+                        text: L10n.of(context)!.signIn),
                   ),
                 ],
               ),
@@ -70,7 +75,9 @@ class _MainScreenState extends State<SignInEmailView> with SignInWidget {
                 width: context.dynamicWidth(1),
                 height: context.dynamicHeight(0.065),
                 child: CustomElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    CustomNavigator.goToScreen(context, Routes.home.name);
+                  },
                   text: L10n.of(context)!.signIn,
                   fontSize: 17,
                 ),
