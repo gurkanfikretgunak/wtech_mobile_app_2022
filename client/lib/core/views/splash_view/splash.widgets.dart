@@ -1,7 +1,7 @@
 import 'package:client/core/constants/color_constans.dart';
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/common/widgets/text/custom_text.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class SplashWidgets {
   Widget allRightReservedText(BuildContext context) {

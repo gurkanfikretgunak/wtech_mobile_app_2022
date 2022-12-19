@@ -1,5 +1,5 @@
 import 'package:client/core/extensions/extension.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 import '../../../../../gen/assets.gen.dart';
 import '../../../l10n/app_l10n.dart';
