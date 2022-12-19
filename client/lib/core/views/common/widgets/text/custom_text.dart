@@ -29,7 +29,7 @@ class CustomText extends StatelessWidget {
       maxLines: maxLines,
       overflow: overflow,
       style: TextStyle(
-        color: color ?? ColorConstant.instance.black,
+        color: color ?? Theme.of(context).textSelectionTheme.cursorColor,
         fontSize: fontSize,
         fontWeight: fontWeight,
         wordSpacing: wordSpacing,

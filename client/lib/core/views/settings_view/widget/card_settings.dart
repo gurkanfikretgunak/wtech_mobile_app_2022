@@ -21,9 +21,10 @@ class SettingsCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: Theme.of(context).primaryColor,
       elevation: 0.1,
       child: Container(
-        decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: ColorConstant.instance.settingGrey),
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: Theme.of(context).primaryColor),
         height: context.dynamicHeight(0.08),
         width: context.dynamicWidth(0.1),
         child: Wrap(
