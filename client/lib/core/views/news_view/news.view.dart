@@ -1,4 +1,5 @@
 import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/views/common/widgets/custom_navbar.dart';
 import 'package:client/core/views/news_view/news.widgets.dart';
 import 'package:client/core/views/news_view/widgets/news_card.dart';
 import 'package:client/core/views/news_view/widgets/news_list.dart';
@@ -17,10 +18,12 @@ class NewsView extends StatelessWidget with NewsWidgets {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar.customAppBar(
-          context: context,
-          titleText: L10n.of(context)!.news,
-          isBackIcon: false),
+      appBar: CustomAppbar(
+        titleText: L10n.of(context)!.news,
+        isCheck: false,
+        isName: false,
+      ),
+      bottomNavigationBar: const CustomBottomNavBar(),
       body: Padding(
         padding: context.paddingNormal,
         child: SingleChildScrollView(

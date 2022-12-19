@@ -32,10 +32,7 @@ class _MainScreenState extends State<MainScreen> {
     return Consumer<MainBloc>(
       builder: (context, bloc, _) {
         return Scaffold(
-            appBar: CustomAppBar.customAppBar(
-                context: context,
-                titleText: L10n.of(context)!.hello,
-                isBackIcon: false),
+            appBar: CustomAppbar(titleText: L10n.of(context)!.hello),
             drawer: const Drawer(child: Text("data")),
             body: Column(
               children: [
@@ -125,11 +122,8 @@ class _MainScreenState extends State<MainScreen> {
                                   return ListTile(
                                       trailing: IconButton(
                                         onPressed: () {
-                                          SharedPrefs()
-                                              .setStorageUsers(user.email);
-                                          Logger().i(SharedPrefs()
-                                              .getStorageUsers()
-                                              .toString());
+                                          SharedPrefs().setStorageUsers(user.email);
+                                          Logger().i(SharedPrefs().getStorageUsers().toString());
                                           bloc.loadUsers();
                                         },
                                         icon: const Icon(Icons.refresh_rounded),

@@ -1,3 +1,4 @@
+import 'package:client/core/extensions/extension.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../constants/color_constans.dart';
@@ -20,6 +21,7 @@ class CustomElevatedButton extends StatelessWidget {
     this.fontWeight,
     this.iconWidget,
     this.disabledBackgroundColor,
+    this.buttonColor,
   }) : super(key: key);
 
   final String text;
@@ -36,23 +38,30 @@ class CustomElevatedButton extends StatelessWidget {
   final Widget? child;
   final Widget? iconWidget;
   final Color? disabledBackgroundColor;
-
+  final bool? buttonColor;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: onPressed ?? () {},
-      child: Wrap(
-        direction: Axis.horizontal,
-        alignment: WrapAlignment.center,
-        crossAxisAlignment: WrapCrossAlignment.center,
-        spacing: 10,
+      onPressed: onPressed,
+      style: buttonColor!
+          ? ButtonStyle(
+              backgroundColor: MaterialStateProperty.all(Color(0XFFF36262)),
+            )
+          : null,
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
         children: [
-          iconWidget == null ? const SizedBox() : iconWidget!,
+          iconWidget != null
+              ? Padding(
+                  padding: context.onlyRightPaddingNormal,
+                  child: iconWidget!,
+                )
+              : const SizedBox.shrink(),
           CustomText(
             text,
             fontWeight: fontWeight ?? FontWeight.w600,
             fontSize: fontSize,
-            color: textColor ?? ColorConstant.instance.blue,
+            color: textColor ?? ColorConstant.instance.white,
           ),
         ],
       ),
