@@ -1,14 +1,9 @@
 import 'dart:async';
 
 import 'package:client/core/views/signin_view/signin_account_view.dart';
-import 'package:client/core/views/splash_view/splash.viewmodel.dart';
 import 'package:client/core/views/splash_view/splash.widgets.dart';
 import 'package:client/core/views/splash_view/widgets/splash.logo.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
-
-import '../../enums/routes.enum.dart';
-import '../../routes/custom_navigator.dart';
 
 class SplashView extends StatefulWidget with SplashWidgets {
   SplashView({
