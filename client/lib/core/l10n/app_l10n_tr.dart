@@ -626,17 +626,20 @@ class L10nTr extends L10n {
   String get titleEducation => 'Sana Uygun Eğitimi Beraber Bulalım!';
 
   @override
-  String get descriptionEducation => '100 Eğitmen ve Kurumdan 30 Farklı Sertifikalı Kursa Ücretsiz Erişim! Kariyer ve öğrenim hayatınızı bir sonraki seviyeye taşıyın.';
+  String get descriptionEducation =>
+      '100 Eğitmen ve Kurumdan 30 Farklı Sertifikalı Kursa Ücretsiz Erişim! Kariyer ve öğrenim hayatınızı bir sonraki seviyeye taşıyın.';
 
   @override
   String get titleMentor => 'Birlikte Güçlüyüz';
 
   @override
-  String get descriptionMentor => 'Türkiye’nin teknolojide lider kurumlarından ve üniversitelerinden farklı alanlardaki danışmanlar ve mentorler, Wtech Platform’da senin yanında!';
+  String get descriptionMentor =>
+      'Türkiye’nin teknolojide lider kurumlarından ve üniversitelerinden farklı alanlardaki danışmanlar ve mentorler, Wtech Platform’da senin yanında!';
 
   @override
   String get titleEvents => 'İşimiz İnsan, İşimiz Teknoloji';
 
   @override
-  String get descriptionEvents => 'Yetenekler ve kurumların bir araya gelebilmeleri için gerekli köprüyü kuruyoruz. Teknolojide fark yaratmak için doğru yerdesin!';
+  String get descriptionEvents =>
+      'Yetenekler ve kurumların bir araya gelebilmeleri için gerekli köprüyü kuruyoruz. Teknolojide fark yaratmak için doğru yerdesin!';
 }
