@@ -675,4 +675,10 @@ class L10nTr extends L10n {
 
   @override
   String get signinWith => 'ile giriş yap.';
+
+  @override
+  String get deleteAccountInformation => '*Bu hesabı gerçekten silmek istiyor musunuz?';
+
+  @override
+  String get deleteAccount => 'Hesabı Sil';
 }

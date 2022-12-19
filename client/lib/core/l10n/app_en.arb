@@ -234,9 +234,8 @@
     "wtechForCareer" : "WTECH PLATFORM FOR YOUR CAREER AND STUDY LIFE",
     "accepted" : "Accepted",
     "evaluating" : "Evaluating",
-    "signinWith" : "Sign in with"
-
-
-
+    "signinWith" : "Sign in with",
+    "deleteAccountInformation" : "*Do you really want to delete this account?",
+    "deleteAccount" : "Delete Account"
 
 }

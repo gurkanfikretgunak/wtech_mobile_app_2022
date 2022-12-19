@@ -23,9 +23,6 @@ class FavoritesWidgets {
         TabBarViewListView(
           favoriteCardType: SizedBox(),
         ),
-        TabBarViewListView(
-          favoriteCardType: SizedBox(),
-        ),
       ],
     );
   }

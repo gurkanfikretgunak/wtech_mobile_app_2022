@@ -14,6 +14,13 @@ class IconConstant {
         },
       },
       {
+        "icon": Icons.event,
+        "text": L10n.of(context)!.events,
+        "onTap": () {
+          CustomNavigator.goToScreen(context, Routes.events.name);
+        },
+      },
+      {
         "icon": Icons.newspaper,
         "text": L10n.of(context)!.news,
         "onTap": () {

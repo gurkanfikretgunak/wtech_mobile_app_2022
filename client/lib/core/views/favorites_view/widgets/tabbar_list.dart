@@ -7,6 +7,5 @@ List<Widget> favoriteTabs(BuildContext context) {
     const TabItem(text: "Educations"),
     TabItem(text: L10n.of(context)!.events),
     TabItem(text: L10n.of(context)!.mentor),
-    TabItem(text: L10n.of(context)!.news),
   ];
 }

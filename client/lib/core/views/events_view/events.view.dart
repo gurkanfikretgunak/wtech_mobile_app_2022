@@ -1,4 +1,6 @@
 import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/l10n/app_l10n.dart';
+import 'package:client/core/views/common/widgets/custom_appbar.dart';
 import 'package:client/core/views/events_view/widgets/calendar_listview.dart';
 import 'package:client/core/views/events_view/widgets/events_listview_builder.dart';
 import 'package:client/core/views/events_view/widgets/the_day_of_the_month.dart';
@@ -16,6 +18,11 @@ class _EventsViewState extends State<EventsView> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
+      appBar: CustomAppbar(
+        titleText: L10n.of(context)!.events,
+        isCheck: false,
+        isName: false,
+      ),
       body: Padding(
         padding: context.horizontalPaddingNormal,
         child: Column(

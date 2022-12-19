@@ -1,3 +1,4 @@
+import 'package:client/core/extensions/extension.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants/color_constans.dart';
@@ -12,14 +13,23 @@ class TabItem extends StatelessWidget {
   final String text;
   @override
   Widget build(BuildContext context) {
-    return Tab(
-      child: Container(
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(50),
-            border: Border.all(color: ColorConstant.instance.yellow, width: 1)),
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(8),
+        border: Border.all(
+          color: ColorConstant.instance.grey,
+          width: 1,
+        ),
+      ),
+      width: context.dynamicWidth(0.5),
+      child: Tab(
         child: Align(
           alignment: Alignment.center,
-          child: CustomText(text),
+          child: CustomText(
+            text,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+          ),
         ),
       ),
     );
