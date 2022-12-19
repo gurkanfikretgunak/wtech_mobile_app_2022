@@ -8,37 +8,35 @@ List aboutItemList(BuildContext context) {
   return [
     {
       "image": Assets.images.whoWe.path,
-      "text": L10n.of(context)!.whoWe,
+      "text": "Biz Kimiz?",
       "onPressed": () {
         navigate(
           context,
           AboutDetailView(
-              imagePath: Assets.images.whoWe.path,
-              title: L10n.of(context)!.whoWe),
+              imagePath: Assets.images.whoWe.path, title: "Biz Kimiz?"),
         );
       }
     },
     {
       "image": Assets.images.whatWeDoing.path,
-      "text": L10n.of(context)!.whatWeDoing,
+      "text": "Ne Yapıyoruz?",
       "onPressed": () {
         navigate(
           context,
           AboutDetailView(
               imagePath: Assets.images.whatWeDoing.path,
-              title: L10n.of(context)!.whatWeDoing),
+              title: "Ne Yapıyoruz?"),
         );
       }
     },
     {
       "image": Assets.images.ourGoals.path,
-      "text": L10n.of(context)!.ourGoals,
+      "text": "Hedefimiz",
       "onPressed": () {
         navigate(
           context,
           AboutDetailView(
-              imagePath: Assets.images.ourGoals.path,
-              title: L10n.of(context)!.ourGoals),
+              imagePath: Assets.images.ourGoals.path, title: "Hedefimiz"),
         );
       }
     }

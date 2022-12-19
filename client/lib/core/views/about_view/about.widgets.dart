@@ -35,7 +35,7 @@ class AboutWidgets {
   Widget titleText(BuildContext context) {
     return Center(
       child: CustomText(
-        L10n.of(context)!.whatMakeUsSpecial,
+        "Bizi Özel Yapan Ne?",
         fontSize: 18,
         fontWeight: FontWeight.w600,
       ),
