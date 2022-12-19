@@ -38,8 +38,9 @@ class VideosWidgets {
                 itemCount: 10,
                 physics: const NeverScrollableScrollPhysics(),
                 itemBuilder: (context, index) {
-                  return SizedBox(
-                    height: MediaQuery.of(context).size.height / 5.8,
+                  return Container(
+                    margin: context.onlyBottomPaddingLow,
+                    height: MediaQuery.of(context).size.height / 6.8,
                     child: const CardItemWidget(
                       videoUrl:
                           'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',

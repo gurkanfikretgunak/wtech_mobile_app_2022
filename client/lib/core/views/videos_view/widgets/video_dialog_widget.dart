@@ -37,6 +37,7 @@ class _VideoDialogWidgetState extends State<VideoDialogWidget> {
   @override
   Widget build(BuildContext context) {
     return Dialog(
+      backgroundColor: Colors.transparent,
       insetPadding: context.horizontalPaddingLow,
       child: SizedBox(
         width: double.infinity,
@@ -48,7 +49,10 @@ class _VideoDialogWidgetState extends State<VideoDialogWidget> {
                 onPressed: () => Navigator.of(context).pop(),
                 icon: Icon(
                   Icons.close,
-                  color: ColorConstant.instance.grey,
+                  color: Theme.of(context)
+                      .iconTheme
+                      .copyWith(color: ColorConstant.instance.white)
+                      .color,
                 ),
               ),
               Expanded(
