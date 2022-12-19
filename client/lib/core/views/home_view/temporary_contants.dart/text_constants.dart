@@ -1,11 +1,12 @@
 import '../../../../gen/assets.gen.dart';
 
 class HomeTextContants {
-  static const String baslikText = "İstanbul Teknolojide Lider Kadinlar Eğitim Programi";
+  static const String baslikText =
+      "İstanbul Teknolojide Lider Kadinlar Eğitim Programi";
   static const String dateText = "27.06.2022";
   static const String cityText = "İstanbul";
   static String imagePath = Assets.images.home1.path;
-  static String logoPath = Assets.images.wtechLogo.path;
+  static String logoPath = Assets.images.wtechLogo1.path;
 
   static List<String> eventPath = [
     Assets.images.gelecekleIddia.path,
