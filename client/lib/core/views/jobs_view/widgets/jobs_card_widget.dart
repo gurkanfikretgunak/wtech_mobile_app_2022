@@ -124,6 +124,7 @@ class JobsCardWidget extends StatelessWidget {
                 top: context.dynamicHeight(0.31),
                 left: context.dynamicWidth(0.03),
                 child: CustomElevatedButton(
+                  width: context.dynamicWidth(0.2),
                   onPressed: isContinue ? () {} : null,
                   text: (isContinue == false)
                       ? L10n.of(context)!.terminatedButton
