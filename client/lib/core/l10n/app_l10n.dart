@@ -1436,6 +1436,18 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'Sign in with'**
   String get signinWith;
+
+  /// No description provided for @deleteAccountInformation.
+  ///
+  /// In en, this message translates to:
+  /// **'*Do you really want to delete this account?'**
+  String get deleteAccountInformation;
+
+  /// No description provided for @deleteAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Account'**
+  String get deleteAccount;
 }
 
 class _L10nDelegate extends LocalizationsDelegate<L10n> {

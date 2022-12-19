@@ -239,8 +239,9 @@
     "wtechForCareer" : "KARİYER VE ÖĞRENİM HAYATINIZ İÇİN WTECH PLATFORM",
     "accepted" : "Kabul Edildi",
     "evaluating" : "Değerlendiriliyor",
-    "signinWith" : "ile giriş yap."
- 
+    "signinWith" : "ile giriş yap.",
+    "deleteAccountInformation" : "*Bu hesabı gerçekten silmek istiyor musunuz?",
+    "deleteAccount" : "Hesabı Sil"
  
  }
 

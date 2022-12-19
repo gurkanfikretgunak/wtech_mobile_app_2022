@@ -23,9 +23,9 @@ class SettingsCardWidget extends StatelessWidget {
     return Card(
       elevation: 0.1,
       child: Container(
-        decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: ColorConstant.instance.settingGrey),
-        height: context.dynamicHeight(0.08),
-        width: context.dynamicWidth(0.1),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: ColorConstant.instance.settingGrey),
         child: Wrap(
           alignment: WrapAlignment.spaceBetween,
           crossAxisAlignment: WrapCrossAlignment.center,
@@ -34,7 +34,11 @@ class SettingsCardWidget extends StatelessWidget {
               padding: context.onlyLeftPaddingLow,
               child: CustomText(text),
             ),
-            isSwitcher ? switcherIcon : IconButton(onPressed: () {}, icon: const Icon(Icons.arrow_forward_ios_rounded)),
+            isSwitcher
+                ? switcherIcon
+                : IconButton(
+                    onPressed: () {},
+                    icon: const Icon(Icons.arrow_forward_ios_rounded)),
           ],
         ),
       ),
