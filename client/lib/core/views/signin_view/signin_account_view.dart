@@ -23,37 +23,33 @@ class SignInAccountView extends StatefulWidget {
 class _MainScreenState extends State<SignInAccountView> with SignInWidget {
   @override
   Widget build(BuildContext context) {
-    return Consumer<MainBloc>(
-      builder: (context, bloc, _) {
-        return Scaffold(
-          body: SingleChildScrollView(
-            child: Padding(
-              padding: context.horizontalPaddingNormal,
-              child: Wrap(
-                alignment: WrapAlignment.center,
-                runSpacing: 60,
-                children: [
-                  const Logo(),
-                  signInAccountButton(context),
-                  const CustomSignInAccountDivider(),
-                  SizedBox(
-                    width: context.dynamicWidth(1),
-                    height: context.dynamicHeight(0.04),
-                    child: CustomElevatedButton(
-                      onPressed: () {
-                        CustomNavigator.goToScreen(
-                            context, Routes.signinWithEmail.name);
-                      },
-                      text: L10n.of(context)!.signInEmail,
-                    ),
-                  ),
-                  const SignInBottomDescription(),
-                ],
+    return Scaffold(
+      body: Padding(
+        padding: context.paddingNormal,
+        child: Wrap(
+          alignment: WrapAlignment.center,
+          runSpacing: 40,
+          children: [
+            Padding(
+              padding: context.onlyTopPaddingHigh,
+              child: const Logo(),
+            ),
+            signInAccountButton(context),
+            const CustomSignInAccountDivider(),
+            SizedBox(
+              width: context.dynamicWidth(0.8),
+              height: context.dynamicHeight(0.06),
+              child: CustomElevatedButton(
+                onPressed: () {
+                  CustomNavigator.goToScreen(context, Routes.signinWithEmail.name);
+                },
+                text: L10n.of(context)!.signInEmail,
               ),
             ),
-          ),
-        );
-      },
+            const SignInBottomDescription(),
+          ],
+        ),
+      ),
     );
   }
 }

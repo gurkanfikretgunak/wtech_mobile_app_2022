@@ -3,6 +3,7 @@ import 'package:client/core/routes/app_routest.dart';
 import 'package:client/core/themes/change_theme/change_theme.viewmodel.dart';
 import 'package:client/core/themes/custom_theme.dart';
 import 'package:client/core/views/sample_view/bloc/sample_bloc.dart';
+import 'package:client/core/views/signin_view/signin_account_view.dart';
 import 'package:client/core/views/splash_view/splash.view.dart';
 import 'package:flavor/flavor.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +30,7 @@ class App extends StatelessWidget {
               home: Provider<MainBloc>(
                 create: (_) => MainBloc(),
                 dispose: (context, bloc) => bloc.dispose(),
-                child: SplashView(),
+                child: SignInAccountView(),
               ),
               title: "Flutter Boilerplate : ${Flavor.I.getString(Keys.appTitle)}",
               theme: snapshot.data! ? CustomTheme.customLightTheme(context) : CustomTheme.customDarkTheme(context),

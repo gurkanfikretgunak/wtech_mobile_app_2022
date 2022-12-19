@@ -1,6 +1,4 @@
-import 'package:client/core/extensions/extension.dart';
 import 'package:flutter/material.dart';
-
 import '../../../enums/routes.enum.dart';
 import '../../../l10n/app_l10n.dart';
 import '../../../routes/custom_navigator.dart';
@@ -29,6 +27,7 @@ class SignUpForNotRemember extends StatelessWidget {
             fontSize: 18,
             color: Colors.blue,
             L10n.of(context)!.signUpHere,
+            underlineText: TextDecoration.underline,
           )),
     ]);
   }

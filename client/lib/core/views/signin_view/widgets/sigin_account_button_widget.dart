@@ -18,12 +18,12 @@ class SignInAccountButton extends StatelessWidget {
         child: Container(
           alignment: Alignment.center,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(8),
             border: Border.all(color: Colors.black),
             color: Colors.white,
           ),
-          height: context.dynamicHeight(0.04),
-          width: context.dynamicWidth(5),
+          height: context.dynamicHeight(0.06),
+          width: context.dynamicWidth(0.9),
           child: Row(
             children: [
               Padding(

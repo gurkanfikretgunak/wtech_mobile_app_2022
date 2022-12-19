@@ -6,7 +6,7 @@ import '../../data/local/theme_preference.dart';
 
 @Injectable()
 class ChangeThemeViewModel extends BaseViewModel with ThemeChangePreference {
-  final _theme = BehaviorSubject<bool>.seeded(false);
+  final _theme = BehaviorSubject<bool>.seeded(true);
   Stream get theme => _theme.stream;
 
   changeTheme() {

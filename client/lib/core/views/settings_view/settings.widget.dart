@@ -1,7 +1,6 @@
 import 'package:client/core/extensions/extension.dart';
 import 'package:client/core/themes/change_theme/change_theme.viewmodel.dart';
 import 'package:client/core/views/common/widgets/text/custom_text.dart';
-import 'package:client/core/views/settings_view/settings.viewmodel.dart';
 import 'package:client/core/views/settings_view/widget/card_settings.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';

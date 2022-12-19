@@ -51,19 +51,19 @@ class SignInWidget {
     return Column(
       children: [
         SignInAccountButton(
-          icon: "/images/google.svg",
+          icon: "assets/images/google.svg",
           text: L10n.of(context)!.signInGoogle,
         ),
         SignInAccountButton(
-          icon: "/images/facebook.svg",
+          icon: "assets/images/facebook.svg",
           text: L10n.of(context)!.signInFacebook,
         ),
         SignInAccountButton(
-          icon: "/images/apple.svg",
+          icon: "assets/images/apple.svg",
           text: L10n.of(context)!.signInApple,
         ),
         SignInAccountButton(
-          icon: "/images/github.svg",
+          icon: "assets/images/github.svg",
           text: L10n.of(context)!.signInGithub,
         ),
       ],
