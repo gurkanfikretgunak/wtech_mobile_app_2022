@@ -23,7 +23,6 @@ class NewsView extends StatelessWidget with NewsWidgets {
         isCheck: false,
         isName: false,
       ),
-      bottomNavigationBar: const CustomBottomNavBar(),
       body: Padding(
         padding: context.paddingNormal,
         child: SingleChildScrollView(

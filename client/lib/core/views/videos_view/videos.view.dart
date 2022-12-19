@@ -19,7 +19,6 @@ class VideosView extends StatelessWidget with VideosWidgets {
         titleText: L10n.of(context)!.videos,
       ),
       body: body(context),
-      bottomNavigationBar: const CustomBottomNavBar(),
     );
   }
 }

@@ -50,7 +50,6 @@ class UserProfileWidgets {
           ),
           CustomElevatedButton(
             onPressed: () {},
-            buttonColor: true,
             text: "Çıkış Yap",
             textColor: ColorConstant.instance.white,
             iconWidget: Icon(Icons.exit_to_app),

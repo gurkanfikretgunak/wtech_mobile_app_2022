@@ -14,9 +14,10 @@ class JobsView extends StatelessWidget with JobsWidgets {
     return Scaffold(
       appBar: CustomAppbar(
         titleText: L10n.of(context)!.jobAndinternship,
+        isCheck: false,
+        isName: false,
       ),
       body: body(context),
-      bottomNavigationBar: const CustomBottomNavBar(),
     );
   }
 }

@@ -5,18 +5,20 @@ import 'package:client/core/views/supporting_institutions_view/support_inst.view
 import 'package:client/core/views/supporting_institutions_view/support_inst.widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
-class SupportInstutionsView extends StatelessWidget with SupportInstutionsWidgets {
+
+class SupportInstutionsView extends StatelessWidget
+    with SupportInstutionsWidgets {
   SupportInstutionsView({super.key});
   final _vm = GetIt.I.get<SupportInstutionsViewModel>;
 
   @override
-  Widget build(BuildContext context) {   
+  Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppbar(titleText: L10n.of(context)!.countributingInstitutions,isCheck: false,isName: false),
+      appBar: CustomAppbar(
+          titleText: L10n.of(context)!.countributingInstitutions,
+          isCheck: false,
+          isName: false),
       body: SupportInstutionsWidgets().cardBuilder(),
-      bottomNavigationBar: CustomBottomNavBar(),
-    );  
+    );
   }
 }
-
-

@@ -20,6 +20,5 @@ Future<void> main() async {
       logLevelKey: 5,
     },
   );
-
   setupApp();
 }

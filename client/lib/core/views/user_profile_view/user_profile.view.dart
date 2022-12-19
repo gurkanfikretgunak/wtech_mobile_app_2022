@@ -49,7 +49,6 @@ class UserProfileView extends StatelessWidget with UserProfileWidgets {
           ]),
         ]),
       ]),
-      bottomNavigationBar: CustomBottomNavBar(),
     );
   }
 }

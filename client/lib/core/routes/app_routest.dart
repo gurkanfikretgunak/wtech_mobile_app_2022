@@ -1,6 +1,8 @@
 import 'package:client/core/views/blogs_view/blogs.view.dart';
+import 'package:client/core/views/educations_detail_view/educations_detail.view.dart';
 import 'package:client/core/views/educations_view/educations.view.dart';
 import 'package:client/core/views/jobs_details_view/jobs_detail.view.dart';
+import 'package:client/core/views/jobs_view/jobs.view.dart';
 import 'package:client/core/views/mentors_view/mentors.view.dart';
 import 'package:client/core/views/news_view/news.view.dart';
 import 'package:client/core/views/videos_view/videos.view.dart';
@@ -29,8 +31,8 @@ class AppRoutes {
         return navigate(const EducationView());
 
       case Routes.educationDetail:
-        // TODO: Handle this case.
-        break;
+        return navigate(const EducationsDetailView());
+
       case Routes.events:
         // TODO: Handle this case.
         break;
@@ -44,11 +46,11 @@ class AppRoutes {
         // TODO: Handle this case.
         break;
       case Routes.jobs:
-        return navigate(JobsDetailView());
+        return navigate(JobsView());
 
       case Routes.jobDetail:
-        // TODO: Handle this case.
-        break;
+        return navigate(JobsDetailView());
+
       case Routes.mentors:
         return navigate(MentorsView());
       case Routes.mentorDetail:

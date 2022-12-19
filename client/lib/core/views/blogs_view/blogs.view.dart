@@ -18,8 +18,8 @@ class BlogsView extends StatelessWidget with BlogsWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppbar(titleText: L10n.of(context)!.blog),
-      bottomNavigationBar: const CustomBottomNavBar(),
+      appBar: CustomAppbar(
+          titleText: L10n.of(context)!.blog, isCheck: false, isName: false),
       body: Padding(
         padding: context.paddingNormal,
         child: SingleChildScrollView(

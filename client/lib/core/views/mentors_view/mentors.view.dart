@@ -14,7 +14,6 @@ class MentorsView extends StatelessWidget with MentorsWidgets {
       //Will be change with common appbar
       appBar: AppBar(title: appBarTitle(context)),
 
-      bottomNavigationBar: const CustomBottomNavBar(),
       drawer: const Drawer(child: Text("data")),
       body: body(context),
     );
