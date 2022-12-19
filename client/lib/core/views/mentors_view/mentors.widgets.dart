@@ -10,9 +10,10 @@ class MentorsWidgets {
       physics: const BouncingScrollPhysics(),
       padding: context.paddingNormal,
       itemCount: 5,
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        mainAxisSpacing: context.dynamicHeight(0.03),
         crossAxisCount: 2,
-        crossAxisSpacing: 20,
+        crossAxisSpacing: context.dynamicWidth(0.03),
         childAspectRatio: 0.7,
       ),
       itemBuilder: (context, index) {

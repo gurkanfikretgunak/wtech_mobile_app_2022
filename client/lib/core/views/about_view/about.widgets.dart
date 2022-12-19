@@ -17,13 +17,13 @@ class AboutWidgets {
       child: Column(
         children: [
           CustomText(
-            "KARİYER VE ÖĞRENİM HAYATINIZ İÇİN WTECH PLATFORM",
+            L10n.of(context)!.wtechForCareer,
             color: ColorConstant.instance.grey,
             fontSize: 12,
           ),
           context.emptySizedHeightBoxNormal,
-          const CustomText(
-            "Fırsat eşitliği sağlayan meraklı, araştırmacı, üretken, cesareti ve özgüveni yüksek teknolojistlerin yetişmesine imkan sunar.",
+          CustomText(
+            L10n.of(context)!.opportunitiyEquality,
             fontWeight: FontWeight.w600,
             textAlign: TextAlign.center,
           ),
@@ -35,7 +35,7 @@ class AboutWidgets {
   Widget titleText(BuildContext context) {
     return Center(
       child: CustomText(
-        "Bizi Özel Yapan Ne?",
+        L10n.of(context)!.madeUsSprecial,
         fontSize: 18,
         fontWeight: FontWeight.w600,
       ),
@@ -73,7 +73,7 @@ class AboutWidgets {
           top: context.dynamicHeight(0.09),
           left: context.dynamicWidth(0.13),
           child: CustomText(
-            "İşimiz İnsan, İşimiz Teknoloji",
+            L10n.of(context)!.titleEvents,
             color: ColorConstant.instance.white,
             fontWeight: FontWeight.w700,
             fontSize: 23,
