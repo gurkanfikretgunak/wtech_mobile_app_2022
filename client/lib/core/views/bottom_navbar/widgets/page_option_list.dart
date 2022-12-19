@@ -9,7 +9,7 @@ import '../../home_view/home.view.dart';
 List<Widget> pageOptionList = <Widget>[
   HomeView(),
   const EducationView(),
-  const EventsView(),
+  // const EventsView(),
   FavoritesView(),
   ApplysView()
 ];

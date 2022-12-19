@@ -23,12 +23,10 @@ class CustomBottomNavBar extends StatelessWidget with BottomNavBarWidgets {
         if (snapshot.hasData) {
           return Scaffold(
             appBar: CustomAppbar(
-              titleText: buildAppBarTitle(
+              titleText: _vm.buildAppBarTitle(
                 pageIndex: snapshot.data,
                 context: context,
               ),
-
-              //L10n.of(context)!.hello,
               isCheck: true,
               isName: snapshot.data == 0 ? true : false,
             ),
@@ -47,24 +45,5 @@ class CustomBottomNavBar extends StatelessWidget with BottomNavBarWidgets {
         }
       },
     );
-  }
-
-  buildAppBarTitle({
-    required int pageIndex,
-    required BuildContext context,
-  }) {
-    switch (pageIndex) {
-      case 0:
-        return L10n.of(context)!.hello;
-      case 1:
-        return "Eğitimler";
-      case 2:
-        return L10n.of(context)!.events;
-      case 3:
-        return L10n.of(context)!.favorites;
-      case 4:
-        return L10n.of(context)!.apply;
-      default:
-    }
   }
 }
