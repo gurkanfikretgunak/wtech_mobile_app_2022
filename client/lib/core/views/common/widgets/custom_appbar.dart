@@ -1,52 +1,96 @@
-import 'package:client/core/constants/color_constans.dart';
 import 'package:client/core/extensions/extension.dart';
 import 'package:flutter/material.dart';
+import 'package:logger/logger.dart';
+import '../../../../gen/assets.gen.dart';
+import '../../../enums/routes.enum.dart';
+import '../../../routes/custom_navigator.dart';
 
 class CustomAppbar extends StatelessWidget with PreferredSizeWidget {
   final String? titleText;
   final bool? isCheck;
+  final bool? isName;
   final TextButton? appButton;
-  const CustomAppbar({Key? key, this.isCheck = false, this.appButton, this.titleText}) : super(key: key);
+  const CustomAppbar(
+      {Key? key,
+      this.isCheck = false,
+      this.appButton,
+      this.titleText,
+      this.isName})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      leading: isCheck!
+          ? customMenuBuilder()
+          : Padding(
+              padding: context.onlyTopPaddingNormal, child: const BackButton()),
       title: Padding(
-        padding: context.onlyTopPaddingLow,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(titleText ?? "",
-                style: Theme.of(context).textTheme.headline6?.copyWith(fontSize: 20, fontWeight: FontWeight.normal)),
-            isCheck!
-                ? Text("Gürkan Fikret Günak", style: Theme.of(context).textTheme.headline6?.copyWith(fontSize: 20))
-                : const SizedBox()
-          ],
-        ),
-      ),
+          padding: context.onlyTopPaddingLow,
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Text.rich(TextSpan(
+                text: titleText ?? "",
+                style: Theme.of(context)
+                    .textTheme
+                    .headline6
+                    ?.copyWith(fontSize: 18, fontWeight: FontWeight.normal),
+                children: <TextSpan>[
+                  TextSpan(
+                      text: isName! ? ", Gürkan" : "",
+                      style: Theme.of(context)
+                          .textTheme
+                          .headline6
+                          ?.copyWith(fontSize: 18))
+                ])),
+          ])),
       actions: [
         isCheck!
-            ? Padding(
-                padding: context.onlyTopPaddingNormal,
-                child: Container(
-                    height: 40,
-                    width: 85,
-                    decoration:
-                        BoxDecoration(color: ColorConstant.instance.yellow, borderRadius: BorderRadius.circular(50)),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Text("W-27",
-                            style: Theme.of(context).textTheme.subtitle1?.copyWith(fontWeight: FontWeight.bold)),
-                        const CircleAvatar(maxRadius: 18),
-                      ],
-                    )),
+            ? Row(
+                children: [
+                  Padding(
+                    padding: context.onlyTopPaddingNormal,
+                    child: IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.notifications_none_outlined,
+                        )),
+                  ),
+                  Padding(
+                      padding: context.onlyTopPaddingNormal,
+                      child: GestureDetector(
+                          onTap: () {
+                            CustomNavigator.goToScreen(
+                                context, Routes.userProfile.name);
+                          },
+                          child: Padding(
+                            padding: context.onlyRightPaddingNormal,
+                            child: CircleAvatar(
+                              maxRadius: 18,
+                              child: Image.asset(
+                                Assets.images.profile.path,
+                              ),
+                            ),
+                          ))),
+                ],
               )
-            : appButton ?? const SizedBox()
+            : const SizedBox()
       ],
     );
   }
 
   @override
   Size get preferredSize => const Size.fromHeight(70.0);
+}
+
+Builder customMenuBuilder() {
+  return Builder(builder: (BuildContext context) {
+    return Padding(
+        padding: context.onlyTopPaddingNormal,
+        child: IconButton(
+            icon: const Icon(Icons.menu),
+            onPressed: () {
+              Scaffold.of(context).openDrawer();
+            }));
+  });
 }

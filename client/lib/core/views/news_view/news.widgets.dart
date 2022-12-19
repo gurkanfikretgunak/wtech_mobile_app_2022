@@ -20,7 +20,7 @@ class NewsWidgets {
 
   Widget titleText(BuildContext context) {
     return Padding(
-        padding: context.paddingMedium,
+        padding: context.onlyTopPaddingNormal,
         child: CustomText(
           L10n.of(context)!.lastNews,
           fontSize: 20,

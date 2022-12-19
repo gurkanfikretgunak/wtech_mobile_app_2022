@@ -10,7 +10,7 @@ class Logo extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: context.dynamicHeight(0.1),
-      child: SvgPicture.asset("/images/wtechLogo.svg"),
+      child: SvgPicture.asset("assets/images/wtechLogo.svg"),
     );
   }
 }

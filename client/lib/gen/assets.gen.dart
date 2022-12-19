@@ -25,6 +25,23 @@ class $AssetsEnvGen {
   List<String> get values => [envDev, envProd, envTest];
 }
 
+class $AssetsGifGen {
+  const $AssetsGifGen();
+
+  /// File path: assets/gif/education.gif
+  AssetGenImage get education =>
+      const AssetGenImage('assets/gif/education.gif');
+
+  /// File path: assets/gif/events.gif
+  AssetGenImage get events => const AssetGenImage('assets/gif/events.gif');
+
+  /// File path: assets/gif/mentor.gif
+  AssetGenImage get mentor => const AssetGenImage('assets/gif/mentor.gif');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [education, events, mentor];
+}
+
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
@@ -34,12 +51,19 @@ class $AssetsIconsGen {
   /// File path: assets/icons/blog.png
   AssetGenImage get blog => const AssetGenImage('assets/icons/blog.png');
 
+  /// File path: assets/icons/book.png
+  AssetGenImage get book => const AssetGenImage('assets/icons/book.png');
+
   /// File path: assets/icons/camera.png
   AssetGenImage get camera => const AssetGenImage('assets/icons/camera.png');
 
   /// File path: assets/icons/communication.png
   AssetGenImage get communication =>
       const AssetGenImage('assets/icons/communication.png');
+
+  /// File path: assets/icons/education.png
+  AssetGenImage get education =>
+      const AssetGenImage('assets/icons/education.png');
 
   /// File path: assets/icons/email.png
   AssetGenImage get email => const AssetGenImage('assets/icons/email.png');
@@ -93,9 +117,6 @@ class $AssetsIconsGen {
   /// File path: assets/icons/share.png
   AssetGenImage get share => const AssetGenImage('assets/icons/share.png');
 
-  /// File path: assets/icons/test.png
-  AssetGenImage get test => const AssetGenImage('assets/icons/test.png');
-
   /// File path: assets/icons/unfavorite.png
   AssetGenImage get unfavorite =>
       const AssetGenImage('assets/icons/unfavorite.png');
@@ -103,12 +124,21 @@ class $AssetsIconsGen {
   /// File path: assets/icons/videos.png
   AssetGenImage get videos => const AssetGenImage('assets/icons/videos.png');
 
+  /// File path: assets/icons/wtechIcon.svg
+  String get wtechIcon => 'assets/icons/wtechIcon.svg';
+
+  /// File path: assets/icons/wtechLogo.png
+  AssetGenImage get wtechLogo =>
+      const AssetGenImage('assets/icons/wtechLogo.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [
+  List<dynamic> get values => [
         apple,
         blog,
+        book,
         camera,
         communication,
+        education,
         email,
         eventDate,
         facebook,
@@ -125,21 +155,56 @@ class $AssetsIconsGen {
         news,
         persons,
         share,
-        test,
         unfavorite,
-        videos
+        videos,
+        wtechIcon,
+        wtechLogo
       ];
 }
 
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/about_1.jpg
+  AssetGenImage get about1 => const AssetGenImage('assets/images/about_1.jpg');
+
+  /// File path: assets/images/apple.svg
+  String get apple => 'assets/images/apple.svg';
+
   /// File path: assets/images/blog_1.png
   AssetGenImage get blog1 => const AssetGenImage('assets/images/blog_1.png');
+
+  /// File path: assets/images/deneme.jpg
+  AssetGenImage get deneme => const AssetGenImage('assets/images/deneme.jpg');
+
+  /// File path: assets/images/dijital_sanatlar.jpeg
+  AssetGenImage get dijitalSanatlar =>
+      const AssetGenImage('assets/images/dijital_sanatlar.jpeg');
 
   /// File path: assets/images/education_1.png
   AssetGenImage get education1 =>
       const AssetGenImage('assets/images/education_1.png');
+
+  /// File path: assets/images/ege_egitim.jpeg
+  AssetGenImage get egeEgitim =>
+      const AssetGenImage('assets/images/ege_egitim.jpeg');
+
+  /// File path: assets/images/facebook.svg
+  String get facebook => 'assets/images/facebook.svg';
+
+  /// File path: assets/images/gelecekle_iddia.jpeg
+  AssetGenImage get gelecekleIddia =>
+      const AssetGenImage('assets/images/gelecekle_iddia.jpeg');
+
+  /// File path: assets/images/github.svg
+  String get github => 'assets/images/github.svg';
+
+  /// File path: assets/images/google.svg
+  String get google => 'assets/images/google.svg';
+
+  /// File path: assets/images/happy_friday.jpeg
+  AssetGenImage get happyFriday =>
+      const AssetGenImage('assets/images/happy_friday.jpeg');
 
   /// File path: assets/images/home_1.png
   AssetGenImage get home1 => const AssetGenImage('assets/images/home_1.png');
@@ -148,7 +213,13 @@ class $AssetsImagesGen {
   AssetGenImage get job1 => const AssetGenImage('assets/images/job_1.png');
 
   /// File path: assets/images/logo.png
-  AssetGenImage get logo => const AssetGenImage('assets/images/logo.png');
+  AssetGenImage get logoPng => const AssetGenImage('assets/images/logo.png');
+
+  /// File path: assets/images/logo.svg
+  String get logoSvg => 'assets/images/logo.svg';
+
+  /// File path: assets/images/logos.jpeg
+  AssetGenImage get logos => const AssetGenImage('assets/images/logos.jpeg');
 
   /// File path: assets/images/mentor_1.png
   AssetGenImage get mentor1 =>
@@ -160,20 +231,100 @@ class $AssetsImagesGen {
   /// File path: assets/images/news_2.png
   AssetGenImage get news2 => const AssetGenImage('assets/images/news_2.png');
 
-  /// File path: assets/images/test.png
-  AssetGenImage get test => const AssetGenImage('assets/images/test.png');
+  /// File path: assets/images/our_goals.jpg
+  AssetGenImage get ourGoals =>
+      const AssetGenImage('assets/images/our_goals.jpg');
+
+  /// File path: assets/images/profile.jpg
+  AssetGenImage get profile => const AssetGenImage('assets/images/profile.jpg');
+
+  /// File path: assets/images/saglik.png
+  AssetGenImage get saglik => const AssetGenImage('assets/images/saglik.png');
+
+  /// File path: assets/images/title_card.png
+  AssetGenImage get titleCard =>
+      const AssetGenImage('assets/images/title_card.png');
+
+  /// File path: assets/images/turk_traktor.jpeg
+  AssetGenImage get turkTraktor =>
+      const AssetGenImage('assets/images/turk_traktor.jpeg');
+
+  /// File path: assets/images/what_we_doing.jpg
+  AssetGenImage get whatWeDoing =>
+      const AssetGenImage('assets/images/what_we_doing.jpg');
+
+  /// File path: assets/images/who_we.jpg
+  AssetGenImage get whoWe => const AssetGenImage('assets/images/who_we.jpg');
+
+  /// File path: assets/images/wtech-logo.png
+  AssetGenImage get wtechLogo =>
+      const AssetGenImage('assets/images/wtech-logo.png');
+
+  /// File path: assets/images/wtechLogo.png
+  AssetGenImage get wtechLogoPng =>
+      const AssetGenImage('assets/images/wtechLogo.png');
+
+  /// File path: assets/images/wtechLogo.svg
+  String get wtechLogoSvg => 'assets/images/wtechLogo.svg';
+
+  /// File path: assets/images/wtech_logo_gif.gif
+  AssetGenImage get wtechLogoGif =>
+      const AssetGenImage('assets/images/wtech_logo_gif.gif');
 
   /// List of all assets
-  List<AssetGenImage> get values =>
-      [blog1, education1, home1, job1, logo, mentor1, news1, news2, test];
+  List<dynamic> get values => [
+        about1,
+        apple,
+        blog1,
+        deneme,
+        dijitalSanatlar,
+        education1,
+        egeEgitim,
+        facebook,
+        gelecekleIddia,
+        github,
+        google,
+        happyFriday,
+        home1,
+        job1,
+        logoPng,
+        logoSvg,
+        logos,
+        mentor1,
+        news1,
+        news2,
+        ourGoals,
+        profile,
+        saglik,
+        titleCard,
+        turkTraktor,
+        whatWeDoing,
+        whoWe,
+        wtechLogo,
+        wtechLogoPng,
+        wtechLogoSvg,
+        wtechLogoGif
+      ];
+}
+
+class $AssetsLottieGen {
+  const $AssetsLottieGen();
+
+  /// File path: assets/lottie/loading_bar.json
+  String get loadingBar => 'assets/lottie/loading_bar.json';
+
+  /// List of all assets
+  List<String> get values => [loadingBar];
 }
 
 class Assets {
   Assets._();
 
   static const $AssetsEnvGen env = $AssetsEnvGen();
+  static const $AssetsGifGen gif = $AssetsGifGen();
   static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
+  static const $AssetsLottieGen lottie = $AssetsLottieGen();
 }
 
 class AssetGenImage {

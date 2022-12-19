@@ -9,7 +9,7 @@ class CustomElevatedButton extends StatelessWidget {
     Key? key,
     required this.onPressed,
     required this.text,
-    this.primary,
+    this.buttonColor,
     this.textColor,
     this.fontSize,
     this.height,
@@ -24,7 +24,7 @@ class CustomElevatedButton extends StatelessWidget {
   }) : super(key: key);
 
   final String text;
-  final Color? primary;
+  final Color? buttonColor;
   final Color? textColor;
   final Color? shadowColor;
   final Color? borderSideColor;
@@ -42,22 +42,27 @@ class CustomElevatedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: onPressed,
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          iconWidget != null
-              ? Padding(
-                  padding: context.onlyRightPaddingNormal,
-                  child: iconWidget!,
-                )
-              : const SizedBox.shrink(),
-          CustomText(
-            text,
-            fontWeight: fontWeight ?? FontWeight.w600,
-            fontSize: fontSize,
-            color: textColor ?? ColorConstant.instance.blue,
-          ),
-        ],
+      style: ElevatedButton.styleFrom(
+        disabledBackgroundColor:
+            disabledBackgroundColor ?? ColorConstant.instance.grey,
+        elevation: 0,
+        shadowColor: shadowColor,
+        shape: RoundedRectangleBorder(
+          side: BorderSide(color: borderSideColor ?? Colors.transparent),
+          borderRadius: BorderRadius.all(Radius.circular(borderRadius ?? 5)),
+        ),
+        padding: EdgeInsets.zero,
+        backgroundColor: buttonColor,
+        fixedSize: Size(
+          width ?? context.dynamicWidth(1),
+          context.dynamicHeight(0.06),
+        ),
+      ),
+      child: CustomText(
+        text,
+        fontWeight: fontWeight ?? FontWeight.w600,
+        fontSize: fontSize,
+        color: textColor ?? ColorConstant.instance.white,
       ),
     );
   }

@@ -26,6 +26,7 @@ migrate_working_dir/
 .project
 .settings/
 .vscode/
+.metadata
 
 # packages file containing multi-root paths
 .packages.generated
@@ -59,7 +60,13 @@ android/
 *.jks
 /android/
 
+
+# Web related 
+web/
+
+
 # iOS/XCode related
+ios/
 **/ios/**/*.mode1v3
 **/ios/**/*.mode2v3
 **/ios/**/*.moved-aside
@@ -91,6 +98,7 @@ android/
 /ios/
 
 # macOS
+macOS/
 **/Flutter/ephemeral/
 **/Pods/
 **/macos/Flutter/GeneratedPluginRegistrant.swift
@@ -99,11 +107,13 @@ android/
 /macos/
 
 # Windows
+windows/
 **/windows/flutter/generated_plugin_registrant.cc
 **/windows/flutter/generated_plugin_registrant.h
 /windows/
 
 # Linux
+linux/
 **/linux/flutter/generated_plugin_registrant.cc
 **/linux/flutter/generated_plugin_registrant.h
 /linux/
