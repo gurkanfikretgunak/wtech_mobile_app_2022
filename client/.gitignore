@@ -26,6 +26,7 @@ migrate_working_dir/
 .project
 .settings/
 .vscode/
+.metadata
 
 # packages file containing multi-root paths
 .packages.generated

@@ -34,12 +34,19 @@ class $AssetsIconsGen {
   /// File path: assets/icons/blog.png
   AssetGenImage get blog => const AssetGenImage('assets/icons/blog.png');
 
+  /// File path: assets/icons/book.png
+  AssetGenImage get book => const AssetGenImage('assets/icons/book.png');
+
   /// File path: assets/icons/camera.png
   AssetGenImage get camera => const AssetGenImage('assets/icons/camera.png');
 
   /// File path: assets/icons/communication.png
   AssetGenImage get communication =>
       const AssetGenImage('assets/icons/communication.png');
+
+  /// File path: assets/icons/education.png
+  AssetGenImage get education =>
+      const AssetGenImage('assets/icons/education.png');
 
   /// File path: assets/icons/email.png
   AssetGenImage get email => const AssetGenImage('assets/icons/email.png');
@@ -111,8 +118,10 @@ class $AssetsIconsGen {
   List<dynamic> get values => [
         apple,
         blog,
+        book,
         camera,
         communication,
+        education,
         email,
         eventDate,
         facebook,
@@ -138,6 +147,9 @@ class $AssetsIconsGen {
 
 class $AssetsImagesGen {
   const $AssetsImagesGen();
+
+  /// File path: assets/images/about_1.jpg
+  AssetGenImage get about1 => const AssetGenImage('assets/images/about_1.jpg');
 
   /// File path: assets/images/apple.svg
   String get apple => 'assets/images/apple.svg';
@@ -202,6 +214,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/news_2.png
   AssetGenImage get news2 => const AssetGenImage('assets/images/news_2.png');
 
+  /// File path: assets/images/our_goals.jpg
+  AssetGenImage get ourGoals =>
+      const AssetGenImage('assets/images/our_goals.jpg');
+
   /// File path: assets/images/profile.jpg
   AssetGenImage get profile => const AssetGenImage('assets/images/profile.jpg');
 
@@ -216,6 +232,13 @@ class $AssetsImagesGen {
   AssetGenImage get turkTraktor =>
       const AssetGenImage('assets/images/turk_traktor.jpeg');
 
+  /// File path: assets/images/what_we_doing.jpg
+  AssetGenImage get whatWeDoing =>
+      const AssetGenImage('assets/images/what_we_doing.jpg');
+
+  /// File path: assets/images/who_we.jpg
+  AssetGenImage get whoWe => const AssetGenImage('assets/images/who_we.jpg');
+
   /// File path: assets/images/wtech-logo.png
   AssetGenImage get wtechLogo =>
       const AssetGenImage('assets/images/wtech-logo.png');
@@ -227,8 +250,13 @@ class $AssetsImagesGen {
   /// File path: assets/images/wtechLogo.svg
   String get wtechLogoSvg => 'assets/images/wtechLogo.svg';
 
+  /// File path: assets/images/wtech_logo_gif.gif
+  AssetGenImage get wtechLogoGif =>
+      const AssetGenImage('assets/images/wtech_logo_gif.gif');
+
   /// List of all assets
   List<dynamic> get values => [
+        about1,
         apple,
         blog1,
         deneme,
@@ -248,13 +276,17 @@ class $AssetsImagesGen {
         mentor1,
         news1,
         news2,
+        ourGoals,
         profile,
         saglik,
         titleCard,
         turkTraktor,
+        whatWeDoing,
+        whoWe,
         wtechLogo,
         wtechLogoPng,
-        wtechLogoSvg
+        wtechLogoSvg,
+        wtechLogoGif
       ];
 }
 
