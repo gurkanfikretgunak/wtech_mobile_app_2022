@@ -227,6 +227,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/wtechLogo.svg
   String get wtechLogoSvg => 'assets/images/wtechLogo.svg';
 
+  /// File path: assets/images/wtech_logo_gif.gif
+  AssetGenImage get wtechLogoGif =>
+      const AssetGenImage('assets/images/wtech_logo_gif.gif');
+
   /// List of all assets
   List<dynamic> get values => [
         apple,
@@ -254,7 +258,8 @@ class $AssetsImagesGen {
         turkTraktor,
         wtechLogo,
         wtechLogoPng,
-        wtechLogoSvg
+        wtechLogoSvg,
+        wtechLogoGif
       ];
 }
 
