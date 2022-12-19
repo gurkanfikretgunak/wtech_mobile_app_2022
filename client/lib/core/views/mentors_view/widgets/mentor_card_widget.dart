@@ -24,7 +24,8 @@ class MentorCardWidget extends StatelessWidget {
       alignment: AlignmentDirectional.topCenter,
       children: [
         MentorImageWidget(imageUrl: imageUrl),
-        MentorInfosWidget(mentor: mentor, organization: organization, role: role),
+        MentorInfosWidget(
+            mentor: mentor, organization: organization, role: role),
         const FavoriteButtonWidget()
       ],
     );
@@ -69,29 +70,38 @@ class MentorInfosWidget extends StatelessWidget {
           elevation: 8,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
-            side: BorderSide(color: ColorConstant.instance.black.withOpacity(0.1)),
+            side: BorderSide(
+                color: ColorConstant.instance.black.withOpacity(0.1)),
           ),
           child: Padding(
             padding: context.horizontalPaddingNormal,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(mentor ?? '', style: Theme.of(context).textTheme.bodyText1),
+                Text(mentor ?? '',
+                    style: Theme.of(context).textTheme.bodyText1),
                 Padding(
                   padding: context.verticalPaddingNormal,
                   child: Text(
                     organization ?? '',
-                    style: Theme.of(context).textTheme.bodySmall!.copyWith(color: ColorConstant.instance.blue),
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodySmall!
+                        .copyWith(color: ColorConstant.instance.blue),
                   ),
                 ),
                 Text(
                   role ?? '',
-                  style: Theme.of(context).textTheme.bodySmall!.copyWith(color: ColorConstant.instance.grey),
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodySmall!
+                      .copyWith(color: ColorConstant.instance.grey),
                 ),
                 CustomElevatedButton(
                   onPressed: () {},
                   text: L10n.of(context)?.contact ?? '',
                   textColor: ColorConstant.instance.white,
+                  buttonColor: false,
                 )
               ],
             ),
