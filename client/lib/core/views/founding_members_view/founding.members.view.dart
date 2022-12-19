@@ -1,5 +1,4 @@
 import 'package:client/core/views/common/widgets/custom_appbar.dart';
-import 'package:client/core/views/common/widgets/custom_navbar.dart';
 import 'package:client/core/views/founding_members_view/founding.members.widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -9,12 +8,11 @@ class FoundingMembersView extends StatelessWidget with FoundingMembersWidgets {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppbar(
+      appBar: const CustomAppbar(
         titleText: "Kurucu Üyeler",
         isCheck: false,
         isName: false,
       ),
-      bottomNavigationBar: const CustomBottomNavBar(),
       body: body(context),
     );
   }

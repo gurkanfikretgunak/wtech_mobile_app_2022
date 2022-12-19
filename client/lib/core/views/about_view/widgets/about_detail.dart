@@ -19,7 +19,11 @@ class AboutDetailView extends StatelessWidget with AboutWidgets {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppbar(titleText: title),
+      appBar: CustomAppbar(
+        titleText: title,
+        isCheck: false,
+        isName: false,
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [

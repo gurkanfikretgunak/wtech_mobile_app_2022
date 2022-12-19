@@ -44,6 +44,37 @@ class IconConstant {
     ];
   }
 
+  List drawerList(BuildContext context) {
+    return [
+      {
+        "icon": Icons.info_outline,
+        "text": L10n.of(context)!.aboutUs,
+        "onTap": () {
+          CustomNavigator.goToScreen(context, Routes.about.name);
+        },
+      },
+      {
+        "icon": Icons.ballot_rounded,
+        "text": L10n.of(context)!.missionVision,
+        "onTap": () {
+          CustomNavigator.goToScreen(context, Routes.missionAndVision.name);
+        },
+      },
+      {
+        "icon": Icons.groups_outlined,
+        "text": L10n.of(context)!.participationConditions,
+        "onTap": () {
+          CustomNavigator.goToScreen(context, Routes.foundingMembersView.name);
+        },
+      },
+      {
+        "icon": Icons.call,
+        "text": L10n.of(context)!.contact,
+        "onTap": () {},
+      },
+    ];
+  }
+
   static List<String> drawerNames(context) {
     return [
       L10n.of(context)!.aboutUs,

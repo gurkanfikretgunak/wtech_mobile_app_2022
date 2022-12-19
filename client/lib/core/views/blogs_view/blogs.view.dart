@@ -7,7 +7,6 @@ import 'package:get_it/get_it.dart';
 import '../../extensions/extension.dart';
 import '../../l10n/app_l10n.dart';
 import '../common/widgets/custom_appbar.dart';
-import '../common/widgets/custom_navbar.dart';
 import 'blogs.viewmodel.dart';
 
 class BlogsView extends StatelessWidget with BlogsWidget {

@@ -1,9 +1,6 @@
-import 'package:client/core/constants/color_constans.dart';
 import 'package:client/core/extensions/extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
-import 'package:client/core/views/common/widgets/button/button_libary.dart';
 import 'package:client/core/views/common/widgets/custom_appbar.dart';
-import 'package:client/core/views/common/widgets/custom_navbar.dart';
 import 'package:client/core/views/common/widgets/text/custom_text.dart';
 import 'package:client/core/views/user_profile_view/user_profile.viewmodel.dart';
 import 'package:client/core/views/user_profile_view/user_profile.widgets.dart';
@@ -32,7 +29,9 @@ class UserProfileView extends StatelessWidget with UserProfileWidgets {
                   width: double.infinity,
                   decoration: const BoxDecoration(
                     color: Color.fromARGB(255, 245, 242, 242),
-                    borderRadius: BorderRadius.only(topLeft: Radius.circular(60), topRight: Radius.circular(60)),
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(60),
+                        topRight: Radius.circular(60)),
                   ),
                   child: Column(
                     children: [

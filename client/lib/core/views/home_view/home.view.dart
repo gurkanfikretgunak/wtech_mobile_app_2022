@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import '../../l10n/app_l10n.dart';
 import '../common/widgets/custom_appbar.dart';
-import '../common/widgets/custom_navbar.dart';
 import 'home.viewmodel.dart';
 import 'home.widgets.dart';
 
@@ -21,7 +20,10 @@ class HomeView extends StatelessWidget with HomeViewWidget {
       builder: (context, snapshot) {
         return Scaffold(
           appBar: CustomAppbar(
-              titleText: L10n.of(context)!.hello, isCheck: true, isName: true),
+            titleText: L10n.of(context)!.hello,
+            isCheck: true,
+            isName: true,
+          ),
           drawer: const DrawerWidget(),
           body: Padding(
             padding: context.onlyLRTpaddingNormal,

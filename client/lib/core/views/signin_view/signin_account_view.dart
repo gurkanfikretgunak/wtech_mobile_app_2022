@@ -10,6 +10,9 @@ import 'package:flutter/material.dart';
 // ignore: depend_on_referenced_packages
 import 'package:provider/provider.dart';
 
+import '../../enums/routes.enum.dart';
+import '../../routes/custom_navigator.dart';
+
 class SignInAccountView extends StatefulWidget {
   const SignInAccountView({super.key});
 
@@ -36,7 +39,13 @@ class _MainScreenState extends State<SignInAccountView> with SignInWidget {
                   SizedBox(
                     width: context.dynamicWidth(1),
                     height: context.dynamicHeight(0.04),
-                    child: CustomElevatedButton(onPressed: () {}, text: L10n.of(context)!.signInEmail),
+                    child: CustomElevatedButton(
+                      onPressed: () {
+                        CustomNavigator.goToScreen(
+                            context, Routes.signinWithEmail.name);
+                      },
+                      text: L10n.of(context)!.signInEmail,
+                    ),
                   ),
                   const SignInBottomDescription(),
                 ],
