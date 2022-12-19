@@ -10,12 +10,6 @@ class EducationView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: const CustomAppbar(
-          titleText: "Eğitimler",
-          isCheck: true,
-          isName: false,
-        ),
-        drawer: const Drawer(child: Text("data")),
         extendBody: true,
         extendBodyBehindAppBar: false,
         body: SingleChildScrollView(
