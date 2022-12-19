@@ -216,16 +216,20 @@ class $AssetsImagesGen {
   AssetGenImage get turkTraktor =>
       const AssetGenImage('assets/images/turk_traktor.jpeg');
 
-  /// File path: assets/images/wtech-logo.png
-  AssetGenImage get wtechLogo =>
-      const AssetGenImage('assets/images/wtech-logo.png');
-
-  /// File path: assets/images/wtechLogo.png
-  AssetGenImage get wtechLogoPng =>
-      const AssetGenImage('assets/images/wtechLogo.png');
-
   /// File path: assets/images/wtechLogo.svg
-  String get wtechLogoSvg => 'assets/images/wtechLogo.svg';
+  String get wtechLogo => 'assets/images/wtechLogo.svg';
+
+  /// File path: assets/images/wtech_logo_1.png
+  AssetGenImage get wtechLogo1 =>
+      const AssetGenImage('assets/images/wtech_logo_1.png');
+
+  /// File path: assets/images/wtech_logo_2.png
+  AssetGenImage get wtechLogo2 =>
+      const AssetGenImage('assets/images/wtech_logo_2.png');
+
+  /// File path: assets/images/wtech_logo_gif.gif
+  AssetGenImage get wtechLogoGif =>
+      const AssetGenImage('assets/images/wtech_logo_gif.gif');
 
   /// List of all assets
   List<dynamic> get values => [
@@ -253,8 +257,9 @@ class $AssetsImagesGen {
         titleCard,
         turkTraktor,
         wtechLogo,
-        wtechLogoPng,
-        wtechLogoSvg
+        wtechLogo1,
+        wtechLogo2,
+        wtechLogoGif
       ];
 }
 

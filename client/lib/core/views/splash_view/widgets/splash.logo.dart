@@ -1,3 +1,5 @@
+import 'package:client/core/views/common/widgets/custom_image.dart';
+import 'package:client/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 
 class SplashLogo extends StatelessWidget {
@@ -7,14 +9,8 @@ class SplashLogo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          Image.asset(
-            'images/wtech_logo.gif',
-            scale: 1.5,
-          )
-        ],
+      child: CustomImage(
+        assetPath: Assets.images.wtechLogoGif.path,
       ),
     );
   }

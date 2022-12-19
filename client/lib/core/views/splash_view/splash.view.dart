@@ -20,11 +20,16 @@ class _SplashViewState extends State<SplashView> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const Expanded(
+          const Spacer(
             flex: 3,
+          ),
+          const Expanded(
+            flex: 2,
             child: SplashLogo(),
           ),
-          const Spacer(),
+          const Spacer(
+            flex: 2,
+          ),
           Expanded(child: widget.allRightReservedText(context)),
           const Spacer()
         ],
