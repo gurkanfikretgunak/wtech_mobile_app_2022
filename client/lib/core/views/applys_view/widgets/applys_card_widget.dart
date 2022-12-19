@@ -1,8 +1,10 @@
 import 'package:client/core/constants/color_constans.dart';
 import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/views/common/widgets/custom_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
+import '../../../../gen/assets.gen.dart';
 import '../../common/widgets/text/custom_text.dart';
 
 class ApplysCardWidget extends StatelessWidget {
@@ -26,13 +28,8 @@ class ApplysCardWidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Stack(children: [
-              Container(
-                width: context.dynamicWidth(0.9),
-                height: context.dynamicHeight(0.2),
-                child: Image.asset(
-                  "images/blog_1.png",
-                  fit: BoxFit.fill,
-                ),
+              CustomImage(
+                assetPath: Assets.images.education1.path,
               ),
               Align(
                 alignment: Alignment.topRight,
@@ -54,34 +51,37 @@ class ApplysCardWidget extends StatelessWidget {
             ]),
             Padding(
               padding: context.paddingLow,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Text(
-                    "Flutter & Dart Bootcamp 22'",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                  ),
-                  Row(
-                    children: [
-                      RatingBar.builder(
-                        initialRating: 2,
-                        minRating: 1,
-                        direction: Axis.horizontal,
-                        allowHalfRating: false,
-                        itemCount: 5,
-                        itemSize: context.dynamicWidth(0.04),
-                        itemBuilder: (context, _) => Icon(
-                          Icons.star,
-                          color: ColorConstant.instance.yellow,
+              child: FittedBox(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text(
+                      "Flutter & Dart Bootcamp 22'",
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    ),
+                    Row(
+                      children: [
+                        RatingBar.builder(
+                          initialRating: 2,
+                          minRating: 1,
+                          direction: Axis.horizontal,
+                          allowHalfRating: false,
+                          itemCount: 5,
+                          itemSize: context.dynamicWidth(0.04),
+                          itemBuilder: (context, _) => Icon(
+                            Icons.star,
+                            color: ColorConstant.instance.yellow,
+                          ),
+                          onRatingUpdate: (rating) {
+                            print(rating);
+                          },
                         ),
-                        onRatingUpdate: (rating) {
-                          print(rating);
-                        },
-                      ),
-                      const Text("(0)"),
-                    ],
-                  ),
-                ],
+                        const Text("(0)"),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
             Padding(

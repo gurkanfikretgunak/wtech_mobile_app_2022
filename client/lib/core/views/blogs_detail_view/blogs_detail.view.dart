@@ -22,7 +22,11 @@ class BlogsDetailView extends StatelessWidget with BlogsDetailWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppbar(titleText: L10n.of(context)!.blog),
+      appBar: CustomAppbar(
+        titleText: L10n.of(context)!.blog,
+        isCheck: false,
+        isName: false,
+      ),
       body: Padding(
         padding: context.horizontalPaddingNormal,
         child: Column(

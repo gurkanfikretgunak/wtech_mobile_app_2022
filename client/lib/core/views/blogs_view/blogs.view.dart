@@ -7,7 +7,6 @@ import 'package:get_it/get_it.dart';
 import '../../extensions/extension.dart';
 import '../../l10n/app_l10n.dart';
 import '../common/widgets/custom_appbar.dart';
-import '../common/widgets/custom_navbar.dart';
 import 'blogs.viewmodel.dart';
 
 class BlogsView extends StatelessWidget with BlogsWidget {
@@ -18,8 +17,8 @@ class BlogsView extends StatelessWidget with BlogsWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppbar(titleText: L10n.of(context)!.blog),
-      bottomNavigationBar: const CustomBottomNavBar(),
+      appBar: CustomAppbar(
+          titleText: L10n.of(context)!.blog, isCheck: false, isName: false),
       body: Padding(
         padding: context.paddingNormal,
         child: SingleChildScrollView(

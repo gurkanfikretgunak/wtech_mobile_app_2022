@@ -11,20 +11,27 @@ class CategoriesWidget extends StatelessWidget {
     return ListView.builder(
       scrollDirection: Axis.horizontal,
       shrinkWrap: true,
-      itemCount: IconConstant.iconList.length,
+      itemCount: IconConstant().categoryList(context).length,
       itemBuilder: (context, index) {
+        var key = IconConstant().categoryList(context)[index];
         return Padding(
           padding: context.horizontalPaddingNormal,
-          child: Column(
-            children: [
-              CircleAvatar(
+          child: GestureDetector(
+            onTap: key['onTap'],
+            child: Column(
+              children: [
+                CircleAvatar(
                   maxRadius: 25,
                   backgroundColor: ColorConstant.instance.shinyWhite,
-                  child: Icon(IconConstant.iconList[index])),
-              Text(
-                IconConstant.iconDef(context)[index],
-              )
-            ],
+                  child: Icon(
+                    key['icon'],
+                  ),
+                ),
+                Text(
+                  key['text'],
+                )
+              ],
+            ),
           ),
         );
       },

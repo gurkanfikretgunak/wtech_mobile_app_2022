@@ -11,7 +11,11 @@ class AboutView extends StatelessWidget with AboutWidgets {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppbar(titleText: L10n.of(context)!.aboutUs),
+      appBar: CustomAppbar(
+        titleText: L10n.of(context)!.aboutUs,
+        isCheck: false,
+        isName: false,
+      ),
       body: Column(children: [
         Expanded(flex: 4, child: titleImage(context)),
         Expanded(flex: 2, child: descriptionText(context)),

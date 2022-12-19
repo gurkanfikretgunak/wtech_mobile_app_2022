@@ -38,16 +38,13 @@ class CustomElevatedButton extends StatelessWidget {
   final Widget? child;
   final Widget? iconWidget;
   final Color? disabledBackgroundColor;
-  final bool? buttonColor;
+  final Color? buttonColor;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: onPressed,
-      style: buttonColor!
-          ? ButtonStyle(
-              backgroundColor: MaterialStateProperty.all(Color(0XFFF36262)),
-            )
-          : null,
+      // style: ButtonStyle(
+      //     backgroundColor: MaterialStateProperty.all<Color>(buttonColor!)),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -60,7 +57,7 @@ class CustomElevatedButton extends StatelessWidget {
           CustomText(
             text,
             fontWeight: fontWeight ?? FontWeight.w600,
-            fontSize: fontSize,
+            fontSize: fontSize ?? 14,
             color: textColor ?? ColorConstant.instance.white,
           ),
         ],
