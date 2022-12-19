@@ -20,7 +20,8 @@ class UserProfileWidgets {
             radius: 40,
             child: CircleAvatar(
               radius: 35,
-              backgroundImage: NetworkImage("https://cdn.pixabay.com/photo/2016/11/18/19/07/happy-1836445_960_720.jpg"),
+              backgroundImage: NetworkImage(
+                  "https://cdn.pixabay.com/photo/2016/11/18/19/07/happy-1836445_960_720.jpg"),
             ),
           ),
         ),
@@ -39,17 +40,17 @@ class UserProfileWidgets {
               physics: const BouncingScrollPhysics(),
               itemCount: iconProfile.length,
               itemBuilder: (context, index) {
+                var key = profilItemList(context)[index];
                 return ProfilItem(
-                  onTap: () {},
-                  iconData: iconProfile[index],
-                  text: profileText[index],
+                  onTap: key['onTap'],
+                  iconData: key['icon'],
+                  text: key['text'],
                 );
               },
             ),
           ),
           CustomElevatedButton(
             onPressed: () {},
-            buttonColor: true,
             text: "Çıkış Yap",
             textColor: ColorConstant.instance.white,
             iconWidget: Icon(Icons.exit_to_app),
@@ -60,6 +61,7 @@ class UserProfileWidgets {
   }
 
   Widget userNameText(BuildContext context) {
-    return const CustomText("Gürkan Fikret Günak", fontSize: 15, fontWeight: FontWeight.w600);
+    return const CustomText("Gürkan Fikret Günak",
+        fontSize: 15, fontWeight: FontWeight.w600);
   }
 }

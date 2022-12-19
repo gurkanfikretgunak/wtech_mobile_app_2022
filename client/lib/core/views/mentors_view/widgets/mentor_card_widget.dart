@@ -101,7 +101,7 @@ class MentorInfosWidget extends StatelessWidget {
                   onPressed: () {},
                   text: L10n.of(context)?.contact ?? '',
                   textColor: ColorConstant.instance.white,
-                  buttonColor: false,
+                  // buttonColor: false,
                 )
               ],
             ),

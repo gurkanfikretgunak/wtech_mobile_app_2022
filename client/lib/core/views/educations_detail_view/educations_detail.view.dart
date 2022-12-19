@@ -16,7 +16,6 @@ class EducationsDetailView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final vm = GetIt.I.get<EducationsDetailViewModel>();
     bool isFavorite = vm.changeFavorite();
 
@@ -25,13 +24,18 @@ class EducationsDetailView extends StatelessWidget {
       builder: (context, snapshot) {
         return SafeArea(
           child: Scaffold(
-            appBar: CustomAppbar(titleText: L10n.of(context)!.hello, isCheck: true),
+            appBar: CustomAppbar(
+                titleText: L10n.of(context)!.hello,
+                isCheck: false,
+                isName: false),
             body: SingleChildScrollView(
               child: Padding(
                 padding: PaddingExtension(context).paddingNormal,
                 child: Column(
                   children: [
-                    ClipRRect(borderRadius: BorderRadius.circular(13), child: Image.asset(Assets.images.education1.path)),
+                    ClipRRect(
+                        borderRadius: BorderRadius.circular(13),
+                        child: Image.asset(Assets.images.education1.path)),
                     EducationsDetailWidgets().educationContent(context),
                     const CustomDivider(
                       endIndent: 1,
@@ -43,12 +47,18 @@ class EducationsDetailView extends StatelessWidget {
                         SizedBox(
                           width: context.dynamicWidth(0.7),
                           height: context.dynamicHeight(0.05),
-                          child: CustomElevatedButton(onPressed: () {}, text: "Başvur", textColor: ColorConstant.instance.white,),
+                          child: CustomElevatedButton(
+                            onPressed: () {},
+                            text: "Başvur",
+                            textColor: ColorConstant.instance.white,
+                          ),
                         ),
                         IconButton(
-                          icon: isFavorite == true ? const Icon(Icons.favorite) : const Icon(Icons.favorite_border),
+                          icon: isFavorite == true
+                              ? const Icon(Icons.favorite)
+                              : const Icon(Icons.favorite_border),
                           onPressed: () {
-                            isFavorite = vm.changeFavorite();                            
+                            isFavorite = vm.changeFavorite();
                           },
                         ),
                       ],

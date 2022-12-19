@@ -14,12 +14,14 @@ class SettingsView extends StatelessWidget with SettingsViewWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppbar(titleText: L10n.of(context)!.profile, isName: false, isCheck: false),
+      appBar: CustomAppbar(
+          titleText: L10n.of(context)!.profile, isName: false, isCheck: false),
       body: Padding(
         padding: context.onlyLRTpaddingNormal,
         child: Column(
           children: [
-            settingCards(context, notificationText, 0.2, categoriesText[0], true),
+            settingCards(
+                context, notificationText, 0.2, categoriesText[0], true),
             settingCards(context, privacyText, 0.1, categoriesText[1], false),
             settingCards(context, themeText, 0.1, categoriesText[2], true),
             settingCards(context, languageText, 0.1, categoriesText[3], true),
@@ -30,7 +32,7 @@ class SettingsView extends StatelessWidget with SettingsViewWidget {
                 height: context.dynamicHeight(0.08),
                 child: CustomElevatedButton(
                   onPressed: () {},
-                  buttonColor: true,
+                  // buttonColor: true,
                   text: "Delete Account",
                   textColor: ColorConstant.instance.white,
                 ),
