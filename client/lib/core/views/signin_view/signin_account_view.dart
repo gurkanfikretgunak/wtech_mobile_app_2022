@@ -25,10 +25,10 @@ class _MainScreenState extends State<SignInAccountView> with SignInWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: context.paddingNormal,
+        padding: context.paddingMedium,
         child: Wrap(
           alignment: WrapAlignment.center,
-          runSpacing: 40,
+          runSpacing: 48,
           children: [
             Padding(
               padding: context.onlyTopPaddingHigh,
@@ -36,15 +36,11 @@ class _MainScreenState extends State<SignInAccountView> with SignInWidget {
             ),
             signInAccountButton(context),
             const CustomSignInAccountDivider(),
-            SizedBox(
-              width: context.dynamicWidth(0.8),
-              height: context.dynamicHeight(0.06),
-              child: CustomElevatedButton(
-                onPressed: () {
-                  CustomNavigator.goToScreen(context, Routes.signinWithEmail.name);
-                },
-                text: L10n.of(context)!.signInEmail,
-              ),
+            CustomElevatedButton(
+              onPressed: () {
+                CustomNavigator.goToScreen(context, Routes.signinWithEmail.name);
+              },
+              text: L10n.of(context)!.signInEmail,
             ),
             const SignInBottomDescription(),
           ],

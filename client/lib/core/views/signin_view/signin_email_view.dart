@@ -29,7 +29,7 @@ class _MainScreenState extends State<SignInEmailView> with SignInWidget {
         padding: context.paddingMedium,
         child: Wrap(
           alignment: WrapAlignment.center,
-          runSpacing: 32,
+          runSpacing: 30,
           children: [
             Padding(
               padding: context.onlyTopPaddingHigh,

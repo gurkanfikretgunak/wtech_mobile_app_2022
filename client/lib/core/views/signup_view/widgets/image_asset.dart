@@ -8,6 +8,6 @@ class PictureWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SvgPicture.asset('assets/images/logo.svg', height: 30);
+    return SvgPicture.asset('assets/images/logo.svg', height: 50);
   }
 }

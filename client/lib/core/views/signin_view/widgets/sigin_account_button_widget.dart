@@ -13,7 +13,7 @@ class SignInAccountButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: context.paddingNormal,
+      padding: context.verticalPaddingLow,
       child: InkWell(
         child: Container(
           alignment: Alignment.center,
@@ -23,7 +23,7 @@ class SignInAccountButton extends StatelessWidget {
             color: Colors.white,
           ),
           height: context.dynamicHeight(0.06),
-          width: context.dynamicWidth(0.9),
+          width: context.dynamicWidth(1),
           child: Row(
             children: [
               Padding(
