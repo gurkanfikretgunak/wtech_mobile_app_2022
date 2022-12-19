@@ -1,12 +1,9 @@
 import 'dart:async';
 
-import 'package:client/core/views/onboarding_view/onboarding.view.dart';
 import 'package:client/core/views/signin_view/signin_account_view.dart';
-import 'package:client/core/views/splash_view/splash.viewmodel.dart';
 import 'package:client/core/views/splash_view/splash.widgets.dart';
 import 'package:client/core/views/splash_view/widgets/splash.logo.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
 
 class SplashView extends StatefulWidget with SplashWidgets {
   SplashView({
@@ -23,7 +20,7 @@ class _SplashViewState extends State<SplashView> {
       body: FutureBuilder(
         future: Future.delayed(const Duration(seconds: 4)),
         builder: (ctx, timer) => timer.connectionState == ConnectionState.done
-            ? const OnboardingView()
+            ? const SignInAccountView()
             : Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

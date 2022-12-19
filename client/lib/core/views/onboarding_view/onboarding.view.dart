@@ -69,34 +69,15 @@ class _OnboardingViewState extends State<OnboardingView> {
                             child: DotIndicator(isActive: index == _pageIndex),
                           )),
                   const Spacer(),
-
                   CustomElevatedButton(
                     buttonColor: ColorConstant.instance.yellow,
                     width: context.dynamicWidth(0.25),
                     borderRadius: 30,
                     onPressed: () {
-                      CustomNavigator.goToScreen(
-                          context, Routes.signinWithAccount.name);
+                      CustomNavigator.goToScreen(context, Routes.home.name);
                     },
                     text: 'Skip',
                   )
-                  // SizedBox(
-                  //   height: context.dynamicHeight(0.08),
-                  //   width: context.dynamicWidth(0.17),
-                  //   child: ElevatedButton(
-                  //     onPressed: () {
-                  //       Navigator.push(
-                  //         context,
-                  //         MaterialPageRoute(builder: (context) => HomeView()),
-                  //       );
-                  //     },
-                  //     style: ElevatedButton.styleFrom(
-                  //         backgroundColor: ColorConstant.instance.yellow,
-                  //         shape: RoundedRectangleBorder(
-                  //             borderRadius: BorderRadius.circular(30))),
-                  //     child: const CustomText('Skip'),
-                  //   ),
-                  // ),
                 ],
               ),
             ],
