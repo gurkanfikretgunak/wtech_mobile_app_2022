@@ -1,11 +1,7 @@
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/themes/custom_theme.dart';
-import 'package:client/core/views/founding_members_view/founding.members.view.dart';
-import 'package:client/core/views/home_view/home.view.dart';
 import 'package:client/core/views/sample_view/bloc/sample_bloc.dart';
-import 'package:client/core/views/sample_view/sample_view.dart';
-import 'package:client/core/views/signup_view/signup.view.dart';
-import 'package:client/core/views/supporting_institutions_view/support_inst.view.dart';
+import 'package:client/core/views/settings_view/settings.view.dart';
 import 'package:flavor/flavor.dart';
 import 'package:flutter/material.dart';
 // ignore: depend_on_referenced_packages
@@ -25,7 +21,7 @@ class App extends StatelessWidget {
         home: Provider<MainBloc>(
           create: (_) => MainBloc(),
           dispose: (context, bloc) => bloc.dispose(),
-          child: SupportInstutionsView(),
+          child: SettingsView(),
         ),
         title: "Flutter Boilerplate : ${Flavor.I.getString(Keys.appTitle)}",
         theme: CustomTheme.customThemeData(context),

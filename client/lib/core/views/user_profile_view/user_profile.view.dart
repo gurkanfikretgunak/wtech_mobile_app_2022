@@ -19,6 +19,8 @@ class UserProfileView extends StatelessWidget with UserProfileWidgets {
     return Scaffold(
       appBar: CustomAppbar(
         titleText: L10n.of(context)!.profile,
+        isName: false,
+        isCheck: false,
       ),
       body: Wrap(children: [
         Column(mainAxisAlignment: MainAxisAlignment.end, children: [
@@ -30,9 +32,7 @@ class UserProfileView extends StatelessWidget with UserProfileWidgets {
                   width: double.infinity,
                   decoration: const BoxDecoration(
                     color: Color.fromARGB(255, 245, 242, 242),
-                    borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(60),
-                        topRight: Radius.circular(60)),
+                    borderRadius: BorderRadius.only(topLeft: Radius.circular(60), topRight: Radius.circular(60)),
                   ),
                   child: Column(
                     children: [
