@@ -6,6 +6,8 @@ import 'package:client/core/views/events_view/widgets/events_listview_builder.da
 import 'package:client/core/views/events_view/widgets/the_day_of_the_month.dart';
 import 'package:flutter/material.dart';
 
+import '../home_view/widgets/drawer_widget.dart';
+
 class EventsView extends StatefulWidget {
   const EventsView({super.key});
 
@@ -23,14 +25,12 @@ class _EventsViewState extends State<EventsView> {
         isCheck: false,
         isName: false,
       ),
+      drawer: const DrawerWidget(),
       body: Padding(
-        padding: context.horizontalPaddingNormal,
+        padding: context.paddingNormal,
         child: Column(
           children: [
-            Padding(
-              padding: context.onlyTopPaddingMedium * 1.5,
-              child: const TheDayOfTheMonth(),
-            ),
+            const TheDayOfTheMonth(),
             Padding(
               padding: context.onlyTopPaddingNormal,
               child: const CalenderListview(),

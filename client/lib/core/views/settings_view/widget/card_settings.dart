@@ -21,11 +21,10 @@ class SettingsCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: Theme.of(context).primaryColor,
       elevation: 0.1,
       child: Container(
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-            color: ColorConstant.instance.settingGrey),
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: ColorConstant.instance.settingGrey),
         child: Wrap(
           alignment: WrapAlignment.spaceBetween,
           crossAxisAlignment: WrapCrossAlignment.center,
@@ -34,11 +33,7 @@ class SettingsCardWidget extends StatelessWidget {
               padding: context.onlyLeftPaddingLow,
               child: CustomText(text),
             ),
-            isSwitcher
-                ? switcherIcon
-                : IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.arrow_forward_ios_rounded)),
+            isSwitcher ? switcherIcon : IconButton(onPressed: () {}, icon: const Icon(Icons.arrow_forward_ios_rounded)),
           ],
         ),
       ),

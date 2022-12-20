@@ -320,7 +320,7 @@ class L10nTr extends L10n {
   String get notMember => 'Üye değil misiniz?';
 
   @override
-  String get signUpHere => 'Buradan üye olun.';
+  String get newMember => 'Yeni üye oluştur';
 
   @override
   String get userAgreement => 'Kullanıcı Sözleşmesi';
