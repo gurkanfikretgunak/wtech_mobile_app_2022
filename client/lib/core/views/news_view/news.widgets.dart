@@ -31,6 +31,9 @@ class NewsWidgets {
   Widget cardImage({required String imagePath, required BuildContext context}) {
     return CustomImage(
       assetPath: imagePath,
+      width: context.dynamicWidth(0.4),
+      height: context.dynamicHeight(0.2),
+      fit: BoxFit.cover,
     );
   }
 
