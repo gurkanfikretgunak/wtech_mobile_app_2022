@@ -4,7 +4,7 @@ import 'package:client/core/views/blogs_view/widgets/blogs_card.dart';
 import 'package:client/core/views/common/widgets/text/custom_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
-import '../../extensions/extension.dart';
+import '../../utils/extensions/common_extension.dart';
 import '../../l10n/app_l10n.dart';
 import '../common/widgets/custom_appbar.dart';
 import 'blogs.viewmodel.dart';
@@ -30,7 +30,7 @@ class BlogsView extends StatelessWidget with BlogsWidget {
                   Expanded(
                       flex: 10,
                       child: CustomTextFormField(
-                        prefixIcon: Icon(Icons.search),
+                        prefixIcon: const Icon(Icons.search),
                         hintText: L10n.of(context)!.searchInTheBlog,
                       )),
                 ],

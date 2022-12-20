@@ -1,7 +1,7 @@
-import 'package:client/core/constants/color_constans.dart';
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/constants/colors/color_constans.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
-import 'package:client/core/views/common/widgets/button/button_libary.dart';
+import 'package:client/core/views/common/widgets/button/custom_button_libary.dart';
 import 'package:client/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +16,10 @@ class MentorDetailsWidgets {
         'desc':
             'Futurist, mobil dönüşüm uzmanı, yatırımcı, uygulamacı, konuşmacı, teknoloji markalaşma ve pazarlama uzmanı olan Zehra Öney 1964 yılında İstanbul’da doğdu, İstanbul Üniversitesi’nde Ekonomi eğitimi aldıktan sonra 10 yıl boyunca Turizm sektöründe Türkiye’nin sayılı acentelerinde üst düzey pozisyonlarda görev aldı. Son 16 yılda ise Telekomünikasyon, Mobil ve Dijital alanlarda profesyonel yönetici olarak kariyerine devam etti. 2002 – 2007 yılları arasında Turkcell’de Uluslararası İş Geliştirme, Avrupa Birliği ve Amerika İlişkilerinde Yönetici olarak görev yapan Zehra Öney, 2007 – 2011 yılları arasında Mobilera A.Ş. Genel Müdürlüğü ile Mobilera BV Genel Müdür Yardımcılığı görevlerini eşzamanlı olarak yürüttü.'
       },
-      {'title': L10n.of(context)?.mentorDetailExpertTitle, 'desc': 'Uygulama Geliştirme, Mobil Dönüşüm, Pazarlama'}
+      {
+        'title': L10n.of(context)?.mentorDetailExpertTitle,
+        'desc': 'Uygulama Geliştirme, Mobil Dönüşüm, Pazarlama'
+      }
     ];
     return SingleChildScrollView(
       child: Column(
@@ -60,7 +63,8 @@ class MentorDetailsWidgets {
       child: CustomElevatedButton(
         onPressed: () {
           showModalBottomSheet(
-            shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+            shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
             context: context,
             isScrollControlled: true,
             builder: (context) => const MentorsDetailBottomSheetWidget(),

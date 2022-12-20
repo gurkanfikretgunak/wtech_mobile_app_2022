@@ -1,5 +1,5 @@
-import 'package:client/core/constants/color_constans.dart';
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/constants/colors/color_constans.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/educations_view/widgets/education_card.dart';
 import 'package:client/core/views/educations_view/widgets/search_bar.dart';

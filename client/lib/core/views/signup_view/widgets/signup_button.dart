@@ -1,7 +1,7 @@
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:flutter/material.dart';
-import '../../../constants/color_constans.dart';
-import '../../../enums/routes.enum.dart';
+import '../../../utils/constants/colors/color_constans.dart';
+import '../../../utils/constants/enums/routes.enum.dart';
 import '../../../l10n/app_l10n.dart';
 import '../../../routes/custom_navigator.dart';
 

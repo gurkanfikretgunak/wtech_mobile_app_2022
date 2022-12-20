@@ -1,11 +1,11 @@
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/common/widgets/custom_appbar.dart';
 import 'package:client/core/views/settings_view/settings.widget.dart';
 import 'package:client/core/views/settings_view/temporary_constant/text_constant.dart';
 import 'package:flutter/material.dart';
 
-import '../../constants/color_constans.dart';
+import '../../utils/constants/colors/color_constans.dart';
 import '../common/widgets/button/custom_button_elevated.dart';
 
 class SettingsView extends StatelessWidget with SettingsViewWidget {

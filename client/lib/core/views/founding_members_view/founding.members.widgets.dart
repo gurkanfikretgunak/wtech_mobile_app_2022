@@ -1,8 +1,7 @@
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/views/mentors_view/widgets/mentor_card_widget.dart';
 import 'package:client/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
-import 'package:client/core/constants/color_constans.dart';
 
 class FoundingMembersWidgets {
   Widget body(BuildContext context) {

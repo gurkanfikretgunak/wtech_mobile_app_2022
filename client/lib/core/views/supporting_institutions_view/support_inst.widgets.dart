@@ -3,6 +3,6 @@ import 'package:flutter/material.dart';
 
 class SupportInstutionsWidgets {
   Widget cardBuilder() {
-    return CustomGridView();
+    return const CustomGridView();
   }
 }

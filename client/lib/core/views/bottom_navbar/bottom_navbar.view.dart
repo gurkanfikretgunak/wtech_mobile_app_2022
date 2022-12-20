@@ -5,7 +5,6 @@ import 'package:client/core/views/common/widgets/custom_loading.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
-import '../../l10n/app_l10n.dart';
 import '../home_view/widgets/drawer_widget.dart';
 import 'bottom_navbar.viewmodel.dart';
 
@@ -41,7 +40,7 @@ class CustomBottomNavBar extends StatelessWidget with BottomNavBarWidgets {
             ),
           );
         } else {
-          return const CustomLoading(logText: "fjdkl");
+          return const CustomLoading(logText: "Title Help - 2");
         }
       },
     );

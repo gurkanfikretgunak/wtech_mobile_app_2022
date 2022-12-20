@@ -1,5 +1,4 @@
 import 'package:client/core/views/events_view/widgets/calendar_card.dart';
-import 'package:client/core/views/events_view/widgets/calendar_events_count.dart';
 import 'package:flutter/material.dart';
 
 class Calendar extends StatelessWidget {

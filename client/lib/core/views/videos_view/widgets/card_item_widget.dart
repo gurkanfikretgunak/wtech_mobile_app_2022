@@ -1,4 +1,4 @@
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/views/videos_view/widgets/card/card_information_widget.dart';
 import 'package:client/core/views/videos_view/widgets/card/card_video_widget.dart';
 import 'package:flutter/material.dart';

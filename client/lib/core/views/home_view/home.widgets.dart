@@ -1,11 +1,10 @@
 import 'dart:ui';
-import 'package:client/core/constants/color_constans.dart';
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/constants/colors/color_constans.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/home_view/temporary_contants.dart/text_constants.dart';
 import 'package:client/core/views/home_view/widgets/training_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:logger/logger.dart';
 import '../common/widgets/text/custom_textfield.dart';
 
 class HomeViewWidget {
@@ -17,7 +16,8 @@ class HomeViewWidget {
       itemBuilder: (context, index) {
         return SizedBox(
           width: MediaQuery.of(context).size.width * 0.6,
-          child: HomeTrainingWidget(trainingImage: HomeTextContants.trainingPath[index]),
+          child: HomeTrainingWidget(
+              trainingImage: HomeTextContants.trainingPath[index]),
         );
       },
     );
@@ -34,7 +34,10 @@ class HomeViewWidget {
               height: context.dynamicHeight(0.03),
               child: Center(
                 child: Text(text,
-                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.bold),
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyMedium
+                        ?.copyWith(fontWeight: FontWeight.bold),
                     textAlign: TextAlign.center),
               ),
             ),
@@ -43,10 +46,9 @@ class HomeViewWidget {
                 child: Row(children: [
                   const Icon(Icons.event_outlined, size: 15),
                   Text(HomeTextContants.dateText,
-                      style: Theme.of(context)
-                          .textTheme
-                          .subtitle1
-                          ?.copyWith(color: ColorConstant.instance.black.withOpacity(0.7), fontSize: 14))
+                      style: Theme.of(context).textTheme.subtitle1?.copyWith(
+                          color: ColorConstant.instance.black.withOpacity(0.7),
+                          fontSize: 14))
                 ]))
           ],
         ),
@@ -58,7 +60,7 @@ class HomeViewWidget {
     return Padding(
       padding: context.paddingLow,
       child: CustomTextFormField(
-        prefixIcon: Icon(Icons.search),
+        prefixIcon: const Icon(Icons.search),
         labelText: L10n.of(context)!.search,
         isSearch: true,
       ),

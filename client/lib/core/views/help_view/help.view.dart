@@ -1,4 +1,4 @@
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/views/home_view/widgets/drawer_widget.dart';
 import 'package:flutter/material.dart';
 import '../common/widgets/custom_appbar.dart';

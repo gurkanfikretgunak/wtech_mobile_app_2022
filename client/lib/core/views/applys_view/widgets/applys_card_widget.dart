@@ -1,12 +1,14 @@
-import 'package:client/core/constants/color_constans.dart';
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/constants/colors/color_constans.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/views/common/widgets/custom_image.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 import '../../../../gen/assets.gen.dart';
 import '../../common/widgets/text/custom_text.dart';
 
+// ignore: must_be_immutable
 class ApplysCardWidget extends StatelessWidget {
   ApplysCardWidget({
     Key? key,
@@ -74,7 +76,9 @@ class ApplysCardWidget extends StatelessWidget {
                             color: ColorConstant.instance.yellow,
                           ),
                           onRatingUpdate: (rating) {
-                            print(rating);
+                            if (kDebugMode) {
+                              print(rating);
+                            }
                           },
                         ),
                         const Text("(0)"),

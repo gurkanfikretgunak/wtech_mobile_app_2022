@@ -32,7 +32,7 @@ class L10nTr extends L10n {
   String get newsDetail => 'Haber Detayı';
 
   @override
-  String get videos => 'Videos';
+  String get videos => 'Videolar';
 
   @override
   String get jobAndinternship => 'İş ve Staj';
@@ -44,7 +44,7 @@ class L10nTr extends L10n {
   String get currentTraining => 'Current Training';
 
   @override
-  String get home => 'Home';
+  String get home => 'Ana Sayfa';
 
   @override
   String get search => 'Arama';
@@ -191,7 +191,7 @@ class L10nTr extends L10n {
   String get myProfile => 'Profilim';
 
   @override
-  String get hello => 'merhaba';
+  String get hello => 'Merhaba';
 
   @override
   String get userName => 'Kullanıcı adı';

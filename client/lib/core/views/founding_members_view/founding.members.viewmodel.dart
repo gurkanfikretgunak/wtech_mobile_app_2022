@@ -1,6 +1,5 @@
 import 'package:client/core/views/abstractions/base_view_model.dart';
 import 'package:injectable/injectable.dart';
-import 'package:rxdart/rxdart.dart';
 
 @Injectable()
 class FoundingMembersViewModel extends BaseViewModel {

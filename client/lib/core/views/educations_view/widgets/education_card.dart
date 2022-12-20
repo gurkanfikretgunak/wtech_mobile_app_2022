@@ -1,15 +1,16 @@
-import 'package:client/core/constants/color_constans.dart';
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/constants/colors/color_constans.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/routes/custom_navigator.dart';
 import 'package:client/core/views/common/widgets/button/custom_button_icon.dart';
-import 'package:client/core/views/common/widgets/text/text_library.dart';
+import 'package:client/core/views/common/widgets/text/custom_text_library.dart';
 import 'package:client/core/views/educations_view/educations.viewmodel.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get_it/get_it.dart';
 
 import '../../../../gen/assets.gen.dart';
-import '../../../enums/routes.enum.dart';
+import '../../../utils/constants/enums/routes.enum.dart';
 
 class EducationCardWidget extends StatelessWidget {
   const EducationCardWidget({
@@ -85,7 +86,9 @@ class EducationCardWidget extends StatelessWidget {
                               color: ColorConstant.instance.yellow,
                             ),
                             onRatingUpdate: (rating) {
-                              print(rating);
+                              if (kDebugMode) {
+                                print(rating);
+                              }
                             },
                           ),
                           const CustomText("(0)"),

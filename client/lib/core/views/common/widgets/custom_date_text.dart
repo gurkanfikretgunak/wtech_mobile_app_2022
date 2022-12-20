@@ -1,7 +1,7 @@
 import 'package:client/core/views/common/widgets/text/custom_text.dart';
 import 'package:flutter/material.dart';
 
-import '../../../constants/color_constans.dart';
+import '../../../utils/constants/colors/color_constans.dart';
 
 class CustomDateText extends StatelessWidget {
   const CustomDateText({

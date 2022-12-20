@@ -1,8 +1,8 @@
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:flutter/material.dart';
 
-import '../../../constants/color_constans.dart';
-import '../../common/widgets/text/text_library.dart';
+import '../../../utils/constants/colors/color_constans.dart';
+import '../../common/widgets/text/custom_text_library.dart';
 
 class TabItem extends StatelessWidget {
   const TabItem({

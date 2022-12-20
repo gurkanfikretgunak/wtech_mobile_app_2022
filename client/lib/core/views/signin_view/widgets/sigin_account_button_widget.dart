@@ -1,5 +1,5 @@
-import 'package:client/core/constants/color_constans.dart';
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/constants/colors/color_constans.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -42,9 +42,15 @@ class SignInAccountButton extends StatelessWidget {
                   TextSpan(
                       text: text,
                       children: <TextSpan>[
-                        TextSpan(text: " $socialText", style: const TextStyle(fontWeight: FontWeight.bold)),
+                        TextSpan(
+                            text: " $socialText",
+                            style:
+                                const TextStyle(fontWeight: FontWeight.bold)),
                       ],
-                      style: Theme.of(context).textTheme.subtitle1?.copyWith(fontSize: 16.5)),
+                      style: Theme.of(context)
+                          .textTheme
+                          .subtitle1
+                          ?.copyWith(fontSize: 16.5)),
                 ),
               ),
             ],

@@ -1,4 +1,4 @@
-import 'package:client/core/constants/color_constans.dart';
+import 'package:client/core/utils/constants/colors/color_constans.dart';
 import 'package:client/core/views/events_detail_view/widgets/base_main_sheet.dart';
 import 'package:client/core/views/events_view/events_image.dart';
 import 'package:client/core/views/events_view/widgets/events_description.dart';
@@ -45,11 +45,10 @@ class Events extends StatelessWidget {
   }
 
   void _navigateEventDetails(BuildContext context) {
-     showModalBottomSheet(
+    showModalBottomSheet(
       context: context,
       isScrollControlled: true,
-      shape:
-          RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       builder: (context) {
         return const BaseMainSheet();
       },

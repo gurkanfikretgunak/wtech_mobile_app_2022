@@ -1,6 +1,6 @@
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/views/common/widgets/custom_appbar.dart';
-import 'package:client/core/views/common/widgets/text/text_library.dart';
+import 'package:client/core/views/common/widgets/text/custom_text_library.dart';
 import 'package:flutter/material.dart';
 
 import '../../../l10n/app_l10n.dart';
@@ -33,10 +33,8 @@ class AboutDetailView extends StatelessWidget with AboutWidgets {
               height: context.dynamicHeight(0.3),
             ),
             Padding(
-              padding: context.paddingMedium,
-              child:  CustomText(
-              L10n.of(context)!.associationDescription   )        
-            ),
+                padding: context.paddingMedium,
+                child: CustomText(L10n.of(context)!.associationDescription)),
           ],
         ),
       ),

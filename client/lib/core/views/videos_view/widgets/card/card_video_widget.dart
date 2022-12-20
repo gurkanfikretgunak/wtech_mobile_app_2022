@@ -1,4 +1,4 @@
-import 'package:client/core/constants/color_constans.dart';
+import 'package:client/core/utils/constants/colors/color_constans.dart';
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/videos_view/videos.viewmodel.dart';
 import 'package:client/core/views/videos_view/widgets/video_dialog_widget.dart';

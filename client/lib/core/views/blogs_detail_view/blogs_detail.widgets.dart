@@ -1,11 +1,11 @@
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/views/common/widgets/text/custom_text.dart';
 import 'package:flutter/material.dart';
-import '../../constants/color_constans.dart';
+import '../../utils/constants/colors/color_constans.dart';
 import '../../l10n/app_l10n.dart';
 
 import '../blogs_view/widgets/blogs_model.dart';
-import '../common/widgets/button/button_libary.dart';
+import '../common/widgets/button/custom_button_libary.dart';
 import '../common/widgets/custom_image.dart';
 import '../common/widgets/custom_date_text.dart';
 import '../common/widgets/custom_views_count.dart';

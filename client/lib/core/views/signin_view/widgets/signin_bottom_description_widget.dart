@@ -1,5 +1,4 @@
-import 'package:client/core/constants/color_constans.dart';
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/constants/colors/color_constans.dart';
 import 'package:flutter/material.dart';
 
 import '../../../l10n/app_l10n.dart';
@@ -22,7 +21,8 @@ class SignInBottomDescription extends StatelessWidget {
           ),
           TextButton(
             onPressed: () {},
-            child: CustomText(L10n.of(context)!.userAgreement, color: ColorConstant.instance.blue),
+            child: CustomText(L10n.of(context)!.userAgreement,
+                color: ColorConstant.instance.blue),
           ),
           CustomText(
             color: ColorConstant.instance.grey,
@@ -30,7 +30,8 @@ class SignInBottomDescription extends StatelessWidget {
           ),
           TextButton(
             onPressed: () {},
-            child: CustomText(L10n.of(context)!.illuminationText, color: ColorConstant.instance.blue),
+            child: CustomText(L10n.of(context)!.illuminationText,
+                color: ColorConstant.instance.blue),
           ),
         ],
       ),

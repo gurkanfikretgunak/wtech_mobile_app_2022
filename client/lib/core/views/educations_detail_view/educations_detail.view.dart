@@ -1,9 +1,6 @@
-import 'package:client/core/constants/color_constans.dart';
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
-import 'package:client/core/views/common/widgets/button/button_libary.dart';
 import 'package:client/core/views/common/widgets/custom_appbar.dart';
-import 'package:client/core/views/common/widgets/custom_divider.dart';
 import 'package:client/core/views/educations_detail_view/educations_detail.viewmodel.dart';
 import 'package:client/core/views/educations_detail_view/educations_detail.widgets.dart';
 import 'package:client/core/views/educations_detail_view/widgets/expansion_tile.dart';
@@ -17,7 +14,7 @@ class EducationsDetailView extends StatelessWidget
 
   @override
   Widget build(BuildContext context) {
-    final vm = GetIt.I.get<EducationsDetailViewModel>();
+    final _vm = GetIt.I.get<EducationsDetailViewModel>();
 
     return SafeArea(
       child: Scaffold(
@@ -28,7 +25,7 @@ class EducationsDetailView extends StatelessWidget
         body: Padding(
           padding: PaddingExtension(context).paddingNormal,
           child: SingleChildScrollView(
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,

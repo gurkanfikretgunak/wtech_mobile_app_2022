@@ -1,5 +1,5 @@
 import 'package:client/core/domain/models/news/news_model.dart';
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/views/news_detail_view/news_detail.widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';

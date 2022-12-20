@@ -1,9 +1,9 @@
 import 'package:client/core/domain/models/news/news_model.dart';
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/views/common/widgets/text/custom_text.dart';
 import 'package:flutter/material.dart';
 
-import '../../constants/color_constans.dart';
+import '../../utils/constants/colors/color_constans.dart';
 import '../../l10n/app_l10n.dart';
 import '../common/widgets/custom_date_text.dart';
 import '../common/widgets/custom_image.dart';

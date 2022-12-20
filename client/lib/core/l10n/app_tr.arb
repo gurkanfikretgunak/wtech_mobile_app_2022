@@ -8,6 +8,7 @@
     "@educationAppBarTitle": {
         "description": ""
     },
+    "home":"Ana Sayfa",
     "educationButton" : "Eğitime Git",
     "aboutEducation" : "Eğitim Hakkında",
     "participationConditions" : "Katılım Koşulları",
@@ -61,7 +62,7 @@
     "myFavorites" : "Favorilerim",
     "myProfile" : "Profilim",
     "blog" : "Blog" ,
-    "hello" : "merhaba",
+    "hello" : "Merhaba",
     "userName" : "Kullanıcı adı",
     "help" : "yardım",
     "logOut" : "Çıkış yap",
@@ -73,6 +74,7 @@
     "favorites" : "Favoriler",
     "name" : "İsim",
     "surname" : "Soyisim",
+    "videos":"Videolar",
     "title" : "Ünvan",
     "phoneNumber" : "Telefon numarası",
     "birthday" : "Doğum Tarihi (gg/aa/yyyy)",

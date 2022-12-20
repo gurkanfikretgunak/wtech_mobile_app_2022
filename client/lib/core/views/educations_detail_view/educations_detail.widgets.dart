@@ -1,12 +1,12 @@
-import 'package:client/core/constants/color_constans.dart';
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/constants/colors/color_constans.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/common/widgets/text/custom_text.dart';
 import 'package:client/core/views/educations_detail_view/widgets/content_card.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
-import '../common/widgets/button/button_libary.dart';
+import '../common/widgets/button/custom_button_libary.dart';
 import 'educations_detail.viewmodel.dart';
 import 'widgets/content_list.dart';
 
@@ -41,7 +41,8 @@ class EducationsDetailWidgets {
     );
   }
 
-  Widget contentPieces(BuildContext context, IconData icon1, String text1, String text2) {
+  Widget contentPieces(
+      BuildContext context, IconData icon1, String text1, String text2) {
     return Row(
       children: [
         Icon(icon1, color: ColorConstant.instance.black),
@@ -71,7 +72,9 @@ class EducationsDetailWidgets {
                 context.emptySizedWidthBoxNormal,
                 CircleAvatar(
                   child: IconButton(
-                    icon: isFavorite == true ? const Icon(Icons.favorite) : const Icon(Icons.favorite_border),
+                    icon: isFavorite == true
+                        ? const Icon(Icons.favorite)
+                        : const Icon(Icons.favorite_border),
                     onPressed: () {
                       isFavorite = vm.changeFavorite();
                     },

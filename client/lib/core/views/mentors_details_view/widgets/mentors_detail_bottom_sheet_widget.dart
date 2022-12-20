@@ -1,8 +1,8 @@
-import 'package:client/core/constants/color_constans.dart';
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/constants/colors/color_constans.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
-import 'package:client/core/views/common/widgets/button/button_libary.dart';
-import 'package:client/core/views/common/widgets/text/text_library.dart';
+import 'package:client/core/views/common/widgets/button/custom_button_libary.dart';
+import 'package:client/core/views/common/widgets/text/custom_text_library.dart';
 import 'package:flutter/material.dart';
 
 class MentorsDetailBottomSheetWidget extends StatelessWidget {
@@ -36,9 +36,12 @@ class MentorsDetailBottomSheetWidget extends StatelessWidget {
                       child: const Icon(Icons.close))),
             ],
           ),
-          CustomTextFormField(hintText: L10n.of(context)?.mentorDetailBottomSheetName ?? ''),
-          CustomTextFormField(hintText: L10n.of(context)?.mentorDetailBottomSheetEmail ?? ''),
-          CustomTextFormField(hintText: L10n.of(context)?.mentorDetailBottomSheetMessage ?? ''),
+          CustomTextFormField(
+              hintText: L10n.of(context)?.mentorDetailBottomSheetName ?? ''),
+          CustomTextFormField(
+              hintText: L10n.of(context)?.mentorDetailBottomSheetEmail ?? ''),
+          CustomTextFormField(
+              hintText: L10n.of(context)?.mentorDetailBottomSheetMessage ?? ''),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [

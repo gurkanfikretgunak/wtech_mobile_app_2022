@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:client/core/views/abstractions/base_view_model.dart';
 import 'package:client/core/views/authentication/validators.dart';
 import 'package:injectable/injectable.dart';
+// ignore: depend_on_referenced_packages
 import 'package:rxdart/rxdart.dart';
 
 @Injectable()
@@ -15,7 +16,8 @@ class AuthenticationViewModel extends BaseViewModel with Validators {
   final _idController = BehaviorSubject<String>();
 
   Stream<String> get email => _emailController.stream.transform(validateEmail);
-  Stream<String> get password => _passwordController.stream.transform(validatePassword);
+  Stream<String> get password =>
+      _passwordController.stream.transform(validatePassword);
   Stream<String> get name => _nameController.stream.transform(validateName);
   Stream<String> get phone => _phoneController.stream.transform(validatePhone);
   Stream<String> get id => _idController.stream.transform(validateId);

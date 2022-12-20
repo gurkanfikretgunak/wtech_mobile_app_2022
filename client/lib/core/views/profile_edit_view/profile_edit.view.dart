@@ -12,7 +12,7 @@ class ProfileEditView extends StatelessWidget with ProfileEditWidgets {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: CustomAppbar(isCheck: false, isName: false),
+      appBar: const CustomAppbar(isCheck: false, isName: false),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

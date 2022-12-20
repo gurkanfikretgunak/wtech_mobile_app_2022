@@ -1,15 +1,13 @@
-import 'package:client/core/extensions/extension.dart';
-import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/blogs_view/widgets/blogs_model.dart';
 import 'package:client/core/views/blogs_view/widgets/blogs_card.dart';
-import 'package:client/core/views/common/widgets/button/button_libary.dart';
+import 'package:client/core/views/common/widgets/button/custom_button_libary.dart';
 import 'package:client/core/views/common/widgets/custom_image.dart';
 import 'package:client/core/views/common/widgets/custom_views_count.dart';
 import 'package:client/core/views/common/widgets/text/custom_text.dart';
 
 import 'package:flutter/material.dart';
 
-import '../../constants/color_constans.dart';
+import '../../utils/constants/colors/color_constans.dart';
 import '../common/widgets/custom_date_text.dart';
 
 class BlogsWidget {
@@ -71,6 +69,6 @@ class BlogsWidget {
   }
 
   Widget viewCount() {
-    return CustomViewsCount(viewsCount: "126");
+    return const CustomViewsCount(viewsCount: "126");
   }
 }
