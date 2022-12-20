@@ -1,8 +1,8 @@
 
 
+import 'package:client/core/l10n/app_l10n.dart';
 import 'package:flutter/material.dart';
 
-import '../../../l10n/app_l10n.dart';
 
 class ProfileEditConstants {
 
@@ -29,7 +29,7 @@ class ProfileEditConstants {
   static TextEditingController? changePassNewAgain = TextEditingController();
 
 
-  List<TextEditingController?> ChangePasswordControllers(){
+  List<TextEditingController?> changePasswordControllers(){
     return [
       changePassCurrent,changePassNew,changePassNewAgain
     ];
