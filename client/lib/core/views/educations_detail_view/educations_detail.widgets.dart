@@ -22,7 +22,7 @@ class EducationsDetailWidgets {
         ),
         context.emptySizedHeightBoxNormal,
         SizedBox(
-          height: context.dynamicHeight(0.13),
+          height: context.dynamicHeight(0.17),
           child: GridView.builder(
               physics: const NeverScrollableScrollPhysics(),
               gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
@@ -41,8 +41,7 @@ class EducationsDetailWidgets {
     );
   }
 
-  Widget contentPieces(
-      BuildContext context, IconData icon1, String text1, String text2) {
+  Widget contentPieces(BuildContext context, IconData icon1, String text1, String text2) {
     return Row(
       children: [
         Icon(icon1, color: ColorConstant.instance.black),
@@ -72,9 +71,7 @@ class EducationsDetailWidgets {
                 context.emptySizedWidthBoxNormal,
                 CircleAvatar(
                   child: IconButton(
-                    icon: isFavorite == true
-                        ? const Icon(Icons.favorite)
-                        : const Icon(Icons.favorite_border),
+                    icon: isFavorite == true ? const Icon(Icons.favorite) : const Icon(Icons.favorite_border),
                     onPressed: () {
                       isFavorite = vm.changeFavorite();
                     },
