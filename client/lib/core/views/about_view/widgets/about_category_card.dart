@@ -1,7 +1,6 @@
+import 'package:client/core/utils/constants/colors/color_constans.dart';
+import 'package:client/core/views/common/widgets/text/custom_text_library.dart';
 import 'package:flutter/material.dart';
-
-import '../../../utils/constants/colors/color_constans.dart';
-import '../../common/widgets/text/custom_text_library.dart';
 
 class AboutCategoryCard extends StatelessWidget {
   const AboutCategoryCard({

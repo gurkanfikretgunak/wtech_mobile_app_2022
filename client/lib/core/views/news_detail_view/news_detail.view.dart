@@ -1,11 +1,11 @@
 import 'package:client/core/domain/models/news/news_model.dart';
+import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/utils/extensions/common_extension.dart';
+import 'package:client/core/views/common/widgets/custom_appbar.dart';
 import 'package:client/core/views/news_detail_view/news_detail.widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
-import '../../l10n/app_l10n.dart';
-import '../common/widgets/custom_appbar.dart';
 import 'news_detail.viewmodel.dart';
 
 // ignore: must_be_immutable

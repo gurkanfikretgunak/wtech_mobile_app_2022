@@ -1,12 +1,13 @@
+import 'package:client/core/l10n/app_l10n.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/views/blogs_view/blogs.widgets.dart';
 import 'package:client/core/views/blogs_view/widgets/blogs_list.dart';
 import 'package:client/core/views/blogs_view/widgets/blogs_card.dart';
+import 'package:client/core/views/common/widgets/custom_appbar.dart';
 import 'package:client/core/views/common/widgets/text/custom_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
-import '../../utils/extensions/common_extension.dart';
-import '../../l10n/app_l10n.dart';
-import '../common/widgets/custom_appbar.dart';
+
 import 'blogs.viewmodel.dart';
 
 class BlogsView extends StatelessWidget with BlogsWidget {
