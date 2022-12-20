@@ -16,18 +16,16 @@ class EducationView extends StatelessWidget {
             child: Column(
               children: [
                 EducationsWidgets().searchEducationWidget(context),
-                SizedBox(
-                  child: ListView.separated(
-                    physics: const BouncingScrollPhysics(),
-                    shrinkWrap: true,
-                    itemCount: 7,
-                    itemBuilder: (context, index) {
-                      return EducationsWidgets().educationCard(context);
-                    },
-                    separatorBuilder: (BuildContext context, int index) {
-                      return context.emptySizedHeightBoxNormal;
-                    },
-                  ),
+                ListView.separated(
+                  physics: const BouncingScrollPhysics(),
+                  shrinkWrap: true,
+                  itemCount: 7,
+                  itemBuilder: (context, index) {
+                    return EducationsWidgets().educationCard(context);
+                  },
+                  separatorBuilder: (BuildContext context, int index) {
+                    return context.emptySizedHeightBoxNormal;
+                  },
                 ),
               ],
             ),
