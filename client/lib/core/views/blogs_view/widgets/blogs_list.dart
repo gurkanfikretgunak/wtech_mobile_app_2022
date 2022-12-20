@@ -1,6 +1,5 @@
 import 'package:client/core/views/blogs_view/widgets/blogs_model.dart';
-
-import '../../../../gen/assets.gen.dart';
+import 'package:client/gen/assets.gen.dart';
 
 List<BlogsModel> blogsList = [
   BlogsModel(

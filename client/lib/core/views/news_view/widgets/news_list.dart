@@ -1,5 +1,5 @@
-import '../../../../gen/assets.gen.dart';
-import '../../../domain/models/news/news_model.dart';
+import 'package:client/core/domain/models/news/news_model.dart';
+import 'package:client/gen/assets.gen.dart';
 
 List<NewsModel> newsList = [
   NewsModel(
