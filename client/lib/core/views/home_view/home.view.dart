@@ -1,11 +1,10 @@
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/views/home_view/widgets/categories_widget.dart';
 import 'package:client/core/views/home_view/widgets/drawer_widget.dart';
 import 'package:client/core/views/home_view/widgets/swiper_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import '../../l10n/app_l10n.dart';
-import '../common/widgets/custom_appbar.dart';
 import 'home.viewmodel.dart';
 import 'home.widgets.dart';
 

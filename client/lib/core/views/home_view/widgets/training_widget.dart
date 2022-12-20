@@ -1,9 +1,8 @@
-import 'package:client/core/extensions/extension.dart';
 import 'package:client/core/routes/custom_navigator.dart';
+import 'package:client/core/utils/constants/enums/routes.enum.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/views/home_view/home.widgets.dart';
 import 'package:flutter/material.dart';
-
-import '../../../enums/routes.enum.dart';
 
 class HomeTrainingWidget extends StatelessWidget {
   const HomeTrainingWidget({super.key, required this.trainingImage});
