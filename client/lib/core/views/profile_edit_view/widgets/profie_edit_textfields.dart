@@ -1,16 +1,13 @@
-
-
 import 'package:client/core/extensions/extension.dart';
 import 'package:client/core/views/common/widgets/text/custom_textfield.dart';
 import 'package:client/core/views/profile_edit_view/constants/profile_edit_const.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:path/path.dart';
 
 class ProfileEditTextFields extends StatelessWidget {
   const ProfileEditTextFields({super.key});
-  
+
   @override
-  
   Widget build(BuildContext context) {
     double screenHeight = context.height;
     return Padding(
@@ -24,13 +21,15 @@ class ProfileEditTextFields extends StatelessWidget {
             return Padding(
               padding: context.verticalPaddingLow,
               child: CustomTextFormField(
-                labelText: ProfileEditConstants().profileEditLabels(context)[index],
-                controller: ProfileEditConstants().profileEditControllers()[index],
+                labelText:
+                    ProfileEditConstants().profileEditLabels(context)[index],
+                controller:
+                    ProfileEditConstants().profileEditControllers()[index],
               ),
             );
-          },),
+          },
+        ),
       ),
     );
   }
-
 }

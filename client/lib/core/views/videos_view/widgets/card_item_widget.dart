@@ -21,6 +21,7 @@ class CardItemWidget extends StatelessWidget {
     Widget cardInfo = CardInformationWidget(
         videoTitle: videoTitle,
         viewsNumber: viewsNumber,
+        isHorizontal: isHorizontal,
         formattedDate: formattedDate);
 
     Widget cardVideo =
@@ -32,7 +33,7 @@ class CardItemWidget extends StatelessWidget {
               children: [
                 Expanded(flex: 5, child: cardVideo),
                 Expanded(
-                    flex: 4,
+                    flex: 5,
                     child:
                         Padding(padding: context.paddingLow, child: cardInfo))
               ],

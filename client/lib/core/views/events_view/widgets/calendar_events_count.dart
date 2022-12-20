@@ -15,8 +15,7 @@ class CalendarEventsCount extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       itemBuilder: (context, index) {
         return Padding(
-          padding:
-              context.onlyRightPaddingLow + context.onlyBottomPaddingNormal,
+          padding: context.onlyRightPaddingLow + context.onlyBottomPaddingNormal,
           child: Center(
             child: Container(
               width: 12,

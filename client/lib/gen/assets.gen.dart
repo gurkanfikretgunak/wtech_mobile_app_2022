@@ -25,6 +25,23 @@ class $AssetsEnvGen {
   List<String> get values => [envDev, envProd, envTest];
 }
 
+class $AssetsGifGen {
+  const $AssetsGifGen();
+
+  /// File path: assets/gif/education.gif
+  AssetGenImage get education =>
+      const AssetGenImage('assets/gif/education.gif');
+
+  /// File path: assets/gif/events.gif
+  AssetGenImage get events => const AssetGenImage('assets/gif/events.gif');
+
+  /// File path: assets/gif/mentor.gif
+  AssetGenImage get mentor => const AssetGenImage('assets/gif/mentor.gif');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [education, events, mentor];
+}
+
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
@@ -309,6 +326,7 @@ class Assets {
   Assets._();
 
   static const $AssetsEnvGen env = $AssetsEnvGen();
+  static const $AssetsGifGen gif = $AssetsGifGen();
   static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
   static const $AssetsLottieGen lottie = $AssetsLottieGen();

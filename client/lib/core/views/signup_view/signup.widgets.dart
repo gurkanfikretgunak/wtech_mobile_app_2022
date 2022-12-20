@@ -1,3 +1,4 @@
+import 'package:client/core/extensions/extension.dart';
 import 'package:client/core/views/signup_view/signup_constants/label_constants.dart';
 import 'package:client/core/views/signup_view/widgets/profile_choose_widget.dart';
 import 'package:client/core/views/signup_view/widgets/register_textfield.dart';
@@ -10,10 +11,11 @@ import '../common/widgets/text/custom_textfield.dart';
 
 class SignUpWidgets {
   Widget userInfoTextfield(BuildContext context, List<String> labels) {
-    return RegisterTextfields();
+    return const RegisterTextfields();
   }
 
-  Widget userProfileWidget(BuildContext context, TextEditingController controller) {
+  Widget userProfileWidget(
+      BuildContext context, TextEditingController controller) {
     TextEditingController? profileController = TextEditingController();
     return UserProfileChooseWidget(profileController: profileController);
   }
@@ -58,14 +60,17 @@ class SignUpWidgets {
     return StreamBuilder<Object>(
         stream: _vm.id,
         builder: (context, snapshot) {
-          return CustomTextFormField(
-              prefixIcon: Icons.mail_outline,
-              labelText: L10n.of(context)!.tcNumber,
-              controller: SignUpConstants.tcController,
-              onChanged: (text) {
-                _vm.changeId(text!);
-              },
-              errorText: snapshot.error?.toString());
+          return Padding(
+            padding: context.onlyTopPaddingNormal,
+            child: CustomTextFormField(
+                prefixIcon: Icons.mail_outline,
+                labelText: L10n.of(context)!.tcNumber,
+                controller: SignUpConstants.tcController,
+                onChanged: (text) {
+                  _vm.changeId(text!);
+                },
+                errorText: snapshot.error?.toString()),
+          );
         });
   }
 }

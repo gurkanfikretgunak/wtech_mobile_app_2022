@@ -5,6 +5,8 @@ import 'package:client/core/views/common/widgets/custom_loading.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
+import '../../l10n/app_l10n.dart';
+import '../home_view/widgets/drawer_widget.dart';
 import 'bottom_navbar.viewmodel.dart';
 
 // ignore: must_be_immutable
@@ -20,7 +22,15 @@ class CustomBottomNavBar extends StatelessWidget with BottomNavBarWidgets {
       builder: (context, snapshot) {
         if (snapshot.hasData) {
           return Scaffold(
-            // appBar: const CustomAppbar(),
+            appBar: CustomAppbar(
+              titleText: _vm.buildAppBarTitle(
+                pageIndex: snapshot.data,
+                context: context,
+              ),
+              isCheck: true,
+              isName: snapshot.data == 0 ? true : false,
+            ),
+            drawer: const DrawerWidget(),
             body: Center(
               child: pageOptionList.elementAt(snapshot.data),
             ),

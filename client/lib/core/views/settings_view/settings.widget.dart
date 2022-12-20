@@ -1,14 +1,15 @@
 import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/themes/change_theme/change_theme.viewmodel.dart';
 import 'package:client/core/views/common/widgets/text/custom_text.dart';
-import 'package:client/core/views/settings_view/settings.viewmodel.dart';
 import 'package:client/core/views/settings_view/widget/card_settings.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
+
 import '../../constants/color_constans.dart';
 
 class SettingsViewWidget {
-  Widget settingCards(
-      BuildContext context, List<String> itemCountText, double heightCard, String categoriesText, bool isSwitcher) {
+  Widget settingCards(BuildContext context, List<String> itemCountText,
+      double heightCard, String categoriesText, bool isSwitcher) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -16,14 +17,14 @@ class SettingsViewWidget {
           padding: context.onlyLeftPaddingLow,
           child: CustomText(
             categoriesText,
-            color: ColorConstant.instance.black.withOpacity(0.5),
+            color: Theme.of(context).textSelectionTheme.selectionColor,
           ),
         ),
         SizedBox(
-          height: context.dynamicHeight(heightCard),
-          width: context.width,
+          height: context.dynamicHeight(heightCard / 1.4),
           child: ListView.builder(
             itemCount: itemCountText.length,
+            physics: const NeverScrollableScrollPhysics(),
             itemBuilder: (context, index) {
               return SettingsCardWidget(
                 onTap: () {},
@@ -39,17 +40,17 @@ class SettingsViewWidget {
   }
 
   Widget switchWidget(BuildContext context) {
-    // ignore: no_leading_underscores_for_local_identifiers
-    final _vm = GetIt.I.get<SettingsViewModel>();
+    final _theme = GetIt.I.get<ChangeThemeViewModel>();
+
     return StreamBuilder(
-        stream: _vm.switcher,
+        stream: _theme.theme,
         builder: (context, snapshot) {
           return Switch(
-            value: snapshot.data ?? false,
+            value: snapshot.data!,
             activeTrackColor: Colors.blue.shade200,
             activeColor: ColorConstant.instance.blue,
             onChanged: (bool value) {
-              _vm.changeSwitcher();
+              _theme.changeTheme();
             },
           );
         });
