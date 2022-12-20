@@ -41,27 +41,29 @@ class CustomElevatedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-        onPressed: onPressed,
-        style: ElevatedButton.styleFrom(
-          disabledBackgroundColor: disabledBackgroundColor ?? ColorConstant.instance.grey,
-          elevation: 0,
-          shadowColor: shadowColor,
-          shape: RoundedRectangleBorder(
-            side: BorderSide(color: borderSideColor ?? Colors.transparent),
-            borderRadius: BorderRadius.all(Radius.circular(borderRadius ?? 5)),
-          ),
-          padding: EdgeInsets.zero,
-          backgroundColor: buttonColor,
-          fixedSize: Size(
-            width ?? context.dynamicWidth(1),
-            context.dynamicHeight(0.06),
-          ),
+      onPressed: onPressed,
+      style: ElevatedButton.styleFrom(
+        disabledBackgroundColor:
+            disabledBackgroundColor ?? ColorConstant.instance.grey,
+        elevation: 0,
+        shadowColor: shadowColor,
+        shape: RoundedRectangleBorder(
+          side: BorderSide(color: borderSideColor ?? Colors.transparent),
+          borderRadius: BorderRadius.all(Radius.circular(borderRadius ?? 5)),
         ),
-        child: CustomText(
-          text,
-          fontWeight: fontWeight ?? FontWeight.w600,
-          fontSize: fontSize,
-          color: textColor ?? ColorConstant.instance.white,
-        ));
+        padding: EdgeInsets.zero,
+        backgroundColor: buttonColor,
+        fixedSize: Size(
+          width ?? context.dynamicWidth(1),
+          height ?? context.dynamicHeight(0.06),
+        ),
+      ),
+      child: CustomText(
+        text,
+        fontWeight: fontWeight ?? FontWeight.w600,
+        fontSize: fontSize,
+        color: textColor ?? ColorConstant.instance.white,
+      ),
+    );
   }
 }
