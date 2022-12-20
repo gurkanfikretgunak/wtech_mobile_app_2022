@@ -34,18 +34,16 @@ class JobsDetailWidget extends StatelessWidget {
       children: [
         Padding(
           padding: context.paddingNormal,
-          child: Center(
-              child: CustomText(jobDetailTitle ?? "",
-                  fontSize: 20, fontWeight: FontWeight.bold)),
+          child: Center(child: CustomText(jobDetailTitle ?? "", fontSize: 20, fontWeight: FontWeight.bold)),
         ),
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Padding(
               padding: context.onlyLeftPaddingNormal,
               child: CustomText(
                 jobInstitution ?? "",
-                color: ColorConstant.instance.black,
+                color: ColorConstant.instance.blue,
               ),
             ),
             Padding(
@@ -111,8 +109,7 @@ Widget floatingActionButton(BuildContext context) {
     child: CustomElevatedButton(
       onPressed: () {
         showModalBottomSheet(
-          shape: const RoundedRectangleBorder(
-              borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+          shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
           context: context,
           isScrollControlled: true,
           builder: (context) => const JobsDetailBottomSheetWidget(),

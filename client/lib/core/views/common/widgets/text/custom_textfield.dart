@@ -13,6 +13,7 @@ class CustomTextFormField extends StatefulWidget {
     this.controller,
     this.errorText,
     this.onChanged,
+    this.isSearch = false,
   });
 
   final Widget? suffixIcon;
@@ -24,6 +25,7 @@ class CustomTextFormField extends StatefulWidget {
   final TextEditingController? controller;
   final String? errorText;
   final Function(String?)? onChanged;
+  final bool? isSearch;
 
   @override
   State<CustomTextFormField> createState() => _CustomTextFormFieldState();
@@ -59,8 +61,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
                     : const Icon(Icons.visibility_off))
             : null,
         prefixIcon: widget.prefixIcon,
-        contentPadding: EdgeInsets.symmetric(
-            horizontal: context.dynamicWidth(0), vertical: 0),
+        contentPadding: EdgeInsets.symmetric(horizontal: context.dynamicWidth(0), vertical: 0),
       ),
     );
   }

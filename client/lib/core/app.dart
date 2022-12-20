@@ -34,7 +34,6 @@ class App extends StatelessWidget {
               ),
               title: "Flutter Boilerplate : ${Flavor.I.getString(Keys.appTitle)}",
               theme: CustomTheme.customLightTheme(context),
-              // theme: snapshot.data! ? CustomTheme.customLightTheme(context) : CustomTheme.customDarkTheme(context),
               debugShowCheckedModeBanner: false,
             );
           }),
