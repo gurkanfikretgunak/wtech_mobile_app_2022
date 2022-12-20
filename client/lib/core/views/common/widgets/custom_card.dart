@@ -12,6 +12,7 @@ class CustomCard extends StatelessWidget {
     this.shadowColor,
     this.borderRadius,
     this.borderSideColor,
+    this.borderWith,
   }) : super(key: key);
 
   final Color? color;
@@ -21,6 +22,7 @@ class CustomCard extends StatelessWidget {
   final double? elevation;
   final double? width;
   final double? height;
+  final double? borderWith;
   final EdgeInsetsGeometry? margin;
   final BorderRadiusGeometry? borderRadius;
 
@@ -32,8 +34,11 @@ class CustomCard extends StatelessWidget {
       clipBehavior: Clip.antiAliasWithSaveLayer,
       shadowColor: shadowColor,
       shape: RoundedRectangleBorder(
-        side: BorderSide(color: borderSideColor ?? Colors.transparent),
-        borderRadius: BorderRadius.circular(15),
+        side: BorderSide(
+          color: borderSideColor ?? Colors.transparent,
+          width: borderWith ?? 1,
+        ),
+        borderRadius: borderRadius ?? BorderRadius.circular(5),
       ),
       child: SizedBox(
         width: width,

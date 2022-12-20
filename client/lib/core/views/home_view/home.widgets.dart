@@ -58,7 +58,7 @@ class HomeViewWidget {
     return Padding(
       padding: context.paddingLow,
       child: CustomTextFormField(
-        prefixIcon: Icons.search,
+        prefixIcon: Icon(Icons.search),
         labelText: L10n.of(context)!.search,
         isSearch: true,
       ),

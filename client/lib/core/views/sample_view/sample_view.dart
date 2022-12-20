@@ -47,7 +47,7 @@ class _MainScreenState extends State<MainScreen> {
               CustomTextButton(onPressed: () {}, text: "text"),
               const CustomText("deneme"),
               CustomTextFormField(
-                prefixIcon: Icons.account_circle,
+                prefixIcon: Icon(Icons.account_circle),
                 labelText: L10n.of(context)!.apply,
               ),
               /****************************************/

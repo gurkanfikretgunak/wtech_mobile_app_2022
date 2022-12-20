@@ -14,7 +14,8 @@ class CustomTheme {
     return ThemeData(
       scaffoldBackgroundColor: ColorConstant.instance.white,
       appBarTheme: CustomAppBarTheme.appBarTheme(),
-      textSelectionTheme: TextSelectionThemeData(selectionColor: ColorConstant.instance.black.withOpacity(0.5)),
+      textSelectionTheme: TextSelectionThemeData(
+          selectionColor: ColorConstant.instance.black.withOpacity(0.5)),
       iconTheme: CustomIconTheme.iconTheme(),
       bottomNavigationBarTheme: CustomBottomNavBarTheme.bottomNavBarTheme(),
       elevatedButtonTheme: CustomElevatedButtonTheme.elevatedButtonTheme(),
@@ -28,7 +29,8 @@ class CustomTheme {
   static ThemeData customDarkTheme(BuildContext context) {
     return ThemeData(
       textSelectionTheme: TextSelectionThemeData(
-          selectionColor: Colors.white.withOpacity(0.5), cursorColor: ColorConstant.instance.white),
+          selectionColor: Colors.white.withOpacity(0.5),
+          cursorColor: ColorConstant.instance.white),
       scaffoldBackgroundColor: ColorConstant.instance.darkThemeBlack,
       appBarTheme: CustomAppBarTheme.appBarTheme(),
       iconTheme: CustomIconTheme.iconTheme(),

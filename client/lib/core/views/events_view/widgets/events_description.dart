@@ -9,15 +9,9 @@ class EventsDescription extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Expanded(
-            flex: 3,
-            child: Padding(
-              padding: context.onlyTopPaddingNormal + context.onlyLeftPaddingNormal,
-              child: const EventsDateAndLocation(),
-            )),
-      ],
+    return Padding(
+      padding: context.onlyTopPaddingNormal + context.onlyLeftPaddingNormal,
+      child: const EventsDateAndLocation(),
     );
   }
 }

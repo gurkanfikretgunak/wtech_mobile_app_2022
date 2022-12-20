@@ -22,6 +22,7 @@ class EventsDateAndLocation extends StatelessWidget {
         Padding(
           padding: context.onlyTopPaddingNormal,
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Row(
                 children: [
@@ -38,7 +39,7 @@ class EventsDateAndLocation extends StatelessWidget {
               ),
               Padding(
                   padding: EdgeInsets.only(
-                      left: MediaQuery.of(context).size.width * 0.07),
+                      right: MediaQuery.of(context).size.width * 0.07),
                   child: const CustomDateText(date: '27.06.2022'))
             ],
           ),

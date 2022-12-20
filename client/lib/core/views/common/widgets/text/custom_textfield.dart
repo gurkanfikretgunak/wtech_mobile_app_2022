@@ -16,8 +16,8 @@ class CustomTextFormField extends StatefulWidget {
     this.isSearch = false,
   });
 
-  final IconData? suffixIcon;
-  final IconData? prefixIcon;
+  final Widget? suffixIcon;
+  final Widget? prefixIcon;
 
   final String? hintText;
   final String? labelText;
@@ -41,31 +41,28 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
       controller: widget.controller,
       keyboardType: TextInputType.text,
       decoration: InputDecoration(
-          filled: true,
-          fillColor: Color(0xFFF3F2F9),
-          errorText: widget.errorText,
-          hintText: widget.hintText,
-          labelText: widget.labelText,
-          suffixIcon: widget.isPassword!
-              ? GestureDetector(
-                  onTap: () {
-                    if (widget.isPassword!) {
-                      setState(() {
-                        obscureText = !obscureText;
-                      });
-                    }
-                  },
-                  child: !obscureText
-                      ? Icon(
-                          Icons.remove_red_eye,
-                          color: ColorConstant.instance.grey,
-                        )
-                      : const Icon(Icons.visibility_off))
-              : widget.isSearch!
-                  ? Icon(Icons.tune_outlined)
-                  : null,
-          prefixIcon: Icon(widget.prefixIcon),
-          contentPadding: EdgeInsets.zero),
+        errorText: widget.errorText,
+        hintText: widget.hintText,
+        labelText: widget.labelText,
+        suffixIcon: widget.isPassword!
+            ? GestureDetector(
+                onTap: () {
+                  if (widget.isPassword!) {
+                    setState(() {
+                      obscureText = !obscureText;
+                    });
+                  }
+                },
+                child: !obscureText
+                    ? Icon(
+                        Icons.remove_red_eye,
+                        color: ColorConstant.instance.grey,
+                      )
+                    : const Icon(Icons.visibility_off))
+            : null,
+        prefixIcon: widget.prefixIcon,
+        contentPadding: EdgeInsets.symmetric(horizontal: context.dynamicWidth(0), vertical: 0),
+      ),
     );
   }
 }

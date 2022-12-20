@@ -29,11 +29,13 @@ class RegisterTextfields extends StatelessWidget {
                 ),
                 Padding(
                   padding: context.onlyTopPaddingNormal,
-                  child: SignInWidget().emailTextField(context, SignUpConstants.emailController!),
+                  child: SignInWidget().emailTextField(
+                      context, SignUpConstants.emailController!),
                 ),
                 Padding(
                   padding: context.onlyTopPaddingNormal,
-                  child: SignInWidget().passwordTextField(context, SignUpConstants.passwordController!),
+                  child: SignInWidget().passwordTextField(
+                      context, SignUpConstants.passwordController!),
                 ),
                 Padding(
                   padding: context.onlyTopPaddingNormal,
@@ -42,7 +44,7 @@ class RegisterTextfields extends StatelessWidget {
                 Padding(
                   padding: context.onlyTopPaddingNormal,
                   child: CustomTextFormField(
-                      prefixIcon: Icons.mail_outline,
+                      prefixIcon: const Icon(Icons.mail_outline),
                       labelText: L10n.of(context)!.tcNumber,
                       controller: SignUpConstants.tcController,
                       onChanged: (text) {

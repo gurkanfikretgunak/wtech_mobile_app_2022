@@ -11,61 +11,42 @@ import 'package:client/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
-class EducationsDetailView extends StatelessWidget {
+class EducationsDetailView extends StatelessWidget
+    with EducationsDetailWidgets {
   const EducationsDetailView({super.key});
 
   @override
   Widget build(BuildContext context) {
     final vm = GetIt.I.get<EducationsDetailViewModel>();
-    bool isFavorite = vm.changeFavorite();
 
-    return StreamBuilder(
-      stream: vm.favorite,
-      builder: (context, snapshot) {
-        return SafeArea(
-          child: Scaffold(
-            appBar: CustomAppbar(
-                titleText: L10n.of(context)!.hello,
-                isCheck: false,
-                isName: false),
-            body: SingleChildScrollView(
-              child: Padding(
-                padding: PaddingExtension(context).paddingNormal,
-                child: Column(
-                  children: [
-                    ClipRRect(
-                        borderRadius: BorderRadius.circular(13),
-                        child: Image.asset(Assets.images.education1.path)),
-                    EducationsDetailWidgets().educationContent(context),
-                    const CustomDivider(
-                      endIndent: 1,
-                    ),
-                    const EducationDescription(),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        CustomElevatedButton(
-                          onPressed: () {},
-                          text: "Başvur",
-                          textColor: ColorConstant.instance.white,
-                        ),
-                        IconButton(
-                          icon: isFavorite == true
-                              ? const Icon(Icons.favorite)
-                              : const Icon(Icons.favorite_border),
-                          onPressed: () {
-                            isFavorite = vm.changeFavorite();
-                          },
-                        ),
-                      ],
-                    ),
-                  ],
+    return SafeArea(
+      child: Scaffold(
+        appBar: CustomAppbar(
+            titleText: L10n.of(context)!.titleEducation,
+            isCheck: false,
+            isName: false),
+        body: Padding(
+          padding: PaddingExtension(context).paddingNormal,
+          child: SingleChildScrollView(
+            physics: BouncingScrollPhysics(),
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ClipRRect(
+                    borderRadius: BorderRadius.circular(13),
+                    child: Image.asset(Assets.images.education1.path)),
+                Padding(
+                  padding: context.verticalPaddingMedium,
+                  child: educationContent(context),
                 ),
-              ),
+                const EducationDescription(),
+                applyAndFavoriteButton(context)
+              ],
             ),
           ),
-        );
-      },
+        ),
+      ),
     );
   }
 }
