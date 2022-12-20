@@ -1,10 +1,10 @@
 import 'package:client/core/utils/extensions/common_extension.dart';
+import 'package:client/core/views/blogs_detail_view/blogs_detail.view.dart';
+import 'package:client/core/views/blogs_view/blogs.widgets.dart';
+import 'package:client/gen/assets.gen.dart';
 
 import 'package:flutter/material.dart';
 
-import '../../../../gen/assets.gen.dart';
-import '../../blogs_detail_view/blogs_detail.view.dart';
-import '../blogs.widgets.dart';
 import 'blogs_model.dart';
 
 class BlogsCard extends StatelessWidget with BlogsWidget {

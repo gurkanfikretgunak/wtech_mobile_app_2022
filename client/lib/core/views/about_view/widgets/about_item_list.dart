@@ -1,8 +1,7 @@
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/about_view/widgets/about_detail.dart';
+import 'package:client/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../../gen/assets.gen.dart';
 
 List aboutItemList(BuildContext context) {
   return [
@@ -13,7 +12,8 @@ List aboutItemList(BuildContext context) {
         navigate(
           context,
           AboutDetailView(
-              imagePath: Assets.images.whoWe.path, title: L10n.of(context)!.whoAreWe),
+              imagePath: Assets.images.whoWe.path,
+              title: L10n.of(context)!.whoAreWe),
         );
       }
     },
@@ -36,7 +36,8 @@ List aboutItemList(BuildContext context) {
         navigate(
           context,
           AboutDetailView(
-              imagePath: Assets.images.ourGoals.path, title: L10n.of(context)!.ourGoal),
+              imagePath: Assets.images.ourGoals.path,
+              title: L10n.of(context)!.ourGoal),
         );
       }
     }
