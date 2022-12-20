@@ -1,7 +1,7 @@
+import 'package:client/core/enums/routes.enum.dart';
 import 'package:client/core/l10n/app_l10n.dart';
+import 'package:client/core/routes/custom_navigator.dart';
 import 'package:flutter/material.dart';
-import '../../../enums/routes.enum.dart';
-import '../../../routes/custom_navigator.dart';
 
 class IconConstant {
   List categoryList(BuildContext context) {

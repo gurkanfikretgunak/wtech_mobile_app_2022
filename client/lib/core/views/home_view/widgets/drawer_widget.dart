@@ -1,8 +1,8 @@
+import 'package:client/core/constants/color_constans.dart';
 import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/views/home_view/temporary_contants.dart/icon_constants.dart';
+import 'package:client/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
-import '../../../../gen/assets.gen.dart';
-import '../../../constants/color_constans.dart';
-import '../temporary_contants.dart/icon_constants.dart';
 
 class DrawerWidget extends StatelessWidget {
   const DrawerWidget({super.key});
@@ -39,10 +39,7 @@ class DrawerWidget extends StatelessWidget {
                           child: ListTile(
                             title: Text(key['text'],
                                 //IconConstant.drawerNames(context)[index],
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .headline6
-                                    ?.copyWith(fontSize: 18)),
+                                style: Theme.of(context).textTheme.headline6?.copyWith(fontSize: 18)),
                             leading: Icon(
                               key['icon'],
                               color: ColorConstant.instance.blue,
@@ -61,10 +58,7 @@ class DrawerWidget extends StatelessWidget {
             padding: context.onlyBottomPaddingNormal,
             child: Text(
               "by Teknolojide Kadın Derneği",
-              style: Theme.of(context)
-                  .textTheme
-                  .subtitle1
-                  ?.copyWith(color: ColorConstant.instance.blue, fontSize: 13),
+              style: Theme.of(context).textTheme.subtitle1?.copyWith(color: ColorConstant.instance.blue, fontSize: 13),
             ),
           ),
         ],

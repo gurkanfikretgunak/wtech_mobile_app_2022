@@ -2,11 +2,10 @@ import 'dart:ui';
 import 'package:client/core/constants/color_constans.dart';
 import 'package:client/core/extensions/extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
+import 'package:client/core/views/common/widgets/text/text_library.dart';
 import 'package:client/core/views/home_view/temporary_contants.dart/text_constants.dart';
 import 'package:client/core/views/home_view/widgets/training_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:logger/logger.dart';
-import '../common/widgets/text/custom_textfield.dart';
 
 class HomeViewWidget {
   Widget homeCardWidget(BuildContext context) {

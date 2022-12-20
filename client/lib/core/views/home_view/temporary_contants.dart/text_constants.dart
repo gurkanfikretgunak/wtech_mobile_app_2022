@@ -1,4 +1,4 @@
-import '../../../../gen/assets.gen.dart';
+import 'package:client/gen/assets.gen.dart';
 
 class HomeTextContants {
   static const String baslikText = "İstanbul Teknolojide Lider Kadinlar Eğitim Programi";
