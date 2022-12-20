@@ -7,8 +7,8 @@ import 'package:client/core/views/signin_view/widgets/logo_widget.dart';
 import 'package:client/core/views/signin_view/widgets/signin_bottom_description_widget.dart';
 import 'package:client/core/views/signin_view/widgets/signup_for_not_remember_widget.dart';
 import 'package:flutter/material.dart';
-import '../../utils/constants/enums/routes.enum.dart';
-import '../../routes/custom_navigator.dart';
+import 'package:client/core/routes/custom_navigator.dart';
+import 'package:client/core/utils/constants/enums/routes.enum.dart';
 
 class SignInEmailView extends StatefulWidget {
   const SignInEmailView({super.key});
