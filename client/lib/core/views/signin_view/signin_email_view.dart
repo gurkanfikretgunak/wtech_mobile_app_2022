@@ -29,13 +29,16 @@ class _MainScreenState extends State<SignInEmailView> with SignInWidget {
         padding: context.paddingMedium,
         child: Wrap(
           alignment: WrapAlignment.center,
-          runSpacing: 30,
+          runSpacing: 28,
           children: [
             Padding(
               padding: context.onlyTopPaddingHigh,
               child: const Logo(),
             ),
-            emailTextField(context, emailTextController),
+            Padding(
+              padding: context.onlyTopPaddingMedium,
+              child: emailTextField(context, emailTextController),
+            ),
             passwordTextField(context, passwordTextController),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -56,7 +59,9 @@ class _MainScreenState extends State<SignInEmailView> with SignInWidget {
                   ],
                 ),
                 TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      CustomNavigator.goToScreen(context, Routes.forgotPassword.name);
+                    },
                     child: Text(
                       L10n.of(context)!.forgotPassword,
                     ))

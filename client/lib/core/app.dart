@@ -30,7 +30,7 @@ class App extends StatelessWidget {
               home: Provider<MainBloc>(
                 create: (_) => MainBloc(),
                 dispose: (context, bloc) => bloc.dispose(),
-                child: SignInAccountView(),
+                child: SplashView(),
               ),
               title: "Flutter Boilerplate : ${Flavor.I.getString(Keys.appTitle)}",
               theme: snapshot.data! ? CustomTheme.customLightTheme(context) : CustomTheme.customDarkTheme(context),

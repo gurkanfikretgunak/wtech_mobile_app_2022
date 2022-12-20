@@ -320,7 +320,7 @@ class L10nEn extends L10n {
   String get notMember => 'Not a member?';
 
   @override
-  String get signUpHere => 'Sign up here.';
+  String get newMember => 'Create a new member';
 
   @override
   String get userAgreement => 'User Agreement';
