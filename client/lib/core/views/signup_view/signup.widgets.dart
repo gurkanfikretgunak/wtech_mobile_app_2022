@@ -27,7 +27,7 @@ class SignUpWidgets {
         stream: _vm.email,
         builder: (context, snapshot) {
           return CustomTextFormField(
-              prefixIcon: Icons.mail_outline,
+              prefixIcon: const Icon(Icons.mail_outline),
               labelText: L10n.of(context)!.name,
               controller: SignUpConstants.nameSurnameController,
               onChanged: (text) {
@@ -44,7 +44,7 @@ class SignUpWidgets {
         stream: _vm.phone,
         builder: (context, snapshot) {
           return CustomTextFormField(
-              prefixIcon: Icons.mail_outline,
+              prefixIcon: Icon(Icons.mail_outline),
               labelText: L10n.of(context)!.phoneNumber,
               controller: SignUpConstants.phoneController,
               onChanged: (text) {
@@ -63,7 +63,7 @@ class SignUpWidgets {
           return Padding(
             padding: context.onlyTopPaddingNormal,
             child: CustomTextFormField(
-                prefixIcon: Icons.mail_outline,
+                prefixIcon: Icon(Icons.mail_outline),
                 labelText: L10n.of(context)!.tcNumber,
                 controller: SignUpConstants.tcController,
                 onChanged: (text) {

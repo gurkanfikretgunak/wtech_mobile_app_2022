@@ -30,7 +30,7 @@ class BlogsView extends StatelessWidget with BlogsWidget {
                   Expanded(
                       flex: 10,
                       child: CustomTextFormField(
-                        prefixIcon: Icons.search,
+                        prefixIcon: Icon(Icons.search),
                         hintText: L10n.of(context)!.searchInTheBlog,
                       )),
                 ],

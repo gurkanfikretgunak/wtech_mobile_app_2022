@@ -21,7 +21,7 @@ class SignUpForNotRemember extends StatelessWidget {
             textStyle: const TextStyle(fontSize: 15),
           ),
           onPressed: () {
-            CustomNavigator.goToScreen(context, Routes.forgotPassword.name);
+            CustomNavigator.goToScreen(context, Routes.signup.name);
           },
           child: CustomText(
             fontSize: 18,

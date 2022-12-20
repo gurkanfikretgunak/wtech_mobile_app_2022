@@ -51,8 +51,10 @@ class AppRoutes {
       case Routes.eventDetail:
         // TODO: Handle this case.
         break;
+
       case Routes.forgotPassword:
         return navigate(ForgotPasswordView());
+
       case Routes.home:
         return navigate(CustomBottomNavBar());
 
@@ -113,7 +115,7 @@ class AppRoutes {
     return null;
   }
 
-  Route<dynamic>? navigate(Widget child) {
+  Route<dynamic> navigate(Widget child) {
     return MaterialPageRoute(
       builder: (context) {
         return child;
