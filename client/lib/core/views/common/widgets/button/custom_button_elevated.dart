@@ -55,7 +55,7 @@ class CustomElevatedButton extends StatelessWidget {
         backgroundColor: buttonColor,
         fixedSize: Size(
           width ?? context.dynamicWidth(1),
-          context.dynamicHeight(0.06),
+          height ?? context.dynamicHeight(0.06),
         ),
       ),
       child: CustomText(

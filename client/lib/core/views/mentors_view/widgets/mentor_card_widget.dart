@@ -65,8 +65,7 @@ class MentorInfosWidget extends StatelessWidget {
     return Positioned(
       top: 100,
       child: SizedBox(
-        height: context.dynamicHeight(0.17),
-        //width: context.dynamicWidth(0.5),
+        height: context.dynamicHeight(0.2),
         child: Card(
           elevation: 10,
           shape: RoundedRectangleBorder(
@@ -75,24 +74,18 @@ class MentorInfosWidget extends StatelessWidget {
                 color: ColorConstant.instance.black.withOpacity(0.1)),
           ),
           child: Padding(
-            padding: context.horizontalPaddingNormal,
+            padding: context.paddingNormal,
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Padding(
-                  padding: PaddingExtension(context).onlyTopPaddingLow,
-                  child: Text(mentor ?? '',
-                      style: Theme.of(context).textTheme.bodyText1),
-                ),
-                Padding(
-                  padding: context.verticalPaddingNormal,
-                  child: Text(
-                    organization ?? '',
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodySmall!
-                        .copyWith(color: ColorConstant.instance.blue),
-                  ),
+                Text(mentor ?? '',
+                    style: Theme.of(context).textTheme.bodyText1),
+                Text(
+                  organization ?? '',
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodySmall!
+                      .copyWith(color: ColorConstant.instance.blue),
                 ),
                 Text(
                   role ?? '',
@@ -101,14 +94,12 @@ class MentorInfosWidget extends StatelessWidget {
                       .bodySmall!
                       .copyWith(color: ColorConstant.instance.grey),
                 ),
-                Padding(
-                  padding: PaddingExtension(context).onlyTopPaddingLow,
-                  child: CustomElevatedButton(
-                    onPressed: () {},
-                    text: L10n.of(context)?.contact ?? '',
-                    textColor: ColorConstant.instance.white,
-                    // buttonColor: false,
-                  ),
+                CustomElevatedButton(
+                  width: context.dynamicHeight(0.1),
+                  height: context.dynamicHeight(0.04),
+                  onPressed: () {},
+                  text: L10n.of(context)?.contact ?? '',
+                  textColor: ColorConstant.instance.white,
                 )
               ],
             ),
