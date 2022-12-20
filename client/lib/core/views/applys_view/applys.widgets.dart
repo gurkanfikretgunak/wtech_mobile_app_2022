@@ -1,9 +1,8 @@
+import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/applys_view/widgets/applys_card_widget.dart';
 import 'package:client/core/views/applys_view/widgets/applys_tabbar_widget.dart';
 import 'package:client/core/views/applys_view/widgets/applys_card_view.dart';
 import 'package:flutter/material.dart';
-
-import '../../l10n/app_l10n.dart';
 
 class ApplysWidgets {
   Widget applysTabbar(BuildContext context) {
