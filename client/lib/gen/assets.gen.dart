@@ -168,6 +168,10 @@ class $AssetsImagesGen {
   AssetGenImage get education1 =>
       const AssetGenImage('assets/images/education_1.png');
 
+  /// File path: assets/images/education_2.jpeg
+  AssetGenImage get education2 =>
+      const AssetGenImage('assets/images/education_2.jpeg');
+
   /// File path: assets/images/ege_egitim.jpeg
   AssetGenImage get egeEgitim =>
       const AssetGenImage('assets/images/ege_egitim.jpeg');
@@ -262,6 +266,7 @@ class $AssetsImagesGen {
         deneme,
         dijitalSanatlar,
         education1,
+        education2,
         egeEgitim,
         facebook,
         gelecekleIddia,

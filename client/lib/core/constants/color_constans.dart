@@ -14,4 +14,5 @@ class ColorConstant {
   Color settingGrey = const Color(0xffF7F7F7);
   Color settingBox = const Color(0xffD9D9D9);
   Color transparent = Colors.transparent;
+  Color cardColor = const Color(0xFFF3F2F9);
 }

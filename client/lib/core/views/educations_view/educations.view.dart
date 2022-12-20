@@ -18,22 +18,33 @@ class EducationView extends StatelessWidget {
         drawer: const Drawer(child: Text("data")),
         extendBody: true,
         extendBodyBehindAppBar: false,
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              EducationsWidgets().searchBar(context),
-              SizedBox(
-                height: context.dynamicHeight(1),
-                width: context.dynamicWidth(1),
-                child: ListView.builder(
-                  itemCount: 3,
-                  itemBuilder: (context, index) {
-                    return EducationsWidgets().educationCard(context);
-                  },
+        body: Column(
+          children: [
+            Padding(
+              padding: context.onlyLeftPaddingMedium,
+              child: EducationsWidgets().searchEducationWidget(context),
+            ),
+            Padding(
+              padding: context.onlyTopPaddingLow,
+              child: Expanded(
+                child: Container(
+                  alignment: Alignment.center,
+                  height: context.dynamicHeight(0.8),
+                  width: context.dynamicWidth(1),
+                  child: ListView.separated(
+                    shrinkWrap: true,
+                    itemCount: 5,
+                    itemBuilder: (context, index) {
+                      return EducationsWidgets().educationCard(context);
+                    },
+                    separatorBuilder: (BuildContext context, int index) {
+                      return context.emptySizedHeightBoxNormal;
+                    },
+                  ),
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

@@ -1,8 +1,6 @@
 import 'package:client/core/constants/color_constans.dart';
 import 'package:client/core/extensions/extension.dart';
-import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/routes/custom_navigator.dart';
-import 'package:client/core/views/common/widgets/button/custom_button_elevated.dart';
 import 'package:client/core/views/common/widgets/button/custom_button_icon.dart';
 import 'package:client/core/views/common/widgets/text/text_library.dart';
 import 'package:client/core/views/educations_view/educations.viewmodel.dart';
@@ -33,22 +31,45 @@ class EducationCardWidget extends StatelessWidget {
               CustomNavigator.goToScreen(context, Routes.educationDetail.name);
             },
             child: Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16),
+              ),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                //mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Image.asset(Assets.images.education1.path),
+                  Stack(
+                    children: [
+                      ClipRRect(borderRadius: BorderRadius.circular(16), child: Image.asset(Assets.images.education2.path)),
+                      Positioned(
+                        left: context.dynamicWidth(0.78),
+                        top: context.dynamicHeight(0.005),
+                        child: CircleAvatar(
+                          backgroundColor: ColorConstant.instance.white,
+                          child: CustomIconButton(
+                                onPressed: () async {
+                                  heart = vm.heartAnimation();
+                                },
+                                icon: heart
+                                    ? Icons.favorite
+                                    : Icons.favorite_border,
+                              ),
+                        ),
+                      ),
+                    ],
+                  ),                  
                   Padding(
                     padding: PaddingExtension(context).paddingNormal,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const CustomText(
-                          "Flutter & Dart Bootcamp 22'",
+                          "Genç Kariyer Eğitim Programı",
                           fontSize: 18,
                         ),
                         context.emptySizedHeightBoxLow,
                         CustomText(
-                          "Sizleri front-end geliştirme dünyasında sektörün yeni lideri Flutter Geliştiricisi...",
+                          "Hopi ve Teknolojide Kadın Derneği iş birliği ile meslek tercihleri aşamasında yönlendirmeye ve geleceğe dair bilgiye ihtiyaç...",
                           color: ColorConstant.instance.grey,
                         ),
                         context.emptySizedHeightBoxLow,
@@ -60,7 +81,7 @@ class EducationCardWidget extends StatelessWidget {
                               direction: Axis.horizontal,
                               allowHalfRating: false,
                               itemCount: 5,
-                              itemSize: context.dynamicWidth(0.05),
+                              itemSize: context.dynamicWidth(0.035),
                               itemBuilder: (context, _) => Icon(
                                 Icons.star,
                                 color: ColorConstant.instance.yellow,
@@ -71,26 +92,7 @@ class EducationCardWidget extends StatelessWidget {
                             ),
                             const CustomText("(0)"),
                           ],
-                        ),
-                        context.emptySizedHeightBoxLow,
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            // CustomElevatedButton(
-                            //   text: "dsfjk",
-                            //   // text: L10n.of(context)!.educationButton,
-                            //   onPressed: () {},
-                            // ),
-                            CustomIconButton(
-                              onPressed: () async {
-                                heart = vm.heartAnimation();
-                              },
-                              icon: heart
-                                  ? Icons.favorite
-                                  : Icons.favorite_border,
-                            ),
-                          ],
-                        ),
+                        ),                        
                       ],
                     ),
                   ),

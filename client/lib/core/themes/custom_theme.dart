@@ -18,6 +18,7 @@ class CustomTheme {
       elevatedButtonTheme: CustomElevatedButtonTheme.elevatedButtonTheme(),
       inputDecorationTheme: CustomInputDecorationTheme.inputDecorationTheme(),
       chipTheme: CustomChipTheme.chipTheme(),
+      cardTheme: CardTheme(color: ColorConstant.instance.cardColor),
     );
   }
 }
