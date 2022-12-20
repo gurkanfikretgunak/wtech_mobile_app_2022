@@ -1,4 +1,5 @@
 import 'package:client/core/constants/color_constans.dart';
+import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/videos_view/videos.viewmodel.dart';
 import 'package:client/core/views/videos_view/widgets/video_dialog_widget.dart';
 import 'package:flutter/material.dart';
@@ -67,9 +68,9 @@ class _CardVideoWidgetState extends State<CardVideoWidget> {
                               isUrlWorkSnapshot.data != null
                           ? isUrlWorkSnapshot.data
                               ? VideoPlayer(controllerSnapshot.data)
-                              : const Center(
-                                  //TODO: l10n will be update
-                                  child: Text("Url Connection Error"))
+                              : Center(
+                                  child: Text(
+                                      L10n.of(context)!.urlConnectionError))
                           : const Center(child: CircularProgressIndicator());
                     }),
               ),
