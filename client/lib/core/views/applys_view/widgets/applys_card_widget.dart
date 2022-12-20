@@ -1,12 +1,11 @@
 import 'package:client/core/utils/constants/colors/color_constans.dart';
 import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/views/common/widgets/custom_image.dart';
+import 'package:client/core/views/common/widgets/text/custom_text.dart';
+import 'package:client/gen/assets.gen.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-
-import '../../../../gen/assets.gen.dart';
-import '../../common/widgets/text/custom_text.dart';
 
 // ignore: must_be_immutable
 class ApplysCardWidget extends StatelessWidget {
@@ -95,18 +94,6 @@ class ApplysCardWidget extends StatelessWidget {
                   style: TextStyle(
                       color: ColorConstant.instance.grey, fontSize: 14)),
             ),
-            // Padding(
-            //   padding: context.paddingNormal,
-            //   child: Row(
-            //     mainAxisAlignment: MainAxisAlignment.end,
-            //     children: [
-            //       ElevatedButton(
-            //         child: Text(L10n.of(context)!.educationButton),
-            //         onPressed: () {},
-            //       ),
-            //     ],
-            //   ),
-            // ),
           ],
         ),
       ),
