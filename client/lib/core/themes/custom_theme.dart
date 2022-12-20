@@ -35,6 +35,7 @@ class CustomTheme {
       primaryColor: ColorConstant.instance.darkThemeAppBar,
       inputDecorationTheme: CustomInputDecorationTheme.inputDecorationTheme(),
       chipTheme: CustomChipTheme.chipTheme(),
+      cardTheme: CardTheme(color: ColorConstant.instance.cardColor),
     );
   }
 }

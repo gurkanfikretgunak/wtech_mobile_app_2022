@@ -17,4 +17,5 @@ class ColorConstant {
   Color red = const Color(0xffF36262);
   Color settingBox = const Color(0xffD9D9D9);
   Color transparent = Colors.transparent;
+  Color cardColor = const Color(0xFFF3F2F9);
 }
