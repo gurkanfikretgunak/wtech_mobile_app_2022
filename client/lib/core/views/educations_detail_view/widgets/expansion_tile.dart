@@ -14,19 +14,16 @@ class EducationDescription extends StatefulWidget {
 class _EducationDescriptionState extends State<EducationDescription> {
   @override
   Widget build(BuildContext context) {
-
-    return SizedBox(
-      height: context.dynamicHeight(0.4),
-      width: context.dynamicWidth(1),
-      child: ListView.builder(
+    return ListView.builder(
+        physics: const NeverScrollableScrollPhysics(),
+        shrinkWrap: true,
         itemBuilder: (context, index) {
-          return educationExpansions(ExpansionListTile().headerList(context)[index], ExpansionListTile().titleList(context)[index]);
+          return educationExpansions(
+              ExpansionListTile().headerList(context)[index],
+              ExpansionListTile().titleList(context)[index]);
         },
-         itemCount: ExpansionListTile().headerList(context).length),
-    );
+        itemCount: ExpansionListTile().headerList(context).length);
   }
-
-  
 
   Widget educationExpansions(String title, String listTitle) {
     return ExpansionTile(

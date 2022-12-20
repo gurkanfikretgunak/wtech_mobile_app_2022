@@ -15,8 +15,8 @@ class CustomTextFormField extends StatefulWidget {
     this.onChanged,
   });
 
-  final IconData? suffixIcon;
-  final IconData? prefixIcon;
+  final Widget? suffixIcon;
+  final Widget? prefixIcon;
 
   final String? hintText;
   final String? labelText;
@@ -58,8 +58,9 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
                       )
                     : const Icon(Icons.visibility_off))
             : null,
-        prefixIcon: Icon(widget.prefixIcon),
-        contentPadding: EdgeInsets.symmetric(horizontal: context.dynamicWidth(0), vertical: 0),
+        prefixIcon: widget.prefixIcon,
+        contentPadding: EdgeInsets.symmetric(
+            horizontal: context.dynamicWidth(0), vertical: 0),
       ),
     );
   }

@@ -1,7 +1,8 @@
-
-
+import 'package:client/core/extensions/extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+
+import '../../../../gen/assets.gen.dart';
 
 class AssetLogo extends StatelessWidget {
   const AssetLogo({
@@ -10,6 +11,9 @@ class AssetLogo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SvgPicture.asset('images/logo.svg',height: 50);
+    return SizedBox(
+      height: context.dynamicHeight(0.1),
+      child: SvgPicture.asset(Assets.images.logoSvg),
+    );
   }
 }

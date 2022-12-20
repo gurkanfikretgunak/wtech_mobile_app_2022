@@ -67,7 +67,7 @@ class HomeViewWidget {
               height: context.dynamicHeight(0.055),
               width: context.dynamicWidth(0.75),
               child: CustomTextFormField(
-                prefixIcon: Icons.search,
+                prefixIcon: const Icon(Icons.search),
                 labelText: L10n.of(context)!.search,
               ),
             ),

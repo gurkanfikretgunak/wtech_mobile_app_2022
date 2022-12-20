@@ -22,12 +22,6 @@ class ApplysWidgets {
         const ApplysCardViewListView(
           applysCardType: SizedBox(),
         ),
-        const ApplysCardViewListView(
-          applysCardType: SizedBox(),
-        ),
-        const ApplysCardViewListView(
-          applysCardType: SizedBox(),
-        ),
       ],
     );
   }

@@ -21,7 +21,7 @@ class HomeView extends StatelessWidget with HomeViewWidget {
         return Scaffold(
           drawer: const DrawerWidget(),
           body: Padding(
-            padding: context.onlyLRTpaddingNormal,
+            padding: context.paddingNormal,
             child: Wrap(
               children: [
                 Column(
@@ -36,15 +36,21 @@ class HomeView extends StatelessWidget with HomeViewWidget {
                     ),
                     Padding(
                       padding: context.onlyTRpaddingNormal,
-                      child: Text(L10n.of(context)!.categories, style: Theme.of(context).textTheme.headline6),
+                      child: Text(L10n.of(context)!.categories,
+                          style: Theme.of(context).textTheme.headline6),
                     ),
                     SizedBox(
-                        height: context.dynamicHeight(0.098), width: context.width, child: const CategoriesWidget()),
+                        height: context.dynamicHeight(0.098),
+                        width: context.width,
+                        child: const CategoriesWidget()),
                     Padding(
                       padding: context.onlyTRpaddingNormal,
-                      child: Text(L10n.of(context)!.currentTraining, style: Theme.of(context).textTheme.headline6),
+                      child: Text(L10n.of(context)!.currentTraining,
+                          style: Theme.of(context).textTheme.headline6),
                     ),
-                    SizedBox(height: context.dynamicHeight(0.2), child: homeCardWidget(context)),
+                    SizedBox(
+                        height: context.dynamicHeight(0.2),
+                        child: homeCardWidget(context)),
                   ],
                 ),
               ],

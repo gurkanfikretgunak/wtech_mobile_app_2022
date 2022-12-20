@@ -24,80 +24,77 @@ class EducationCardWidget extends StatelessWidget {
     return StreamBuilder(
       stream: vm.heartFill,
       builder: (context, snapshot) {
-        return Padding(
-          padding: PaddingExtension(context).horizontalPaddingNormal,
-          child: GestureDetector(
-            onTap: () {
-              CustomNavigator.goToScreen(context, Routes.educationDetail.name);
-            },
-            child: Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(16),
-              ),
-              child: Column(
-                //mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Stack(
-                    children: [
-                      ClipRRect(borderRadius: BorderRadius.circular(16), child: Image.asset(Assets.images.education2.path)),
-                      Positioned(
-                        left: context.dynamicWidth(0.78),
-                        top: context.dynamicHeight(0.005),
-                        child: CircleAvatar(
-                          backgroundColor: ColorConstant.instance.white,
-                          child: CustomIconButton(
-                                onPressed: () async {
-                                  heart = vm.heartAnimation();
-                                },
-                                icon: heart
-                                    ? Icons.favorite
-                                    : Icons.favorite_border,
-                              ),
+        return GestureDetector(
+          onTap: () {
+            CustomNavigator.goToScreen(context, Routes.educationDetail.name);
+          },
+          child: Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+            ),
+            child: Column(
+              //mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Stack(
+                  children: [
+                    ClipRRect(
+                        borderRadius: BorderRadius.circular(16),
+                        child: Image.asset(Assets.images.education2.path)),
+                    Positioned(
+                      left: context.dynamicWidth(0.78),
+                      top: context.dynamicHeight(0.005),
+                      child: CircleAvatar(
+                        backgroundColor: ColorConstant.instance.white,
+                        child: CustomIconButton(
+                          onPressed: () async {
+                            heart = vm.heartAnimation();
+                          },
+                          icon: heart ? Icons.favorite : Icons.favorite_border,
                         ),
                       ),
-                    ],
-                  ),                  
-                  Padding(
-                    padding: PaddingExtension(context).paddingNormal,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const CustomText(
-                          "Genç Kariyer Eğitim Programı",
-                          fontSize: 18,
-                        ),
-                        context.emptySizedHeightBoxLow,
-                        CustomText(
-                          "Hopi ve Teknolojide Kadın Derneği iş birliği ile meslek tercihleri aşamasında yönlendirmeye ve geleceğe dair bilgiye ihtiyaç...",
-                          color: ColorConstant.instance.grey,
-                        ),
-                        context.emptySizedHeightBoxLow,
-                        Row(
-                          children: [
-                            RatingBar.builder(
-                              initialRating: 3,
-                              minRating: 1,
-                              direction: Axis.horizontal,
-                              allowHalfRating: false,
-                              itemCount: 5,
-                              itemSize: context.dynamicWidth(0.035),
-                              itemBuilder: (context, _) => Icon(
-                                Icons.star,
-                                color: ColorConstant.instance.yellow,
-                              ),
-                              onRatingUpdate: (rating) {
-                                print(rating);
-                              },
-                            ),
-                            const CustomText("(0)"),
-                          ],
-                        ),                        
-                      ],
                     ),
+                  ],
+                ),
+                Padding(
+                  padding: PaddingExtension(context).paddingNormal,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const CustomText(
+                        "Genç Kariyer Eğitim Programı",
+                        fontSize: 18,
+                      ),
+                      context.emptySizedHeightBoxLow,
+                      CustomText(
+                        "Hopi ve Teknolojide Kadın Derneği iş birliği ile meslek tercihleri aşamasında yönlendirmeye ve geleceğe dair bilgiye ihtiyaç...",
+                        color: ColorConstant.instance.grey,
+                      ),
+                      context.emptySizedHeightBoxLow,
+                      Row(
+                        children: [
+                          RatingBar.builder(
+                            initialRating: 3,
+                            minRating: 1,
+                            direction: Axis.horizontal,
+                            allowHalfRating: false,
+                            itemCount: 5,
+                            itemSize: context.dynamicWidth(0.035),
+                            itemBuilder: (context, _) => Icon(
+                              Icons.star,
+                              color: ColorConstant.instance.yellow,
+                            ),
+                            onRatingUpdate: (rating) {
+                              print(rating);
+                            },
+                          ),
+                          const CustomText("(0)"),
+                        ],
+                      ),
+                    ],
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         );

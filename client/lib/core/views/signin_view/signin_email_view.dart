@@ -58,25 +58,21 @@ class _MainScreenState extends State<SignInEmailView> with SignInWidget {
                     Text(L10n.of(context)!.rememberMe),
                   ],
                 ),
-                TextButton(
-                    onPressed: () {
-                      CustomNavigator.goToScreen(context, Routes.forgotPassword.name);
-                    },
-                    child: Text(
-                      L10n.of(context)!.forgotPassword,
-                    ))
+                CustomTextButton(
+                  onPressed: () {
+                    CustomNavigator.goToScreen(
+                        context, Routes.forgotPassword.name);
+                  },
+                  text: L10n.of(context)!.forgotPassword,
+                )
               ],
             ),
-            SizedBox(
-              width: context.dynamicWidth(1),
-              height: context.dynamicHeight(0.065),
-              child: CustomElevatedButton(
-                onPressed: () {
-                  CustomNavigator.goToScreen(context, Routes.home.name);
-                },
-                text: L10n.of(context)!.signIn,
-                fontSize: 17,
-              ),
+            CustomElevatedButton(
+              onPressed: () {
+                CustomNavigator.goToScreen(context, Routes.home.name);
+              },
+              text: L10n.of(context)!.signIn,
+              fontSize: 17,
             ),
             const CustomDivider(endIndent: 0),
             const SignUpForNotRemember(),

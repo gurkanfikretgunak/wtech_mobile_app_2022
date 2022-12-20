@@ -1,4 +1,7 @@
+import 'package:client/core/extensions/extension.dart';
 import 'package:client/core/views/common/widgets/button/button_libary.dart';
+import 'package:client/core/views/common/widgets/custom_appbar.dart';
+import 'package:client/core/views/common/widgets/text/text_library.dart';
 import 'package:client/core/views/forgot_password_view/forgotpass.widgets.dart';
 import 'package:client/core/views/forgot_password_view/fotgotpass.viewmodel.dart';
 import 'package:client/core/views/forgot_password_view/widgets/asset_logo.dart';
@@ -16,25 +19,41 @@ class ForgotPasswordView extends StatelessWidget with ForgotPasswordWidgets {
   Widget build(BuildContext context) {
     TextEditingController? forgotPasswordContorller;
     return Scaffold(
-        body: Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const AssetLogo(),
-          text(L10n.of(context)!.forgotPassword,
-              TextStyle(fontSize: 15, fontWeight: FontWeight.w400, color: ColorConstant.instance.grey)),
-          const Padding(padding: EdgeInsets.only(top: 20)),
-          text(L10n.of(context)!.forgotPasswordDescription,
-              TextStyle(fontSize: 15, fontWeight: FontWeight.w400, color: ColorConstant.instance.grey)),
-          const Padding(padding: EdgeInsets.only(top: 20)),
-          textButton(L10n.of(context)!.backLogin,
-              TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: ColorConstant.instance.blue), () {}),
-          const Padding(padding: EdgeInsets.only(top: 20)),
-          inputTextField(forgotPasswordContorller!, L10n.of(context)!.emailOrPhone, Icons.mail_outline),
-          const Padding(padding: EdgeInsets.only(top: 30)),
-          CustomElevatedButton(onPressed: () {}, text: L10n.of(context)!.resetPassword)
-        ],
-      ),
-    ));
+        appBar: const CustomAppbar(),
+        body: Padding(
+          padding: context.paddingMedium,
+          child: Column(
+            children: [
+              const Expanded(child: AssetLogo()),
+              text(
+                  L10n.of(context)!.forgotPassword,
+                  TextStyle(
+                      fontSize: 26,
+                      fontWeight: FontWeight.w500,
+                      color: ColorConstant.instance.grey)),
+              context.emptySizedHeightBoxNormal,
+              text(
+                L10n.of(context)!.forgotPasswordDescription,
+                TextStyle(fontSize: 16, color: ColorConstant.instance.grey),
+              ),
+              context.emptySizedHeightBoxNormal,
+              textButton(
+                  L10n.of(context)!.backLogin,
+                  const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  () {}),
+              context.emptySizedHeightBoxNormal,
+              const CustomTextFormField(
+                prefixIcon: Icon(Icons.mail_outline),
+                hintText: "E-Posta veya telefon",
+              ),
+              context.emptySizedHeightBoxNormal,
+              context.emptySizedHeightBoxNormal,
+              context.emptySizedHeightBoxNormal,
+              CustomElevatedButton(
+                  onPressed: () {}, text: L10n.of(context)!.resetPassword),
+              const Spacer()
+            ],
+          ),
+        ));
   }
 }

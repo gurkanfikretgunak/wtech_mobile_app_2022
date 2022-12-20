@@ -26,10 +26,8 @@ class BottomNavBarViewModel extends BaseViewModel {
       case 1:
         return "Eğitimler";
       case 2:
-        return L10n.of(context)!.events;
-      case 3:
         return L10n.of(context)!.favorites;
-      case 4:
+      case 3:
         return L10n.of(context)!.apply;
       default:
     }

@@ -11,14 +11,15 @@ class SignInWidget {
     return Container();
   }
 
-  Widget emailTextField(BuildContext context, TextEditingController emailTextController) {
+  Widget emailTextField(
+      BuildContext context, TextEditingController emailTextController) {
     final _vm = GetIt.I.get<AuthenticationViewModel>();
 
     return StreamBuilder<Object>(
         stream: _vm.email,
         builder: (context, snapshot) {
           return CustomTextFormField(
-              prefixIcon: Icons.mail_outline,
+              prefixIcon: const Icon(Icons.mail_outline),
               labelText: L10n.of(context)!.email,
               controller: emailTextController,
               onChanged: (text) {
@@ -28,14 +29,15 @@ class SignInWidget {
         });
   }
 
-  Widget passwordTextField(BuildContext context, TextEditingController passwordTextController) {
+  Widget passwordTextField(
+      BuildContext context, TextEditingController passwordTextController) {
     final _vm = GetIt.I.get<AuthenticationViewModel>();
 
     return StreamBuilder<Object>(
         stream: _vm.password,
         builder: (context, snapshot) {
           return CustomTextFormField(
-            prefixIcon: Icons.lock_outline,
+            prefixIcon: const Icon(Icons.lock_outline),
             labelText: L10n.of(context)!.password,
             isPassword: true,
             controller: passwordTextController,

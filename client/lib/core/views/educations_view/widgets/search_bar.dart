@@ -17,7 +17,8 @@ class SearchBarWidget extends StatelessWidget {
       width: context.dynamicWidth(1),
       decoration: BoxDecoration(
         color: ColorConstant.instance.white,
-        borderRadius: const BorderRadius.only(bottomLeft: Radius.circular(16), bottomRight: Radius.circular(16)),
+        borderRadius: const BorderRadius.only(
+            bottomLeft: Radius.circular(16), bottomRight: Radius.circular(16)),
         boxShadow: [
           BoxShadow(
             color: ColorConstant.instance.black,
@@ -41,7 +42,7 @@ class SearchBarWidget extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: CustomTextFormField(
-                  prefixIcon: Icons.search,
+                  prefixIcon: const Icon(Icons.search),
                   labelText: L10n.of(context)!.search,
                 ),
               ),
