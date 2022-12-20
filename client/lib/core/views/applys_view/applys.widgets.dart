@@ -16,7 +16,7 @@ class ApplysWidgets {
     return TabBarView(
       children: [
         ApplysCardViewListView(
-          applysCardType: ApplysCardWidget(state: true),
+          applysCardType: ApplysCardWidget(state: false),
         ),
         const ApplysCardViewListView(
           applysCardType: SizedBox(),
