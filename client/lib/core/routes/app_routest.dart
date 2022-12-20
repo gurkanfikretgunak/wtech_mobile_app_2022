@@ -3,6 +3,7 @@ import 'package:client/core/views/blogs_view/blogs.view.dart';
 import 'package:client/core/views/educations_detail_view/educations_detail.view.dart';
 import 'package:client/core/views/educations_view/educations.view.dart';
 import 'package:client/core/views/events_view/events.view.dart';
+import 'package:client/core/views/forgot_password_view/forgotpass.view.dart';
 import 'package:client/core/views/help_view/help.view.dart';
 import 'package:client/core/views/jobs_details_view/jobs_detail.view.dart';
 import 'package:client/core/views/jobs_view/jobs.view.dart';
@@ -51,8 +52,7 @@ class AppRoutes {
         // TODO: Handle this case.
         break;
       case Routes.forgotPassword:
-        // TODO: Handle this case.
-        break;
+        return navigate(ForgotPasswordView());
       case Routes.home:
         return navigate(CustomBottomNavBar());
 

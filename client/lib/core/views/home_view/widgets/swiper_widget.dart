@@ -16,7 +16,7 @@ class EventSwiperWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
             child: Image.asset(
               HomeTextContants.eventPath[index],
-              fit: BoxFit.fill,
+              fit: BoxFit.cover,
             ),
           );
         },

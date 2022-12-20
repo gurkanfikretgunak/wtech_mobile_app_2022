@@ -12,6 +12,7 @@ class CustomText extends StatelessWidget {
     this.fontSize,
     this.fontWeight,
     this.wordSpacing,
+    this.underlineText,
   });
   final String text;
   final TextAlign? textAlign;
@@ -21,19 +22,19 @@ class CustomText extends StatelessWidget {
   final double? fontSize;
   final FontWeight? fontWeight;
   final double? wordSpacing;
+  final TextDecoration? underlineText;
   @override
   Widget build(BuildContext context) {
-    return Text(
-      text,
-      textAlign: textAlign,
-      maxLines: maxLines,
-      overflow: overflow,
-      style: TextStyle(
-        color: color ?? ColorConstant.instance.black,
-        fontSize: fontSize,
-        fontWeight: fontWeight,
-        wordSpacing: wordSpacing,
-      ),
-    );
+    return Text(text,
+        textAlign: textAlign,
+        maxLines: maxLines,
+        overflow: overflow,
+        style: TextStyle(
+          color: color ?? Theme.of(context).textSelectionTheme.cursorColor,
+          fontSize: fontSize,
+          fontWeight: fontWeight,
+          wordSpacing: wordSpacing,
+          decoration: underlineText,
+        ));
   }
 }

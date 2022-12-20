@@ -20,30 +20,26 @@ class _MainScreenState extends State<SignInAccountView> with SignInWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: context.horizontalPaddingNormal,
-          child: Wrap(
-            alignment: WrapAlignment.center,
-            runSpacing: 60,
-            children: [
-              const Logo(),
-              signInAccountButton(context),
-              const CustomSignInAccountDivider(),
-              SizedBox(
-                width: context.dynamicWidth(1),
-                height: context.dynamicHeight(0.04),
-                child: CustomElevatedButton(
-                  onPressed: () {
-                    CustomNavigator.goToScreen(
-                        context, Routes.signinWithEmail.name);
-                  },
-                  text: L10n.of(context)!.signInEmail,
-                ),
-              ),
-              const SignInBottomDescription(),
-            ],
-          ),
+      body: Padding(
+        padding: context.paddingMedium,
+        child: Wrap(
+          alignment: WrapAlignment.center,
+          runSpacing: 48,
+          children: [
+            Padding(
+              padding: context.onlyTopPaddingHigh,
+              child: const Logo(),
+            ),
+            signInAccountButton(context),
+            const CustomSignInAccountDivider(),
+            CustomElevatedButton(
+              onPressed: () {
+                CustomNavigator.goToScreen(context, Routes.signinWithEmail.name);
+              },
+              text: L10n.of(context)!.signInEmail,
+            ),
+            const SignInBottomDescription(),
+          ],
         ),
       ),
     );
