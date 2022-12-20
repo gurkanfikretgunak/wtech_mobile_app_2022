@@ -1,5 +1,6 @@
 import 'package:client/core/extensions/extension.dart';
 import 'package:client/core/views/jobs_view/widgets/jobs_card_widget.dart';
+import 'package:client/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 
 class JobsWidgets {
@@ -11,12 +12,10 @@ class JobsWidgets {
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         crossAxisSpacing: 10,
-        mainAxisSpacing: context.dynamicHeight(0.2),
-        //childAspectRatio: 0.5,
+        childAspectRatio: context.width / context.height * 1.15,
       ),
-      itemBuilder: (context, index) => const JobsCardWidget(
-          imageUrl:
-              "https://storagewtech.blob.core.windows.net/files/posts/posts_370_16644637286335b370bb4e3.jpeg",
+      itemBuilder: (context, index) => JobsCardWidget(
+          imageUrl: Assets.images.job1.path,
           applyTime: "10.11.2022",
           institution: "Women in Technology Association",
           role: "Project Management Assistant",
