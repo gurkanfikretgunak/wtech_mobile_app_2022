@@ -1,9 +1,11 @@
+import 'package:client/core/utils/constants/colors/color_constans.dart';
 import 'package:flutter/material.dart';
-import '../../constants/colors/color_constans.dart';
 
 class CustomTabBarTheme {
   static TabBarTheme tabbarTheme() {
     return TabBarTheme(
+      labelColor: ColorConstant.instance.white,
+      unselectedLabelColor: ColorConstant.instance.yellow,
       indicatorSize: TabBarIndicatorSize.label,
       indicator: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
