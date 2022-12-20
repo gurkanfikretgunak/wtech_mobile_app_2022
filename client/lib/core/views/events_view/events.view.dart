@@ -22,7 +22,7 @@ class _EventsViewState extends State<EventsView> {
         child: Scaffold(
       appBar: CustomAppbar(
         titleText: L10n.of(context)!.events,
-        isCheck: true,
+        isCheck: false,
         isName: false,
       ),
       drawer: const DrawerWidget(),

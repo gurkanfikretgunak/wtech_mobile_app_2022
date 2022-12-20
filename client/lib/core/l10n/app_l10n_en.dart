@@ -128,18 +128,6 @@ class L10nEn extends L10n {
   String get examine => 'Examine';
 
   @override
-  String get signInGoogle => 'Sign in with Google.';
-
-  @override
-  String get signInFacebook => 'Sign in with Facebook.';
-
-  @override
-  String get signInGithub => 'Sign in with Github.';
-
-  @override
-  String get signInApple => 'Sign in with Apple.';
-
-  @override
   String get signInEmail => 'Sign in with E-mail.';
 
   @override
@@ -639,4 +627,58 @@ class L10nEn extends L10n {
 
   @override
   String get descriptionEvents => 'It builds the necessary bridge for talents and institutions to come together. You are in the right place to make a difference in technology!';
+
+  @override
+  String get opportunitiyEquality => 'It provides the opportunity to train curious, inquisitive, productive, courageous and self-confident technologists who provide equal opportunities.';
+
+  @override
+  String get madeUsSprecial => 'What Makes Us Special?';
+
+  @override
+  String get associationDescription => 'Zehra Öney, who has been working as a professional manager and entrepreneur in the technology sector since the early 2000s, especially in production, research and development, digital and mobile marketing, artificial intelligence, augmented reality, big data, machine learning, joined on 31 January 2019 with the intention of progressing towards the same goal. It was founded with 75 founding corporate members. Click here to access our corporate member list, which includes institutions such as HP Turkey, Denizbank, Tempo Call Center, Vodafone Turkey, Microsoft, Gittigidiyor, Akbank, Arçelik, Limak Holding, Yemeksepeti, UiPath, EnerjiSA, Pegasus, Migros, Adcolony and Baker&McKenzie. Zehra Öney, With all its work and experience in the field of technology with its agency 360+ Media Interactive Technologies, it is an important vision for the association to increase its investments in people and especially women in this field, to train more qualified human resources in the fields of technical expertise, and to enable women to have a voice as role models in this field. and was elected as the Founding Chairman of the Board of our association, which is a first in Turkey. Öney started the preliminary studies of the establishment of our association in 2017, brought the Wtech Platform into practice, gathered feedback on the activities of the association, and met with local and multinational companies in Turkey to get their opinions on this issue, and brought the establishment to life with these companies and their participation in this goal. While our association was being established, the main purpose was to fill the need for specialists in the fields of science and technology, to increase the number of trained individuals by investing in specialist training, to make Turkey an advantageous country in global competition with a strong technology; Thus, the objectives of increasing Turkey\'s welfare power were set. Our association reached more than 150 members in a short time after its establishment and started to sign successful projects with its fast, focused and disciplined working principle compared to many associations at the start-up level.';
+
+  @override
+  String get whoAreWe => 'Who Are We?';
+
+  @override
+  String get whatAreWeDoing => 'What Are We Doing?';
+
+  @override
+  String get ourGoal => 'Our Goal';
+
+  @override
+  String get educationProgram => 'Education Program';
+
+  @override
+  String get wtechStudent => 'Wtech Student';
+
+  @override
+  String get wtechGraduate => 'Wtech Graduate';
+
+  @override
+  String get platformMember => 'Platform Members';
+
+  @override
+  String get applys => 'Applys';
+
+  @override
+  String get educations => 'Educations';
+
+  @override
+  String get wtechForCareer => 'WTECH PLATFORM FOR YOUR CAREER AND STUDY LIFE';
+
+  @override
+  String get accepted => 'Accepted';
+
+  @override
+  String get evaluating => 'Evaluating';
+
+  @override
+  String get signinWith => 'Sign in with';
+
+  @override
+  String get deleteAccountInformation => '*Do you really want to delete this account?';
+
+  @override
+  String get deleteAccount => 'Delete Account';
 }

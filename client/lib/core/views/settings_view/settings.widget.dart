@@ -4,11 +4,12 @@ import 'package:client/core/views/common/widgets/text/custom_text.dart';
 import 'package:client/core/views/settings_view/widget/card_settings.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
+
 import '../../constants/color_constans.dart';
 
 class SettingsViewWidget {
-  Widget settingCards(
-      BuildContext context, List<String> itemCountText, double heightCard, String categoriesText, bool isSwitcher) {
+  Widget settingCards(BuildContext context, List<String> itemCountText,
+      double heightCard, String categoriesText, bool isSwitcher) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -20,10 +21,10 @@ class SettingsViewWidget {
           ),
         ),
         SizedBox(
-          height: context.dynamicHeight(heightCard),
-          width: context.width,
+          height: context.dynamicHeight(heightCard / 1.4),
           child: ListView.builder(
             itemCount: itemCountText.length,
+            physics: const NeverScrollableScrollPhysics(),
             itemBuilder: (context, index) {
               return SettingsCardWidget(
                 onTap: () {},

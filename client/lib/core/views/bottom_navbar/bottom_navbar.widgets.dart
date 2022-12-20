@@ -21,10 +21,6 @@ class BottomNavBarWidgets {
           label: "Eğitimler",
         ),
         BottomNavigationBarItem(
-          icon: const Icon(Icons.event),
-          label: L10n.of(context)!.events,
-        ),
-        BottomNavigationBarItem(
           icon: const Icon(Icons.favorite_border_outlined),
           label: L10n.of(context)!.favorites,
         ),

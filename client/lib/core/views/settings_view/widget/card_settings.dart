@@ -24,9 +24,7 @@ class SettingsCardWidget extends StatelessWidget {
       color: Theme.of(context).primaryColor,
       elevation: 0.1,
       child: Container(
-        decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: Theme.of(context).primaryColor),
-        height: context.dynamicHeight(0.08),
-        width: context.dynamicWidth(0.1),
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: ColorConstant.instance.settingGrey),
         child: Wrap(
           alignment: WrapAlignment.spaceBetween,
           crossAxisAlignment: WrapCrossAlignment.center,
