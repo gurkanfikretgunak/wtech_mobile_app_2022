@@ -2,11 +2,11 @@ import 'package:client/core/domain/models/news/news_model.dart';
 import 'package:client/core/extensions/extension.dart';
 import 'package:client/core/views/common/widgets/text/custom_text.dart';
 import 'package:flutter/material.dart';
+
 import '../../constants/color_constans.dart';
 import '../../l10n/app_l10n.dart';
-
-import '../common/widgets/custom_image.dart';
 import '../common/widgets/custom_date_text.dart';
+import '../common/widgets/custom_image.dart';
 import '../common/widgets/custom_views_count.dart';
 
 class NewsDetailWidgets {
@@ -77,7 +77,12 @@ class NewsDetailWidgets {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CustomText(news.detail, fontSize: 15),
+            CustomText(
+              news.detail,
+              fontSize: 15,
+              overflow: TextOverflow.ellipsis,
+              maxLines: 6,
+            ),
             TextButton(
               onPressed: () {},
               child: CustomText(

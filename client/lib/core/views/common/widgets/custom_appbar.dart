@@ -1,6 +1,6 @@
 import 'package:client/core/extensions/extension.dart';
 import 'package:flutter/material.dart';
-import 'package:logger/logger.dart';
+
 import '../../../../gen/assets.gen.dart';
 import '../../../enums/routes.enum.dart';
 import '../../../routes/custom_navigator.dart';
@@ -10,7 +10,8 @@ class CustomAppbar extends StatelessWidget with PreferredSizeWidget {
   final bool? isCheck;
   final bool? isName;
   final TextButton? appButton;
-  const CustomAppbar({Key? key, this.isCheck = false, this.appButton, this.titleText, this.isName}) : super(key: key);
+  const CustomAppbar({Key? key, this.isCheck = false, this.appButton, this.titleText, this.isName = false})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
