@@ -13,6 +13,8 @@ class JobsDetailView extends StatelessWidget with JobsDetailWidgets {
     return Scaffold(
       appBar: CustomAppbar(
         titleText: L10n.of(context)!.jobAndinternship,
+        isCheck: false,
+        isName: false,
       ),
       body: SingleChildScrollView(child: body(context)),
     );
