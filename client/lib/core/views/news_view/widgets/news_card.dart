@@ -2,9 +2,8 @@ import 'package:client/core/domain/models/news/news_model.dart';
 import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/views/news_detail_view/news_detail.view.dart';
 import 'package:client/core/views/news_view/news.widgets.dart';
+import 'package:client/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../gen/assets.gen.dart';
 
 class NewsCard extends StatelessWidget with NewsWidgets {
   NewsCard({
