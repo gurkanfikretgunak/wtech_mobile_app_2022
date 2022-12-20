@@ -1,10 +1,9 @@
+import 'package:client/core/l10n/app_l10n.dart';
+import 'package:client/core/views/authentication/authentication.viewmodel.dart';
+import 'package:client/core/views/common/widgets/text/custom_textfield.dart';
 import 'package:client/core/views/signin_view/widgets/sigin_account_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
-
-import '../../l10n/app_l10n.dart';
-import '../authentication/authentication.viewmodel.dart';
-import '../common/widgets/text/custom_textfield.dart';
 
 class SignInWidget {
   Widget form(BuildContext context) {
