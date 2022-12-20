@@ -1,6 +1,8 @@
 import 'package:client/core/constants/color_constans.dart';
+import 'package:client/core/enums/routes.enum.dart';
 import 'package:client/core/extensions/extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
+import 'package:client/core/routes/custom_navigator.dart';
 import 'package:client/core/views/common/widgets/button/button_libary.dart';
 import 'package:client/core/views/common/widgets/custom_date_text.dart';
 import 'package:client/core/views/common/widgets/custom_views_count.dart';
@@ -117,7 +119,10 @@ class JobsCardWidget extends StatelessWidget {
                           children: [
                             CustomElevatedButton(
                               width: context.dynamicWidth(0.2),
-                              onPressed: () {},
+                              onPressed: () {
+                                CustomNavigator.goToScreen(
+                                    context, Routes.jobDetail.name);
+                              },
                               text: L10n.of(context)?.details ?? '',
                               textColor: ColorConstant.instance.white,
                               // buttonColor: false,
