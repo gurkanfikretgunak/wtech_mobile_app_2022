@@ -1,4 +1,4 @@
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/views/events_detail_view/widgets/base_bottom_sheet_header.dart';
 import 'package:client/core/views/events_detail_view/widgets/events_detail.dart';
 import 'package:flutter/material.dart';

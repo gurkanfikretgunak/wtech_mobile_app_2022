@@ -1,5 +1,4 @@
 import 'package:client/core/extensions/extension.dart';
-import 'package:client/core/views/home_view/temporary_contants.dart/text_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:card_swiper/card_swiper.dart';
 

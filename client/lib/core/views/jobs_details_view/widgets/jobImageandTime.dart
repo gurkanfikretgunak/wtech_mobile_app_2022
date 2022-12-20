@@ -1,5 +1,5 @@
-import 'package:client/core/constants/color_constans.dart';
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/constants/colors/color_constans.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_timer_countdown/flutter_timer_countdown.dart';
 

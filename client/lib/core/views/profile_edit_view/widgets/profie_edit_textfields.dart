@@ -1,8 +1,7 @@
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/views/common/widgets/text/custom_textfield.dart';
 import 'package:client/core/views/profile_edit_view/constants/profile_edit_const.dart';
 import 'package:flutter/material.dart';
-import 'package:path/path.dart';
 
 class ProfileEditTextFields extends StatelessWidget {
   const ProfileEditTextFields({super.key});

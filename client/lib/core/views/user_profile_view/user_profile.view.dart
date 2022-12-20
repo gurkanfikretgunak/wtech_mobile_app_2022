@@ -1,4 +1,4 @@
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/common/widgets/custom_appbar.dart';
 import 'package:client/core/views/common/widgets/text/custom_text.dart';
@@ -35,7 +35,7 @@ class UserProfileView extends StatelessWidget with UserProfileWidgets {
                   ),
                   child: Column(
                     children: [
-                      SizedBox(height: 30),
+                      const SizedBox(height: 30),
                       userNameText(context),
                       const CustomText("gurkan@gmail.com"),
                       context.emptySizedHeightBoxHigh,

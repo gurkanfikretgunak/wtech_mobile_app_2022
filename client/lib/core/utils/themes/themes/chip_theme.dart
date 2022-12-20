@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../constants/color_constans.dart';
+import '../../constants/colors/color_constans.dart';
 
 class CustomChipTheme {
   static ChipThemeData chipTheme() {

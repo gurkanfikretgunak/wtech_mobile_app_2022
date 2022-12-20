@@ -1,13 +1,13 @@
-import 'package:client/core/constants/color_constans.dart';
+import 'package:client/core/utils/constants/colors/color_constans.dart';
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/common/widgets/button/custom_button_elevated.dart';
 import 'package:client/core/views/onboarding_view/widgets/dot_indicator.dart';
 import 'package:client/core/views/onboarding_view/widgets/onboarding_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 
 import '../../../gen/assets.gen.dart';
-import '../../enums/routes.enum.dart';
+import '../../utils/constants/enums/routes.enum.dart';
 import '../../routes/custom_navigator.dart';
 
 class OnboardingView extends StatefulWidget {

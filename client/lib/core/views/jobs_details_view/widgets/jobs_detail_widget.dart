@@ -1,8 +1,8 @@
-import 'package:client/core/constants/color_constans.dart';
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/constants/colors/color_constans.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
-import 'package:client/core/views/common/widgets/button/button_libary.dart';
-import 'package:client/core/views/common/widgets/text/text_library.dart';
+import 'package:client/core/views/common/widgets/button/custom_button_libary.dart';
+import 'package:client/core/views/common/widgets/text/custom_text_library.dart';
 import 'package:client/core/views/jobs_details_view/widgets/jobExpansionTile.dart';
 import 'package:client/core/views/jobs_details_view/widgets/jobImageandTime.dart';
 import 'package:client/core/views/jobs_details_view/widgets/jobsApplyBottomSheet.dart';
@@ -34,7 +34,9 @@ class JobsDetailWidget extends StatelessWidget {
       children: [
         Padding(
           padding: context.paddingNormal,
-          child: Center(child: CustomText(jobDetailTitle ?? "", fontSize: 20, fontWeight: FontWeight.bold)),
+          child: Center(
+              child: CustomText(jobDetailTitle ?? "",
+                  fontSize: 20, fontWeight: FontWeight.bold)),
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -109,7 +111,8 @@ Widget floatingActionButton(BuildContext context) {
     child: CustomElevatedButton(
       onPressed: () {
         showModalBottomSheet(
-          shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+          shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
           context: context,
           isScrollControlled: true,
           builder: (context) => const JobsDetailBottomSheetWidget(),

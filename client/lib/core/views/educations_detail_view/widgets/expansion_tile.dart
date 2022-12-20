@@ -1,5 +1,4 @@
-import 'package:client/core/constants/color_constans.dart';
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/constants/colors/color_constans.dart';
 import 'package:client/core/views/common/widgets/text/custom_text.dart';
 import 'package:client/core/views/educations_detail_view/widgets/expansion_tile_list.dart';
 import 'package:flutter/material.dart';

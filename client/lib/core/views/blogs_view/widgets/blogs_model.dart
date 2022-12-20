@@ -1,5 +1,3 @@
-import '../../../../gen/assets.gen.dart';
-
 class BlogsModel {
   String? title;
   String? author;

@@ -1,8 +1,9 @@
 import 'package:client/core/views/abstractions/base_view_model.dart';
 import 'package:injectable/injectable.dart';
+// ignore: depend_on_referenced_packages
 import 'package:rxdart/rxdart.dart';
 
-import '../../data/local/theme_preference.dart';
+import '../../../data/local/theme_preference.dart';
 
 @Injectable()
 class ChangeThemeViewModel extends BaseViewModel with ThemeChangePreference {

@@ -1,5 +1,5 @@
 import 'package:chewie/chewie.dart';
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/common/widgets/text/custom_text.dart';
 import 'package:client/core/views/videos_view/widgets/card_item_widget.dart';

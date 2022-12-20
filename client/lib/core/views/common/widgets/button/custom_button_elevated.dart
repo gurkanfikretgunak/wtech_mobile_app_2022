@@ -1,7 +1,6 @@
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../constants/color_constans.dart';
+import '../../../../utils/constants/colors/color_constans.dart';
 import '../text/custom_text.dart';
 
 class CustomElevatedButton extends StatelessWidget {

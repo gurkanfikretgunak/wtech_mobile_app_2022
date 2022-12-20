@@ -1,11 +1,7 @@
-
-
-
-
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:flutter/material.dart';
 
-import '../../../constants/color_constans.dart';
+import '../../../utils/constants/colors/color_constans.dart';
 import '../../common/widgets/text/custom_text.dart';
 import '../support_constants/support_text_const.dart';
 
@@ -22,27 +18,31 @@ class CustomGridView extends StatelessWidget {
         child: GridView.builder(
           shrinkWrap: true,
           scrollDirection: Axis.vertical,
-          
           itemCount: 67,
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount( 
-            crossAxisCount: 2,
-            crossAxisSpacing: 20,
-            mainAxisSpacing: 20,
-            childAspectRatio: 1.5
-          ),      
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              crossAxisSpacing: 20,
+              mainAxisSpacing: 20,
+              childAspectRatio: 1.5),
           itemBuilder: (context, index) {
-            return Container(  
+            return Container(
               color: ColorConstant.instance.textFormFieldBorderColor,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(child: Image(image: NetworkImage(SupportTextConstants.imagePath()[index]))),
+                  Container(
+                      child: Image(
+                          image: NetworkImage(
+                              SupportTextConstants.imagePath()[index]))),
                   Padding(padding: context.paddingLow),
-                  CustomText(SupportTextConstants().instutionConstant(context)[index],)
+                  CustomText(
+                    SupportTextConstants().instutionConstant(context)[index],
+                  )
                 ],
               ),
             );
-          },),
+          },
+        ),
       ),
     );
   }

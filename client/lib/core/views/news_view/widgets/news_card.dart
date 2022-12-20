@@ -1,5 +1,5 @@
 import 'package:client/core/domain/models/news/news_model.dart';
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/views/news_detail_view/news_detail.view.dart';
 import 'package:client/core/views/news_view/news.widgets.dart';
 import 'package:flutter/material.dart';
@@ -36,7 +36,10 @@ class NewsCard extends StatelessWidget with NewsWidgets {
                 children: [
                   Row(
                     children: [
-                      Expanded(child: cardImage(imagePath: Assets.images.news1.path, context: context)),
+                      Expanded(
+                          child: cardImage(
+                              imagePath: Assets.images.news1.path,
+                              context: context)),
                     ],
                   ),
                   Padding(
@@ -59,7 +62,8 @@ class NewsCard extends StatelessWidget with NewsWidgets {
               )
             : Row(
                 children: [
-                  cardImage(imagePath: Assets.images.deneme.path, context: context),
+                  cardImage(
+                      imagePath: Assets.images.deneme.path, context: context),
                   const Spacer(),
                   Expanded(
                     flex: 6,

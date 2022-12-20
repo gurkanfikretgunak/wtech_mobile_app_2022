@@ -1,20 +1,18 @@
-import 'package:client/core/extensions/extension.dart';
-import 'package:client/core/views/common/widgets/button/button_libary.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
+import 'package:client/core/views/common/widgets/button/custom_button_libary.dart';
 import 'package:client/core/views/common/widgets/custom_appbar.dart';
-import 'package:client/core/views/common/widgets/text/text_library.dart';
+import 'package:client/core/views/common/widgets/text/custom_text_library.dart';
 import 'package:client/core/views/forgot_password_view/forgotpass.widgets.dart';
-import 'package:client/core/views/forgot_password_view/fotgotpass.viewmodel.dart';
 import 'package:client/core/views/forgot_password_view/widgets/asset_logo.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
 
-import '../../constants/color_constans.dart';
+import '../../utils/constants/colors/color_constans.dart';
 import '../../l10n/app_l10n.dart';
 
+// ignore: must_be_immutable
 class ForgotPasswordView extends StatelessWidget with ForgotPasswordWidgets {
   ForgotPasswordView({super.key});
 
-  final _vm = GetIt.I.get<ForgotPasswordViewModel>();
   @override
   Widget build(BuildContext context) {
     TextEditingController? forgotPasswordContorller;

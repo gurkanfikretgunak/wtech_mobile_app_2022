@@ -15,7 +15,7 @@ import 'package:client/core/views/signup_view/signup.view.dart';
 import 'package:client/core/views/user_profile_view/user_profile.view.dart';
 import 'package:client/core/views/videos_view/videos.view.dart';
 import 'package:flutter/material.dart';
-import '../enums/routes.enum.dart';
+import '../utils/constants/enums/routes.enum.dart';
 import '../views/bottom_navbar/bottom_navbar.view.dart';
 import '../views/founding_members_view/founding.members.view.dart';
 import '../views/onboarding_view/onboarding.view.dart';
@@ -102,9 +102,9 @@ class AppRoutes {
 
       case Routes.missionAndVision:
         return navigate(const HelpView(
-          appbarText: 'Mission and Vision',
-          expansionText: "fjdk",
-          expansionTextTwo: "fdjkl",
+          appbarText: '-',
+          expansionText: "Title Help - 1",
+          expansionTextTwo: "Title Help - 2",
         ));
 
       default:

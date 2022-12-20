@@ -1,5 +1,5 @@
-import 'package:client/core/constants/color_constans.dart';
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/constants/colors/color_constans.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextFormField extends StatefulWidget {
@@ -61,7 +61,8 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
                     : const Icon(Icons.visibility_off))
             : null,
         prefixIcon: widget.prefixIcon,
-        contentPadding: EdgeInsets.symmetric(horizontal: context.dynamicWidth(0), vertical: 0),
+        contentPadding: EdgeInsets.symmetric(
+            horizontal: context.dynamicWidth(0), vertical: 0),
       ),
     );
   }

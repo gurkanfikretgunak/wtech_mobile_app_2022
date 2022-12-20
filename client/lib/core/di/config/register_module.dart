@@ -2,7 +2,6 @@ import 'package:client/core/di/config/raw_helper.dart';
 import 'package:client/core/env_loader.dart';
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
-
 import 'app_config.dart';
 
 @module

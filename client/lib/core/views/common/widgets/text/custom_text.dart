@@ -1,4 +1,3 @@
-import 'package:client/core/constants/color_constans.dart';
 import 'package:flutter/material.dart';
 
 class CustomText extends StatelessWidget {

@@ -55,22 +55,22 @@ class SignInWidget {
         SignInAccountButton(
           icon: "assets/images/google.svg",
           text: L10n.of(context)!.signinWith,
-          socialText: "Google",
+          socialText: "",
         ),
         SignInAccountButton(
           icon: "assets/images/facebook.svg",
           text: L10n.of(context)!.signinWith,
-          socialText: "Facebook",
+          socialText: "",
         ),
         SignInAccountButton(
           icon: "assets/images/apple.svg",
           text: L10n.of(context)!.signinWith,
-          socialText: "Apple",
+          socialText: "",
         ),
         SignInAccountButton(
           icon: "assets/images/github.svg",
           text: L10n.of(context)!.signinWith,
-          socialText: "Github",
+          socialText: "",
         ),
       ],
     );

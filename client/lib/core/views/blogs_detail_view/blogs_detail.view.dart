@@ -1,8 +1,6 @@
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/views/blogs_detail_view/blogs_detail.widgets.dart';
 import 'package:client/core/views/blogs_view/widgets/blogs_model.dart';
-import 'package:client/core/views/common/widgets/button/button_libary.dart';
-import 'package:client/core/views/common/widgets/text/text_library.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 

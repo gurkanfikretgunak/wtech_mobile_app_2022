@@ -1,5 +1,5 @@
-import 'package:client/core/extensions/extension.dart';
-import 'package:client/core/views/common/widgets/text/text_library.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
+import 'package:client/core/views/common/widgets/text/custom_text_library.dart';
 import 'package:client/core/views/signin_view/signin_widgets.dart';
 import 'package:client/core/views/signup_view/signup.widgets.dart';
 import 'package:flutter/material.dart';

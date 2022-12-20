@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../enums/routes.enum.dart';
+import '../../../utils/constants/enums/routes.enum.dart';
 import '../../../l10n/app_l10n.dart';
 import '../../../routes/custom_navigator.dart';
 import '../../common/widgets/text/custom_text.dart';

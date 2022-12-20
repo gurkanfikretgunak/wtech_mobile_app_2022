@@ -1,4 +1,4 @@
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/views/signup_view/signup_constants/label_constants.dart';
 import 'package:client/core/views/signup_view/widgets/profile_choose_widget.dart';
 import 'package:client/core/views/signup_view/widgets/register_textfield.dart';
@@ -44,7 +44,7 @@ class SignUpWidgets {
         stream: _vm.phone,
         builder: (context, snapshot) {
           return CustomTextFormField(
-              prefixIcon: Icon(Icons.mail_outline),
+              prefixIcon: const Icon(Icons.mail_outline),
               labelText: L10n.of(context)!.phoneNumber,
               controller: SignUpConstants.phoneController,
               onChanged: (text) {
@@ -63,7 +63,7 @@ class SignUpWidgets {
           return Padding(
             padding: context.onlyTopPaddingNormal,
             child: CustomTextFormField(
-                prefixIcon: Icon(Icons.mail_outline),
+                prefixIcon: const Icon(Icons.mail_outline),
                 labelText: L10n.of(context)!.tcNumber,
                 controller: SignUpConstants.tcController,
                 onChanged: (text) {

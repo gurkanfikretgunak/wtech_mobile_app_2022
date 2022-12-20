@@ -1,12 +1,12 @@
-import 'package:client/core/constants/color_constans.dart';
-import 'package:client/core/enums/routes.enum.dart';
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/constants/colors/color_constans.dart';
+import 'package:client/core/utils/constants/enums/routes.enum.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/routes/custom_navigator.dart';
-import 'package:client/core/views/common/widgets/button/button_libary.dart';
+import 'package:client/core/views/common/widgets/button/custom_button_libary.dart';
 import 'package:client/core/views/common/widgets/custom_date_text.dart';
 import 'package:client/core/views/common/widgets/custom_views_count.dart';
-import 'package:client/core/views/common/widgets/text/text_library.dart';
+import 'package:client/core/views/common/widgets/text/custom_text_library.dart';
 import 'package:flutter/material.dart';
 
 class JobsCardWidget extends StatelessWidget {
@@ -122,7 +122,8 @@ class JobsCardWidget extends StatelessWidget {
                                 CustomElevatedButton(
                                   width: context.dynamicWidth(0.2),
                                   onPressed: () {
-                                    CustomNavigator.goToScreen(context, Routes.jobDetail.name);
+                                    CustomNavigator.goToScreen(
+                                        context, Routes.jobDetail.name);
                                   },
                                   text: L10n.of(context)?.details ?? '',
                                   textColor: ColorConstant.instance.white,
@@ -134,11 +135,15 @@ class JobsCardWidget extends StatelessWidget {
                                     decoration: BoxDecoration(
                                       color: ColorConstant.instance.white,
                                       borderRadius: BorderRadius.circular(100),
-                                      border: Border.all(color: ColorConstant.instance.grey.withOpacity(0.3)),
+                                      border: Border.all(
+                                          color: ColorConstant.instance.grey
+                                              .withOpacity(0.3)),
                                     ),
                                     child: IconButton(
                                       onPressed: () {},
-                                      icon: Icon((isLiked == false) ? Icons.favorite_border : Icons.favorite),
+                                      icon: Icon((isLiked == false)
+                                          ? Icons.favorite_border
+                                          : Icons.favorite),
                                     )),
                               ],
                             ),

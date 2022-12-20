@@ -1,6 +1,6 @@
-import 'package:client/core/enums/routes.enum.dart';
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/routes/custom_navigator.dart';
+import 'package:client/core/utils/constants/enums/routes.enum.dart';
 import 'package:flutter/material.dart';
 
 class IconConstant {

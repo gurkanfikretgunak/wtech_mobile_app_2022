@@ -1,12 +1,11 @@
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/views/user_profile_view/widgets/profil_item.dart';
 import 'package:client/core/views/user_profile_view/widgets/profil_item_icon_list.dart';
-import 'package:client/core/views/user_profile_view/widgets/profil_item_text_list.dart';
 import 'package:flutter/material.dart';
 
-import '../../constants/color_constans.dart';
+import '../../utils/constants/colors/color_constans.dart';
 import '../common/widgets/button/custom_button_elevated.dart';
-import '../common/widgets/text/text_library.dart';
+import '../common/widgets/text/custom_text_library.dart';
 
 class UserProfileWidgets {
   Widget profileAvatar(BuildContext context) {
@@ -62,7 +61,7 @@ class UserProfileWidgets {
   }
 
   Widget userNameText(BuildContext context) {
-    return const CustomText("Gürkan Fikret Günak",
+    return const CustomText("Uncle Bob",
         fontSize: 15, fontWeight: FontWeight.w600);
   }
 }

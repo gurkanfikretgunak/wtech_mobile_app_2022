@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
 
 class OnboardContent extends StatelessWidget {
   const OnboardContent({

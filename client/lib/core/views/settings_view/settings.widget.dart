@@ -1,11 +1,11 @@
-import 'package:client/core/extensions/extension.dart';
-import 'package:client/core/themes/change_theme/change_theme.viewmodel.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
+import 'package:client/core/utils/themes/change_theme/change_theme.viewmodel.dart';
 import 'package:client/core/views/common/widgets/text/custom_text.dart';
 import 'package:client/core/views/settings_view/widget/card_settings.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
-import '../../constants/color_constans.dart';
+import '../../utils/constants/colors/color_constans.dart';
 
 class SettingsViewWidget {
   Widget settingCards(BuildContext context, List<String> itemCountText,
