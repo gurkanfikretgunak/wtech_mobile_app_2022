@@ -13,6 +13,7 @@ class CustomTextFormField extends StatefulWidget {
     this.controller,
     this.errorText,
     this.onChanged,
+    this.isSearch = false,
   });
 
   final IconData? suffixIcon;
@@ -24,6 +25,7 @@ class CustomTextFormField extends StatefulWidget {
   final TextEditingController? controller;
   final String? errorText;
   final Function(String?)? onChanged;
+  final bool? isSearch;
 
   @override
   State<CustomTextFormField> createState() => _CustomTextFormFieldState();
@@ -39,28 +41,31 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
       controller: widget.controller,
       keyboardType: TextInputType.text,
       decoration: InputDecoration(
-        errorText: widget.errorText,
-        hintText: widget.hintText,
-        labelText: widget.labelText,
-        suffixIcon: widget.isPassword!
-            ? GestureDetector(
-                onTap: () {
-                  if (widget.isPassword!) {
-                    setState(() {
-                      obscureText = !obscureText;
-                    });
-                  }
-                },
-                child: !obscureText
-                    ? Icon(
-                        Icons.remove_red_eye,
-                        color: ColorConstant.instance.grey,
-                      )
-                    : const Icon(Icons.visibility_off))
-            : null,
-        prefixIcon: Icon(widget.prefixIcon),
-        contentPadding: EdgeInsets.symmetric(horizontal: context.dynamicWidth(0), vertical: 0),
-      ),
+          filled: true,
+          fillColor: Color(0xFFF3F2F9),
+          errorText: widget.errorText,
+          hintText: widget.hintText,
+          labelText: widget.labelText,
+          suffixIcon: widget.isPassword!
+              ? GestureDetector(
+                  onTap: () {
+                    if (widget.isPassword!) {
+                      setState(() {
+                        obscureText = !obscureText;
+                      });
+                    }
+                  },
+                  child: !obscureText
+                      ? Icon(
+                          Icons.remove_red_eye,
+                          color: ColorConstant.instance.grey,
+                        )
+                      : const Icon(Icons.visibility_off))
+              : widget.isSearch!
+                  ? Icon(Icons.tune_outlined)
+                  : null,
+          prefixIcon: Icon(widget.prefixIcon),
+          contentPadding: EdgeInsets.zero),
     );
   }
 }

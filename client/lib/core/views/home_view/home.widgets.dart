@@ -17,8 +17,7 @@ class HomeViewWidget {
       itemBuilder: (context, index) {
         return SizedBox(
           width: MediaQuery.of(context).size.width * 0.6,
-          child: HomeTrainingWidget(
-              trainingImage: HomeTextContants.trainingPath[index]),
+          child: HomeTrainingWidget(trainingImage: HomeTextContants.trainingPath[index]),
         );
       },
     );
@@ -35,10 +34,7 @@ class HomeViewWidget {
               height: context.dynamicHeight(0.03),
               child: Center(
                 child: Text(text,
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyMedium
-                        ?.copyWith(fontWeight: FontWeight.bold),
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.bold),
                     textAlign: TextAlign.center),
               ),
             ),
@@ -47,9 +43,10 @@ class HomeViewWidget {
                 child: Row(children: [
                   const Icon(Icons.event_outlined, size: 15),
                   Text(HomeTextContants.dateText,
-                      style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                          color: ColorConstant.instance.black.withOpacity(0.7),
-                          fontSize: 14))
+                      style: Theme.of(context)
+                          .textTheme
+                          .subtitle1
+                          ?.copyWith(color: ColorConstant.instance.black.withOpacity(0.7), fontSize: 14))
                 ]))
           ],
         ),
@@ -59,25 +56,11 @@ class HomeViewWidget {
 
   static Widget searchHomeWidget(BuildContext context) {
     return Padding(
-      padding: context.onlyLeftPaddingMedium,
-      child: FittedBox(
-        child: Row(
-          children: [
-            SizedBox(
-              height: context.dynamicHeight(0.055),
-              width: context.dynamicWidth(0.75),
-              child: CustomTextFormField(
-                prefixIcon: Icons.search,
-                labelText: L10n.of(context)!.search,
-              ),
-            ),
-            IconButton(
-                onPressed: () {
-                  Logger().d("message");
-                },
-                icon: const Icon(Icons.filter_list_outlined, size: 30))
-          ],
-        ),
+      padding: context.paddingLow,
+      child: CustomTextFormField(
+        prefixIcon: Icons.search,
+        labelText: L10n.of(context)!.search,
+        isSearch: true,
       ),
     );
   }

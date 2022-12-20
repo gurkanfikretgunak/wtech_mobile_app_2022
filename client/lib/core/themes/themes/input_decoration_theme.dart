@@ -6,7 +6,7 @@ class CustomInputDecorationTheme {
     return InputDecorationTheme(
       border: OutlineInputBorder(
           borderRadius: const BorderRadius.all(Radius.circular(8)),
-          borderSide: BorderSide(color: ColorConstant.instance.black)),
+          borderSide: BorderSide(color: ColorConstant.instance.black.withOpacity(0.2))),
     );
   }
 }

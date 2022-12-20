@@ -33,7 +33,7 @@ class App extends StatelessWidget {
                 child: SplashView(),
               ),
               title: "Flutter Boilerplate : ${Flavor.I.getString(Keys.appTitle)}",
-              theme: snapshot.data! ? CustomTheme.customLightTheme(context) : CustomTheme.customDarkTheme(context),
+              theme: CustomTheme.customLightTheme(context),
               debugShowCheckedModeBanner: false,
             );
           }),

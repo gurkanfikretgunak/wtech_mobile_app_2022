@@ -21,32 +21,21 @@ class HomeView extends StatelessWidget with HomeViewWidget {
         return Scaffold(
           drawer: const DrawerWidget(),
           body: Padding(
-            padding: context.onlyLRTpaddingNormal,
+            padding: context.paddingNormal,
             child: Wrap(
+              runSpacing: 5,
               children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    HomeViewWidget.searchHomeWidget(context),
-                    context.emptySizedHeightBoxLow,
-                    SizedBox(
-                      height: context.dynamicHeight(0.29),
-                      width: context.width,
-                      child: const EventSwiperWidget(),
-                    ),
-                    Padding(
-                      padding: context.onlyTRpaddingNormal,
-                      child: Text(L10n.of(context)!.categories, style: Theme.of(context).textTheme.headline6),
-                    ),
-                    SizedBox(
-                        height: context.dynamicHeight(0.098), width: context.width, child: const CategoriesWidget()),
-                    Padding(
-                      padding: context.onlyTRpaddingNormal,
-                      child: Text(L10n.of(context)!.currentTraining, style: Theme.of(context).textTheme.headline6),
-                    ),
-                    SizedBox(height: context.dynamicHeight(0.2), child: homeCardWidget(context)),
-                  ],
+                HomeViewWidget.searchHomeWidget(context),
+                context.emptySizedHeightBoxLow,
+                SizedBox(
+                  height: context.dynamicHeight(0.29),
+                  width: context.width,
+                  child: const EventSwiperWidget(),
                 ),
+                Text(L10n.of(context)!.categories, style: Theme.of(context).textTheme.headline6),
+                SizedBox(height: context.dynamicHeight(0.098), width: context.width, child: const CategoriesWidget()),
+                Text(L10n.of(context)!.currentTraining, style: Theme.of(context).textTheme.headline6),
+                SizedBox(height: context.dynamicHeight(0.2), child: homeCardWidget(context)),
               ],
             ),
           ),
