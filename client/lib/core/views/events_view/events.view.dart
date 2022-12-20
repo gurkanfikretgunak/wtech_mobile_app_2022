@@ -1,8 +1,12 @@
 import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/l10n/app_l10n.dart';
+import 'package:client/core/views/common/widgets/custom_appbar.dart';
 import 'package:client/core/views/events_view/widgets/calendar_listview.dart';
 import 'package:client/core/views/events_view/widgets/events_listview_builder.dart';
 import 'package:client/core/views/events_view/widgets/the_day_of_the_month.dart';
 import 'package:flutter/material.dart';
+
+import '../home_view/widgets/drawer_widget.dart';
 
 class EventsView extends StatefulWidget {
   const EventsView({super.key});
@@ -16,14 +20,17 @@ class _EventsViewState extends State<EventsView> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
+      appBar: CustomAppbar(
+        titleText: L10n.of(context)!.events,
+        isCheck: false,
+        isName: false,
+      ),
+      drawer: const DrawerWidget(),
       body: Padding(
-        padding: context.horizontalPaddingNormal,
+        padding: context.paddingNormal,
         child: Column(
           children: [
-            Padding(
-              padding: context.onlyTopPaddingMedium * 1.5,
-              child: const TheDayOfTheMonth(),
-            ),
+            const TheDayOfTheMonth(),
             Padding(
               padding: context.onlyTopPaddingNormal,
               child: const CalenderListview(),

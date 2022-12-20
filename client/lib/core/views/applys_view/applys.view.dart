@@ -23,7 +23,7 @@ class ApplysView extends StatelessWidget with ApplysWidgets {
                 child: applysTabbar(context),
               ),
               Expanded(
-                flex: 9,
+                flex: 15,
                 child: applysCards(),
               ),
             ],

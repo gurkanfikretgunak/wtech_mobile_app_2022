@@ -11,22 +11,15 @@ class Calendar extends StatelessWidget {
   final Color color;
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.16,
-      width: MediaQuery.of(context).size.width * 0.2,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.125,
-            width: MediaQuery.of(context).size.width * 0.2,
-            child: CalendarCard(color: color),
-          ),
-          const Expanded(
-            child: CalendarEventsCount(),
-          )
-        ],
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.10,
+          width: MediaQuery.of(context).size.width * 0.17,
+          child: CalendarCard(color: color),
+        ),
+      ],
     );
   }
 }

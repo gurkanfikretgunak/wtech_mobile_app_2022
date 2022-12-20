@@ -1,4 +1,5 @@
 import 'package:client/core/extensions/extension.dart';
+import 'package:client/core/views/common/widgets/custom_divider.dart';
 import 'package:client/core/views/favorites_view/widgets/tabbar_list.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';

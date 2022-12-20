@@ -11,12 +11,15 @@ class TabbarWidget extends StatelessWidget {
   final String text;
   @override
   Widget build(BuildContext context) {
-    return Tab(
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(50),
-          border: Border.all(color: ColorConstant.instance.yellow, width: 1),
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(8),
+        border: Border.all(
+          color: ColorConstant.instance.grey,
+          width: 1,
         ),
+      ),
+      child: Tab(
         child: Align(
           alignment: Alignment.center,
           child: CustomText(text),

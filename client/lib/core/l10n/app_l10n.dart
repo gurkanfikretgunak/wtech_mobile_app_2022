@@ -723,11 +723,11 @@ abstract class L10n {
   /// **'Not a member?'**
   String get notMember;
 
-  /// No description provided for @signUpHere.
+  /// No description provided for @newMember.
   ///
   /// In en, this message translates to:
-  /// **'Sign up here.'**
-  String get signUpHere;
+  /// **'Create a new member'**
+  String get newMember;
 
   /// No description provided for @userAgreement.
   ///

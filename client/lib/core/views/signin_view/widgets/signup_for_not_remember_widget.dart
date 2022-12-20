@@ -1,6 +1,4 @@
-import 'package:client/core/extensions/extension.dart';
 import 'package:flutter/material.dart';
-
 import '../../../enums/routes.enum.dart';
 import '../../../l10n/app_l10n.dart';
 import '../../../routes/custom_navigator.dart';
@@ -23,12 +21,13 @@ class SignUpForNotRemember extends StatelessWidget {
             textStyle: const TextStyle(fontSize: 15),
           ),
           onPressed: () {
-            CustomNavigator.goToScreen(context, Routes.signup.name);
+            CustomNavigator.goToScreen(context, Routes.forgotPassword.name);
           },
           child: CustomText(
             fontSize: 18,
             color: Colors.blue,
-            L10n.of(context)!.signUpHere,
+            L10n.of(context)!.newMember,
+            underlineText: TextDecoration.underline,
           )),
     ]);
   }
