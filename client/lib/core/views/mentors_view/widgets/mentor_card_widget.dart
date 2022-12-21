@@ -2,7 +2,9 @@ import 'package:client/core/utils/constants/colors/color_constans.dart';
 import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/common/widgets/button/custom_button_libary.dart';
+import 'package:client/core/views/mentors_view/mentors.viewmodel.dart';
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 
 class MentorCardWidget extends StatelessWidget {
   final String? mentor;
@@ -117,17 +119,28 @@ class FavoriteButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(
-      right: 10,
-      top: 10,
-      child: CircleAvatar(
-        backgroundColor: ColorConstant.instance.white,
-        child: IconButton(
-          splashRadius: Material.defaultSplashRadius / 2,
-          onPressed: () {},
-          icon: Icon(Icons.favorite_border, color: ColorConstant.instance.blue),
-        ),
-      ),
+    final vm = GetIt.I.get<MentorsViewModel>();
+    bool isFavorite = vm.heartFill();
+    return StreamBuilder(
+      stream: vm.favorite,
+      builder: (context, snapshot) {
+        return Positioned(
+          right: 10,
+          top: 10,
+          child: CircleAvatar(
+            backgroundColor: ColorConstant.instance.white,
+            child: IconButton(
+              splashRadius: Material.defaultSplashRadius / 2,
+              onPressed: () {
+                isFavorite = vm.heartFill();
+              },
+              icon: isFavorite
+                  ? const Icon(Icons.favorite)
+                  : const Icon(Icons.favorite_border),
+            ),
+          ),
+        );
+      },
     );
   }
 }
