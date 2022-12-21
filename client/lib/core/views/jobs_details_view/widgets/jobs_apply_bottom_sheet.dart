@@ -46,11 +46,14 @@ class JobsDetailBottomSheetWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(L10n.of(context)?.mentorDetailBottomSheetUploadFile ?? ''),
-              CustomElevatedButton(
-                iconWidget: const Icon(Icons.attach_file),
-                onPressed: () {},
-                text: L10n.of(context)?.mentorDetailBottomSheetSelectFile ?? '',
-                textColor: ColorConstant.instance.white,
+              Expanded(
+                child: CustomElevatedButton(
+                  iconWidget: const Icon(Icons.attach_file),
+                  onPressed: () {},
+                  text:
+                      L10n.of(context)?.mentorDetailBottomSheetSelectFile ?? '',
+                  textColor: ColorConstant.instance.white,
+                ),
               ),
             ],
           ),

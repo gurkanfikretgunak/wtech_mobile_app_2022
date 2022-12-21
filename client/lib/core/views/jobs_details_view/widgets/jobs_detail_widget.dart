@@ -3,9 +3,9 @@ import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/common/widgets/button/custom_button_libary.dart';
 import 'package:client/core/views/common/widgets/text/custom_text_library.dart';
-import 'package:client/core/views/jobs_details_view/widgets/jobExpansionTile.dart';
-import 'package:client/core/views/jobs_details_view/widgets/jobImageandTime.dart';
-import 'package:client/core/views/jobs_details_view/widgets/jobsApplyBottomSheet.dart';
+import 'package:client/core/views/jobs_details_view/widgets/job_image_and_time.dart';
+import 'package:client/core/views/jobs_details_view/widgets/job_expansion_tile.dart';
+import 'package:client/core/views/jobs_details_view/widgets/jobs_apply_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 
 class JobsDetailWidget extends StatelessWidget {
