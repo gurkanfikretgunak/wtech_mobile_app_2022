@@ -1,8 +1,7 @@
 import 'package:client/core/utils/extensions/common_extension.dart';
+import 'package:client/core/views/mentors_view/widgets/mentor_card_widget.dart';
 import 'package:client/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
-
-import 'widgets/mentor_card_widget.dart';
 
 class MentorsWidgets {
   Widget body(BuildContext context) {

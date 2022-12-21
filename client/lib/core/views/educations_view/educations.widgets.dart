@@ -5,8 +5,7 @@ import 'package:client/core/views/educations_view/widgets/education_card.dart';
 import 'package:client/core/views/educations_view/widgets/search_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
-
-import '../common/widgets/text/custom_textfield.dart';
+import 'package:client/core/views/common/widgets/text/custom_textfield.dart';
 
 class EducationsWidgets {
   Widget educationCard(BuildContext context) {

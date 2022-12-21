@@ -1,9 +1,8 @@
+import 'package:client/core/utils/constants/colors/color_constans.dart';
 import 'package:client/core/utils/extensions/common_extension.dart';
+import 'package:client/core/views/common/widgets/custom_image.dart';
+import 'package:client/core/views/common/widgets/text/custom_text.dart';
 import 'package:flutter/material.dart';
-
-import '../../../utils/constants/colors/color_constans.dart';
-import '../../common/widgets/custom_image.dart';
-import '../../common/widgets/text/custom_text.dart';
 
 class IntroduceCard extends StatelessWidget {
   const IntroduceCard({
