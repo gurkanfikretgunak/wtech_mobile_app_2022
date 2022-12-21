@@ -7,6 +7,7 @@ import 'package:client/core/views/forgot_password_view/forgotpass.view.dart';
 import 'package:client/core/views/help_view/help.view.dart';
 import 'package:client/core/views/jobs_details_view/jobs_detail.view.dart';
 import 'package:client/core/views/jobs_view/jobs.view.dart';
+import 'package:client/core/views/mentors_details_view/mentors_details.view.dart';
 import 'package:client/core/views/mentors_view/mentors.view.dart';
 import 'package:client/core/views/news_view/news.view.dart';
 import 'package:client/core/views/settings_view/settings.view.dart';
@@ -15,6 +16,7 @@ import 'package:client/core/views/signup_view/signup.view.dart';
 import 'package:client/core/views/user_profile_view/user_profile.view.dart';
 import 'package:client/core/views/videos_view/videos.view.dart';
 import 'package:flutter/material.dart';
+
 import '../utils/constants/enums/routes.enum.dart';
 import '../views/bottom_navbar/bottom_navbar.view.dart';
 import '../views/founding_members_view/founding.members.view.dart';
@@ -68,8 +70,7 @@ class AppRoutes {
         return navigate(MentorsView());
 
       case Routes.mentorDetail:
-        // TODO: Handle this case.
-        break;
+        return navigate(MentorsDetailsView());
       case Routes.newsDetail:
         // TODO: Handle this case.
         break;
