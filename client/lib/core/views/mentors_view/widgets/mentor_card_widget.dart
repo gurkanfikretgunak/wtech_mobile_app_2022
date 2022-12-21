@@ -1,6 +1,6 @@
+import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/utils/constants/colors/color_constans.dart';
 import 'package:client/core/utils/extensions/common_extension.dart';
-import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/common/widgets/button/custom_button_libary.dart';
 import 'package:flutter/material.dart';
 
@@ -9,6 +9,8 @@ class MentorCardWidget extends StatelessWidget {
   final String? imageUrl;
   final String? organization;
   final String? role;
+  final Function()? onPressedContact;
+  final Function()? onPressedFavorite;
 
   const MentorCardWidget({
     Key? key,
@@ -16,6 +18,8 @@ class MentorCardWidget extends StatelessWidget {
     required this.imageUrl,
     required this.organization,
     required this.role,
+    this.onPressedContact,
+    this.onPressedFavorite,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -25,8 +29,14 @@ class MentorCardWidget extends StatelessWidget {
       children: [
         MentorImageWidget(imageUrl: imageUrl),
         MentorInfosWidget(
-            mentor: mentor, organization: organization, role: role),
-        const FavoriteButtonWidget()
+          mentor: mentor,
+          organization: organization,
+          role: role,
+          onPressed: onPressedContact,
+        ),
+        FavoriteButtonWidget(
+          onPressed: onPressedFavorite,
+        )
       ],
     );
   }
@@ -54,11 +64,13 @@ class MentorInfosWidget extends StatelessWidget {
     required this.mentor,
     required this.organization,
     required this.role,
+    required this.onPressed,
   }) : super(key: key);
 
   final String? mentor;
   final String? organization;
   final String? role;
+  final Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -70,34 +82,26 @@ class MentorInfosWidget extends StatelessWidget {
           elevation: 10,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),
-            side: BorderSide(
-                color: ColorConstant.instance.black.withOpacity(0.1)),
+            side: BorderSide(color: ColorConstant.instance.black.withOpacity(0.1)),
           ),
           child: Padding(
             padding: context.paddingNormal,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(mentor ?? '',
-                    style: Theme.of(context).textTheme.bodyText1),
+                Text(mentor ?? '', style: Theme.of(context).textTheme.bodyText1),
                 Text(
                   organization ?? '',
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodySmall!
-                      .copyWith(color: ColorConstant.instance.blue),
+                  style: Theme.of(context).textTheme.bodySmall!.copyWith(color: ColorConstant.instance.blue),
                 ),
                 Text(
                   role ?? '',
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodySmall!
-                      .copyWith(color: ColorConstant.instance.grey),
+                  style: Theme.of(context).textTheme.bodySmall!.copyWith(color: ColorConstant.instance.grey),
                 ),
                 CustomElevatedButton(
                   width: context.dynamicHeight(0.1),
                   height: context.dynamicHeight(0.04),
-                  onPressed: () {},
+                  onPressed: onPressed,
                   text: L10n.of(context)?.contact ?? '',
                   textColor: ColorConstant.instance.white,
                 )
@@ -111,8 +115,10 @@ class MentorInfosWidget extends StatelessWidget {
 }
 
 class FavoriteButtonWidget extends StatelessWidget {
+  final Function()? onPressed;
   const FavoriteButtonWidget({
     Key? key,
+    required this.onPressed,
   }) : super(key: key);
 
   @override
@@ -124,7 +130,7 @@ class FavoriteButtonWidget extends StatelessWidget {
         backgroundColor: ColorConstant.instance.white,
         child: IconButton(
           splashRadius: Material.defaultSplashRadius / 2,
-          onPressed: () {},
+          onPressed: onPressed,
           icon: Icon(Icons.favorite_border, color: ColorConstant.instance.blue),
         ),
       ),

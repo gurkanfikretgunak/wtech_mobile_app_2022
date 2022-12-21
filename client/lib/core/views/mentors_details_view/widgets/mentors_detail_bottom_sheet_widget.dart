@@ -1,6 +1,6 @@
+import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/utils/constants/colors/color_constans.dart';
 import 'package:client/core/utils/extensions/common_extension.dart';
-import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/common/widgets/button/custom_button_libary.dart';
 import 'package:client/core/views/common/widgets/text/custom_text_library.dart';
 import 'package:flutter/material.dart';
@@ -36,21 +36,20 @@ class MentorsDetailBottomSheetWidget extends StatelessWidget {
                       child: const Icon(Icons.close))),
             ],
           ),
-          CustomTextFormField(
-              hintText: L10n.of(context)?.mentorDetailBottomSheetName ?? ''),
-          CustomTextFormField(
-              hintText: L10n.of(context)?.mentorDetailBottomSheetEmail ?? ''),
-          CustomTextFormField(
-              hintText: L10n.of(context)?.mentorDetailBottomSheetMessage ?? ''),
+          CustomTextFormField(hintText: L10n.of(context)?.mentorDetailBottomSheetName ?? ''),
+          CustomTextFormField(hintText: L10n.of(context)?.mentorDetailBottomSheetEmail ?? ''),
+          CustomTextFormField(hintText: L10n.of(context)?.mentorDetailBottomSheetMessage ?? ''),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(L10n.of(context)?.mentorDetailBottomSheetUploadFile ?? ''),
-              CustomElevatedButton(
-                iconWidget: const Icon(Icons.attach_file),
-                onPressed: () {},
-                text: L10n.of(context)?.mentorDetailBottomSheetSelectFile ?? '',
-                textColor: ColorConstant.instance.white,
+              context.emptySizedWidthBoxLow,
+              Expanded(
+                child: CustomElevatedButton(
+                  iconWidget: const Icon(Icons.attach_file),
+                  onPressed: () {},
+                  text: L10n.of(context)?.mentorDetailBottomSheetSelectFile ?? '',
+                  textColor: ColorConstant.instance.white,
+                ),
               ),
             ],
           ),
@@ -69,17 +68,21 @@ class MentorsDetailBottomSheetWidget extends StatelessWidget {
             ],
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              CustomElevatedButton(
-                onPressed: () {},
-                text: L10n.of(context)?.mentorDetailBottomSheetWatchVideo ?? '',
-                textColor: ColorConstant.instance.white,
+              Expanded(
+                child: CustomElevatedButton(
+                  onPressed: () {},
+                  text: L10n.of(context)?.mentorDetailBottomSheetWatchVideo ?? '',
+                  textColor: ColorConstant.instance.white,
+                ),
               ),
-              CustomElevatedButton(
-                onPressed: () {},
-                text: L10n.of(context)?.mentorDetailBottomSheetSend ?? '',
-                textColor: ColorConstant.instance.white,
+              context.emptySizedWidthBoxNormal,
+              Expanded(
+                child: CustomElevatedButton(
+                  onPressed: () {},
+                  text: L10n.of(context)?.mentorDetailBottomSheetSend ?? '',
+                  textColor: ColorConstant.instance.white,
+                ),
               ),
             ],
           ),
