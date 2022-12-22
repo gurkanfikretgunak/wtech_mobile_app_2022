@@ -1,3 +1,5 @@
+import 'package:client/core/routes/custom_navigator.dart';
+import 'package:client/core/utils/constants/enums/routes.enum.dart';
 import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/common/widgets/button/custom_button_libary.dart';
@@ -6,8 +8,6 @@ import 'package:client/core/views/signin_view/widgets/logo_widget.dart';
 import 'package:client/core/views/signin_view/widgets/signin_account_divider_widget.dart';
 import 'package:client/core/views/signin_view/widgets/signin_bottom_description_widget.dart';
 import 'package:flutter/material.dart';
-import '../../utils/constants/enums/routes.enum.dart';
-import '../../routes/custom_navigator.dart';
 
 class SignInAccountView extends StatefulWidget {
   const SignInAccountView({super.key});

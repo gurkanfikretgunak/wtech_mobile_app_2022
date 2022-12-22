@@ -1,6 +1,5 @@
 import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:flutter/material.dart';
-
 import 'applys.widgets.dart';
 
 class ApplysView extends StatelessWidget with ApplysWidgets {

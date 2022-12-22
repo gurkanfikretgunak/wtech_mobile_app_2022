@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 List<Widget> favoriteTabs(BuildContext context) {
   return <Widget>[
-    const TabItem(text: "Educations"),
+    TabItem(text: L10n.of(context)!.educations),
     TabItem(text: L10n.of(context)!.events),
     TabItem(text: L10n.of(context)!.mentor),
   ];

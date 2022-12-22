@@ -1,8 +1,8 @@
+import 'package:client/core/l10n/app_l10n.dart';
+import 'package:client/core/routes/custom_navigator.dart';
+import 'package:client/core/utils/constants/enums/routes.enum.dart';
+import 'package:client/core/views/common/widgets/text/custom_text.dart';
 import 'package:flutter/material.dart';
-import '../../../utils/constants/enums/routes.enum.dart';
-import '../../../l10n/app_l10n.dart';
-import '../../../routes/custom_navigator.dart';
-import '../../common/widgets/text/custom_text.dart';
 
 class SignUpForNotRemember extends StatelessWidget {
   const SignUpForNotRemember({
