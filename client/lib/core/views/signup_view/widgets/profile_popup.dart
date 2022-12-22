@@ -1,8 +1,7 @@
+import 'package:client/core/l10n/app_l10n.dart';
+import 'package:client/core/views/signup_view/signup.viewmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
-
-import '../../../l10n/app_l10n.dart';
-import '../signup.viewmodel.dart';
 
 class ProfilePopUpButton extends StatelessWidget {
   ProfilePopUpButton({

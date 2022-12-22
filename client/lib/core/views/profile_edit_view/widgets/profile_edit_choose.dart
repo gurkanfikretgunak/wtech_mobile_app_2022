@@ -1,9 +1,10 @@
+import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/profile_edit_view/profile_edit.viewmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
-import '../../../l10n/app_l10n.dart';
 
+// ignore: must_be_immutable
 class EditProfileChooseWidget extends StatelessWidget {
   EditProfileChooseWidget({
     Key? key,
