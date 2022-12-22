@@ -1,19 +1,19 @@
+import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/utils/extensions/common_extension.dart';
+import 'package:client/core/views/authentication/authentication.viewmodel.dart';
 import 'package:client/core/views/common/widgets/text/custom_text_library.dart';
 import 'package:client/core/views/signin_view/signin_widgets.dart';
 import 'package:client/core/views/signup_view/signup.widgets.dart';
+import 'package:client/core/views/signup_view/signup_constants/label_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
-import '../../../l10n/app_l10n.dart';
-import '../../authentication/authentication.viewmodel.dart';
-import '../signup_constants/label_constants.dart';
 
 class RegisterTextfields extends StatelessWidget {
   const RegisterTextfields({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final _vm = GetIt.I.get<AuthenticationViewModel>();
+    final vm = GetIt.I.get<AuthenticationViewModel>();
 
     return StreamBuilder<Object>(
         stream: null,
@@ -48,7 +48,7 @@ class RegisterTextfields extends StatelessWidget {
                       labelText: L10n.of(context)!.tcNumber,
                       controller: SignUpConstants.tcController,
                       onChanged: (text) {
-                        _vm.changeEmail(text!);
+                        vm.changeEmail(text!);
                       },
                       errorText: snapshot.error?.toString()),
                 ),

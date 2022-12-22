@@ -1,12 +1,11 @@
+import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/utils/constants/colors/color_constans.dart';
 import 'package:client/core/utils/extensions/common_extension.dart';
-import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/common/widgets/button/custom_button_libary.dart';
+import 'package:client/core/views/mentors_details_view/widgets/mentor_detail_stats_widget.dart';
+import 'package:client/core/views/mentors_details_view/widgets/mentors_detail_bottom_sheet_widget.dart';
 import 'package:client/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
-
-import 'widgets/mentor_detail_stats_widget.dart';
-import 'widgets/mentors_detail_bottom_sheet_widget.dart';
 
 class MentorDetailsWidgets {
   Widget body(BuildContext context) {

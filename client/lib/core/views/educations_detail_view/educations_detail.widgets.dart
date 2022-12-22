@@ -5,8 +5,7 @@ import 'package:client/core/views/common/widgets/text/custom_text.dart';
 import 'package:client/core/views/educations_detail_view/widgets/content_card.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
-
-import '../common/widgets/button/custom_button_libary.dart';
+import 'package:client/core/views/common/widgets/button/custom_button_libary.dart';
 import 'educations_detail.viewmodel.dart';
 import 'widgets/content_list.dart';
 

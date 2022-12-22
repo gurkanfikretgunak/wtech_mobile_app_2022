@@ -8,9 +8,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get_it/get_it.dart';
-
-import '../../../../gen/assets.gen.dart';
-import '../../../utils/constants/enums/routes.enum.dart';
+import 'package:client/gen/assets.gen.dart';
+import 'package:client/core/utils/constants/enums/routes.enum.dart';
 
 class EducationCardWidget extends StatelessWidget {
   const EducationCardWidget({
@@ -34,7 +33,6 @@ class EducationCardWidget extends StatelessWidget {
               borderRadius: BorderRadius.circular(16),
             ),
             child: Column(
-              //mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Stack(

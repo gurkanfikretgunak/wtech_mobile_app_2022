@@ -1,8 +1,8 @@
 import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:flutter/material.dart';
 
-import '../../common/widgets/custom_card.dart';
-import '../../common/widgets/text/custom_text_library.dart';
+import 'package:client/core/views/common/widgets/custom_card.dart';
+import 'package:client/core/views/common/widgets/text/custom_text_library.dart';
 
 class ContentCard extends StatelessWidget {
   const ContentCard({
