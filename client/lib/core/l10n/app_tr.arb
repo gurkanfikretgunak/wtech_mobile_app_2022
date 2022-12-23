@@ -243,7 +243,8 @@
     "evaluating" : "Değerlendiriliyor",
     "signinWith" : "ile giriş yap.",
     "deleteAccountInformation" : "*Bu hesabı gerçekten silmek istiyor musunuz?",
-    "deleteAccount" : "Hesabı Sil"
- 
+    "deleteAccount" : "Hesabı Sil",
+    "nextPage" : "Sonraki",
+    "getStarted" : "Başla"
  }
 

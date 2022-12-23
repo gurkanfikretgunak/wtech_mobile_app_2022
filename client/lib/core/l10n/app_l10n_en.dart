@@ -681,4 +681,10 @@ class L10nEn extends L10n {
 
   @override
   String get deleteAccount => 'Delete Account';
+
+  @override
+  String get nextPage => 'Next';
+
+  @override
+  String get getStarted => 'Get Started';
 }

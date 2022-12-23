@@ -236,6 +236,8 @@
     "evaluating" : "Evaluating",
     "signinWith" : "Sign in with",
     "deleteAccountInformation" : "*Do you really want to delete this account?",
-    "deleteAccount" : "Delete Account"
+    "deleteAccount" : "Delete Account",
+    "nextPage" : "Next",
+    "getStarted" : "Get Started"
 
 }

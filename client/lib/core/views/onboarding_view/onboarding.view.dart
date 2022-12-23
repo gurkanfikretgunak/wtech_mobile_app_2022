@@ -1,6 +1,7 @@
 import 'package:client/core/utils/constants/colors/color_constans.dart';
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/common/widgets/button/custom_button_elevated.dart';
+import 'package:client/core/views/common/widgets/text/custom_text.dart';
 import 'package:client/core/views/onboarding_view/widgets/dot_indicator.dart';
 import 'package:client/core/views/onboarding_view/widgets/onboarding_widget.dart';
 import 'package:flutter/material.dart';
@@ -21,6 +22,7 @@ class _OnboardingViewState extends State<OnboardingView> {
   late PageController _pageController;
 
   int _pageIndex = 0;
+  int _numPage = 3;
 
   @override
   void initState() {
@@ -69,21 +71,45 @@ class _OnboardingViewState extends State<OnboardingView> {
                             child: DotIndicator(isActive: index == _pageIndex),
                           )),
                   const Spacer(),
-                  CustomElevatedButton(
-                    buttonColor: ColorConstant.instance.yellow,
-                    width: context.dynamicWidth(0.25),
-                    borderRadius: 30,
-                    onPressed: () {
-                      CustomNavigator.goToScreen(context, Routes.home.name);
-                    },
-                    text: 'Skip',
-                  )
+                  _pageIndex != _numPage - 1
+                      ? CustomElevatedButton(
+                          buttonColor: ColorConstant.instance.yellow,
+                          width: context.dynamicWidth(0.25),
+                          borderRadius: 30,
+                          onPressed: () {
+                            _pageController.nextPage(duration: const Duration(milliseconds: 500), curve: Curves.ease);
+                          },
+                          text: L10n.of(context)!.nextPage,
+                        )
+                      : const SizedBox(),
                 ],
               ),
             ],
           ),
         ),
       ),
+      bottomSheet: _pageIndex == _numPage - 1
+          ? Container(
+              decoration: BoxDecoration(
+                borderRadius: const BorderRadius.only(topLeft: Radius.circular(40), topRight: Radius.circular(40)),
+                color: ColorConstant.instance.blue,
+              ),
+              height: 70,
+              width: double.infinity,
+              child: GestureDetector(
+                onTap: () => CustomNavigator.goToScreen(context, Routes.home.name),
+                child: Padding(
+                  padding: context.onlyBottomPaddingNormal,
+                  child: Center(
+                    child: Text(
+                      L10n.of(context)!.getStarted,
+                      style: Theme.of(context).textTheme.headline6?.copyWith(color: ColorConstant.instance.white),
+                    ),
+                  ),
+                ),
+              ),
+            )
+          : const SizedBox(),
     );
   }
 }

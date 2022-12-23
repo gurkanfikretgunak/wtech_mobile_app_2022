@@ -681,4 +681,10 @@ class L10nTr extends L10n {
 
   @override
   String get deleteAccount => 'Hesabı Sil';
+
+  @override
+  String get nextPage => 'Sonraki';
+
+  @override
+  String get getStarted => 'Başla';
 }

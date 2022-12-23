@@ -1448,6 +1448,18 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'Delete Account'**
   String get deleteAccount;
+
+  /// No description provided for @nextPage.
+  ///
+  /// In en, this message translates to:
+  /// **'Next'**
+  String get nextPage;
+
+  /// No description provided for @getStarted.
+  ///
+  /// In en, this message translates to:
+  /// **'Get Started'**
+  String get getStarted;
 }
 
 class _L10nDelegate extends LocalizationsDelegate<L10n> {
