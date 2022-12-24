@@ -12,8 +12,7 @@ class SignInWidget {
     return Container();
   }
 
-  Widget emailTextField(
-      BuildContext context, TextEditingController emailTextController) {
+  Widget emailTextField(BuildContext context, TextEditingController emailTextController) {
     final _vm = GetIt.I.get<AuthenticationViewModel>();
 
     return StreamBuilder<Object>(
@@ -30,8 +29,7 @@ class SignInWidget {
         });
   }
 
-  Widget passwordTextField(
-      BuildContext context, TextEditingController passwordTextController) {
+  Widget passwordTextField(BuildContext context, TextEditingController passwordTextController) {
     final _vm = GetIt.I.get<AuthenticationViewModel>();
 
     return StreamBuilder<Object>(
@@ -54,22 +52,22 @@ class SignInWidget {
     return Column(
       children: [
         SignInAccountButton(
-          icon: Assets.images.google,
+          icon: Assets.images.svg.google,
           text: L10n.of(context)!.signinWith,
           socialText: "",
         ),
         SignInAccountButton(
-          icon: Assets.images.facebook,
+          icon: Assets.images.svg.facebook,
           text: L10n.of(context)!.signinWith,
           socialText: "",
         ),
         SignInAccountButton(
-          icon: Assets.images.apple,
+          icon: Assets.images.svg.apple,
           text: L10n.of(context)!.signinWith,
           socialText: "",
         ),
         SignInAccountButton(
-          icon: Assets.images.github,
+          icon: Assets.images.svg.github,
           text: L10n.of(context)!.signinWith,
           socialText: "",
         ),

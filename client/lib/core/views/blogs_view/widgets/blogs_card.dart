@@ -55,10 +55,7 @@ class BlogsCard extends StatelessWidget with BlogsWidget {
                   ),
                 ),
                 const Spacer(),
-                Expanded(
-                    flex: 20,
-                    child: cardImage(
-                        imagePath: Assets.images.blog1.path, context: context)),
+                Expanded(flex: 20, child: cardImage(imagePath: Assets.images.png.blog1.path, context: context)),
               ],
             ),
           ),

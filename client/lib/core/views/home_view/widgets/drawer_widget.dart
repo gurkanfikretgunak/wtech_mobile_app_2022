@@ -17,7 +17,7 @@ class DrawerWidget extends StatelessWidget {
             padding: context.onlyTopPaddingHigh,
             child: CircleAvatar(
               maxRadius: 50,
-              child: ClipOval(child: Image.asset(Assets.images.logos.path)),
+              child: ClipOval(child: Image.asset(Assets.images.jpg.drawerLogo.path)),
             ),
           ),
           Expanded(

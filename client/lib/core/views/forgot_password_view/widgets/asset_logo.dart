@@ -13,7 +13,7 @@ class AssetLogo extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: context.dynamicHeight(0.1),
-      child: SvgPicture.asset(Assets.images.logoSvg),
+      child: SvgPicture.asset(Assets.images.svg.logo),
     );
   }
 }

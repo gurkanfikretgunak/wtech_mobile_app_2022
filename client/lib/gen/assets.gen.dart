@@ -38,8 +38,12 @@ class $AssetsGifGen {
   /// File path: assets/gif/mentor.gif
   AssetGenImage get mentor => const AssetGenImage('assets/gif/mentor.gif');
 
+  /// File path: assets/gif/wtech_logo_gif.gif
+  AssetGenImage get wtechLogoGif =>
+      const AssetGenImage('assets/gif/wtech_logo_gif.gif');
+
   /// List of all assets
-  List<AssetGenImage> get values => [education, events, mentor];
+  List<AssetGenImage> get values => [education, events, mentor, wtechLogoGif];
 }
 
 class $AssetsIconsGen {
@@ -165,151 +169,29 @@ class $AssetsIconsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
-  /// File path: assets/images/about_1.jpg
-  AssetGenImage get about1 => const AssetGenImage('assets/images/about_1.jpg');
+  $AssetsImagesJpgGen get jpg => const $AssetsImagesJpgGen();
+  $AssetsImagesPngGen get png => const $AssetsImagesPngGen();
+  $AssetsImagesSvgGen get svg => const $AssetsImagesSvgGen();
+}
 
-  /// File path: assets/images/apple.svg
-  String get apple => 'assets/images/apple.svg';
+class $AssetsLauncherIconGen {
+  const $AssetsLauncherIconGen();
 
-  /// File path: assets/images/blog_1.png
-  AssetGenImage get blog1 => const AssetGenImage('assets/images/blog_1.png');
+  /// File path: assets/launcher_icon/launcher_icon_dev.png
+  AssetGenImage get launcherIconDev =>
+      const AssetGenImage('assets/launcher_icon/launcher_icon_dev.png');
 
-  /// File path: assets/images/deneme.jpg
-  AssetGenImage get deneme => const AssetGenImage('assets/images/deneme.jpg');
+  /// File path: assets/launcher_icon/launcher_icon_int.png
+  AssetGenImage get launcherIconInt =>
+      const AssetGenImage('assets/launcher_icon/launcher_icon_int.png');
 
-  /// File path: assets/images/dijital_sanatlar.jpeg
-  AssetGenImage get dijitalSanatlar =>
-      const AssetGenImage('assets/images/dijital_sanatlar.jpeg');
-
-  /// File path: assets/images/education_1.png
-  AssetGenImage get education1 =>
-      const AssetGenImage('assets/images/education_1.png');
-
-  /// File path: assets/images/education_2.jpeg
-  AssetGenImage get education2 =>
-      const AssetGenImage('assets/images/education_2.jpeg');
-
-  /// File path: assets/images/ege_egitim.jpeg
-  AssetGenImage get egeEgitim =>
-      const AssetGenImage('assets/images/ege_egitim.jpeg');
-
-  /// File path: assets/images/facebook.svg
-  String get facebook => 'assets/images/facebook.svg';
-
-  /// File path: assets/images/gelecekle_iddia.jpeg
-  AssetGenImage get gelecekleIddia =>
-      const AssetGenImage('assets/images/gelecekle_iddia.jpeg');
-
-  /// File path: assets/images/github.svg
-  String get github => 'assets/images/github.svg';
-
-  /// File path: assets/images/google.svg
-  String get google => 'assets/images/google.svg';
-
-  /// File path: assets/images/happy_friday.jpeg
-  AssetGenImage get happyFriday =>
-      const AssetGenImage('assets/images/happy_friday.jpeg');
-
-  /// File path: assets/images/home_1.png
-  AssetGenImage get home1 => const AssetGenImage('assets/images/home_1.png');
-
-  /// File path: assets/images/job_1.png
-  AssetGenImage get job1 => const AssetGenImage('assets/images/job_1.png');
-
-  /// File path: assets/images/logo.png
-  AssetGenImage get logoPng => const AssetGenImage('assets/images/logo.png');
-
-  /// File path: assets/images/logo.svg
-  String get logoSvg => 'assets/images/logo.svg';
-
-  /// File path: assets/images/logos.jpeg
-  AssetGenImage get logos => const AssetGenImage('assets/images/logos.jpeg');
-
-  /// File path: assets/images/mentor_1.png
-  AssetGenImage get mentor1 =>
-      const AssetGenImage('assets/images/mentor_1.png');
-
-  /// File path: assets/images/news_1.png
-  AssetGenImage get news1 => const AssetGenImage('assets/images/news_1.png');
-
-  /// File path: assets/images/news_2.png
-  AssetGenImage get news2 => const AssetGenImage('assets/images/news_2.png');
-
-  /// File path: assets/images/our_goals.jpg
-  AssetGenImage get ourGoals =>
-      const AssetGenImage('assets/images/our_goals.jpg');
-
-  /// File path: assets/images/profile.jpg
-  AssetGenImage get profile => const AssetGenImage('assets/images/profile.jpg');
-
-  /// File path: assets/images/saglik.png
-  AssetGenImage get saglik => const AssetGenImage('assets/images/saglik.png');
-
-  /// File path: assets/images/title_card.png
-  AssetGenImage get titleCard =>
-      const AssetGenImage('assets/images/title_card.png');
-
-  /// File path: assets/images/turk_traktor.jpeg
-  AssetGenImage get turkTraktor =>
-      const AssetGenImage('assets/images/turk_traktor.jpeg');
-
-  /// File path: assets/images/what_we_doing.jpg
-  AssetGenImage get whatWeDoing =>
-      const AssetGenImage('assets/images/what_we_doing.jpg');
-
-  /// File path: assets/images/who_we.jpg
-  AssetGenImage get whoWe => const AssetGenImage('assets/images/who_we.jpg');
-
-  /// File path: assets/images/wtech-logo.png
-  AssetGenImage get wtechLogo =>
-      const AssetGenImage('assets/images/wtech-logo.png');
-
-  /// File path: assets/images/wtechLogo.png
-  AssetGenImage get wtechLogoPng =>
-      const AssetGenImage('assets/images/wtechLogo.png');
-
-  /// File path: assets/images/wtechLogo.svg
-  String get wtechLogoSvg => 'assets/images/wtechLogo.svg';
-
-  /// File path: assets/images/wtech_logo_gif.gif
-  AssetGenImage get wtechLogoGif =>
-      const AssetGenImage('assets/images/wtech_logo_gif.gif');
+  /// File path: assets/launcher_icon/launcher_icon_prod.png
+  AssetGenImage get launcherIconProd =>
+      const AssetGenImage('assets/launcher_icon/launcher_icon_prod.png');
 
   /// List of all assets
-  List<dynamic> get values => [
-        about1,
-        apple,
-        blog1,
-        deneme,
-        dijitalSanatlar,
-        education1,
-        education2,
-        egeEgitim,
-        facebook,
-        gelecekleIddia,
-        github,
-        google,
-        happyFriday,
-        home1,
-        job1,
-        logoPng,
-        logoSvg,
-        logos,
-        mentor1,
-        news1,
-        news2,
-        ourGoals,
-        profile,
-        saglik,
-        titleCard,
-        turkTraktor,
-        whatWeDoing,
-        whoWe,
-        wtechLogo,
-        wtechLogoPng,
-        wtechLogoSvg,
-        wtechLogoGif
-      ];
+  List<AssetGenImage> get values =>
+      [launcherIconDev, launcherIconInt, launcherIconProd];
 }
 
 class $AssetsLottieGen {
@@ -322,6 +204,143 @@ class $AssetsLottieGen {
   List<String> get values => [loadingBar];
 }
 
+class $AssetsImagesJpgGen {
+  const $AssetsImagesJpgGen();
+
+  /// File path: assets/images/jpg/about_1.jpg
+  AssetGenImage get about1 =>
+      const AssetGenImage('assets/images/jpg/about_1.jpg');
+
+  /// File path: assets/images/jpg/digital_arts.jpeg
+  AssetGenImage get digitalArts =>
+      const AssetGenImage('assets/images/jpg/digital_arts.jpeg');
+
+  /// File path: assets/images/jpg/drawer_logo.jpeg
+  AssetGenImage get drawerLogo =>
+      const AssetGenImage('assets/images/jpg/drawer_logo.jpeg');
+
+  /// File path: assets/images/jpg/education.jpeg
+  AssetGenImage get education =>
+      const AssetGenImage('assets/images/jpg/education.jpeg');
+
+  /// File path: assets/images/jpg/educational_program.jpeg
+  AssetGenImage get educationalProgram =>
+      const AssetGenImage('assets/images/jpg/educational_program.jpeg');
+
+  /// File path: assets/images/jpg/event_future.jpeg
+  AssetGenImage get eventFuture =>
+      const AssetGenImage('assets/images/jpg/event_future.jpeg');
+
+  /// File path: assets/images/jpg/happy_friday.jpeg
+  AssetGenImage get happyFriday =>
+      const AssetGenImage('assets/images/jpg/happy_friday.jpeg');
+
+  /// File path: assets/images/jpg/our_goals.jpg
+  AssetGenImage get ourGoals =>
+      const AssetGenImage('assets/images/jpg/our_goals.jpg');
+
+  /// File path: assets/images/jpg/profile.jpg
+  AssetGenImage get profile =>
+      const AssetGenImage('assets/images/jpg/profile.jpg');
+
+  /// File path: assets/images/jpg/what_we_doing.jpg
+  AssetGenImage get whatWeDoing =>
+      const AssetGenImage('assets/images/jpg/what_we_doing.jpg');
+
+  /// File path: assets/images/jpg/who_we.jpg
+  AssetGenImage get whoWe =>
+      const AssetGenImage('assets/images/jpg/who_we.jpg');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [
+        about1,
+        digitalArts,
+        drawerLogo,
+        education,
+        educationalProgram,
+        eventFuture,
+        happyFriday,
+        ourGoals,
+        profile,
+        whatWeDoing,
+        whoWe
+      ];
+}
+
+class $AssetsImagesPngGen {
+  const $AssetsImagesPngGen();
+
+  /// File path: assets/images/png/blog_1.png
+  AssetGenImage get blog1 =>
+      const AssetGenImage('assets/images/png/blog_1.png');
+
+  /// File path: assets/images/png/education_1.png
+  AssetGenImage get education1 =>
+      const AssetGenImage('assets/images/png/education_1.png');
+
+  /// File path: assets/images/png/event_health.png
+  AssetGenImage get eventHealth =>
+      const AssetGenImage('assets/images/png/event_health.png');
+
+  /// File path: assets/images/png/home_1.png
+  AssetGenImage get home1 =>
+      const AssetGenImage('assets/images/png/home_1.png');
+
+  /// File path: assets/images/png/job_1.png
+  AssetGenImage get job1 => const AssetGenImage('assets/images/png/job_1.png');
+
+  /// File path: assets/images/png/mentor_1.png
+  AssetGenImage get mentor1 =>
+      const AssetGenImage('assets/images/png/mentor_1.png');
+
+  /// File path: assets/images/png/news_1.png
+  AssetGenImage get news1 =>
+      const AssetGenImage('assets/images/png/news_1.png');
+
+  /// File path: assets/images/png/news_2.png
+  AssetGenImage get news2 =>
+      const AssetGenImage('assets/images/png/news_2.png');
+
+  /// File path: assets/images/png/wtech_logo.png
+  AssetGenImage get wtechLogo =>
+      const AssetGenImage('assets/images/png/wtech_logo.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [
+        blog1,
+        education1,
+        eventHealth,
+        home1,
+        job1,
+        mentor1,
+        news1,
+        news2,
+        wtechLogo
+      ];
+}
+
+class $AssetsImagesSvgGen {
+  const $AssetsImagesSvgGen();
+
+  /// File path: assets/images/svg/apple.svg
+  String get apple => 'assets/images/svg/apple.svg';
+
+  /// File path: assets/images/svg/facebook.svg
+  String get facebook => 'assets/images/svg/facebook.svg';
+
+  /// File path: assets/images/svg/github.svg
+  String get github => 'assets/images/svg/github.svg';
+
+  /// File path: assets/images/svg/google.svg
+  String get google => 'assets/images/svg/google.svg';
+
+  /// File path: assets/images/svg/logo.svg
+  String get logo => 'assets/images/svg/logo.svg';
+
+  /// List of all assets
+  List<String> get values => [apple, facebook, github, google, logo];
+}
+
 class Assets {
   Assets._();
 
@@ -329,6 +348,7 @@ class Assets {
   static const $AssetsGifGen gif = $AssetsGifGen();
   static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
+  static const $AssetsLauncherIconGen launcherIcon = $AssetsLauncherIconGen();
   static const $AssetsLottieGen lottie = $AssetsLottieGen();
 }
 

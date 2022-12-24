@@ -35,10 +35,7 @@ class NewsCard extends StatelessWidget with NewsWidgets {
                 children: [
                   Row(
                     children: [
-                      Expanded(
-                          child: cardImage(
-                              imagePath: Assets.images.news1.path,
-                              context: context)),
+                      Expanded(child: cardImage(imagePath: Assets.images.png.news1.path, context: context)),
                     ],
                   ),
                   Padding(
@@ -61,8 +58,7 @@ class NewsCard extends StatelessWidget with NewsWidgets {
               )
             : Row(
                 children: [
-                  cardImage(
-                      imagePath: Assets.images.deneme.path, context: context),
+                  cardImage(imagePath: Assets.images.png.home1.path, context: context),
                   const Spacer(),
                   Expanded(
                     flex: 6,

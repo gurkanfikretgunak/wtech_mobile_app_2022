@@ -38,8 +38,7 @@ class EducationCardWidget extends StatelessWidget {
                 Stack(
                   children: [
                     ClipRRect(
-                        borderRadius: BorderRadius.circular(16),
-                        child: Image.asset(Assets.images.education2.path)),
+                        borderRadius: BorderRadius.circular(16), child: Image.asset(Assets.images.png.news1.path)),
                     Positioned(
                       left: context.dynamicWidth(0.78),
                       top: context.dynamicHeight(0.005),

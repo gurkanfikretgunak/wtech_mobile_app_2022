@@ -55,9 +55,7 @@ class AboutWidgets {
         physics: const NeverScrollableScrollPhysics(),
         itemBuilder: (context, index) {
           var key = wtechStatisticsList(context)[index];
-          return SizedBox(
-              width: context.dynamicWidth(0.2),
-              child: AboutCategoryCard(listItem: key));
+          return SizedBox(width: context.dynamicWidth(0.2), child: AboutCategoryCard(listItem: key));
         },
       ),
     );
@@ -67,7 +65,7 @@ class AboutWidgets {
     return Stack(
       children: [
         CustomImage(
-          assetPath: Assets.images.about1.path,
+          assetPath: Assets.images.jpg.about1.path,
           height: context.dynamicHeight(0.2),
         ),
         Positioned(

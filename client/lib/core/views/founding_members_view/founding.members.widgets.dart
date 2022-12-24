@@ -1,4 +1,3 @@
-
 import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/views/mentors_view/widgets/mentor_card_widget.dart';
 import 'package:client/gen/assets.gen.dart';
@@ -20,7 +19,7 @@ class FoundingMembersWidgets {
           mentor: 'Zehra Öney',
           organization: 'Teknolojide Kadın Derneği',
           role: 'Yönetim Kurulu Başkanı',
-          imageUrl: Assets.images.mentor1.path,
+          imageUrl: Assets.images.png.mentor1.path,
         );
       },
     );

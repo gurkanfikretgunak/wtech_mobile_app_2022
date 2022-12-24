@@ -85,7 +85,10 @@ flutter:
     - assets/env/.env.test
     - assets/env/.env.dev
     - assets/env/
-    - assets/images/
+    - assets/images/jpg/
+    - assets/images/png/
+    - assets/images/svg/
     - assets/gif/
     - assets/icons/
     - assets/lottie/
+    - assets/launcher_icon/

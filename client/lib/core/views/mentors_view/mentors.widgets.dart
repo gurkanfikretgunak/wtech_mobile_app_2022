@@ -23,7 +23,7 @@ class MentorsWidgets {
           mentor: 'Zehra Öney',
           organization: 'Teknolojide Kadın Derneği',
           role: 'Yönetim Kurulu Başkanı',
-          imageUrl: Assets.images.mentor1.path,
+          imageUrl: Assets.images.png.mentor1.path,
           onPressedContact: () {
             CustomNavigator.goToScreen(context, Routes.mentorDetail.name);
           },

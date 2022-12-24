@@ -9,7 +9,7 @@ class SplashLogo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-      child: CustomImage(assetPath: Assets.images.wtechLogoGif.path),
+      child: CustomImage(assetPath: Assets.gif.wtechLogoGif.path),
     );
   }
 }

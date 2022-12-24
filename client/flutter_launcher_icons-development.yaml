@@ -1,4 +1,4 @@
 flutter_icons:
   android: true
   ios: true
-  image_path: "assets/images/wtechLogo.png"
+  image_path: "assets/launcher_icon/launcher_icon_dev.png"

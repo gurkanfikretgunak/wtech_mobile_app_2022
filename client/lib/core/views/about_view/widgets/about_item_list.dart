@@ -6,38 +6,32 @@ import 'package:flutter/material.dart';
 List aboutItemList(BuildContext context) {
   return [
     {
-      "image": Assets.images.whoWe.path,
+      "image": Assets.images.jpg.whoWe.path,
       "text": L10n.of(context)!.whoAreWe,
       "onPressed": () {
         navigate(
           context,
-          AboutDetailView(
-              imagePath: Assets.images.whoWe.path,
-              title: L10n.of(context)!.whoAreWe),
+          AboutDetailView(imagePath: Assets.images.jpg.whoWe.path, title: L10n.of(context)!.whoAreWe),
         );
       }
     },
     {
-      "image": Assets.images.whatWeDoing.path,
+      "image": Assets.images.jpg.whatWeDoing.path,
       "text": L10n.of(context)!.whatAreWeDoing,
       "onPressed": () {
         navigate(
           context,
-          AboutDetailView(
-              imagePath: Assets.images.whatWeDoing.path,
-              title: L10n.of(context)!.whatAreWeDoing),
+          AboutDetailView(imagePath: Assets.images.jpg.whatWeDoing.path, title: L10n.of(context)!.whatAreWeDoing),
         );
       }
     },
     {
-      "image": Assets.images.ourGoals.path,
+      "image": Assets.images.jpg.ourGoals.path,
       "text": L10n.of(context)!.ourGoal,
       "onPressed": () {
         navigate(
           context,
-          AboutDetailView(
-              imagePath: Assets.images.ourGoals.path,
-              title: L10n.of(context)!.ourGoal),
+          AboutDetailView(imagePath: Assets.images.jpg.ourGoals.path, title: L10n.of(context)!.ourGoal),
         );
       }
     }

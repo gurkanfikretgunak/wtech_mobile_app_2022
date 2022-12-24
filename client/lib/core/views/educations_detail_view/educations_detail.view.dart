@@ -8,8 +8,7 @@ import 'package:client/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
-class EducationsDetailView extends StatelessWidget
-    with EducationsDetailWidgets {
+class EducationsDetailView extends StatelessWidget with EducationsDetailWidgets {
   const EducationsDetailView({super.key});
 
   @override
@@ -18,10 +17,7 @@ class EducationsDetailView extends StatelessWidget
 
     return SafeArea(
       child: Scaffold(
-        appBar: CustomAppbar(
-            titleText: L10n.of(context)!.titleEducation,
-            isCheck: false,
-            isName: false),
+        appBar: CustomAppbar(titleText: L10n.of(context)!.titleEducation, isCheck: false, isName: false),
         body: Padding(
           padding: PaddingExtension(context).paddingNormal,
           child: SingleChildScrollView(
@@ -30,9 +26,7 @@ class EducationsDetailView extends StatelessWidget
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ClipRRect(
-                    borderRadius: BorderRadius.circular(13),
-                    child: Image.asset(Assets.images.education1.path)),
+                ClipRRect(borderRadius: BorderRadius.circular(13), child: Image.asset(Assets.images.png.blog1.path)),
                 Padding(
                   padding: context.verticalPaddingMedium,
                   child: educationContent(context),

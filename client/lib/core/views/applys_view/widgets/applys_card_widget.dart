@@ -33,7 +33,7 @@ class ApplysCardWidget extends StatelessWidget {
           children: [
             Stack(children: [
               CustomImage(
-                assetPath: Assets.images.education1.path,
+                assetPath: Assets.images.png.education1.path,
               ),
               Align(
                 alignment: Alignment.topRight,
@@ -61,8 +61,7 @@ class ApplysCardWidget extends StatelessWidget {
                   children: [
                     const Text(
                       "Flutter & Dart Bootcamp 22'",
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                     ),
                     Row(
                       children: [
@@ -92,10 +91,8 @@ class ApplysCardWidget extends StatelessWidget {
             ),
             Padding(
               padding: context.paddingLow,
-              child: Text(
-                  "Sizleri front-end geliştirme dünyasında sektörün yeni lideri Flutter Geliştiricisi...",
-                  style: TextStyle(
-                      color: ColorConstant.instance.grey, fontSize: 14)),
+              child: Text("Sizleri front-end geliştirme dünyasında sektörün yeni lideri Flutter Geliştiricisi...",
+                  style: TextStyle(color: ColorConstant.instance.grey, fontSize: 14)),
             ),
           ],
         ),

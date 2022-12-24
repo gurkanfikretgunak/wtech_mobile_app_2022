@@ -15,7 +15,7 @@ class JobsWidgets {
         childAspectRatio: context.width / context.height * 1.15,
       ),
       itemBuilder: (context, index) => JobsCardWidget(
-          imageUrl: Assets.images.job1.path,
+          imageUrl: Assets.images.png.job1.path,
           applyTime: "10.11.2022",
           institution: "Women in Technology Association",
           role: "Project Management Assistant",
