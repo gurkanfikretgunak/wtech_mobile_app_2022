@@ -14,7 +14,7 @@ class VideosView extends StatelessWidget with VideosWidgets {
     return _vm.baseScaffold(
       context,
       body: body(context),
-      appbar: appbar(context),
+      appbar: appBar(context),
     );
   }
 }

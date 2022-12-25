@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 class VideosWidgets {
   late ChewieController chewieController;
 
-  PreferredSizeWidget appbar(BuildContext context) {
+  PreferredSizeWidget appBar(BuildContext context) {
     return CustomAppbar(
       titleText: L10n.of(context)!.videos,
       isCheck: false,
