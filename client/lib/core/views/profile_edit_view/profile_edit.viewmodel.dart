@@ -1,9 +1,10 @@
+import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/abstractions/base_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
+// ignore: depend_on_referenced_packages
 import 'package:rxdart/rxdart.dart';
 
-import '../../l10n/app_l10n.dart';
 
 @Injectable()
 class ProfileEditViewModel extends BaseViewModel {
@@ -21,7 +22,6 @@ class ProfileEditViewModel extends BaseViewModel {
       _controller.add(L10n.of(context)!.mentor);
     }
     profileController?.text = _controller.value;
-    print(profileController!.text);
   }
 
   @override
