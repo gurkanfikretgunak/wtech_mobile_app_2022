@@ -17,30 +17,6 @@ class EducationsWidgets {
   }
 
   Widget searchEducationWidget(BuildContext context) {
-    /*return FittedBox(
-      child: Row(
-        children: [
-          SizedBox(
-            height: context.dynamicHeight(0.055),
-            width: context.dynamicWidth(0.75),
-            child: CustomTextFormField(
-              prefixIcon: const Icon(Icons.search),
-              labelText: L10n.of(context)!.search,
-            ),
-          ),
-          IconButton(
-            onPressed: () {
-              Logger().d("message");
-            },
-            icon: Icon(
-              Icons.filter_list_outlined,
-              size: 30,
-              color: ColorConstant.instance.blue,
-            ),
-          )
-        ],
-      ),
-    );*/
     return Padding(
       padding: context.paddingLow,
       child: CustomTextFormField(
