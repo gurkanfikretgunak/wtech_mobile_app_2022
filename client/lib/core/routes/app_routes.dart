@@ -42,13 +42,13 @@ class AppRoutes {
         return navigate(BlogsView());
 
       case Routes.educations:
-        return navigate(const EducationView());
+        return navigate(EducationView());
 
       case Routes.educationDetail:
-        return navigate(const EducationsDetailView());
+        return navigate(EducationsDetailView());
 
       case Routes.events:
-        return navigate(const EventsView());
+        return navigate(EventsView());
 
       case Routes.eventDetail:
         // TODO: Handle this case.
