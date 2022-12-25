@@ -1,20 +1,16 @@
-import 'package:client/core/utils/extensions/common_extension.dart';
+
 import 'package:client/core/l10n/app_l10n.dart';
-import 'package:client/core/views/signup_view/signup.viewmodel.dart';
+import 'package:client/core/utils/constants/colors/color_constans.dart';
+import 'package:client/core/utils/extensions/common_extension.dart';
+import 'package:client/core/views/signin_view/widgets/logo_widget.dart';
 import 'package:client/core/views/signup_view/signup.widgets.dart';
 import 'package:client/core/views/signup_view/signup_constants/label_constants.dart';
 import 'package:client/core/views/signup_view/widgets/agreement_text.dart';
 import 'package:client/core/views/signup_view/widgets/signup_button.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
-
-import '../../utils/constants/colors/color_constans.dart';
-import '../signin_view/widgets/logo_widget.dart';
-
 class SignUpView extends StatelessWidget with SignUpWidgets {
   SignUpView({super.key});
 
-  final _vm = GetIt.I.get<SignUpViewModel>();
 
   @override
   Widget build(BuildContext context) {
@@ -32,17 +28,11 @@ class SignUpView extends StatelessWidget with SignUpWidgets {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text("${L10n.of(context)!.alreadyHave} ",
-                style: TextStyle(
-                    fontSize: 12,
-                    fontWeight: FontWeight.w400,
-                    color: ColorConstant.instance.grey)),
+                style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400, color: ColorConstant.instance.grey)),
             InkWell(
                 child: Text(
               L10n.of(context)!.signIn,
-              style: TextStyle(
-                  fontSize: 12,
-                  fontWeight: FontWeight.bold,
-                  color: ColorConstant.instance.blue),
+              style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: ColorConstant.instance.blue),
             ))
           ],
         ),

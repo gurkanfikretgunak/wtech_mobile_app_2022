@@ -1,8 +1,7 @@
+import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/common/widgets/custom_divider.dart';
+import 'package:client/core/views/common/widgets/text/custom_text.dart';
 import 'package:flutter/material.dart';
-
-import '../../../l10n/app_l10n.dart';
-import '../../common/widgets/text/custom_text.dart';
 
 class CustomSignInAccountDivider extends StatelessWidget {
   const CustomSignInAccountDivider({
