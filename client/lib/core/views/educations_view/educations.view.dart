@@ -1,5 +1,6 @@
 import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/views/educations_view/educations.widgets.dart';
+import 'package:client/core/views/home_view/home.widgets.dart';
 import 'package:flutter/material.dart';
 
 class EducationView extends StatelessWidget {
@@ -15,7 +16,7 @@ class EducationView extends StatelessWidget {
             padding: context.paddingNormal,
             child: Column(
               children: [
-                EducationsWidgets().searchEducationWidget(context),
+                HomeViewWidget.searchHomeWidget(context),
                 ListView.separated(
                   physics: const BouncingScrollPhysics(),
                   shrinkWrap: true,

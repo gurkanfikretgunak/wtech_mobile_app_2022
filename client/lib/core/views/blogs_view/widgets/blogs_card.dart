@@ -34,6 +34,8 @@ class BlogsCard extends StatelessWidget with BlogsWidget {
           child: SizedBox(
             child: Row(
               children: [
+                Expanded(flex: 20, child: cardImage(imagePath: Assets.images.png.blog1.path, context: context)),
+                const Spacer(),
                 Expanded(
                   flex: 20,
                   child: Padding(
@@ -54,8 +56,6 @@ class BlogsCard extends StatelessWidget with BlogsWidget {
                     ),
                   ),
                 ),
-                const Spacer(),
-                Expanded(flex: 20, child: cardImage(imagePath: Assets.images.png.blog1.path, context: context)),
               ],
             ),
           ),

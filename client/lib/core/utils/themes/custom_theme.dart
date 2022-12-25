@@ -23,6 +23,7 @@ class CustomTheme {
       chipTheme: CustomChipTheme.chipTheme(),
       tabBarTheme: CustomTabBarTheme.tabbarTheme(),
       backgroundColor: ColorConstant.instance.cardColor,
+      cardTheme: CardTheme(color: ColorConstant.instance.cardColor),
     );
   }
 
