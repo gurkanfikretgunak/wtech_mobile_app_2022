@@ -1,10 +1,11 @@
+import 'package:client/core/l10n/app_l10n.dart';
+import 'package:client/core/views/authentication/authentication.viewmodel.dart';
+import 'package:client/core/views/common/widgets/text/custom_textfield.dart';
 import 'package:client/core/views/signin_view/widgets/sigin_account_button_widget.dart';
+import 'package:client/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get_it/get_it.dart';
-
-import '../../l10n/app_l10n.dart';
-import '../authentication/authentication.viewmodel.dart';
-import '../common/widgets/text/custom_textfield.dart';
 
 class SignInWidget {
   Widget form(BuildContext context) {
@@ -53,22 +54,22 @@ class SignInWidget {
     return Column(
       children: [
         SignInAccountButton(
-          icon: "assets/images/google.svg",
+          icon: Assets.images.google,
           text: L10n.of(context)!.signinWith,
           socialText: "",
         ),
         SignInAccountButton(
-          icon: "assets/images/facebook.svg",
+          icon: Assets.images.facebook,
           text: L10n.of(context)!.signinWith,
           socialText: "",
         ),
         SignInAccountButton(
-          icon: "assets/images/apple.svg",
+          icon: Assets.images.apple,
           text: L10n.of(context)!.signinWith,
           socialText: "",
         ),
         SignInAccountButton(
-          icon: "assets/images/github.svg",
+          icon: Assets.images.github,
           text: L10n.of(context)!.signinWith,
           socialText: "",
         ),

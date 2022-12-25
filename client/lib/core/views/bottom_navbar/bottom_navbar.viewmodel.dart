@@ -1,9 +1,8 @@
+import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/abstractions/base_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 import 'package:rxdart/rxdart.dart';
-
-import '../../l10n/app_l10n.dart';
 
 @Injectable()
 class BottomNavBarViewModel extends BaseViewModel {
@@ -24,11 +23,11 @@ class BottomNavBarViewModel extends BaseViewModel {
       case 0:
         return L10n.of(context)!.hello;
       case 1:
-        return "Eğitimler";
+        return L10n.of(context)!.educations;
       case 2:
         return L10n.of(context)!.favorites;
       case 3:
-        return L10n.of(context)!.apply;
+        return L10n.of(context)!.applys;
       default:
     }
   }
