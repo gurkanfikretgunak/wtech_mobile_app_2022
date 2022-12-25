@@ -4,11 +4,22 @@ import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/common/widgets/text/custom_textfield.dart';
 import 'package:client/core/views/home_view/temporary_contants.dart/text_constants.dart';
+import 'package:client/core/views/home_view/widgets/categories_widget.dart';
+import 'package:client/core/views/home_view/widgets/swiper_widget.dart';
 import 'package:client/core/views/home_view/widgets/training_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:client/core/views/common/widgets/custom_appbar.dart';
 
 class HomeViewWidget {
-  Widget homeCardWidget(BuildContext context) {
+  PreferredSizeWidget appBar(BuildContext context) {
+    return CustomAppbar(
+      titleText: L10n.of(context)!.videos,
+      isCheck: false,
+      isName: false,
+    );
+  }
+
+  static Widget homeCardWidget(BuildContext context) {
     return ListView.builder(
       scrollDirection: Axis.horizontal,
       shrinkWrap: true,
@@ -61,6 +72,28 @@ class HomeViewWidget {
         suffixIcon: const Icon(Icons.tune_outlined),
         labelText: L10n.of(context)!.search,
         isSearch: true,
+      ),
+    );
+  }
+
+  Padding homePageWidget(BuildContext context) {
+    return Padding(
+      padding: context.paddingNormal,
+      child: Wrap(
+        runSpacing: 5,
+        children: [
+          HomeViewWidget.searchHomeWidget(context),
+          context.emptySizedHeightBoxLow,
+          SizedBox(
+            height: context.dynamicHeight(0.29),
+            width: context.width,
+            child: const EventSwiperWidget(),
+          ),
+          Text(L10n.of(context)!.categories, style: Theme.of(context).textTheme.headline6),
+          SizedBox(height: context.dynamicHeight(0.098), width: context.width, child: const CategoriesWidget()),
+          Text(L10n.of(context)!.currentTraining, style: Theme.of(context).textTheme.headline6),
+          SizedBox(height: context.dynamicHeight(0.2), child: homeCardWidget(context)),
+        ],
       ),
     );
   }
