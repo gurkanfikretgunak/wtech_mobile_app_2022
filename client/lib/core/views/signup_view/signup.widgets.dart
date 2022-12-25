@@ -1,14 +1,16 @@
-
 import 'package:client/core/l10n/app_l10n.dart';
+import 'package:client/core/utils/constants/colors/color_constans.dart';
 import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/views/authentication/authentication.viewmodel.dart';
 import 'package:client/core/views/common/widgets/text/custom_textfield.dart';
+import 'package:client/core/views/signin_view/widgets/logo_widget.dart';
 import 'package:client/core/views/signup_view/signup_constants/label_constants.dart';
+import 'package:client/core/views/signup_view/widgets/agreement_text.dart';
 import 'package:client/core/views/signup_view/widgets/profile_choose_widget.dart';
 import 'package:client/core/views/signup_view/widgets/register_textfield.dart';
+import 'package:client/core/views/signup_view/widgets/signup_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
-
 class SignUpWidgets {
   Widget userInfoTextfield(BuildContext context, List<String> labels) {
     return const RegisterTextfields();
@@ -72,5 +74,33 @@ class SignUpWidgets {
                 errorText: snapshot.error?.toString()),
           );
         });
+  }
+
+  Widget body(BuildContext context){
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        Padding(
+          padding: context.onlyTopPaddingHigh,
+          child: const Logo(),
+        ),
+        userInfoTextfield(context, SignUpConstants().signUpLabels(context)),
+        userProfileWidget(context, SignUpConstants().profileController!),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("${L10n.of(context)!.alreadyHave} ",
+                style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400, color: ColorConstant.instance.grey)),
+            InkWell(
+                child: Text(
+              L10n.of(context)!.signIn,
+              style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: ColorConstant.instance.blue),
+            ))
+          ],
+        ),
+        const SignUpButton(),
+        const AgreementTextWidget()
+      ],
+    );
   }
 }
