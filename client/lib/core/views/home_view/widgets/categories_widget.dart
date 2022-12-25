@@ -1,4 +1,3 @@
-import 'package:client/core/utils/constants/colors/color_constans.dart';
 import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/views/home_view/temporary_contants.dart/icon_constants.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +21,7 @@ class CategoriesWidget extends StatelessWidget {
               children: [
                 CircleAvatar(
                   maxRadius: 25,
-                  backgroundColor: ColorConstant.instance.shinyWhite,
+                  backgroundColor: Theme.of(context).backgroundColor,
                   child: Icon(
                     key['icon'],
                   ),

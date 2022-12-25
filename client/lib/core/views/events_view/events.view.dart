@@ -1,7 +1,7 @@
 import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/common/widgets/custom_appbar.dart';
-import 'package:client/core/views/events_view/widgets/calendar_listview.dart';
+import 'package:client/core/views/events_view/widgets/calendar_card.dart';
 import 'package:client/core/views/events_view/widgets/events_listview_builder.dart';
 import 'package:client/core/views/events_view/widgets/the_day_of_the_month.dart';
 import 'package:flutter/material.dart';
@@ -27,13 +27,13 @@ class _EventsViewState extends State<EventsView> {
       ),
       drawer: const DrawerWidget(),
       body: Padding(
-        padding: context.paddingNormal,
+        padding: context.paddingLow,
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const TheDayOfTheMonth(),
             Padding(
-              padding: context.onlyTopPaddingNormal,
-              child: const CalenderListview(),
+              padding: context.paddingNormal,
+              child: const CalendarCard(),
             ),
             Expanded(
                 child: SizedBox(

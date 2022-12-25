@@ -32,8 +32,7 @@ class App extends StatelessWidget {
                 dispose: (context, bloc) => bloc.dispose(),
                 child: SplashView(),
               ),
-              title:
-                  "Flutter Boilerplate : ${Flavor.I.getString(Keys.appTitle)}",
+              title: "Flutter Boilerplate : ${Flavor.I.getString(Keys.appTitle)}",
               theme: CustomTheme.customLightTheme(context),
               debugShowCheckedModeBanner: false,
             );

@@ -50,6 +50,8 @@ dependencies:
 
   #videoos
   video_player: ^2.4.10
+  flutter_advanced_calendar: ^1.3.0
+
   
   
 

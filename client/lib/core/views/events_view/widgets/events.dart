@@ -32,8 +32,7 @@ class Events extends StatelessWidget {
               Expanded(
                 flex: 4,
                 child: Padding(
-                  padding: EdgeInsets.only(
-                      bottom: MediaQuery.of(context).size.width * 0.025),
+                  padding: EdgeInsets.only(bottom: MediaQuery.of(context).size.width * 0.025),
                   child: const EventsDescription(),
                 ),
               )

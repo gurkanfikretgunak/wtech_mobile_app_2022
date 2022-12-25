@@ -1,6 +1,5 @@
 import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class Logo extends StatelessWidget {
   const Logo({
@@ -10,7 +9,7 @@ class Logo extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: context.dynamicHeight(0.1),
-      child: SvgPicture.asset("assets/images/wtechLogo.svg"),
+      child: Image.asset("assets/images/png/wtech_logo.png"),
     );
   }
 }

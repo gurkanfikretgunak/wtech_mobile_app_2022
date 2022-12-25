@@ -44,6 +44,7 @@ class SignInWidget {
               _vm.changePassword(text!);
             },
             errorText: snapshot.error?.toString(),
+            isSearch: false,
           );
         });
   }
