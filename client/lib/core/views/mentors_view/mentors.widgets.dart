@@ -1,7 +1,10 @@
+import 'package:client/core/routes/custom_navigator.dart';
+import 'package:client/core/utils/constants/enums/routes.enum.dart';
 import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/views/mentors_view/widgets/mentor_card_widget.dart';
 import 'package:client/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
+import 'package:logger/logger.dart';
 
 class MentorsWidgets {
   Widget body(BuildContext context) {
@@ -21,6 +24,12 @@ class MentorsWidgets {
           organization: 'Teknolojide Kadın Derneği',
           role: 'Yönetim Kurulu Başkanı',
           imageUrl: Assets.images.mentor1.path,
+          onPressedContact: () {
+            CustomNavigator.goToScreen(context, Routes.mentorDetail.name);
+          },
+          onPressedFavorite: () {
+            Logger().i('Favorite button pressed');
+          },
         );
       },
     );

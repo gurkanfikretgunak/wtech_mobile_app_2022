@@ -59,7 +59,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
                         color: ColorConstant.instance.grey,
                       )
                     : const Icon(Icons.visibility_off))
-            : null,
+            : widget.suffixIcon,
         prefixIcon: widget.prefixIcon,
         contentPadding: EdgeInsets.symmetric(
             horizontal: context.dynamicWidth(0), vertical: 0),

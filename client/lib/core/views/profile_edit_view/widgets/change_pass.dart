@@ -3,9 +3,9 @@ import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/common/widgets/button/custom_button_libary.dart';
 import 'package:client/core/views/common/widgets/text/custom_textfield.dart';
+import 'package:client/core/views/profile_edit_view/constants/profile_edit_const.dart';
 import 'package:flutter/material.dart';
 
-import '../constants/profile_edit_const.dart';
 
 class ChangePasswordContainer extends StatelessWidget {
   const ChangePasswordContainer({super.key});
@@ -52,7 +52,7 @@ class ChangePasswordContainer extends StatelessWidget {
                         padding: context.paddingMedium,
                         child: CustomTextFormField(
                           controller: ProfileEditConstants()
-                              .ChangePasswordControllers()[index]!,
+                              .changePasswordControllers()[index]!,
                           labelText: ProfileEditConstants()
                               .changePassLabels(context)[index],
                         ),

@@ -1,8 +1,10 @@
+
 import 'package:client/core/utils/extensions/common_extension.dart';
-import 'package:client/core/views/common/widgets/text/custom_text_library.dart';
+import 'package:client/core/views/common/widgets/text/custom_textfield.dart';
 import 'package:client/core/views/signup_view/signup.widgets.dart';
 import 'package:client/core/views/signup_view/widgets/profile_popup.dart';
 import 'package:flutter/material.dart';
+
 
 class UserProfileChooseWidget extends StatelessWidget with SignUpWidgets {
   const UserProfileChooseWidget({

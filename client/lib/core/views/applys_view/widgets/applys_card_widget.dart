@@ -1,12 +1,12 @@
+import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/utils/constants/colors/color_constans.dart';
 import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/views/common/widgets/custom_image.dart';
+import 'package:client/core/views/common/widgets/text/custom_text.dart';
+import 'package:client/gen/assets.gen.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-
-import '../../../../gen/assets.gen.dart';
-import '../../common/widgets/text/custom_text.dart';
 
 // ignore: must_be_immutable
 class ApplysCardWidget extends StatelessWidget {
@@ -17,9 +17,11 @@ class ApplysCardWidget extends StatelessWidget {
   bool applyState = true;
   final bool state;
   Color applyAccepted = Colors.green.withOpacity(0.9);
-  Color applyEvaluation = ColorConstant.instance.yellow.withOpacity(0.6);
+  Color applyEvaluation = ColorConstant.instance.blue.withOpacity(0.9);
   @override
   Widget build(BuildContext context) {
+    String accepted = L10n.of(context)!.accepted;
+    String evaluating = L10n.of(context)!.evaluating;
     return Padding(
       padding: context.paddingLow,
       child: Card(
@@ -44,7 +46,7 @@ class ApplysCardWidget extends StatelessWidget {
                   width: context.dynamicWidth(0.3),
                   child: Center(
                     child: CustomText(
-                      state ? "Kabul Edildi" : "Değerlendirmede",
+                      state ? accepted : evaluating,
                       color: ColorConstant.instance.white,
                     ),
                   ),
@@ -95,18 +97,6 @@ class ApplysCardWidget extends StatelessWidget {
                   style: TextStyle(
                       color: ColorConstant.instance.grey, fontSize: 14)),
             ),
-            // Padding(
-            //   padding: context.paddingNormal,
-            //   child: Row(
-            //     mainAxisAlignment: MainAxisAlignment.end,
-            //     children: [
-            //       ElevatedButton(
-            //         child: Text(L10n.of(context)!.educationButton),
-            //         onPressed: () {},
-            //       ),
-            //     ],
-            //   ),
-            // ),
           ],
         ),
       ),

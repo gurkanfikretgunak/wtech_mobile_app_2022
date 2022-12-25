@@ -2,8 +2,7 @@ import 'package:client/core/utils/constants/colors/color_constans.dart';
 import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:flutter/material.dart';
-
-import '../../common/widgets/text/custom_textfield.dart';
+import 'package:client/core/views/common/widgets/text/custom_textfield.dart';
 
 class SearchBarWidget extends StatelessWidget {
   const SearchBarWidget({
@@ -26,7 +25,6 @@ class SearchBarWidget extends StatelessWidget {
             blurRadius: 1.0,
           ),
         ],
-        //border: Border.all()
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -38,7 +36,6 @@ class SearchBarWidget extends StatelessWidget {
                 height: context.dynamicHeight(0.09),
                 width: context.dynamicWidth(0.8),
                 decoration: BoxDecoration(
-                  //color: ColorConstant.instance.grey,
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: CustomTextFormField(
