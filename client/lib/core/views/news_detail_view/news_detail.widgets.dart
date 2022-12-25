@@ -2,6 +2,7 @@ import 'package:client/core/domain/models/news/news_model.dart';
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/utils/constants/colors/color_constans.dart';
 import 'package:client/core/utils/extensions/common_extension.dart';
+import 'package:client/core/views/common/widgets/custom_appbar.dart';
 import 'package:client/core/views/common/widgets/custom_date_text.dart';
 import 'package:client/core/views/common/widgets/custom_image.dart';
 import 'package:client/core/views/common/widgets/custom_views_count.dart';
@@ -9,6 +10,28 @@ import 'package:client/core/views/common/widgets/text/custom_text.dart';
 import 'package:flutter/material.dart';
 
 class NewsDetailWidgets {
+  PreferredSizeWidget appBar(BuildContext context) {
+    return CustomAppbar(titleText: L10n.of(context)!.news);
+  }
+
+  Widget body(BuildContext context, {required NewsModel news}) {
+    return Padding(
+      padding: context.horizontalPaddingNormal,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Expanded(flex: 2, child: title(news)),
+          Expanded(flex: 2, child: wtechAndDateText(context)),
+          Expanded(flex: 6, child: newsImage(news, context)),
+          Expanded(flex: 2, child: newsDetailTitleAndViewsCount(context)),
+          Expanded(flex: 6, child: newsDetailTextCard(context, news)),
+          const Spacer()
+        ],
+      ),
+    );
+  }
+
   Widget title(NewsModel news) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
