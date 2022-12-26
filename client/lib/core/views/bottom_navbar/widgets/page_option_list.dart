@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 
 List<Widget> pageOptionList = <Widget>[
   HomeView(),
-  const EducationView(),
+  EducationView(),
   FavoritesView(),
   ApplysView()
 ];

@@ -1,8 +1,11 @@
 import 'package:client/core/utils/constants/colors/color_constans.dart';
 import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
+import 'package:client/core/views/common/widgets/custom_appbar.dart';
 import 'package:client/core/views/common/widgets/text/custom_text.dart';
 import 'package:client/core/views/educations_detail_view/widgets/content_card.dart';
+import 'package:client/core/views/educations_detail_view/widgets/expansion_tile.dart';
+import 'package:client/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:client/core/views/common/widgets/button/custom_button_libary.dart';
@@ -84,6 +87,40 @@ class EducationsDetailWidgets {
           ),
         );
       },
+    );
+  }
+
+  PreferredSizeWidget appBar(BuildContext context) {
+    return CustomAppbar(
+      titleText: L10n.of(context)!.titleEducation,
+      isCheck: false,
+      isName: false
+    );
+  }
+
+  Widget body(BuildContext context) {
+    return SafeArea(
+      child: Padding(
+        padding: PaddingExtension(context).paddingNormal,
+        child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              ClipRRect(
+                  borderRadius: BorderRadius.circular(13),
+                  child: Image.asset(Assets.images.education1.path)),
+              Padding(
+                padding: context.verticalPaddingMedium,
+                child: educationContent(context),
+              ),
+              const EducationDescription(),
+              applyAndFavoriteButton(context)
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
