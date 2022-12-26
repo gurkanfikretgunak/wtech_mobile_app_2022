@@ -6,6 +6,7 @@ import 'package:client/core/views/jobs_details_view/widgets/job_detail_action_bu
 import 'package:client/core/views/jobs_details_view/widgets/job_image_and_time.dart';
 import 'package:client/core/views/jobs_details_view/widgets/job_expansion_tile.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 class JobsDetailWidget extends StatelessWidget {
   const JobsDetailWidget(
@@ -29,67 +30,12 @@ class JobsDetailWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context).copyWith(dividerColor: Colors.transparent);
-<<<<<<< HEAD
-    return Column(
-      children: [
-        Padding(
-          padding: context.paddingNormal,
-          child: Center(child: CustomText(jobDetailTitle ?? "", fontSize: 20, fontWeight: FontWeight.bold)),
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Padding(
-              padding: context.onlyLeftPaddingNormal,
-              child: CustomText(
-                jobInstitution ?? "",
-                color: ColorConstant.instance.blue,
-              ),
-            ),
-            Padding(
-              padding: context.onlyRightPaddingNormal,
-              child: Row(
-                children: [
-                  CustomText(
-                    L10n.of(context)!.lastUpdatedDate,
-                    color: Theme.of(context).cardColor,
-                  ),
-                  CustomText(
-                    ":",
-                    color: Theme.of(context).cardColor,
-                  ),
-                  CustomText(
-                    jobApplyTime ?? "",
-                    color: Theme.of(context).cardColor,
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-        Padding(
-          padding: context.onlyTopPaddingMedium,
-          child: SizedBox(
-            height: context.dynamicHeight(0.2),
-            width: context.dynamicWidth(0.9),
-            child: JobImageandTime(jobImage: jobImage),
-          ),
-        ),
-        Padding(
-          padding: context.paddingMedium,
-          child: CustomText(
-            jobQualification ?? "",
-            color: Theme.of(context).cardColor,
-            fontSize: 15,
-=======
     return SingleChildScrollView(
       child: Column(
         children: [
           Padding(
             padding: context.paddingNormal,
-            child: Center(
-                child: CustomText(jobDetailTitle ?? "",
-                    fontSize: 20, fontWeight: FontWeight.bold)),
+            child: Center(child: CustomText(jobDetailTitle ?? "", fontSize: 20, fontWeight: FontWeight.bold)),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -121,7 +67,6 @@ class JobsDetailWidget extends StatelessWidget {
                 ),
               ),
             ],
->>>>>>> 997b4d9189507f32e8c4bbb1d790e81e83050bcf
           ),
           Padding(
             padding: context.onlyTopPaddingMedium,
@@ -158,25 +103,3 @@ class JobsDetailWidget extends StatelessWidget {
     );
   }
 }
-<<<<<<< HEAD
-
-Widget floatingActionButton(BuildContext context) {
-  return Container(
-    padding: context.horizontalPaddingHigh,
-    width: context.width,
-    child: CustomElevatedButton(
-      onPressed: () {
-        showModalBottomSheet(
-          shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
-          context: context,
-          isScrollControlled: true,
-          builder: (context) => const JobsDetailBottomSheetWidget(),
-        );
-      },
-      text: L10n.of(context)?.apply ?? '',
-      textColor: ColorConstant.instance.white,
-    ),
-  );
-}
-=======
->>>>>>> 997b4d9189507f32e8c4bbb1d790e81e83050bcf

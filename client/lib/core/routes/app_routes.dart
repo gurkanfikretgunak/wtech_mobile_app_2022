@@ -49,7 +49,7 @@ class AppRoutes {
         return navigate(const EducationsDetailView());
 
       case Routes.events:
-        return navigate(const EventsView());
+        return navigate(EventsView());
 
       case Routes.profileEdit:
         return navigate(ProfileEditView());

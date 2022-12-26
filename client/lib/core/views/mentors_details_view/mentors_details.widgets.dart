@@ -18,27 +18,12 @@ class MentorDetailsWidgets {
       },
       {'title': L10n.of(context)?.mentorDetailExpertTitle, 'desc': 'Uygulama Geliştirme, Mobil Dönüşüm, Pazarlama'}
     ];
-<<<<<<< HEAD
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          Padding(
-            padding: context.verticalPaddingNormal * 2,
-            child: CircleAvatar(
-              radius: 50,
-              backgroundImage: Image.asset(Assets.images.png.mentor1.path).image,
-            ),
-=======
     return Column(
       children: [
         Padding(
           padding: context.verticalPaddingNormal * 2,
           child: CircleAvatar(
             radius: 50,
-            backgroundImage: Image.asset(
-              Assets.images.mentor1.path,
-            ).image,
->>>>>>> 997b4d9189507f32e8c4bbb1d790e81e83050bcf
           ),
         ),
         const MentorDetailStatsWidget(viewCount: '1328', appliedCount: '80'),

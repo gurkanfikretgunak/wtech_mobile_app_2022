@@ -1,7 +1,6 @@
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/views/common/widgets/custom_appbar.dart';
-import 'package:client/core/views/events_view/widgets/calendar_listview.dart';
 import 'package:client/core/views/events_view/widgets/events_listview_builder.dart';
 import 'package:client/core/views/events_view/widgets/the_day_of_the_month.dart';
 import 'package:client/core/views/home_view/widgets/drawer_widget.dart';
@@ -24,7 +23,6 @@ class EventsWidgets {
           const TheDayOfTheMonth(),
           Padding(
             padding: context.onlyTopPaddingNormal,
-            child: const CalenderListview(),
           ),
           Expanded(
               child: SizedBox(

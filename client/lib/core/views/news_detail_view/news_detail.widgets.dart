@@ -2,11 +2,7 @@ import 'package:client/core/domain/models/news/news_model.dart';
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/utils/constants/colors/color_constans.dart';
 import 'package:client/core/utils/extensions/common_extension.dart';
-<<<<<<< HEAD
-import 'package:client/core/views/common/widgets/button/custom_button_icon.dart';
-=======
 import 'package:client/core/views/common/widgets/custom_appbar.dart';
->>>>>>> 997b4d9189507f32e8c4bbb1d790e81e83050bcf
 import 'package:client/core/views/common/widgets/custom_date_text.dart';
 import 'package:client/core/views/common/widgets/custom_image.dart';
 import 'package:client/core/views/common/widgets/custom_views_count.dart';
@@ -14,6 +10,7 @@ import 'package:client/core/views/common/widgets/text/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
+import '../common/widgets/button/custom_button_icon.dart';
 import '../educations_view/educations.viewmodel.dart';
 
 class NewsDetailWidgets {
