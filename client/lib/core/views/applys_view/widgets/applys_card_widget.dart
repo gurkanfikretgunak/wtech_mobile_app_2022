@@ -59,9 +59,10 @@ class ApplysCardWidget extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text(
+                    CustomText(
                       "Flutter & Dart Bootcamp 22'",
-                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                      fontSize: 18,
+                      color: Theme.of(context).cardColor,
                     ),
                     Row(
                       children: [
@@ -91,8 +92,10 @@ class ApplysCardWidget extends StatelessWidget {
             ),
             Padding(
               padding: context.paddingLow,
-              child: Text("Sizleri front-end geliştirme dünyasında sektörün yeni lideri Flutter Geliştiricisi...",
-                  style: TextStyle(color: ColorConstant.instance.grey, fontSize: 14)),
+              child: CustomText(
+                "Sizleri front-end geliştirme dünyasında sektörün yeni lideri Flutter Geliştiricisi...",
+                color: ColorConstant.instance.grey,
+              ),
             ),
           ],
         ),

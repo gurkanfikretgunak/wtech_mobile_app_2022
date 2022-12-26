@@ -25,7 +25,7 @@ class IntroduceCard extends StatelessWidget {
           child: Column(
             children: [
               ClipRRect(
-                borderRadius: BorderRadius.circular(15),
+                borderRadius: const BorderRadius.only(topLeft: Radius.circular(12), topRight: Radius.circular(12)),
                 child: CustomImage(
                   assetPath: listItem['image'],
                   fit: BoxFit.scaleDown,
@@ -39,9 +39,8 @@ class IntroduceCard extends StatelessWidget {
                     listItem['text'],
                     fontWeight: FontWeight.w600,
                     fontSize: 16,
+                    textAlign: TextAlign.center,
                   ),
-                  context.emptySizedWidthBoxNormal,
-                  const Icon(Icons.arrow_forward)
                 ],
               )
             ],

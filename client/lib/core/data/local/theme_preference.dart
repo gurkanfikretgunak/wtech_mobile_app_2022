@@ -6,6 +6,7 @@ class ThemeChangePreference {
   setThemePref(bool value) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     prefs.setBool(themeSetting, value);
+    return value;
   }
 
   Future<bool> getTheme() async {

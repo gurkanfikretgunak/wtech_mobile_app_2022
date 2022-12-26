@@ -24,4 +24,5 @@ enum Routes {
   videos,
   missionAndVision,
   foundingMembersView,
+  profileEdit,
 }

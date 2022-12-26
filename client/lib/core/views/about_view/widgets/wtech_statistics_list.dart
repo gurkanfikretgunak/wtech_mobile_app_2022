@@ -1,37 +1,39 @@
 import 'package:client/core/l10n/app_l10n.dart';
-import 'package:client/core/utils/extensions/common_extension.dart';
-import 'package:client/core/views/common/widgets/custom_image.dart';
-import 'package:client/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 
 List wtechStatisticsList(BuildContext context) {
   return [
     {
-      "icon": customImage(context, Assets.icons.book.path),
+      "icon": const Icon(
+        Icons.menu_book_outlined,
+        size: 25,
+      ),
       "count": "28",
       "text": L10n.of(context)!.educationProgram,
     },
     {
-      "icon": customImage(context, Assets.icons.mentor.path),
+      "icon": const Icon(
+        Icons.contact_mail_rounded,
+        size: 25,
+      ),
       "count": "500",
       "text": L10n.of(context)!.wtechStudent,
     },
     {
-      "icon": customImage(context, Assets.icons.education.path),
+      "icon": const Icon(
+        Icons.school_outlined,
+        size: 30,
+      ),
       "count": "200",
       "text": L10n.of(context)!.wtechGraduate,
     },
     {
-      "icon": customImage(context, Assets.icons.persons.path),
+      "icon": const Icon(
+        Icons.groups_outlined,
+        size: 30,
+      ),
       "count": "5000 +",
       "text": L10n.of(context)!.platformMember,
     }
   ];
-}
-
-Widget customImage(BuildContext context, String path) {
-  return CustomImage(
-    assetPath: path,
-    height: context.dynamicHeight(0.04),
-  );
 }

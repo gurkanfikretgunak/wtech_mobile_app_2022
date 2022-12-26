@@ -128,15 +128,8 @@ class $AssetsIconsGen {
   /// File path: assets/icons/videos.png
   AssetGenImage get videos => const AssetGenImage('assets/icons/videos.png');
 
-  /// File path: assets/icons/wtechIcon.svg
-  String get wtechIcon => 'assets/icons/wtechIcon.svg';
-
-  /// File path: assets/icons/wtechLogo.png
-  AssetGenImage get wtechLogo =>
-      const AssetGenImage('assets/icons/wtechLogo.png');
-
   /// List of all assets
-  List<dynamic> get values => [
+  List<AssetGenImage> get values => [
         apple,
         blog,
         book,
@@ -160,9 +153,7 @@ class $AssetsIconsGen {
         persons,
         share,
         unfavorite,
-        videos,
-        wtechIcon,
-        wtechLogo
+        videos
       ];
 }
 
@@ -239,10 +230,6 @@ class $AssetsImagesJpgGen {
   AssetGenImage get ourGoals =>
       const AssetGenImage('assets/images/jpg/our_goals.jpg');
 
-  /// File path: assets/images/jpg/profile.jpg
-  AssetGenImage get profile =>
-      const AssetGenImage('assets/images/jpg/profile.jpg');
-
   /// File path: assets/images/jpg/what_we_doing.jpg
   AssetGenImage get whatWeDoing =>
       const AssetGenImage('assets/images/jpg/what_we_doing.jpg');
@@ -261,7 +248,6 @@ class $AssetsImagesJpgGen {
         eventFuture,
         happyFriday,
         ourGoals,
-        profile,
         whatWeDoing,
         whoWe
       ];
@@ -301,6 +287,10 @@ class $AssetsImagesPngGen {
   AssetGenImage get news2 =>
       const AssetGenImage('assets/images/png/news_2.png');
 
+  /// File path: assets/images/png/profile.png
+  AssetGenImage get profile =>
+      const AssetGenImage('assets/images/png/profile.png');
+
   /// File path: assets/images/png/wtech_logo.png
   AssetGenImage get wtechLogo =>
       const AssetGenImage('assets/images/png/wtech_logo.png');
@@ -315,6 +305,7 @@ class $AssetsImagesPngGen {
         mentor1,
         news1,
         news2,
+        profile,
         wtechLogo
       ];
 }

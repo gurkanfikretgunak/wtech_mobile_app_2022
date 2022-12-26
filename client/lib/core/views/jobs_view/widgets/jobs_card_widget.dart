@@ -7,7 +7,9 @@ import 'package:client/core/views/common/widgets/button/custom_button_libary.dar
 import 'package:client/core/views/common/widgets/custom_date_text.dart';
 import 'package:client/core/views/common/widgets/custom_views_count.dart';
 import 'package:client/core/views/common/widgets/text/custom_text_library.dart';
+import 'package:client/core/views/educations_view/educations.viewmodel.dart';
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 
 class JobsCardWidget extends StatelessWidget {
   const JobsCardWidget(
@@ -27,8 +29,9 @@ class JobsCardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isLiked = false;
-    bool isContinue = true;
+    final _vm = GetIt.I.get<EducationsViewModel>();
+    bool heart = _vm.heartAnimation();
+
     return Wrap(
       children: [
         SizedBox(
@@ -122,29 +125,35 @@ class JobsCardWidget extends StatelessWidget {
                                 CustomElevatedButton(
                                   width: context.dynamicWidth(0.2),
                                   onPressed: () {
-                                    CustomNavigator.goToScreen(
-                                        context, Routes.jobDetail.name);
+                                    CustomNavigator.goToScreen(context, Routes.jobDetail.name);
                                   },
                                   text: L10n.of(context)?.details ?? '',
                                   textColor: ColorConstant.instance.white,
                                   // buttonColor: false,
                                 ),
-                                Container(
-                                    height: 45,
-                                    width: 45,
-                                    decoration: BoxDecoration(
-                                      color: ColorConstant.instance.white,
-                                      borderRadius: BorderRadius.circular(100),
-                                      border: Border.all(
-                                          color: ColorConstant.instance.grey
-                                              .withOpacity(0.3)),
-                                    ),
-                                    child: IconButton(
-                                      onPressed: () {},
-                                      icon: Icon((isLiked == false)
-                                          ? Icons.favorite_border
-                                          : Icons.favorite),
-                                    )),
+                                StreamBuilder(
+                                    stream: _vm.heartFill,
+                                    builder: (context, snapshot) {
+                                      return Container(
+                                        height: 45,
+                                        width: 45,
+                                        decoration: BoxDecoration(
+                                          color: ColorConstant.instance.white,
+                                          borderRadius: BorderRadius.circular(100),
+                                          border: Border.all(color: ColorConstant.instance.grey.withOpacity(0.3)),
+                                        ),
+                                        child: CircleAvatar(
+                                          backgroundColor: Theme.of(context).cardTheme.color,
+                                          child: CustomIconButton(
+                                            onPressed: () async {
+                                              heart = _vm.heartAnimation();
+                                            },
+                                            icon: heart ? Icons.favorite : Icons.favorite_border,
+                                            color: Theme.of(context).backgroundColor,
+                                          ),
+                                        ),
+                                      );
+                                    }),
                               ],
                             ),
                           )

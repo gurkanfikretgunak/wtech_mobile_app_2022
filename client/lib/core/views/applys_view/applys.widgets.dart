@@ -2,6 +2,8 @@ import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/applys_view/widgets/applys_card_widget.dart';
 import 'package:client/core/views/applys_view/widgets/applys_tabbar_widget.dart';
 import 'package:client/core/views/applys_view/widgets/applys_card_view.dart';
+import 'package:client/core/views/events_view/widgets/events.dart';
+import 'package:client/core/views/events_view/widgets/events_listview_builder.dart';
 import 'package:flutter/material.dart';
 
 class ApplysWidgets {
@@ -13,12 +15,12 @@ class ApplysWidgets {
   }
 
   Widget applysCards() {
-    return TabBarView(
+    return const TabBarView(
       children: [
         ApplysCardViewListView(
-          applysCardType: ApplysCardWidget(state: false),
+          applysCardType: Events(),
         ),
-        const ApplysCardViewListView(
+        ApplysCardViewListView(
           applysCardType: SizedBox(),
         ),
       ],

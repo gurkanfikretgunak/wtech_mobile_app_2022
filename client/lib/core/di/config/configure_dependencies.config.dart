@@ -14,8 +14,6 @@ import 'package:client/core/data/network/services/users/user_api.dart' as _i36;
 import 'package:client/core/di/config/app_config.dart' as _i31;
 import 'package:client/core/di/config/raw_helper.dart' as _i24;
 import 'package:client/core/di/config/register_module.dart' as _i37;
-import 'package:client/core/utils/themes/change_theme/change_theme.viewmodel.dart'
-    as _i9;
 import 'package:client/core/views/about_view/about.viewmodel.dart' as _i3;
 import 'package:client/core/views/applys_view/applys.viewmodel.dart' as _i4;
 import 'package:client/core/views/authentication/authentication.viewmodel.dart'
@@ -26,12 +24,14 @@ import 'package:client/core/views/blogs_view/blogs.viewmodel.dart' as _i7;
 import 'package:client/core/views/bottom_navbar/bottom_navbar.viewmodel.dart'
     as _i8;
 import 'package:client/core/views/educations_detail_view/educations_detail.viewmodel.dart'
-    as _i10;
+    as _i9;
 import 'package:client/core/views/educations_view/educations.viewmodel.dart'
-    as _i11;
+    as _i10;
 import 'package:client/core/views/favorites_view/favorites.viewmodel.dart'
-    as _i12;
+    as _i11;
 import 'package:client/core/views/forgot_password_view/forgotpass.viewmodel.dart'
+    as _i12;
+import 'package:client/core/views/forgot_password_view/fotgotpass.viewmodel.dart'
     as _i13;
 import 'package:client/core/views/founding_members_view/founding.members.viewmodel.dart'
     as _i14;
@@ -81,11 +81,12 @@ Future<_i1.GetIt> $initGetIt(
   gh.factory<_i6.BlogsDetailViewModel>(() => _i6.BlogsDetailViewModel());
   gh.factory<_i7.BlogsViewModel>(() => _i7.BlogsViewModel());
   gh.factory<_i8.BottomNavBarViewModel>(() => _i8.BottomNavBarViewModel());
-  gh.factory<_i9.ChangeThemeViewModel>(() => _i9.ChangeThemeViewModel());
-  gh.factory<_i10.EducationsDetailViewModel>(
-      () => _i10.EducationsDetailViewModel());
-  gh.factory<_i11.EducationsViewModel>(() => _i11.EducationsViewModel());
-  gh.factory<_i12.FavoritesViewModel>(() => _i12.FavoritesViewModel());
+  gh.factory<_i9.EducationsDetailViewModel>(
+      () => _i9.EducationsDetailViewModel());
+  gh.factory<_i10.EducationsViewModel>(() => _i10.EducationsViewModel());
+  gh.factory<_i11.FavoritesViewModel>(() => _i11.FavoritesViewModel());
+  gh.factory<_i12.ForgotPasswordViewModel>(
+      () => _i12.ForgotPasswordViewModel());
   gh.factory<_i13.ForgotPasswordViewModel>(
       () => _i13.ForgotPasswordViewModel());
   gh.factory<_i14.FoundingMembersViewModel>(

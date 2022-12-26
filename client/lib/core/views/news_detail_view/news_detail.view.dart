@@ -31,7 +31,7 @@ class NewsDetailView extends StatelessWidget with NewsDetailWidgets {
             Expanded(flex: 2, child: title(news)),
             Expanded(flex: 2, child: wtechAndDateText(context)),
             Expanded(flex: 6, child: newsImage(news, context)),
-            Expanded(flex: 2, child: newsDetailTitleAndViewsCount(context)),
+            Expanded(flex: 1, child: newsDetailTitleAndViewsCount(context)),
             Expanded(flex: 6, child: newsDetailTextCard(context, news)),
             const Spacer()
           ],

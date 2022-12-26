@@ -29,6 +29,9 @@ class BlogsCard extends StatelessWidget with BlogsWidget {
         );
       },
       child: Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+        ),
         elevation: 5,
         child: SizedBox(
           child: SizedBox(

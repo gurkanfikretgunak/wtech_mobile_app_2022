@@ -2,7 +2,10 @@ import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/utils/constants/colors/color_constans.dart';
 import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/views/common/widgets/button/custom_button_libary.dart';
+import 'package:client/core/views/common/widgets/text/custom_text.dart';
+import 'package:client/core/views/educations_view/educations.viewmodel.dart';
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 
 class MentorCardWidget extends StatelessWidget {
   final String? mentor;
@@ -11,6 +14,7 @@ class MentorCardWidget extends StatelessWidget {
   final String? role;
   final Function()? onPressedContact;
   final Function()? onPressedFavorite;
+  final bool isMentor;
 
   const MentorCardWidget({
     Key? key,
@@ -20,6 +24,7 @@ class MentorCardWidget extends StatelessWidget {
     required this.role,
     this.onPressedContact,
     this.onPressedFavorite,
+    required this.isMentor,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -33,6 +38,7 @@ class MentorCardWidget extends StatelessWidget {
           organization: organization,
           role: role,
           onPressed: onPressedContact,
+          isMentor: isMentor,
         ),
         FavoriteButtonWidget(
           onPressed: onPressedFavorite,
@@ -65,12 +71,14 @@ class MentorInfosWidget extends StatelessWidget {
     required this.organization,
     required this.role,
     required this.onPressed,
+    required this.isMentor,
   }) : super(key: key);
 
   final String? mentor;
   final String? organization;
   final String? role;
   final Function()? onPressed;
+  final bool isMentor;
 
   @override
   Widget build(BuildContext context) {
@@ -89,7 +97,7 @@ class MentorInfosWidget extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(mentor ?? '', style: Theme.of(context).textTheme.bodyText1),
+                CustomText(mentor ?? '', color: Theme.of(context).backgroundColor),
                 Text(
                   organization ?? '',
                   style: Theme.of(context).textTheme.bodySmall!.copyWith(color: ColorConstant.instance.blue),
@@ -98,13 +106,15 @@ class MentorInfosWidget extends StatelessWidget {
                   role ?? '',
                   style: Theme.of(context).textTheme.bodySmall!.copyWith(color: ColorConstant.instance.grey),
                 ),
-                CustomElevatedButton(
-                  width: context.dynamicHeight(0.1),
-                  height: context.dynamicHeight(0.04),
-                  onPressed: onPressed,
-                  text: L10n.of(context)?.contact ?? '',
-                  textColor: ColorConstant.instance.white,
-                )
+                isMentor
+                    ? CustomElevatedButton(
+                        width: context.dynamicHeight(0.1),
+                        height: context.dynamicHeight(0.04),
+                        onPressed: onPressed,
+                        text: L10n.of(context)?.contact ?? '',
+                        textColor: ColorConstant.instance.white,
+                      )
+                    : const SizedBox()
               ],
             ),
           ),
@@ -123,17 +133,25 @@ class FavoriteButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(
-      right: 10,
-      top: 10,
-      child: CircleAvatar(
-        backgroundColor: ColorConstant.instance.white,
-        child: IconButton(
-          splashRadius: Material.defaultSplashRadius / 2,
-          onPressed: onPressed,
-          icon: Icon(Icons.favorite_border, color: ColorConstant.instance.blue),
-        ),
-      ),
-    );
+    final _vm = GetIt.I.get<EducationsViewModel>();
+    bool heart = _vm.heartAnimation();
+    return StreamBuilder(
+        stream: _vm.heartFill,
+        builder: (context, snapshot) {
+          return Positioned(
+            right: 10,
+            top: 10,
+            child: CircleAvatar(
+              backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
+              child: CustomIconButton(
+                onPressed: () async {
+                  heart = _vm.heartAnimation();
+                },
+                icon: heart ? Icons.favorite : Icons.favorite_border,
+                color: Theme.of(context).backgroundColor,
+              ),
+            ),
+          );
+        });
   }
 }

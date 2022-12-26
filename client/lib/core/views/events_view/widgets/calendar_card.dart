@@ -28,15 +28,7 @@ class _CalendarCardState extends State<CalendarCard> {
           textTheme: ThemeData.light().textTheme.copyWith(
                 subtitle1: ThemeData.light().textTheme.subtitle1?.copyWith(
                       fontSize: 16,
-                      color: theme.colorScheme.secondary,
-                    ),
-                bodyText1: ThemeData.light().textTheme.bodyText1?.copyWith(
-                      fontSize: 14,
-                      color: Colors.black54,
-                    ),
-                bodyText2: ThemeData.light().textTheme.bodyText1?.copyWith(
-                      fontSize: 12,
-                      color: Colors.black87,
+                      color: theme.colorScheme.onPrimary,
                     ),
               ),
           primaryColor: ColorConstant.instance.yellow,
@@ -55,7 +47,7 @@ class _CalendarCardState extends State<CalendarCard> {
               fontWeight: FontWeight.w400,
               height: 1.3125,
               letterSpacing: 0,
-              color: ColorConstant.instance.blue),
+              color: Theme.of(context).backgroundColor),
         ));
   }
 }

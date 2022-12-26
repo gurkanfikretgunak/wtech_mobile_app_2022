@@ -5,6 +5,8 @@ import 'package:client/core/views/common/widgets/button/custom_button_libary.dar
 import 'package:client/core/views/common/widgets/text/custom_textfield.dart';
 import 'package:flutter/material.dart';
 
+import '../../common/widgets/text/custom_text.dart';
+
 class JobsDetailBottomSheetWidget extends StatelessWidget {
   const JobsDetailBottomSheetWidget({Key? key}) : super(key: key);
 
@@ -36,28 +38,30 @@ class JobsDetailBottomSheetWidget extends StatelessWidget {
                       child: const Icon(Icons.close))),
             ],
           ),
-          CustomTextFormField(
-              hintText: L10n.of(context)?.mentorDetailBottomSheetName ?? ''),
-          CustomTextFormField(
-              hintText: L10n.of(context)?.mentorDetailBottomSheetEmail ?? ''),
-          CustomTextFormField(
-              hintText: L10n.of(context)?.mentorDetailBottomSheetMessage ?? ''),
+          CustomTextFormField(hintText: L10n.of(context)?.mentorDetailBottomSheetName ?? ''),
+          CustomTextFormField(hintText: L10n.of(context)?.mentorDetailBottomSheetEmail ?? ''),
+          CustomTextFormField(hintText: L10n.of(context)?.mentorDetailBottomSheetMessage ?? ''),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(L10n.of(context)?.mentorDetailBottomSheetUploadFile ?? ''),
+              CustomText(
+                L10n.of(context)?.mentorDetailBottomSheetUploadFile ?? '',
+                color: Theme.of(context).cardColor,
+              ),
               Expanded(
                 child: CustomElevatedButton(
                   iconWidget: const Icon(Icons.attach_file),
                   onPressed: () {},
-                  text:
-                      L10n.of(context)?.mentorDetailBottomSheetSelectFile ?? '',
+                  text: L10n.of(context)?.mentorDetailBottomSheetSelectFile ?? '',
                   textColor: ColorConstant.instance.white,
                 ),
               ),
             ],
           ),
-          Text(L10n.of(context)?.mentorDetailBottomSheetNotSelectedFile ?? ''),
+          CustomText(
+            L10n.of(context)?.mentorDetailBottomSheetNotSelectedFile ?? '',
+            color: Theme.of(context).cardColor,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -68,7 +72,10 @@ class JobsDetailBottomSheetWidget extends StatelessWidget {
                   isTrue = !isTrue;
                 },
               ),
-              Text(L10n.of(context)?.mentorDetailBottomSheetSaveInfo ?? ''),
+              CustomText(
+                L10n.of(context)?.mentorDetailBottomSheetSaveInfo ?? '',
+                color: Theme.of(context).cardColor,
+              ),
             ],
           ),
           Center(

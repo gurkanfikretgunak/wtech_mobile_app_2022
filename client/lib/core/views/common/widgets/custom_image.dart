@@ -2,13 +2,7 @@ import 'package:flutter/material.dart';
 
 class CustomImage extends StatelessWidget {
   const CustomImage(
-      {super.key,
-      required this.assetPath,
-      this.color,
-      this.fit,
-      this.alignment,
-      this.height,
-      this.width});
+      {super.key, required this.assetPath, this.color, this.fit, this.alignment, this.height, this.width});
 
   final String assetPath;
   final Color? color;

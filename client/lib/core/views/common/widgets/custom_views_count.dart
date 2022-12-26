@@ -24,17 +24,17 @@ class CustomViewsCount extends StatelessWidget {
         Icon(
           size: 14,
           Icons.remove_red_eye_sharp,
-          color: ColorConstant.instance.grey,
+          color: Theme.of(context).cardColor,
         ),
         CustomText(
           viewsCount,
-          color: ColorConstant.instance.black.withOpacity(0.5),
+          color: ColorConstant.instance.grey,
           fontWeight: FontWeight.w600,
         ),
         hasViewsText
             ? CustomText(
                 L10n.of(context)!.views,
-                color: ColorConstant.instance.black.withOpacity(0.5),
+                color: ColorConstant.instance.grey,
                 fontWeight: FontWeight.w600,
               )
             : const SizedBox.shrink(),

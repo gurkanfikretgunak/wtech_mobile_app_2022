@@ -26,22 +26,16 @@ class _EventsViewState extends State<EventsView> {
         isName: false,
       ),
       drawer: const DrawerWidget(),
-      body: Padding(
-        padding: context.paddingLow,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: context.paddingNormal,
-              child: const CalendarCard(),
-            ),
-            Expanded(
-                child: SizedBox(
-              height: MediaQuery.of(context).size.height * 0.4,
-              child: const EventsListviewBuilder(),
-            ))
-          ],
-        ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const CalendarCard(),
+          Expanded(
+              child: SizedBox(
+            height: MediaQuery.of(context).size.height * 0.4,
+            child: const EventsListviewBuilder(),
+          ))
+        ],
       ),
     ));
   }

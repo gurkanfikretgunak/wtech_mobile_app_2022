@@ -9,19 +9,18 @@ import '../../utils/constants/colors/color_constans.dart';
 import '../common/widgets/button/custom_button_elevated.dart';
 
 class SettingsView extends StatelessWidget with SettingsViewWidget {
-  SettingsView({super.key});
+  SettingsView({super.key, this.data});
+  final bool? data;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppbar(
-          titleText: L10n.of(context)!.profile, isName: false, isCheck: false),
+      appBar: CustomAppbar(titleText: L10n.of(context)!.profile, isName: false, isCheck: false),
       body: Padding(
         padding: context.paddingNormal,
         child: Column(
           children: [
-            settingCards(
-                context, notificationText, 0.2, categoriesText[0], true),
+            settingCards(context, notificationText, 0.2, categoriesText[0], true),
             settingCards(context, privacyText, 0.1, categoriesText[1], false),
             settingCards(context, themeText, 0.1, categoriesText[2], true),
             settingCards(context, languageText, 0.1, categoriesText[3], true),

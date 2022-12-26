@@ -40,8 +40,7 @@ class EducationsDetailWidgets {
     );
   }
 
-  Widget contentPieces(
-      BuildContext context, IconData icon1, String text1, String text2) {
+  Widget contentPieces(BuildContext context, IconData icon1, String text1, String text2) {
     return Row(
       children: [
         Icon(icon1, color: ColorConstant.instance.black),
@@ -52,10 +51,10 @@ class EducationsDetailWidgets {
   }
 
   Widget applyAndFavoriteButton(BuildContext context) {
-    final vm = GetIt.I.get<EducationsDetailViewModel>();
-    bool isFavorite = vm.changeFavorite();
+    final _vm = GetIt.I.get<EducationsDetailViewModel>();
+    bool isFavorite = _vm.changeFavorite();
     return StreamBuilder(
-      stream: vm.favorite,
+      stream: _vm.favorite,
       builder: (context, snapshot) {
         return FittedBox(
           child: Padding(
@@ -70,13 +69,12 @@ class EducationsDetailWidgets {
                 ),
                 context.emptySizedWidthBoxNormal,
                 CircleAvatar(
-                  child: IconButton(
-                    icon: isFavorite == true
-                        ? const Icon(Icons.favorite)
-                        : const Icon(Icons.favorite_border),
-                    onPressed: () {
-                      isFavorite = vm.changeFavorite();
+                  child: CustomIconButton(
+                    onPressed: () async {
+                      isFavorite = _vm.changeFavorite();
                     },
+                    icon: isFavorite ? Icons.favorite : Icons.favorite_border,
+                    color: Theme.of(context).backgroundColor,
                   ),
                 ),
               ],

@@ -18,7 +18,7 @@ class ContentCard extends StatelessWidget {
       width: context.dynamicWidth(0.25),
       borderRadius: BorderRadius.circular(15),
       borderWith: 3,
-      color: Colors.grey.shade200,
+      color: Theme.of(context).appBarTheme.backgroundColor,
       child: Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,

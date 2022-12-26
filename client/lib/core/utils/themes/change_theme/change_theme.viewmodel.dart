@@ -1,19 +1,14 @@
-import 'package:client/core/views/abstractions/base_view_model.dart';
-import 'package:injectable/injectable.dart';
-// ignore: depend_on_referenced_packages
-import 'package:rxdart/rxdart.dart';
+import 'package:client/core/data/local/theme_preference.dart';
+import 'package:flutter/material.dart';
 
-import '../../../data/local/theme_preference.dart';
+class ThemeChangeProvider extends ChangeNotifier {
+  ThemeChangePreference appPreference = ThemeChangePreference();
+  bool _darkTheme = true;
+  bool get darkTheme => _darkTheme;
 
-@Injectable()
-class ChangeThemeViewModel extends BaseViewModel with ThemeChangePreference {
-  final _theme = BehaviorSubject<bool>.seeded(true);
-  Stream get theme => _theme.stream;
-
-  changeTheme() {
-    _theme.value = !_theme.value;
+  set darkTheme(bool value) {
+    _darkTheme = value;
+    appPreference.setThemePref(value);
+    notifyListeners();
   }
-
-  @override
-  void clear() {}
 }

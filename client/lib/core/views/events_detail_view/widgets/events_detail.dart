@@ -38,27 +38,21 @@ class _EventsDetailState extends State<EventsDetail> {
             padding: context.onlyTopPaddingNormal * 1.5,
             child: Text(
               'İstanbul Teknolojide Lider Kadınlar Eğitim Programı',
-              style: Theme.of(context).textTheme.headline6,
+              style: Theme.of(context).textTheme.headline6?.copyWith(color: Theme.of(context).backgroundColor),
             ),
           ),
           Padding(
             padding: context.onlyTopPaddingNormal * 1.5,
             child: Text(
               'Wtech Akademi',
-              style: Theme.of(context)
-                  .textTheme
-                  .headline5
-                  ?.copyWith(color: ColorConstant.instance.blue),
+              style: Theme.of(context).textTheme.headline5?.copyWith(color: ColorConstant.instance.blue),
             ),
           ),
           Padding(
             padding: context.verticalPaddingNormal * 1.5,
             child: Text(
               'Teknolojide Kadın Derneği olarak organizasyon partneri olduğumuz Teknoloji Buluşmaları’nda her ilde 200 kadına teknoloji okuryazarı olmaları adına vizyon eğitimleri vereceğiz. Vizyon eğitimi alan kadınlar arasından teknoloji konusunda yetenekli olanlara ayrıca online teknik uzmanlık eğitimleri başlatacağız.',
-              style: Theme.of(context)
-                  .textTheme
-                  .subtitle2
-                  ?.copyWith(color: Colors.grey.withOpacity(0.5)),
+              style: Theme.of(context).textTheme.subtitle2?.copyWith(color: ColorConstant.instance.grey),
             ),
           )
         ],

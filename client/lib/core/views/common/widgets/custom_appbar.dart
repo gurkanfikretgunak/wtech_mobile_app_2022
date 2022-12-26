@@ -23,11 +23,17 @@ class CustomAppbar extends StatelessWidget with PreferredSizeWidget {
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Text.rich(TextSpan(
                 text: titleText ?? "",
-                style: Theme.of(context).textTheme.headline6?.copyWith(fontSize: 18, fontWeight: FontWeight.normal),
+                style: Theme.of(context)
+                    .textTheme
+                    .headline6
+                    ?.copyWith(fontSize: 18, fontWeight: FontWeight.normal, color: Theme.of(context).backgroundColor),
                 children: <TextSpan>[
                   TextSpan(
                       text: isName! ? ", Uncle Bob" : "",
-                      style: Theme.of(context).textTheme.headline6?.copyWith(fontSize: 18))
+                      style: Theme.of(context)
+                          .textTheme
+                          .headline6
+                          ?.copyWith(fontSize: 18, color: Theme.of(context).backgroundColor))
                 ])),
           ])),
       actions: [
@@ -53,7 +59,7 @@ class CustomAppbar extends StatelessWidget with PreferredSizeWidget {
                             child: CircleAvatar(
                               maxRadius: 18,
                               child: Image.asset(
-                                Assets.images.jpg.profile.path,
+                                Assets.images.png.profile.path,
                               ),
                             ),
                           ))),

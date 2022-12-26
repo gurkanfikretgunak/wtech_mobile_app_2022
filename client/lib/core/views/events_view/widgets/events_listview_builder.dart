@@ -13,7 +13,7 @@ class EventsListviewBuilder extends StatelessWidget {
       itemCount: 2,
       itemBuilder: (context, index) {
         return Padding(
-          padding: context.onlyTopPaddingNormal,
+          padding: context.paddingNormal,
           child: const Events(),
         );
       },

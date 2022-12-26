@@ -10,6 +10,7 @@ import 'package:client/core/views/jobs_view/jobs.view.dart';
 import 'package:client/core/views/mentors_details_view/mentors_details.view.dart';
 import 'package:client/core/views/mentors_view/mentors.view.dart';
 import 'package:client/core/views/news_view/news.view.dart';
+import 'package:client/core/views/profile_edit_view/profile_edit.view.dart';
 import 'package:client/core/views/settings_view/settings.view.dart';
 import 'package:client/core/views/signin_view/signin_email_view.dart';
 import 'package:client/core/views/signup_view/signup.view.dart';
@@ -50,9 +51,8 @@ class AppRoutes {
       case Routes.events:
         return navigate(const EventsView());
 
-      case Routes.eventDetail:
-        // TODO: Handle this case.
-        break;
+      case Routes.profileEdit:
+        return navigate(ProfileEditView());
 
       case Routes.forgotPassword:
         return navigate(ForgotPasswordView());

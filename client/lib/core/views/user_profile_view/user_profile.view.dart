@@ -27,11 +27,9 @@ class UserProfileView extends StatelessWidget with UserProfileWidgets {
               child: Container(
                   height: context.dynamicHeight(0.75),
                   width: double.infinity,
-                  decoration: const BoxDecoration(
-                    color: Color.fromARGB(255, 245, 242, 242),
-                    borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(60),
-                        topRight: Radius.circular(60)),
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).selectedRowColor,
+                    borderRadius: const BorderRadius.only(topLeft: Radius.circular(60), topRight: Radius.circular(60)),
                   ),
                   child: Column(
                     children: [

@@ -1,6 +1,9 @@
+import 'package:client/core/utils/constants/colors/color_constans.dart';
 import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/views/common/widgets/custom_date_text.dart';
 import 'package:flutter/material.dart';
+
+import '../../common/widgets/text/custom_text.dart';
 
 class EventsDateAndLocation extends StatelessWidget {
   const EventsDateAndLocation({
@@ -11,14 +14,11 @@ class EventsDateAndLocation extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text(
-          maxLines: 4,
-          'İstanbul Teknolojide Lider Kadınlar Eğitim Programı ',
-          style: Theme.of(context)
-              .textTheme
-              .subtitle1
-              ?.copyWith(fontWeight: FontWeight.w400),
-        ),
+        CustomText(
+            maxLines: 4,
+            'İstanbul Teknolojide Lider Kadınlar Eğitim Programı ',
+            fontSize: 18,
+            color: Theme.of(context).cardColor),
         Padding(
           padding: context.onlyTopPaddingNormal,
           child: Row(
@@ -26,20 +26,21 @@ class EventsDateAndLocation extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  const Icon(
+                  Icon(
                     Icons.location_on_sharp,
-                    color: Colors.grey,
+                    color: Theme.of(context).cardColor,
                   ),
                   Padding(
-                    padding: EdgeInsets.only(
-                        left: MediaQuery.of(context).size.width * 0.025),
-                    child: const Text('İstanbul'),
+                    padding: EdgeInsets.only(left: MediaQuery.of(context).size.width * 0.025),
+                    child: CustomText(
+                      'İstanbul',
+                      color: ColorConstant.instance.grey,
+                    ),
                   )
                 ],
               ),
               Padding(
-                  padding: EdgeInsets.only(
-                      right: MediaQuery.of(context).size.width * 0.07),
+                  padding: EdgeInsets.only(right: MediaQuery.of(context).size.width * 0.07),
                   child: const CustomDateText(date: '27.06.2022'))
             ],
           ),

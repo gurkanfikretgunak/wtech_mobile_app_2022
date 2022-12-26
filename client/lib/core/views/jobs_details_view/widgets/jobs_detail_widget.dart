@@ -34,9 +34,7 @@ class JobsDetailWidget extends StatelessWidget {
       children: [
         Padding(
           padding: context.paddingNormal,
-          child: Center(
-              child: CustomText(jobDetailTitle ?? "",
-                  fontSize: 20, fontWeight: FontWeight.bold)),
+          child: Center(child: CustomText(jobDetailTitle ?? "", fontSize: 20, fontWeight: FontWeight.bold)),
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -54,15 +52,15 @@ class JobsDetailWidget extends StatelessWidget {
                 children: [
                   CustomText(
                     L10n.of(context)!.lastUpdatedDate,
-                    color: ColorConstant.instance.black,
+                    color: Theme.of(context).cardColor,
                   ),
                   CustomText(
                     ":",
-                    color: ColorConstant.instance.black,
+                    color: Theme.of(context).cardColor,
                   ),
                   CustomText(
                     jobApplyTime ?? "",
-                    color: ColorConstant.instance.black,
+                    color: Theme.of(context).cardColor,
                   ),
                 ],
               ),
@@ -81,7 +79,7 @@ class JobsDetailWidget extends StatelessWidget {
           padding: context.paddingMedium,
           child: CustomText(
             jobQualification ?? "",
-            color: ColorConstant.instance.black,
+            color: Theme.of(context).cardColor,
             fontSize: 15,
           ),
         ),
@@ -111,8 +109,7 @@ Widget floatingActionButton(BuildContext context) {
     child: CustomElevatedButton(
       onPressed: () {
         showModalBottomSheet(
-          shape: const RoundedRectangleBorder(
-              borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+          shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
           context: context,
           isScrollControlled: true,
           builder: (context) => const JobsDetailBottomSheetWidget(),

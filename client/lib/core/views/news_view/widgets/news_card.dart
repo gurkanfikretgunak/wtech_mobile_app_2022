@@ -29,20 +29,23 @@ class NewsCard extends StatelessWidget with NewsWidgets {
         );
       },
       child: Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+        ),
         child: isTitleCard != null
             ? Wrap(
                 runSpacing: 10,
                 children: [
                   Row(
                     children: [
-                      Expanded(child: cardImage(imagePath: Assets.images.png.news1.path, context: context)),
+                      Expanded(child: cardImage(imagePath: Assets.images.png.news1.path, context: context, true)),
                     ],
                   ),
                   Padding(
                     padding: context.paddingLow,
                     child: Wrap(
                       children: [
-                        cardTitleText(news.title),
+                        cardTitleText(news.title, context),
                         cardDetailText(news.detail),
                         Padding(
                           padding: context.onlyTopPaddingLow,
@@ -58,14 +61,14 @@ class NewsCard extends StatelessWidget with NewsWidgets {
               )
             : Row(
                 children: [
-                  cardImage(imagePath: Assets.images.png.home1.path, context: context),
-                  const Spacer(),
+                  cardImage(imagePath: Assets.images.png.home1.path, context: context, false),
+                  context.emptySizedWidthBoxLow,
                   Expanded(
                     flex: 6,
                     child: Wrap(
                       runSpacing: 8,
                       children: [
-                        cardTitleText(news.title),
+                        cardTitleText(news.title, context),
                         cardDetailText(news.detail),
                         dateText(date: news.date),
                       ],

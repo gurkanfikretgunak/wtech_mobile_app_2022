@@ -19,7 +19,7 @@ class JobExpansionTile extends StatelessWidget {
     return Theme(
       data: theme,
       child: ExpansionTile(
-        collapsedIconColor: ColorConstant.instance.blue,
+        collapsedIconColor: Theme.of(context).cardColor,
         controlAffinity: ListTileControlAffinity.leading,
         title: CustomText(
           expansionTileTitle ?? "",

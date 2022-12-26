@@ -21,13 +21,18 @@ class CategoriesWidget extends StatelessWidget {
               children: [
                 CircleAvatar(
                   maxRadius: 25,
-                  backgroundColor: Theme.of(context).backgroundColor,
+                  backgroundColor: Theme.of(context).hoverColor,
                   child: Icon(
                     key['icon'],
+                    color: Theme.of(context).backgroundColor,
                   ),
                 ),
                 Text(
                   key['text'],
+                  style: Theme.of(context)
+                      .textTheme
+                      .caption
+                      ?.copyWith(fontSize: 13, color: Theme.of(context).backgroundColor),
                 )
               ],
             ),

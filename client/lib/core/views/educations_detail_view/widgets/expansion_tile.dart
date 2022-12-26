@@ -18,8 +18,7 @@ class _EducationDescriptionState extends State<EducationDescription> {
         shrinkWrap: true,
         itemBuilder: (context, index) {
           return educationExpansions(
-              ExpansionListTile().headerList(context)[index],
-              ExpansionListTile().titleList(context)[index]);
+              ExpansionListTile().headerList(context)[index], ExpansionListTile().titleList(context)[index]);
         },
         itemCount: ExpansionListTile().headerList(context).length);
   }
@@ -29,7 +28,7 @@ class _EducationDescriptionState extends State<EducationDescription> {
       title: CustomText(title, color: ColorConstant.instance.blue),
       controlAffinity: ListTileControlAffinity.leading,
       iconColor: ColorConstant.instance.blue,
-      collapsedIconColor: ColorConstant.instance.blue,
+      collapsedIconColor: Theme.of(context).backgroundColor,
       textColor: ColorConstant.instance.blue,
       collapsedTextColor: ColorConstant.instance.blue,
       children: [

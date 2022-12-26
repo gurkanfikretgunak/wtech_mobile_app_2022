@@ -76,7 +76,7 @@ class HomeViewWidget {
     );
   }
 
-  Padding homePageWidget(BuildContext context) {
+  Padding body(BuildContext context) {
     return Padding(
       padding: context.paddingNormal,
       child: Wrap(
@@ -89,9 +89,11 @@ class HomeViewWidget {
             width: context.width,
             child: const EventSwiperWidget(),
           ),
-          Text(L10n.of(context)!.categories, style: Theme.of(context).textTheme.headline6),
+          Text(L10n.of(context)!.categories,
+              style: Theme.of(context).textTheme.headline6?.copyWith(color: Theme.of(context).backgroundColor)),
           SizedBox(height: context.dynamicHeight(0.098), width: context.width, child: const CategoriesWidget()),
-          Text(L10n.of(context)!.currentTraining, style: Theme.of(context).textTheme.headline6),
+          Text(L10n.of(context)!.currentTraining,
+              style: Theme.of(context).textTheme.headline6?.copyWith(color: Theme.of(context).backgroundColor)),
           SizedBox(height: context.dynamicHeight(0.2), child: homeCardWidget(context)),
         ],
       ),

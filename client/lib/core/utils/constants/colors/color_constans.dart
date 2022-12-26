@@ -18,4 +18,7 @@ class ColorConstant {
   Color settingBox = const Color(0xffD9D9D9);
   Color transparent = Colors.transparent;
   Color cardColor = const Color(0xFFF3F2F9);
+  Color darkThemeBody = const Color(0xFF50577A);
+  Color darkThemeAppbar = const Color(0xFF404258);
+  Color darkThemeCards = const Color(0xFF474E68);
 }

@@ -20,6 +20,7 @@ class FoundingMembersWidgets {
           organization: 'Teknolojide Kadın Derneği',
           role: 'Yönetim Kurulu Başkanı',
           imageUrl: Assets.images.png.mentor1.path,
+          isMentor: false,
         );
       },
     );

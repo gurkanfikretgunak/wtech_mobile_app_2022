@@ -27,24 +27,33 @@ class NewsWidgets {
         ));
   }
 
-  Widget cardImage({required String imagePath, required BuildContext context}) {
-    return CustomImage(
-      assetPath: imagePath,
-      width: context.dynamicWidth(0.4),
-      height: context.dynamicHeight(0.2),
-      fit: BoxFit.cover,
+  Widget cardImage(bool isMainCard, {required String imagePath, required BuildContext context}) {
+    return ClipRRect(
+      borderRadius: isMainCard
+          ? const BorderRadius.only(topLeft: Radius.circular(12), topRight: Radius.circular(12))
+          : const BorderRadius.only(topLeft: Radius.circular(12), bottomLeft: Radius.circular(12)),
+      child: CustomImage(
+        assetPath: imagePath,
+        width: context.dynamicWidth(0.43),
+        height: isMainCard ? context.dynamicHeight(0.26) : context.dynamicHeight(0.20),
+        fit: BoxFit.fill,
+      ),
     );
   }
 
-  Widget cardTitleText(String title) {
-    return CustomText(title, fontSize: 17, fontWeight: FontWeight.w500);
+  Widget cardTitleText(String title, BuildContext context) {
+    return CustomText(
+      title,
+      fontSize: 18,
+      color: Theme.of(context).cardColor,
+    );
   }
 
   Widget cardDetailText(String subTitle) {
     return CustomText(
       subTitle,
       fontSize: 14,
-      color: ColorConstant.instance.black.withOpacity(0.5),
+      color: ColorConstant.instance.grey,
       maxLines: 2,
       overflow: TextOverflow.ellipsis,
     );

@@ -2,9 +2,9 @@ import 'package:client/core/utils/constants/colors/color_constans.dart';
 import 'package:flutter/material.dart';
 
 class CustomTabBarTheme {
-  static TabBarTheme tabbarTheme() {
+  static TabBarTheme tabbarTheme(bool isDarkTheme) {
     return TabBarTheme(
-      labelColor: ColorConstant.instance.white,
+      labelColor: isDarkTheme ? ColorConstant.instance.darkThemeAppbar : ColorConstant.instance.white,
       unselectedLabelColor: ColorConstant.instance.yellow,
       indicatorSize: TabBarIndicatorSize.label,
       indicator: BoxDecoration(

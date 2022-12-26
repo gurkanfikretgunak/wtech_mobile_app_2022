@@ -24,6 +24,7 @@ class MentorsWidgets {
           organization: 'Teknolojide Kadın Derneği',
           role: 'Yönetim Kurulu Başkanı',
           imageUrl: Assets.images.png.mentor1.path,
+          isMentor: true,
           onPressedContact: () {
             CustomNavigator.goToScreen(context, Routes.mentorDetail.name);
           },

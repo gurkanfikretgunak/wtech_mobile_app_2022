@@ -33,8 +33,11 @@ class BlogsWidget {
   }
 
   Widget cardImage({required String imagePath, required BuildContext context}) {
-    return CustomImage(
-      assetPath: imagePath,
+    return ClipRRect(
+      borderRadius: const BorderRadius.only(topLeft: Radius.circular(12), bottomLeft: Radius.circular(12)),
+      child: CustomImage(
+        assetPath: imagePath,
+      ),
     );
   }
 
@@ -46,7 +49,7 @@ class BlogsWidget {
     return CustomText(
       subTitle,
       fontSize: 14,
-      color: ColorConstant.instance.black.withOpacity(0.5),
+      color: ColorConstant.instance.grey,
       maxLines: 2,
       overflow: TextOverflow.ellipsis,
     );

@@ -1,5 +1,6 @@
 import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
+import 'package:client/core/utils/themes/custom_theme.dart';
 import 'package:client/core/views/common/widgets/button/custom_button_libary.dart';
 import 'package:client/core/views/common/widgets/custom_divider.dart';
 import 'package:client/core/views/signin_view/signin_widgets.dart';
@@ -25,6 +26,7 @@ class _MainScreenState extends State<SignInEmailView> with SignInWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: CustomTheme.customLightTheme(context).scaffoldBackgroundColor,
       body: Padding(
         padding: context.paddingMedium,
         child: Wrap(
@@ -60,8 +62,7 @@ class _MainScreenState extends State<SignInEmailView> with SignInWidget {
                 ),
                 CustomTextButton(
                   onPressed: () {
-                    CustomNavigator.goToScreen(
-                        context, Routes.forgotPassword.name);
+                    CustomNavigator.goToScreen(context, Routes.forgotPassword.name);
                   },
                   text: L10n.of(context)!.forgotPassword,
                 )

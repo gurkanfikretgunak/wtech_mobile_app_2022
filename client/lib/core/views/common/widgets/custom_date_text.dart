@@ -20,11 +20,11 @@ class CustomDateText extends StatelessWidget {
       children: [
         Icon(
           Icons.calendar_month_outlined,
-          color: ColorConstant.instance.grey,
+          color: Theme.of(context).cardColor,
         ),
         CustomText(
           date,
-          color: ColorConstant.instance.black.withOpacity(0.8),
+          color: ColorConstant.instance.grey,
         )
       ],
     );

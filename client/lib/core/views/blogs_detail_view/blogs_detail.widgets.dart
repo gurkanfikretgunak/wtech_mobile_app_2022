@@ -12,14 +12,10 @@ import '../common/widgets/custom_views_count.dart';
 
 class BlogsDetailWidget {
   Widget title(BlogsModel blogs) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        CustomText(
-          blogs.title!,
-          fontSize: 20,
-        ),
-      ],
+    return CustomText(
+      blogs.title!,
+      fontSize: 20,
+      maxLines: 2,
     );
   }
 
@@ -38,9 +34,12 @@ class BlogsDetailWidget {
   }
 
   Widget blogsImage(BlogsModel blog, BuildContext context) {
-    return CustomImage(
-      width: context.dynamicWidth(1),
-      assetPath: blog.image!,
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(12),
+      child: CustomImage(
+        width: context.dynamicWidth(1),
+        assetPath: blog.image!,
+      ),
     );
   }
 
@@ -62,8 +61,7 @@ class BlogsDetailWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
-        CustomTextButton(
-            onPressed: () {}, text: L10n.of(context)!.shareThisPost),
+        CustomTextButton(onPressed: () {}, text: L10n.of(context)!.shareThisPost),
         CustomIconButton(onPressed: () {}, icon: Icons.share)
       ],
     );

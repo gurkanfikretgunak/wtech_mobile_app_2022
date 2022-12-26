@@ -1,3 +1,5 @@
+import 'package:client/core/routes/custom_navigator.dart';
+import 'package:client/core/utils/constants/enums/routes.enum.dart';
 import 'package:flutter/material.dart';
 
 class ForgotPasswordWidgets {
@@ -6,9 +8,11 @@ class ForgotPasswordWidgets {
     return Text(value, style: testStyle);
   }
 
-  Widget textButton(String value, TextStyle textStyle, Function onpressed) {
+  Widget textButton(String value, TextStyle textStyle, Function onpressed, BuildContext context) {
     return TextButton(
-      onPressed: () {},
+      onPressed: () {
+        CustomNavigator.goToScreen(context, Routes.signinWithEmail.name);
+      },
       child: Text(value, style: textStyle),
     );
   }

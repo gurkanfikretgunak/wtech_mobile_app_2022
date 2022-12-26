@@ -1,9 +1,8 @@
-
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/utils/constants/colors/color_constans.dart';
 import 'package:client/core/utils/extensions/common_extension.dart';
+import 'package:client/core/utils/themes/custom_theme.dart';
 import 'package:client/core/views/common/widgets/button/custom_button_elevated.dart';
-import 'package:client/core/views/common/widgets/custom_appbar.dart';
 import 'package:client/core/views/common/widgets/text/custom_textfield.dart';
 
 import 'package:client/core/views/forgot_password_view/forgotpass.widgets.dart';
@@ -17,28 +16,22 @@ class ForgotPasswordView extends StatelessWidget with ForgotPasswordWidgets {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: const CustomAppbar(),
+        backgroundColor: CustomTheme.customLightTheme(context).scaffoldBackgroundColor,
         body: Padding(
           padding: context.paddingMedium,
           child: Column(
             children: [
               const Expanded(child: AssetLogo()),
-              text(
-                  L10n.of(context)!.forgotPassword,
-                  TextStyle(
-                      fontSize: 26,
-                      fontWeight: FontWeight.w500,
-                      color: ColorConstant.instance.grey)),
+              text(L10n.of(context)!.forgotPassword,
+                  TextStyle(fontSize: 26, fontWeight: FontWeight.w500, color: ColorConstant.instance.grey)),
               context.emptySizedHeightBoxNormal,
               text(
                 L10n.of(context)!.forgotPasswordDescription,
                 TextStyle(fontSize: 16, color: ColorConstant.instance.grey),
               ),
               context.emptySizedHeightBoxNormal,
-              textButton(
-                  L10n.of(context)!.backLogin,
-                  const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                  () {}),
+              textButton(L10n.of(context)!.backLogin, const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), () {},
+                  context),
               context.emptySizedHeightBoxNormal,
               const CustomTextFormField(
                 prefixIcon: Icon(Icons.mail_outline),
@@ -47,8 +40,7 @@ class ForgotPasswordView extends StatelessWidget with ForgotPasswordWidgets {
               context.emptySizedHeightBoxNormal,
               context.emptySizedHeightBoxNormal,
               context.emptySizedHeightBoxNormal,
-              CustomElevatedButton(
-                  onPressed: () {}, text: L10n.of(context)!.resetPassword),
+              CustomElevatedButton(onPressed: () {}, text: L10n.of(context)!.resetPassword),
               const Spacer()
             ],
           ),

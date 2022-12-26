@@ -19,8 +19,7 @@ class UserProfileWidgets {
             radius: 40,
             child: CircleAvatar(
               radius: 35,
-              backgroundImage: NetworkImage(
-                  "https://cdn.pixabay.com/photo/2016/11/18/19/07/happy-1836445_960_720.jpg"),
+              backgroundImage: NetworkImage("https://cdn.pixabay.com/photo/2016/11/18/19/07/happy-1836445_960_720.jpg"),
             ),
           ),
         ),
@@ -33,7 +32,7 @@ class UserProfileWidgets {
       padding: context.horizontalPaddingNormal,
       child: Column(
         children: [
-          Container(
+          SizedBox(
             height: context.dynamicHeight(0.4),
             child: ListView.builder(
               physics: const BouncingScrollPhysics(),
@@ -61,7 +60,6 @@ class UserProfileWidgets {
   }
 
   Widget userNameText(BuildContext context) {
-    return const CustomText("Uncle Bob",
-        fontSize: 15, fontWeight: FontWeight.w600);
+    return const CustomText("Uncle Bob", fontSize: 15, fontWeight: FontWeight.w600);
   }
 }

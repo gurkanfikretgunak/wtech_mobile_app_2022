@@ -26,12 +26,12 @@ class BlogsDetailView extends StatelessWidget with BlogsDetailWidget {
         isName: false,
       ),
       body: Padding(
-        padding: context.horizontalPaddingNormal,
+        padding: context.paddingNormal,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            Expanded(child: title(blogs)),
+            Expanded(flex: 2, child: title(blogs)),
             Expanded(flex: 2, child: wtechAndDateText(context)),
             Expanded(flex: 6, child: blogsImage(blogs, context)),
             Expanded(flex: 2, child: blogsDetailTitleAndViewsCount(context)),

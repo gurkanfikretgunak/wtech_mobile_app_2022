@@ -15,7 +15,9 @@ List profilItemList(BuildContext context) {
     {
       "icon": Icons.edit,
       "text": "Profil Düzenle",
-      "onTap": () {},
+      "onTap": () {
+        CustomNavigator.goToScreen(context, Routes.profileEdit.name);
+      },
     },
     {
       "icon": Icons.settings_outlined,

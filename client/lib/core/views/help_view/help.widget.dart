@@ -4,8 +4,6 @@ import 'package:client/core/views/common/widgets/text/custom_text.dart';
 import 'package:client/core/views/help_view/help.viewmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
-
-import '../../utils/constants/colors/color_constans.dart';
 import '../common/widgets/custom_card.dart';
 
 class HelpViewWidget {
@@ -14,7 +12,6 @@ class HelpViewWidget {
     bool _customTileExpanded = false;
     final vm = GetIt.I.get<HelpViewModel>();
     return CustomCard(
-      color: ColorConstant.instance.shinyWhite,
       elevation: 1.5,
       child: StreamBuilder(
           stream: vm.expansion,
@@ -27,9 +24,7 @@ class HelpViewWidget {
                 fontWeight: FontWeight.w500,
               ),
               trailing: Icon(
-                _customTileExpanded
-                    ? Icons.arrow_drop_down_circle
-                    : Icons.arrow_drop_down,
+                _customTileExpanded ? Icons.arrow_drop_down_circle : Icons.arrow_drop_down,
               ),
               children: const <Widget>[
                 ListTile(title: Text('This is tile number 2')),

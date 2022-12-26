@@ -33,22 +33,25 @@ class EducationCardWidget extends StatelessWidget {
               borderRadius: BorderRadius.circular(16),
             ),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Stack(
                   children: [
                     ClipRRect(
-                        borderRadius: BorderRadius.circular(16), child: Image.asset(Assets.images.png.news1.path)),
+                        borderRadius:
+                            const BorderRadius.only(topLeft: Radius.circular(16), topRight: Radius.circular(16)),
+                        child: Image.asset(Assets.images.png.news1.path)),
                     Positioned(
                       left: context.dynamicWidth(0.78),
                       top: context.dynamicHeight(0.005),
                       child: CircleAvatar(
-                        backgroundColor: ColorConstant.instance.white,
+                        backgroundColor: Theme.of(context).cardTheme.color,
                         child: CustomIconButton(
                           onPressed: () async {
                             heart = vm.heartAnimation();
                           },
                           icon: heart ? Icons.favorite : Icons.favorite_border,
+                          color: Theme.of(context).backgroundColor,
                         ),
                       ),
                     ),
@@ -59,9 +62,10 @@ class EducationCardWidget extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const CustomText(
+                      CustomText(
                         "Genç Kariyer Eğitim Programı",
                         fontSize: 18,
+                        color: Theme.of(context).cardColor,
                       ),
                       context.emptySizedHeightBoxLow,
                       CustomText(
