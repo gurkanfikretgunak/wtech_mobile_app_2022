@@ -6,8 +6,6 @@ import 'package:rxdart/rxdart.dart';
 class BlogsViewModel extends BaseViewModel {
   final _login = BehaviorSubject<String>.seeded("");
   final _password = BehaviorSubject<String>.seeded("");
-  final BehaviorSubject<bool> _favorite = BehaviorSubject<bool>.seeded(true);
-  Stream get favorite => _favorite.stream;
 
   Stream get login => _login.stream;
   void setLogin(String value) => _login.add(value);
@@ -26,15 +24,5 @@ class BlogsViewModel extends BaseViewModel {
   void clear() {
     _login.add("");
     _password.add("");
-  }
-
-  bool heartFill() {
-    if(_favorite.value == true) {
-      _favorite.value = false;
-    }
-    else if(_favorite.value == false) {
-      _favorite.value = true;
-    }
-    return _favorite.value;
   }
 }

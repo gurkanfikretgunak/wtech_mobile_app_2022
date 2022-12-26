@@ -1,5 +1,4 @@
 import 'package:client/core/utils/constants/colors/color_constans.dart';
-import 'package:client/core/views/blogs_view/blogs.viewmodel.dart';
 import 'package:client/core/views/blogs_view/widgets/blogs_model.dart';
 import 'package:client/core/views/blogs_view/widgets/blogs_card.dart';
 import 'package:client/core/views/common/widgets/button/custom_button_libary.dart';
@@ -9,7 +8,6 @@ import 'package:client/core/views/common/widgets/custom_views_count.dart';
 import 'package:client/core/views/common/widgets/text/custom_text.dart';
 
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
 
 class BlogsWidget {
   Widget card({bool? isTitleCard, required BlogsModel blogs}) {
@@ -23,32 +21,23 @@ class BlogsWidget {
   }
 
   Widget cardImage({required String imagePath, required BuildContext context}) {
-    final vm = GetIt.I.get<BlogsViewModel>();
-    bool isFavorite = vm.heartFill();
-    return StreamBuilder(
-      stream: vm.favorite,
-      builder:(context, snapshot) {
-        return Stack(
-        children: [
-          CustomImage(
-            assetPath: imagePath,
-          ),
-          Transform(
-            transform: Matrix4.translationValues(180, 10, 0),
-            child: CircleAvatar(
-              backgroundColor: ColorConstant.instance.white,
-              child: CustomIconButton(
-                iconSize: 20,
-                icon: isFavorite ? Icons.favorite : Icons.favorite_border,
-                onPressed: () {
-                  isFavorite = vm.heartFill();
-                },
-              ),
+    return Stack(
+      children: [
+        CustomImage(
+          assetPath: imagePath,
+        ),
+        Transform(
+          transform: Matrix4.translationValues(180, 10, 0),
+          child: CircleAvatar(
+            backgroundColor: ColorConstant.instance.white,
+            child: CustomIconButton(
+              iconSize: 20,
+              icon: Icons.favorite,
+              onPressed: () {},
             ),
           ),
-        ],
-      );
-      },
+        ),
+      ],
     );
   }
 
