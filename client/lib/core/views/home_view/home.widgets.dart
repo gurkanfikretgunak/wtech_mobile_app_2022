@@ -3,12 +3,14 @@ import 'package:client/core/utils/constants/colors/color_constans.dart';
 import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/views/home_view/temporary_contants.dart/text_constants.dart';
+import 'package:client/core/views/home_view/widgets/categories_widget.dart';
+import 'package:client/core/views/home_view/widgets/swiper_widget.dart';
 import 'package:client/core/views/home_view/widgets/training_widget.dart';
 import 'package:flutter/material.dart';
-import '../common/widgets/text/custom_textfield.dart';
+import 'package:client/core/views/common/widgets/text/custom_textfield.dart';
 
 class HomeViewWidget {
-  Widget homeCardWidget(BuildContext context) {
+  static Widget homeCardWidget(BuildContext context) {
     return ListView.builder(
       scrollDirection: Axis.horizontal,
       shrinkWrap: true,
@@ -16,8 +18,7 @@ class HomeViewWidget {
       itemBuilder: (context, index) {
         return SizedBox(
           width: MediaQuery.of(context).size.width * 0.6,
-          child: HomeTrainingWidget(
-              trainingImage: HomeTextContants.trainingPath[index]),
+          child: HomeTrainingWidget(trainingImage: HomeTextContants.trainingPath[index]),
         );
       },
     );
@@ -34,10 +35,7 @@ class HomeViewWidget {
               height: context.dynamicHeight(0.03),
               child: Center(
                 child: Text(text,
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyMedium
-                        ?.copyWith(fontWeight: FontWeight.bold),
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.bold),
                     textAlign: TextAlign.center),
               ),
             ),
@@ -46,9 +44,10 @@ class HomeViewWidget {
                 child: Row(children: [
                   const Icon(Icons.event_outlined, size: 15),
                   Text(HomeTextContants.dateText,
-                      style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                          color: ColorConstant.instance.black.withOpacity(0.7),
-                          fontSize: 14))
+                      style: Theme.of(context)
+                          .textTheme
+                          .subtitle1
+                          ?.copyWith(color: ColorConstant.instance.black.withOpacity(0.7), fontSize: 14))
                 ]))
           ],
         ),
@@ -64,6 +63,28 @@ class HomeViewWidget {
         suffixIcon: const Icon(Icons.filter_list),
         labelText: L10n.of(context)!.search,
         isSearch: true,
+      ),
+    );
+  }
+
+  Padding body(BuildContext context) {
+    return Padding(
+      padding: context.paddingNormal,
+      child: Wrap(
+        runSpacing: 5,
+        children: [
+          HomeViewWidget.searchHomeWidget(context),
+          context.emptySizedHeightBoxLow,
+          SizedBox(
+            height: context.dynamicHeight(0.29),
+            width: context.width,
+            child: const EventSwiperWidget(),
+          ),
+          Text(L10n.of(context)!.categories, style: Theme.of(context).textTheme.headline6),
+          SizedBox(height: context.dynamicHeight(0.098), width: context.width, child: const CategoriesWidget()),
+          Text(L10n.of(context)!.currentTraining, style: Theme.of(context).textTheme.headline6),
+          SizedBox(height: context.dynamicHeight(0.2), child: homeCardWidget(context)),
+        ],
       ),
     );
   }
