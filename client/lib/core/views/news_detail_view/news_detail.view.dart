@@ -20,23 +20,10 @@ class NewsDetailView extends StatelessWidget with NewsDetailWidgets {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: CustomAppbar(titleText: L10n.of(context)!.news),
-      body: Padding(
-        padding: context.horizontalPaddingNormal,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Expanded(flex: 2, child: title(news)),
-            Expanded(flex: 2, child: wtechAndDateText(context)),
-            Expanded(flex: 6, child: newsImage(news, context)),
-            Expanded(flex: 2, child: newsDetailTitleAndViewsCount(context)),
-            Expanded(flex: 6, child: newsDetailTextCard(context, news)),
-            const Spacer()
-          ],
-        ),
-      ),
+    return _vm.baseScaffold(
+      context,
+      appbar: appBar(context),
+      body: body(context, news: news),
     );
   }
 }

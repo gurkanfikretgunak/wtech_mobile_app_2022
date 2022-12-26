@@ -1,6 +1,8 @@
+import 'package:client/core/l10n/app_l10n.dart';
 import 'package:client/core/routes/custom_navigator.dart';
 import 'package:client/core/utils/constants/enums/routes.enum.dart';
 import 'package:client/core/utils/extensions/common_extension.dart';
+import 'package:client/core/views/common/widgets/custom_appbar.dart';
 import 'package:client/core/views/mentors_view/widgets/mentor_card_widget.dart';
 import 'package:client/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
@@ -35,7 +37,11 @@ class MentorsWidgets {
     );
   }
 
-  Widget appBarTitle(BuildContext context) {
-    return Text('Mentorler', style: Theme.of(context).textTheme.headline6);
+  PreferredSizeWidget? appbar(BuildContext context) {
+    return CustomAppbar(
+      titleText: L10n.of(context)!.mentorAppBarTitle,
+      isName: false,
+      isCheck: false,
+    );
   }
 }
