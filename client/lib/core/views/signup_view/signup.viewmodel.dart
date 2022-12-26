@@ -10,7 +10,6 @@ import 'package:rxdart/rxdart.dart';
 class SignUpViewModel extends BaseViewModel {
   final BehaviorSubject<String> _controller = BehaviorSubject<String>.seeded("");
   Stream get controller => _controller.stream;
-
   void changeValue(
       String value, context, TextEditingController? profileController) {
     if (value == L10n.of(context)!.student) {
@@ -21,9 +20,7 @@ class SignUpViewModel extends BaseViewModel {
       _controller.add(L10n.of(context)!.mentor);
     }
     profileController?.text = _controller.value;
-
   }
-
   @override
   void clear() {}
 }

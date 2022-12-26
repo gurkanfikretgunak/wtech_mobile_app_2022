@@ -20,6 +20,7 @@ class NewsDetailView extends StatelessWidget with NewsDetailWidgets {
 
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     return Scaffold(
       appBar: CustomAppbar(titleText: L10n.of(context)!.news),
       body: Padding(
@@ -37,6 +38,12 @@ class NewsDetailView extends StatelessWidget with NewsDetailWidgets {
           ],
         ),
       ),
+=======
+    return _vm.baseScaffold(
+      context,
+      appbar: appBar(context),
+      body: body(context, news: news),
+>>>>>>> 997b4d9189507f32e8c4bbb1d790e81e83050bcf
     );
   }
 }

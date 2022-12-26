@@ -1,7 +1,17 @@
+import 'package:client/core/l10n/app_l10n.dart';
+import 'package:client/core/views/common/widgets/custom_appbar.dart';
 import 'package:client/core/views/jobs_details_view/widgets/jobs_detail_widget.dart';
 import 'package:flutter/material.dart';
 
 class JobsDetailWidgets {
+  PreferredSizeWidget appbar(BuildContext context) {
+    return CustomAppbar(
+      titleText: L10n.of(context)!.jobAndinternship,
+      isCheck: false,
+      isName: false,
+    );
+  }
+
   Widget body(BuildContext context) {
     return const JobsDetailWidget(
       jobDetailTitle: "2021 Turkey Discover Young Talent Programı",
