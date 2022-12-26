@@ -48,7 +48,7 @@ class AppRoutes {
         return navigate(const EducationsDetailView());
 
       case Routes.events:
-        return navigate(const EventsView());
+        return navigate(EventsView());
 
       case Routes.eventDetail:
         // TODO: Handle this case.
