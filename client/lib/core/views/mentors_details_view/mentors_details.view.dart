@@ -1,4 +1,3 @@
-import 'package:client/core/views/common/widgets/custom_appbar.dart';
 import 'package:client/core/views/mentors_details_view/mentors_details.viewmodel.dart';
 import 'package:client/core/views/mentors_details_view/mentors_details.widgets.dart';
 import 'package:flutter/material.dart';
@@ -10,11 +9,10 @@ class MentorsDetailsView extends StatelessWidget with MentorDetailsWidgets {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const CustomAppbar(titleText: 'Zehra Öney'),
+    return _vm.baseScaffold(
+      context,
+      appbar: appbar(context, 'Zehra Öney'),
       body: body(context),
-      floatingActionButton: floatingActionButton(context),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }
