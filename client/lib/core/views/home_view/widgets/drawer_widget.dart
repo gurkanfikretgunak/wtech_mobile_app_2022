@@ -10,7 +10,6 @@ class DrawerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: ColorConstant.instance.white,
       child: Column(
         children: [
           Padding(
@@ -42,10 +41,10 @@ class DrawerWidget extends StatelessWidget {
                                 style: Theme.of(context)
                                     .textTheme
                                     .headline6
-                                    ?.copyWith(fontSize: 18)),
+                                    ?.copyWith(fontSize: 18, color: Theme.of(context).textSelectionTheme.cursorColor)),
                             leading: Icon(
                               key['icon'],
-                              color: ColorConstant.instance.blue,
+                              color: Theme.of(context).iconTheme.color,
                             ),
                           ),
                         ),
@@ -61,10 +60,7 @@ class DrawerWidget extends StatelessWidget {
             padding: context.onlyBottomPaddingNormal,
             child: Text(
               "by Teknolojide Kadın Derneği",
-              style: Theme.of(context)
-                  .textTheme
-                  .subtitle1
-                  ?.copyWith(color: ColorConstant.instance.blue, fontSize: 13),
+              style: Theme.of(context).textTheme.subtitle1?.copyWith(color: ColorConstant.instance.blue, fontSize: 13),
             ),
           ),
         ],

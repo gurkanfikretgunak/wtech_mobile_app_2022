@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import '../../constants/colors/color_constans.dart';
 
 class CustomIconTheme {
-  static IconThemeData iconTheme() {
+  static IconThemeData iconTheme(bool isDarkTheme) {
     return IconThemeData(
-      color: ColorConstant.instance.blue,
+      color: isDarkTheme ? ColorConstant.instance.cardColor : ColorConstant.instance.blue,
     );
   }
 }

@@ -41,6 +41,8 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
       controller: widget.controller,
       keyboardType: TextInputType.text,
       decoration: InputDecoration(
+        filled: true,
+        fillColor: widget.isSearch! ? Theme.of(context).backgroundColor : ColorConstant.instance.white,
         errorText: widget.errorText,
         hintText: widget.hintText,
         labelText: widget.labelText,
@@ -61,8 +63,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
                     : const Icon(Icons.visibility_off))
             : widget.suffixIcon,
         prefixIcon: widget.prefixIcon,
-        contentPadding: EdgeInsets.symmetric(
-            horizontal: context.dynamicWidth(0), vertical: 0),
+        contentPadding: EdgeInsets.symmetric(horizontal: context.dynamicWidth(0), vertical: 0),
       ),
     );
   }
