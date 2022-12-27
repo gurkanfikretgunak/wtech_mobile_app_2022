@@ -4,7 +4,6 @@ import 'package:client/app/views/common/widgets/text/custom_textfield.dart';
 import 'package:client/app/views/signin_view/widgets/sigin_account_button_widget.dart';
 import 'package:client/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get_it/get_it.dart';
 
 class SignInWidget {

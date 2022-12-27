@@ -1,9 +1,3 @@
-import 'package:client/core/di/config/configure_dependencies.dart';
-import 'package:client/gen/assets.gen.dart';
-import 'package:client/starter.dart';
-import 'package:flavor/flavor.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 /*
 Future<void> main() async {

@@ -35,7 +35,7 @@ class UserProfileWidgets {
       padding: context.horizontalPaddingNormal,
       child: Column(
         children: [
-          Container(
+          SizedBox(
             height: context.dynamicHeight(0.4),
             child: ListView.builder(
               physics: const BouncingScrollPhysics(),

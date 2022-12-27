@@ -1,7 +1,4 @@
 import 'package:client/core/domain/models/news/news_model.dart';
-import 'package:client/app/l10n/app_l10n.dart';
-import 'package:client/core/utils/extensions/common_extension.dart';
-import 'package:client/app/views/common/widgets/custom_appbar.dart';
 import 'package:client/app/views/news_detail_view/news_detail.widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';

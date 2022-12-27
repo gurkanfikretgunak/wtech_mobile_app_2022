@@ -1,10 +1,8 @@
-import 'package:client/core/utils/constants/colors/color_constans.dart';
 import 'package:client/core/utils/extensions/common_extension.dart';
 import 'package:client/app/l10n/app_l10n.dart';
 import 'package:client/app/views/educations_view/widgets/education_card.dart';
 import 'package:client/app/views/educations_view/widgets/search_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:logger/logger.dart';
 import 'package:client/app/views/common/widgets/text/custom_textfield.dart';
 
 class EducationsWidgets {
