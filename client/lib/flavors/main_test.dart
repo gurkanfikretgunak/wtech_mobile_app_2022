@@ -5,6 +5,7 @@ import 'package:flavor/flavor.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
+/*
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await configureDependencies();
@@ -22,3 +23,4 @@ Future<void> main() async {
   );
   setupApp();
 }
+*/
