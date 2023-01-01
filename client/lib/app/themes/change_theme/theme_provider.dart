@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class ThemeChangeProvider extends ChangeNotifier {
   ThemeChangePreference appPreference = ThemeChangePreference();
-  bool _darkTheme = true;
+  bool _darkTheme = false;
   bool get darkTheme => _darkTheme;
 
   set darkTheme(bool value) {

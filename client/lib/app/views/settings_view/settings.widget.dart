@@ -1,15 +1,15 @@
 import 'package:client/core/utils/extensions/common_extension.dart';
-import 'package:client/app/themes/change_theme/change_theme.viewmodel.dart';
 import 'package:client/app/views/common/widgets/text/custom_text.dart';
 import 'package:client/app/views/settings_view/widget/card_settings.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
-
+// ignore: depend_on_referenced_packages
+import 'package:provider/provider.dart';
 import '../../../core/utils/constants/colors/color_constans.dart';
+import '../../themes/change_theme/theme_provider.dart';
 
 class SettingsViewWidget {
-  Widget settingCards(BuildContext context, List<String> itemCountText,
-      double heightCard, String categoriesText, bool isSwitcher) {
+  Widget settingCards(
+      BuildContext context, List<String> itemCountText, double heightCard, String categoriesText, bool isSwitcher) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -40,19 +40,17 @@ class SettingsViewWidget {
   }
 
   Widget switchWidget(BuildContext context) {
-    final _theme = GetIt.I.get<ChangeThemeViewModel>();
-
-    return StreamBuilder(
-        stream: _theme.theme,
-        builder: (context, snapshot) {
-          return Switch(
-            value: snapshot.data!,
-            activeTrackColor: Colors.blue.shade200,
-            activeColor: ColorConstant.instance.blue,
-            onChanged: (bool value) {
-              _theme.changeTheme();
-            },
-          );
-        });
+    return Consumer<ThemeChangeProvider>(
+      builder: (context, theme, child) {
+        return Switch(
+          value: theme.darkTheme,
+          activeTrackColor: Colors.blue.shade200,
+          activeColor: ColorConstant.instance.blue,
+          onChanged: (bool value) {
+            theme.darkTheme = value;
+          },
+        );
+      },
+    );
   }
 }
