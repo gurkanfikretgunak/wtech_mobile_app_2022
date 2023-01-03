@@ -6,8 +6,7 @@ class CustomElevatedButtonTheme {
       style: ButtonStyle(
         shape: MaterialStateProperty.resolveWith<OutlinedBorder>(
           (_) {
-            return RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(8));
+            return RoundedRectangleBorder(borderRadius: BorderRadius.circular(8));
           },
         ),
       ),

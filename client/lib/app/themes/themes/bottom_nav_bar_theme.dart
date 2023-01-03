@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import '../../../core/utils/constants/colors/color_constans.dart';
 
 class CustomBottomNavBarTheme {
-  static BottomNavigationBarThemeData bottomNavBarTheme(bool isDarkTheme) {
+  static BottomNavigationBarThemeData bottomNavBarTheme() {
     return BottomNavigationBarThemeData(
-      unselectedItemColor: isDarkTheme ? ColorConstant.instance.white : ColorConstant.instance.blue,
+      unselectedItemColor: ColorConstant.instance.blue,
       selectedItemColor: ColorConstant.instance.yellow,
-      backgroundColor: isDarkTheme ? ColorConstant.instance.darkThemeAppbar : ColorConstant.instance.white,
+      backgroundColor: ColorConstant.instance.white,
       showUnselectedLabels: true,
     );
   }

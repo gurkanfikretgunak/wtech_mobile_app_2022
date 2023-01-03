@@ -25,14 +25,12 @@ class HomeTrainingWidget extends StatelessWidget {
             borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
             child: Stack(
               children: [
-                Image.asset(trainingImage,
-                    fit: BoxFit.fill, width: context.width),
+                Image.asset(trainingImage, fit: BoxFit.fill, width: context.width),
                 Positioned(
                   bottom: 0,
                   left: 0,
                   right: 0,
-                  child: HomeViewWidget.textProperty(
-                      context, "Teknolojide Kadın Derneği Eğitim"),
+                  child: HomeViewWidget.textProperty(context, "Teknolojide Kadın Derneği Eğitim"),
                 ),
               ],
             ),

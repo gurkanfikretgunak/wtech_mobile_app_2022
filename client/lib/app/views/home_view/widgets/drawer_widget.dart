@@ -10,6 +10,7 @@ class DrawerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      backgroundColor: ColorConstant.instance.white,
       child: Column(
         children: [
           Padding(
@@ -38,13 +39,10 @@ class DrawerWidget extends StatelessWidget {
                           child: ListTile(
                             title: Text(key['text'],
                                 //IconConstant.drawerNames(context)[index],
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .headline6
-                                    ?.copyWith(fontSize: 18, color: Theme.of(context).textSelectionTheme.cursorColor)),
+                                style: Theme.of(context).textTheme.headline6?.copyWith(fontSize: 18)),
                             leading: Icon(
                               key['icon'],
-                              color: Theme.of(context).iconTheme.color,
+                              color: ColorConstant.instance.blue,
                             ),
                           ),
                         ),
